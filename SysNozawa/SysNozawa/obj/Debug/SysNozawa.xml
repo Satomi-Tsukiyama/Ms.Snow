@@ -1,0 +1,663 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SysNozawa
+</name>
+</assembly>
+<members>
+<member name="T:SysNozawa.My.Resources.inhibitStrings">
+<summary>
+  ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
+</summary>
+</member>
+<member name="P:SysNozawa.My.Resources.inhibitStrings.ResourceManager">
+<summary>
+  このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
+</summary>
+</member>
+<member name="P:SysNozawa.My.Resources.inhibitStrings.Culture">
+<summary>
+  すべてについて、現在のスレッドの CurrentUICulture プロパティをオーバーライドします
+  現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
+</summary>
+</member>
+<member name="T:SysNozawa.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SysNozawa.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SysNozawa.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:SysNozawa.Staff.#ctor">
+ <summary>
+ インスタンス
+ </summary>
+</member>
+<member name="M:SysNozawa.Staff.#ctor(MySql.Data.MySqlClient.MySqlDataReader)">
+ <summary>
+ インスタンス
+ </summary>
+ <param name="sqlResult">SQL結果</param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.AnkenEditForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.cmbCode1_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 工番1選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.txtCode2_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ 工番2入力
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.txtSalesAmount_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ 売上金額に金額入力のみ許可
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.txtSalesAmount_Leave(System.Object,System.EventArgs)">
+ <summary>
+ 売上金額に3桁カンマ区切り
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.txtSalesAmount_Enter(System.Object,System.EventArgs)">
+ <summary>
+ 売上金額の3桁カンマ区切り解除
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.AnkenEditForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ ×クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenEditForm.check">
+ <summary>
+ 入力した案件情報のチェック
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.AnkenMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.dgvAnken_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 案件選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.mitmAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新規追加クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.mitmDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 削除クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.cmbCode1_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 工番1選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.txtCode2_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ 工番2入力
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.txtSalesAmount_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+ <summary>
+ 売上金額に金額入力のみ許可
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.txtSalesAmount_Leave(System.Object,System.EventArgs)">
+ <summary>
+ 売上金額に3桁カンマ区切り
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.txtSalesAmount_Enter(System.Object,System.EventArgs)">
+ <summary>
+ 売上金額の3桁カンマ区切り解除
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.AnkenMasterForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ ×クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.setDgvAnken">
+ <summary>
+ 従業員リストの表示
+ </summary>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.check">
+ <summary>
+ 入力した案件情報のチェック
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.CalendarMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.dtpDisplayYearMonth_ValueChanged(System.Object,System.EventArgs)">
+ <summary>
+ 年月変更
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.btnDays_Click(System.Object,System.EventArgs)">
+ <summary>
+ 日付クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.setCalendar">
+ <summary>
+ カレンダーの表示
+ </summary>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.setBtnDays_Visible">
+ <summary>
+ ボタンの表示/非表示
+ </summary>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.setBtnDays_BackColor">
+ <summary>
+ 休日のボタン背景色の変更
+ </summary>
+</member>
+<member name="M:SysNozawa.CalendarMasterForm.check">
+ <summary>
+ 入力した案件情報のチェック
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.ClientMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.dgvClient_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 取引先選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.mitmAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新規追加クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.mitmDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 削除クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.ClientMasterForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ ×クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.setDgvClient">
+ <summary>
+ 得意先リストの表示
+ </summary>
+</member>
+<member name="M:SysNozawa.ClientMasterForm.check">
+ <summary>
+入力した得意先情報のチェック
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.CommonSet.setCmbCode1(System.Windows.Forms.ComboBox@)">
+ <summary>
+ 工番1のセット
+ </summary>
+</member>
+<member name="M:SysNozawa.CommonSet.setCmbClient(System.Windows.Forms.ComboBox@)">
+ <summary>
+ 取引先のセット
+ </summary>
+</member>
+<member name="M:SysNozawa.CommonSet.setCmbStaff(System.Windows.Forms.ComboBox@)">
+ <summary>
+ 従業員のセット
+ </summary>
+</member>
+<member name="M:SysNozawa.MenuForm.Menu_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnStaffMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ 社員名簿ボタンクリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnStaffReport_Click(System.Object,System.EventArgs)">
+ <summary>
+ 日報入力
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnClientMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ 取引先マスタ
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnCalendarMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ カレンダーマスタ
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnAnkenMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ 案件登録
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnClose_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じるボタンクリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.MenuForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ 画面終了イベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.SalesPlanForm.SalesPlanForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.StaffMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.dgvStaff_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 従業員選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.mitmAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新規追加クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.mitmDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 削除クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/更新クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.StaffMasterForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ ×クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.setDgvStaff">
+ <summary>
+ 従業員リストの表示
+ </summary>
+</member>
+<member name="M:SysNozawa.StaffMasterForm.check">
+ <summary>
+入力した得意先情報のチェック
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Calendars.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Calendars.selectHolidayWhereDay(System.DateTime)">
+ <summary>
+ 該当日付の休日情報を取得
+ </summary>
+ <param name="day"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Calendars.selectHolidayWhereYearMonth(System.Int32,System.Int32)">
+ <summary>
+ 該当年月の休日情報を取得
+ </summary>
+ <param name="year"></param>
+ <param name="month"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Calendars.update(SysNozawa.Calendar)">
+ <summary>
+ 取引先情報の更新
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.getNewCode3(System.String)">
+ <summary>
+ 新規追加用の新しい工番3を生成
+ </summary>
+ <param name="code2"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.selectOne(System.Int32)">
+ <summary>
+ 社員情報を取得
+ </summary>
+ <param name="id">社員番号</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.update(SysNozawa.Anken)">
+ <summary>
+ 取引先情報の更新
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.insert(SysNozawa.Anken)">
+ <summary>
+ 部署情報の追加
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.delete(System.Int32)">
+ <summary>
+ 部署情報の削除
+ </summary>
+ <param name="id">ID</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.ToDataTable(System.Collections.Generic.List{SysNozawa.Anken})">
+ <summary>
+ List(Of Anken)をDataTableに変換
+ </summary>
+ <param name="list"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.selectOne(System.Int32)">
+ <summary>
+ 社員情報を取得
+ </summary>
+ <param name="id">社員番号</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.update(SysNozawa.Client)">
+ <summary>
+ 取引先情報の更新
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.insert(SysNozawa.Client)">
+ <summary>
+ 部署情報の追加
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.delete(System.Int32)">
+ <summary>
+ 部署情報の削除
+ </summary>
+ <param name="id">ID</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Clients.ToDataTable(System.Collections.Generic.List{SysNozawa.Client})">
+ <summary>
+ List(Of Anken)をDataTableに変換
+ </summary>
+ <param name="list"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.selectAll">
+ <summary>
+ 全社員情報を取得
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.selectOne(System.Int32)">
+ <summary>
+ 社員情報を取得
+ </summary>
+ <param name="id">社員番号</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.insert(SysNozawa.Staff)">
+ <summary>
+ 社員情報を更新
+ </summary>
+ <param name="info">社員情報</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.update(SysNozawa.Staff)">
+ <summary>
+ 社員情報を更新
+ </summary>
+ <param name="info">社員情報</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Staffs.delete(System.Int32)">
+ <summary>
+ 社員情報を更新
+ </summary>
+ <param name="id">社員ID</param>
+ <returns></returns>
+</member>
+</members>
+</doc>
