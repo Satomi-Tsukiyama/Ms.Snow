@@ -57,6 +57,51 @@ Public Module Ankens
 
     End Function
 
+    Public Function getAllCode2() As List(Of String)
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        '社員リスト初期化
+        Dim list As New List(Of String)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = "select distinct anken.code2"
+            sqlStr = sqlStr + " from anken"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+                list.Add(rlt("code2"))
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        Return list
+
+    End Function
+
     ''' <summary>
     ''' 新規追加用の新しい工番3を生成
     ''' </summary>
@@ -200,6 +245,66 @@ Public Module Ankens
             sqlStr = sqlStr + " from anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " order by anken.code2, anken.code3"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+
+                list.Add(New Anken(rlt))
+
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        Return ToDataTable(list)
+
+    End Function
+
+    '' <summary>
+    '' 全案件をDataTableで出力
+    '' </summary>
+    '' <returns></returns>
+    Public Function selectWhereCode2(code2 As String) As DataTable
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        '社員リスト初期化
+        Dim list As New List(Of Anken)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = "select anken.*,"
+            sqlStr = sqlStr + " client.code as clientcode,"
+            sqlStr = sqlStr + " client.name as clientname,"
+            sqlStr = sqlStr + " staff.name as staffname"
+            sqlStr = sqlStr + " from anken"
+            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
+            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " Where 0 = 0"
+            sqlStr = sqlStr + String.Format(" and anken.code2 = '{0}'", code2)
+            sqlStr = sqlStr + " order by anken.code2"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -461,6 +566,56 @@ Public Module Ankens
                 sqlStr = sqlStr + " updatedatetime = now()"
 
                 sqlStr = sqlStr + String.Format(" where id = {0}", info.id)
+
+                'MySQLCommand作成 
+                cmd = New MySqlCommand(sqlStr, con)
+
+                'SQL文実行 
+                rlt = cmd.ExecuteReader
+
+                'クローズ 
+                con.Close()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
+    ''' <summary>
+    ''' 請求状況の更新
+    ''' </summary>
+    ''' <param name="id"></param>
+    ''' <param name="status"></param>
+    ''' <returns></returns>
+    Public Function updateStatus(id As Integer, status As Integer) As Boolean
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        Try
+
+            'コネクション生成 
+            Using con As New MySqlConnection(connectionString)
+
+                '接続 
+                con.Open()
+
+                'SQL文 
+                sqlStr = "update anken set"
+                sqlStr = sqlStr + String.Format(" status = {0},", status)
+                sqlStr = sqlStr + " updatedatetime = now()"
+
+                sqlStr = sqlStr + String.Format(" where id = {0}", id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

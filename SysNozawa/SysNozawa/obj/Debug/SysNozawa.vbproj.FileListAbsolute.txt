@@ -31,7 +31,6 @@ C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\bin\Debug\Google.Pr
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\bin\Debug\MySql.Data.dll
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\bin\Debug\Google.Protobuf.xml
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\bin\Debug\MySql.Data.xml
-C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.vbprojAssemblyReference.cache
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.vbproj.ResolveComReference.cache
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.inhibitStrings.resources
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.AnkenEditForm.resources
@@ -48,3 +47,6 @@ C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.exe
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.xml
 C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.pdb
+C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.vbprojAssemblyReference.cache
+C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.ShopMasterForm.resources
+C:\Users\理美\Documents\GitHub\Ms.Snow\SysNozawa\SysNozawa\obj\Debug\SysNozawa.BuyingForm.resources

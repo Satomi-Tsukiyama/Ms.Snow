@@ -38,6 +38,16 @@ SysNozawa
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:SysNozawa.inputType">
+ <summary>
+ 画面モード
+ </summary>
+</member>
+<member name="T:SysNozawa.AnkenStatus">
+ <summary>
+ 案件テーブル：請求状況
+ </summary>
+</member>
 <member name="M:SysNozawa.Staff.#ctor">
  <summary>
  インスタンス
@@ -132,6 +142,13 @@ SysNozawa
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:SysNozawa.AnkenMasterForm.cmbCode2_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 検索工番の変更
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:SysNozawa.AnkenMasterForm.dgvAnken_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
  <summary>
  案件選択
@@ -215,6 +232,11 @@ SysNozawa
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
+</member>
+<member name="M:SysNozawa.AnkenMasterForm.setCmbCode2">
+ <summary>
+ 工番2のセット
+ </summary>
 </member>
 <member name="M:SysNozawa.AnkenMasterForm.setDgvAnken">
  <summary>
@@ -372,6 +394,12 @@ SysNozawa
  従業員のセット
  </summary>
 </member>
+<member name="M:SysNozawa.CommonSet.setDgvAnken_BackColor(System.Windows.Forms.DataGridView@)">
+ <summary>
+ 請求状況によって背景色を設定
+ </summary>
+ <param name="dgvAnken"></param>
+</member>
 <member name="M:SysNozawa.MenuForm.Menu_Load(System.Object,System.EventArgs)">
  <summary>
  ロードイベント
@@ -386,7 +414,7 @@ SysNozawa
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:SysNozawa.MenuForm.btnStaffReport_Click(System.Object,System.EventArgs)">
+<member name="M:SysNozawa.MenuForm.btnBuying_Click(System.Object,System.EventArgs)">
  <summary>
  日報入力
  </summary>
@@ -407,9 +435,23 @@ SysNozawa
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:SysNozawa.MenuForm.btnShopMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ 購入先マスタ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:SysNozawa.MenuForm.btnAnkenMaster_Click(System.Object,System.EventArgs)">
  <summary>
  案件登録
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.MenuForm.btnSalesPlan_Click(System.Object,System.EventArgs)">
+ <summary>
+ 売上見込
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
@@ -434,6 +476,73 @@ SysNozawa
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.ShopMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.dgvShop_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 購入先選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.mitmAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新規追加クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.mitmDelete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 削除クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.btnOK_Click(System.Object,System.EventArgs)">
+ <summary>
+ 追加/編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.btnCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 閉じる/中止クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.ShopMasterForm_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+ <summary>
+ ×クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.setDgvShop">
+ <summary>
+ 得意先リストの表示
+ </summary>
+</member>
+<member name="M:SysNozawa.ShopMasterForm.check">
+ <summary>
+入力した得意先情報のチェック
+ </summary>
+ <returns></returns>
 </member>
 <member name="M:SysNozawa.StaffMasterForm.StaffMasterForm_Load(System.Object,System.EventArgs)">
  <summary>
@@ -525,7 +634,14 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Calendars.update(SysNozawa.Calendar)">
  <summary>
- 取引先情報の更新
+ カレンダー情報の更新
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Calendars.insert(SysNozawa.Calendar)">
+ <summary>
+ カレンダー情報の追加
  </summary>
  <param name="info"></param>
  <returns></returns>
@@ -557,6 +673,14 @@ SysNozawa
  <param name="info"></param>
  <returns></returns>
 </member>
+<member name="M:SysNozawa.Ankens.updateStatus(System.Int32,System.Int32)">
+ <summary>
+ 請求状況の更新
+ </summary>
+ <param name="id"></param>
+ <param name="status"></param>
+ <returns></returns>
+</member>
 <member name="M:SysNozawa.Ankens.insert(SysNozawa.Anken)">
  <summary>
  部署情報の追加
@@ -578,6 +702,47 @@ SysNozawa
  <param name="list"></param>
  <returns></returns>
 </member>
+<member name="M:SysNozawa.Shops.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Shops.selectOne(System.Int32)">
+ <summary>
+ 購入先情報を取得
+ </summary>
+ <param name="id">社員番号</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Shops.update(SysNozawa.Shop)">
+ <summary>
+ 購入先情報の更新
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Shops.insert(SysNozawa.Shop)">
+ <summary>
+ 購入先情報の追加
+ </summary>
+ <param name="info"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Shops.delete(System.Int32)">
+ <summary>
+ 購入先情報の削除
+ </summary>
+ <param name="id">ID</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Shops.ToDataTable(System.Collections.Generic.List{SysNozawa.Shop})">
+ <summary>
+ List(Of Anken)をDataTableに変換
+ </summary>
+ <param name="list"></param>
+ <returns></returns>
+</member>
 <member name="M:SysNozawa.Clients.getNewId">
  <summary>
  新規追加用の新しいIDを生成
@@ -586,7 +751,7 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Clients.selectOne(System.Int32)">
  <summary>
- 社員情報を取得
+ 取引先情報を取得
  </summary>
  <param name="id">社員番号</param>
  <returns></returns>
@@ -600,14 +765,14 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Clients.insert(SysNozawa.Client)">
  <summary>
- 部署情報の追加
+ 取引先情報の追加
  </summary>
  <param name="info"></param>
  <returns></returns>
 </member>
 <member name="M:SysNozawa.Clients.delete(System.Int32)">
  <summary>
- 部署情報の削除
+ 取引先情報の削除
  </summary>
  <param name="id">ID</param>
  <returns></returns>

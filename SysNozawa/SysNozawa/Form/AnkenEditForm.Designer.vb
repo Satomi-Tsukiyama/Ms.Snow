@@ -114,7 +114,7 @@ Partial Class AnkenEditForm
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.59162!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.40838!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 773.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 774.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 0, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 5)
@@ -152,7 +152,7 @@ Partial Class AnkenEditForm
         Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label13.AutoSize = True
         Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(117, 267)
+        Me.Label13.Location = New System.Drawing.Point(116, 267)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(62, 18)
         Me.Label13.TabIndex = 18
@@ -162,7 +162,7 @@ Partial Class AnkenEditForm
         '
         Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(22, 267)
+        Me.Label12.Location = New System.Drawing.Point(21, 267)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(80, 18)
         Me.Label12.TabIndex = 17
@@ -173,7 +173,7 @@ Partial Class AnkenEditForm
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label11.AutoSize = True
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(117, 222)
+        Me.Label11.Location = New System.Drawing.Point(116, 222)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(62, 18)
         Me.Label11.TabIndex = 14
@@ -183,7 +183,7 @@ Partial Class AnkenEditForm
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(40, 96)
+        Me.Label7.Location = New System.Drawing.Point(39, 96)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 18)
         Me.Label7.TabIndex = 6
@@ -193,7 +193,7 @@ Partial Class AnkenEditForm
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(58, 54)
+        Me.Label2.Location = New System.Drawing.Point(57, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(44, 18)
         Me.Label2.TabIndex = 3
@@ -203,7 +203,7 @@ Partial Class AnkenEditForm
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(58, 12)
+        Me.Label1.Location = New System.Drawing.Point(57, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 18)
         Me.Label1.TabIndex = 0
@@ -213,7 +213,7 @@ Partial Class AnkenEditForm
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(40, 222)
+        Me.Label5.Location = New System.Drawing.Point(39, 222)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(62, 18)
         Me.Label5.TabIndex = 13
@@ -223,7 +223,7 @@ Partial Class AnkenEditForm
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 180)
+        Me.Label4.Location = New System.Drawing.Point(21, 180)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(80, 18)
         Me.Label4.TabIndex = 11
@@ -233,7 +233,7 @@ Partial Class AnkenEditForm
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 138)
+        Me.Label3.Location = New System.Drawing.Point(21, 138)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(80, 18)
         Me.Label3.TabIndex = 9
@@ -245,11 +245,11 @@ Partial Class AnkenEditForm
         Me.TableLayoutPanel2.ColumnCount = 3
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.95745!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.04255!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.cmbCode1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtCode3, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.txtCode2, 1, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(185, 6)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(184, 6)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -262,22 +262,22 @@ Partial Class AnkenEditForm
         Me.cmbCode1.FormattingEnabled = True
         Me.cmbCode1.Location = New System.Drawing.Point(3, 3)
         Me.cmbCode1.Name = "cmbCode1"
-        Me.cmbCode1.Size = New System.Drawing.Size(113, 26)
+        Me.cmbCode1.Size = New System.Drawing.Size(112, 26)
         Me.cmbCode1.TabIndex = 0
         '
         'txtCode3
         '
         Me.txtCode3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCode3.Location = New System.Drawing.Point(261, 3)
+        Me.txtCode3.Location = New System.Drawing.Point(260, 3)
         Me.txtCode3.Name = "txtCode3"
         Me.txtCode3.ReadOnly = True
-        Me.txtCode3.Size = New System.Drawing.Size(157, 25)
+        Me.txtCode3.Size = New System.Drawing.Size(158, 25)
         Me.txtCode3.TabIndex = 2
         '
         'txtCode2
         '
         Me.txtCode2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCode2.Location = New System.Drawing.Point(122, 3)
+        Me.txtCode2.Location = New System.Drawing.Point(121, 3)
         Me.txtCode2.Name = "txtCode2"
         Me.txtCode2.Size = New System.Drawing.Size(133, 25)
         Me.txtCode2.TabIndex = 1
@@ -285,16 +285,16 @@ Partial Class AnkenEditForm
         'txtName
         '
         Me.txtName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtName.Location = New System.Drawing.Point(185, 50)
+        Me.txtName.Location = New System.Drawing.Point(184, 50)
         Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(768, 25)
+        Me.txtName.Size = New System.Drawing.Size(769, 25)
         Me.txtName.TabIndex = 5
         '
         'cmbClient
         '
         Me.cmbClient.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.cmbClient.FormattingEnabled = True
-        Me.cmbClient.Location = New System.Drawing.Point(185, 92)
+        Me.cmbClient.Location = New System.Drawing.Point(184, 92)
         Me.cmbClient.Name = "cmbClient"
         Me.cmbClient.Size = New System.Drawing.Size(229, 26)
         Me.cmbClient.TabIndex = 8
@@ -304,7 +304,7 @@ Partial Class AnkenEditForm
         Me.dtpSalesYearMonth.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.dtpSalesYearMonth.CustomFormat = "yyyy/MM"
         Me.dtpSalesYearMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpSalesYearMonth.Location = New System.Drawing.Point(185, 134)
+        Me.dtpSalesYearMonth.Location = New System.Drawing.Point(184, 134)
         Me.dtpSalesYearMonth.Name = "dtpSalesYearMonth"
         Me.dtpSalesYearMonth.ShowUpDown = True
         Me.dtpSalesYearMonth.Size = New System.Drawing.Size(200, 25)
@@ -319,7 +319,7 @@ Partial Class AnkenEditForm
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.42857!))
         Me.TableLayoutPanel3.Controls.Add(Me.Label6, 1, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.txtSalesAmount, 0, 0)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(185, 174)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(184, 174)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -349,7 +349,7 @@ Partial Class AnkenEditForm
         '
         Me.cmbStaff.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.cmbStaff.FormattingEnabled = True
-        Me.cmbStaff.Location = New System.Drawing.Point(185, 218)
+        Me.cmbStaff.Location = New System.Drawing.Point(184, 218)
         Me.cmbStaff.Name = "cmbStaff"
         Me.cmbStaff.Size = New System.Drawing.Size(229, 26)
         Me.cmbStaff.TabIndex = 15
@@ -359,7 +359,7 @@ Partial Class AnkenEditForm
         Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Location = New System.Drawing.Point(117, 12)
+        Me.Label8.Location = New System.Drawing.Point(116, 12)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(62, 18)
         Me.Label8.TabIndex = 1
@@ -370,7 +370,7 @@ Partial Class AnkenEditForm
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label9.AutoSize = True
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(117, 54)
+        Me.Label9.Location = New System.Drawing.Point(116, 54)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(62, 18)
         Me.Label9.TabIndex = 4
@@ -381,7 +381,7 @@ Partial Class AnkenEditForm
         Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label10.AutoSize = True
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(117, 96)
+        Me.Label10.Location = New System.Drawing.Point(116, 96)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(62, 18)
         Me.Label10.TabIndex = 7
@@ -391,7 +391,7 @@ Partial Class AnkenEditForm
         '
         Me.cmbStatus.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Location = New System.Drawing.Point(185, 263)
+        Me.cmbStatus.Location = New System.Drawing.Point(184, 263)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(229, 26)
         Me.cmbStatus.TabIndex = 16

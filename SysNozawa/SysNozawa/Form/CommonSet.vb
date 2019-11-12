@@ -99,4 +99,45 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 請求状況によって背景色を設定
+    ''' </summary>
+    ''' <param name="dgvAnken"></param>
+    Public Sub setDgvAnken_BackColor(ByRef dgvAnken As DataGridView)
+
+        Dim cStatus_index As Integer = 0
+        For Each column As DataGridViewColumn In dgvAnken.Columns
+            If column.DataPropertyName = "cStatus" Then
+                cStatus_index = column.Index
+            End If
+        Next
+
+
+        For rowIndex = 0 To dgvAnken.Rows.Count - 1
+
+            Select Case dgvAnken.Rows(rowIndex).Cells(cStatus_index).Value
+                Case AnkenStatus.NoPlan
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.LemonChiffon
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
+                Case AnkenStatus.Estimating
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.YellowGreen
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
+                Case AnkenStatus.Decided
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Violet
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
+                Case AnkenStatus.Invoiced
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Cyan
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
+                Case AnkenStatus.Cancel
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Black
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.White
+                Case Else
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.White
+                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
+            End Select
+
+        Next
+
+    End Sub
+
 End Module

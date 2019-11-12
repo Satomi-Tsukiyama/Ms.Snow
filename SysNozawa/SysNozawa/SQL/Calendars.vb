@@ -178,7 +178,7 @@ Public Module Calendars
 #Region "更新"
 
     ''' <summary>
-    ''' 取引先情報の更新
+    ''' カレンダー情報の更新
     ''' </summary>
     ''' <param name="info"></param>
     ''' <returns></returns>
@@ -231,6 +231,11 @@ Public Module Calendars
 
 #Region "追加"
 
+    ''' <summary>
+    ''' カレンダー情報の追加
+    ''' </summary>
+    ''' <param name="info"></param>
+    ''' <returns></returns>
     Public Function insert(info As Calendar) As Boolean
 
         Dim cmd As MySqlCommand

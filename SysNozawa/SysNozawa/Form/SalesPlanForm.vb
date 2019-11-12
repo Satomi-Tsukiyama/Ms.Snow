@@ -4,7 +4,7 @@ Public Class SalesPlanForm
 
     Private inputType As New inputType
     Private selectId As Integer = 0
-    Private selectRow As DataGridViewRow
+    Private selectDataGridView As DataGridView
 
     Private lblMonths As Label()
     Private cmbClients As ComboBox()
@@ -33,6 +33,14 @@ Public Class SalesPlanForm
 
         setDudSemester()
 
+        mitmAdd.Enabled = False
+        mitmEdit.Enabled = False
+        mitmDelete.Enabled = False
+
+    End Sub
+
+    Private Sub SalesPlanForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        setDgvSalesPlans()
     End Sub
 
     Private Sub dtpDisplayYear_ValueChanged(sender As Object, e As EventArgs) Handles dtpDisplayYear.ValueChanged
@@ -43,7 +51,8 @@ Public Class SalesPlanForm
         setDgvSalesPlans()
     End Sub
 
-    Private Sub cmbClients_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbClient1.SelectedIndexChanged, cmbClient2.SelectedIndexChanged, cmbClient3.SelectedIndexChanged, cmbClient4.SelectedIndexChanged
+    Private Sub cmbClients_SelectedIndexChanged(sender As Object, e As EventArgs) Handles _
+        cmbClient1.SelectedIndexChanged, cmbClient2.SelectedIndexChanged, cmbClient3.SelectedIndexChanged, cmbClient4.SelectedIndexChanged, cmbClient5.SelectedIndexChanged, cmbClient6.SelectedIndexChanged
         setDgvSalesPlans()
     End Sub
 
@@ -56,9 +65,7 @@ Public Class SalesPlanForm
             dgvRow6Column1.CellClick, dgvRow6Column2.CellClick, dgvRow6Column3.CellClick, dgvRow6Column4.CellClick, dgvRow6Column5.CellClick, dgvRow6Column6.CellClick
 
         Dim dgvSalesPlan As DataGridView = sender
-        selectRow = dgvSalesPlan.Rows(e.RowIndex)
         selectId = dgvSalesPlan.Rows(e.RowIndex).Cells(0).Value
-
 
     End Sub
 
@@ -72,7 +79,6 @@ Public Class SalesPlanForm
 
 
         Dim dgvSalesPlan As DataGridView = sender
-        selectRow = dgvSalesPlan.Rows(e.RowIndex)
         selectId = dgvSalesPlan.Rows(e.RowIndex).Cells(0).Value
 
         Dim childrenForm As New AnkenEditForm
@@ -80,6 +86,20 @@ Public Class SalesPlanForm
         childrenForm.ShowDialog()
 
         setDgvSalesPlans()
+
+    End Sub
+
+    Private Sub dgv_SalesPlans_RowContextMenuStripNeeded(sender As Object, e As DataGridViewRowContextMenuStripNeededEventArgs) Handles _
+        dgvRow1Column1.RowContextMenuStripNeeded, dgvRow1Column2.RowContextMenuStripNeeded, dgvRow1Column3.RowContextMenuStripNeeded, dgvRow1Column4.RowContextMenuStripNeeded, dgvRow1Column5.RowContextMenuStripNeeded, dgvRow1Column6.RowContextMenuStripNeeded,
+        dgvRow2Column1.RowContextMenuStripNeeded, dgvRow2Column2.RowContextMenuStripNeeded, dgvRow2Column3.RowContextMenuStripNeeded, dgvRow2Column4.RowContextMenuStripNeeded, dgvRow2Column5.RowContextMenuStripNeeded, dgvRow2Column6.RowContextMenuStripNeeded,
+        dgvRow3Column1.RowContextMenuStripNeeded, dgvRow3Column2.RowContextMenuStripNeeded, dgvRow3Column3.RowContextMenuStripNeeded, dgvRow3Column4.RowContextMenuStripNeeded, dgvRow3Column5.RowContextMenuStripNeeded, dgvRow3Column6.RowContextMenuStripNeeded,
+        dgvRow4Column1.RowContextMenuStripNeeded, dgvRow4Column2.RowContextMenuStripNeeded, dgvRow4Column3.RowContextMenuStripNeeded, dgvRow4Column4.RowContextMenuStripNeeded, dgvRow4Column5.RowContextMenuStripNeeded, dgvRow4Column6.RowContextMenuStripNeeded,
+        dgvRow5Column1.RowContextMenuStripNeeded, dgvRow5Column2.RowContextMenuStripNeeded, dgvRow5Column3.RowContextMenuStripNeeded, dgvRow5Column4.RowContextMenuStripNeeded, dgvRow5Column5.RowContextMenuStripNeeded, dgvRow5Column6.RowContextMenuStripNeeded,
+        dgvRow6Column1.RowContextMenuStripNeeded, dgvRow6Column2.RowContextMenuStripNeeded, dgvRow6Column3.RowContextMenuStripNeeded, dgvRow6Column4.RowContextMenuStripNeeded, dgvRow6Column5.RowContextMenuStripNeeded, dgvRow6Column6.RowContextMenuStripNeeded
+
+        selectDataGridView = sender
+        selectId = selectDataGridView.CurrentRow.Cells(0).Value
+        e.ContextMenuStrip = cmsStatusChange
 
     End Sub
 
@@ -211,7 +231,38 @@ Public Class SalesPlanForm
 
 
             End If
+
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 0))
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 1))
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 2))
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 3))
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 4))
+            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 5))
+
         Next
+
+    End Sub
+
+    Private Sub tsmi_Click(sender As Object, e As EventArgs) Handles _
+        tsmiNoPlan.Click, tsmiEstimating.Click, tsmiDecided.Click, tsmiInvoiced.Click, tsmiCancel.Click
+
+        Dim tsmi As ToolStripMenuItem = sender
+
+        Select Case tsmi.Text
+            Case "未定"
+                Ankens.updateStatus(selectId, AnkenStatus.NoPlan)
+            Case "見積中"
+                Ankens.updateStatus(selectId, AnkenStatus.Estimating)
+            Case "決定"
+                Ankens.updateStatus(selectId, AnkenStatus.Decided)
+            Case "請求済"
+                Ankens.updateStatus(selectId, AnkenStatus.Invoiced)
+            Case "取消"
+                Ankens.updateStatus(selectId, AnkenStatus.Cancel)
+        End Select
+
+        setDgvSalesPlans()
+
     End Sub
 
 

@@ -96,6 +96,7 @@
     </Compile>
     <Compile Include="Entity\Anken.vb" />
     <Compile Include="Entity\Calendar.vb" />
+    <Compile Include="Entity\Shop.vb" />
     <Compile Include="Entity\Client.vb" />
     <Compile Include="Entity\Staff.vb" />
     <Compile Include="Form\AnkenEditForm.Designer.vb">
@@ -108,6 +109,12 @@
       <DependentUpon>AnkenMasterForm.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\AnkenMasterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\BuyingForm.Designer.vb">
+      <DependentUpon>BuyingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\BuyingForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\CalendarMasterForm.Designer.vb">
@@ -135,6 +142,12 @@
     <Compile Include="Form\SalesPlanForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\ShopMasterForm.Designer.vb">
+      <DependentUpon>ShopMasterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ShopMasterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\StaffMasterForm.Designer.vb">
       <DependentUpon>StaffMasterForm.vb</DependentUpon>
     </Compile>
@@ -158,6 +171,7 @@
     </Compile>
     <Compile Include="SQL\Calendars.vb" />
     <Compile Include="SQL\Ankens.vb" />
+    <Compile Include="SQL\Shops.vb" />
     <Compile Include="SQL\Clients.vb" />
     <Compile Include="SQL\Staffs.vb" />
   </ItemGroup>
@@ -173,6 +187,9 @@
     <EmbeddedResource Include="Form\AnkenMasterForm.resx">
       <DependentUpon>AnkenMasterForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\BuyingForm.resx">
+      <DependentUpon>BuyingForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\CalendarMasterForm.resx">
       <DependentUpon>CalendarMasterForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\SalesPlanForm.resx">
       <DependentUpon>SalesPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ShopMasterForm.resx">
+      <DependentUpon>ShopMasterForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\StaffMasterForm.resx">
       <DependentUpon>StaffMasterForm.vb</DependentUpon>

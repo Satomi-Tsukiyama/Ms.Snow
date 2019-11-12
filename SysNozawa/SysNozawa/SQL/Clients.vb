@@ -107,7 +107,7 @@ Public Module Clients
     End Function
 
     ''' <summary>
-    ''' 社員情報を取得
+    ''' 取引先情報を取得
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
@@ -219,7 +219,7 @@ Public Module Clients
 #Region "追加"
 
     ''' <summary>
-    ''' 部署情報の追加
+    ''' 取引先情報の追加
     ''' </summary>
     ''' <param name="info"></param>
     ''' <returns></returns>
@@ -280,7 +280,7 @@ Public Module Clients
 #Region "削除"
 
     ''' <summary>
-    ''' 部署情報の削除
+    ''' 取引先情報の削除
     ''' </summary>
     ''' <param name="id">ID</param>
     ''' <returns></returns>

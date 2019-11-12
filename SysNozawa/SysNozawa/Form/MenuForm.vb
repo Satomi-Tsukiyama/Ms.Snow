@@ -26,8 +26,8 @@ Public Class MenuForm
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    Private Sub btnStaffReport_Click(sender As Object, e As EventArgs) Handles btnStaffReport.Click
-
+    Private Sub btnBuying_Click(sender As Object, e As EventArgs) Handles btnBuying.Click
+        My.Forms.BuyingForm.ShowDialog()
     End Sub
 
     ''' <summary>
@@ -49,6 +49,15 @@ Public Class MenuForm
     End Sub
 
     ''' <summary>
+    ''' 購入先マスタ 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnShopMaster_Click(sender As Object, e As EventArgs) Handles btnShopMaster.Click
+        My.Forms.ShopMasterForm.ShowDialog()
+    End Sub
+
+    ''' <summary>
     ''' 案件登録
     ''' </summary>
     ''' <param name="sender"></param>
@@ -57,10 +66,15 @@ Public Class MenuForm
         My.Forms.AnkenMasterForm.ShowDialog()
     End Sub
 
-
+    ''' <summary>
+    ''' 売上見込
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub btnSalesPlan_Click(sender As Object, e As EventArgs) Handles btnSalesPlan.Click
         My.Forms.SalesPlanForm.ShowDialog()
     End Sub
+
 
     ''' <summary>
     ''' 閉じるボタンクリック

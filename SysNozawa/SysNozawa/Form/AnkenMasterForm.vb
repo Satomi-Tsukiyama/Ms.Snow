@@ -15,6 +15,9 @@ Public Class AnkenMasterForm
         inputType = inputType.non
         selectId = 0
 
+        '工番2のセット
+        setCmbCode2()
+
         '従業員リストの表示
         setDgvAnken()
 
@@ -31,6 +34,26 @@ Public Class AnkenMasterForm
         CommonSet.setCmbStatus(cmbStatus)
 
         setOther()
+
+    End Sub
+
+    ''' <summary>
+    ''' 検索工番の変更
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub cmbCode2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCode2.SelectedIndexChanged
+
+        If cmbCode2.Text.Count > 0 Then
+            '案件リスト
+            dgvAnken.DataSource = Ankens.selectWhereCode2(cmbCode2.Text)
+        Else
+            '案件リスト
+            dgvAnken.DataSource = Ankens.selectAll()
+        End If
+
+        '背景色設定
+        CommonSet.setDgvAnken_BackColor(dgvAnken)
 
     End Sub
 
@@ -246,6 +269,8 @@ Public Class AnkenMasterForm
         inputType = inputType.non
         selectId = 0
 
+        setCmbCode2()
+
         setDgvAnken()
 
         setOther()
@@ -404,6 +429,21 @@ Public Class AnkenMasterForm
     End Sub
 
     ''' <summary>
+    ''' 工番2のセット
+    ''' </summary>
+    Private Sub setCmbCode2()
+
+        cmbCode2.Items.Clear()
+        Dim code2s As List(Of String) = Ankens.getAllCode2()
+
+        cmbCode2.Items.Add("")
+        For Each code2 In code2s
+            cmbCode2.Items.Add(code2)
+        Next
+
+    End Sub
+
+    ''' <summary>
     ''' 従業員リストの表示
     ''' </summary>
     Private Sub setDgvAnken()
@@ -411,7 +451,8 @@ Public Class AnkenMasterForm
         '案件リスト
         dgvAnken.DataSource = Ankens.selectAll()
 
-
+        '背景色設定
+        CommonSet.setDgvAnken_BackColor(dgvAnken)
 
     End Sub
 
