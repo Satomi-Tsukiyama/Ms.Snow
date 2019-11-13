@@ -32,6 +32,7 @@ Partial Class MenuForm
         Me.btnCalendarMaster = New System.Windows.Forms.Button()
         Me.btnAnkenMaster = New System.Windows.Forms.Button()
         Me.btnSalesPlan = New System.Windows.Forms.Button()
+        Me.btnItemMaster = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -39,9 +40,10 @@ Partial Class MenuForm
         'btnBuying
         '
         Me.btnBuying.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnBuying.Location = New System.Drawing.Point(99, 151)
+        Me.btnBuying.Location = New System.Drawing.Point(59, 101)
+        Me.btnBuying.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBuying.Name = "btnBuying"
-        Me.btnBuying.Size = New System.Drawing.Size(408, 45)
+        Me.btnBuying.Size = New System.Drawing.Size(245, 30)
         Me.btnBuying.TabIndex = 0
         Me.btnBuying.Text = "仕入登録"
         Me.btnBuying.UseVisualStyleBackColor = True
@@ -49,9 +51,10 @@ Partial Class MenuForm
         'btnStaffMaster
         '
         Me.btnStaffMaster.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnStaffMaster.Location = New System.Drawing.Point(542, 13)
+        Me.btnStaffMaster.Location = New System.Drawing.Point(26, 2)
+        Me.btnStaffMaster.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnStaffMaster.Name = "btnStaffMaster"
-        Me.btnStaffMaster.Size = New System.Drawing.Size(408, 45)
+        Me.btnStaffMaster.Size = New System.Drawing.Size(245, 28)
         Me.btnStaffMaster.TabIndex = 1
         Me.btnStaffMaster.Text = "従業員マスタ"
         Me.btnStaffMaster.UseVisualStyleBackColor = True
@@ -59,9 +62,10 @@ Partial Class MenuForm
         'btnClose
         '
         Me.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnClose.Location = New System.Drawing.Point(855, 663)
+        Me.btnClose.Location = New System.Drawing.Point(513, 442)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(244, 47)
+        Me.btnClose.Size = New System.Drawing.Size(146, 31)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "閉じる"
         Me.btnClose.UseVisualStyleBackColor = True
@@ -69,9 +73,11 @@ Partial Class MenuForm
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.TableLayoutPanel2)
-        Me.GroupBox2.Location = New System.Drawing.Point(29, 390)
+        Me.GroupBox2.Location = New System.Drawing.Point(17, 260)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1069, 206)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(641, 170)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "マスタ"
@@ -81,24 +87,29 @@ Partial Class MenuForm
         Me.TableLayoutPanel2.ColumnCount = 2
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnShopMaster, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnStaffMaster, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnClientMaster, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnCalendarMaster, 1, 1)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(36, 38)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnClientMaster, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnStaffMaster, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnItemMaster, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnShopMaster, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnCalendarMaster, 0, 2)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(22, 25)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(995, 145)
+        Me.TableLayoutPanel2.RowCount = 4
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(597, 128)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'btnShopMaster
         '
         Me.btnShopMaster.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnShopMaster.Location = New System.Drawing.Point(44, 86)
+        Me.btnShopMaster.Location = New System.Drawing.Point(325, 2)
+        Me.btnShopMaster.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnShopMaster.Name = "btnShopMaster"
-        Me.btnShopMaster.Size = New System.Drawing.Size(408, 45)
+        Me.btnShopMaster.Size = New System.Drawing.Size(245, 28)
         Me.btnShopMaster.TabIndex = 8
         Me.btnShopMaster.Text = "購入先マスタ"
         Me.btnShopMaster.UseVisualStyleBackColor = True
@@ -106,9 +117,10 @@ Partial Class MenuForm
         'btnClientMaster
         '
         Me.btnClientMaster.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnClientMaster.Location = New System.Drawing.Point(44, 13)
+        Me.btnClientMaster.Location = New System.Drawing.Point(26, 34)
+        Me.btnClientMaster.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnClientMaster.Name = "btnClientMaster"
-        Me.btnClientMaster.Size = New System.Drawing.Size(408, 45)
+        Me.btnClientMaster.Size = New System.Drawing.Size(245, 28)
         Me.btnClientMaster.TabIndex = 2
         Me.btnClientMaster.Text = "得意先マスタ"
         Me.btnClientMaster.UseVisualStyleBackColor = True
@@ -116,9 +128,10 @@ Partial Class MenuForm
         'btnCalendarMaster
         '
         Me.btnCalendarMaster.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCalendarMaster.Location = New System.Drawing.Point(542, 86)
+        Me.btnCalendarMaster.Location = New System.Drawing.Point(26, 66)
+        Me.btnCalendarMaster.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCalendarMaster.Name = "btnCalendarMaster"
-        Me.btnCalendarMaster.Size = New System.Drawing.Size(408, 45)
+        Me.btnCalendarMaster.Size = New System.Drawing.Size(245, 28)
         Me.btnCalendarMaster.TabIndex = 7
         Me.btnCalendarMaster.Text = "カレンダーマスタ"
         Me.btnCalendarMaster.UseVisualStyleBackColor = True
@@ -126,9 +139,10 @@ Partial Class MenuForm
         'btnAnkenMaster
         '
         Me.btnAnkenMaster.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnAnkenMaster.Location = New System.Drawing.Point(99, 86)
+        Me.btnAnkenMaster.Location = New System.Drawing.Point(59, 57)
+        Me.btnAnkenMaster.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAnkenMaster.Name = "btnAnkenMaster"
-        Me.btnAnkenMaster.Size = New System.Drawing.Size(408, 45)
+        Me.btnAnkenMaster.Size = New System.Drawing.Size(245, 30)
         Me.btnAnkenMaster.TabIndex = 5
         Me.btnAnkenMaster.Text = "案件登録"
         Me.btnAnkenMaster.UseVisualStyleBackColor = True
@@ -136,23 +150,36 @@ Partial Class MenuForm
         'btnSalesPlan
         '
         Me.btnSalesPlan.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnSalesPlan.Location = New System.Drawing.Point(607, 86)
+        Me.btnSalesPlan.Location = New System.Drawing.Point(364, 57)
+        Me.btnSalesPlan.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnSalesPlan.Name = "btnSalesPlan"
-        Me.btnSalesPlan.Size = New System.Drawing.Size(408, 45)
+        Me.btnSalesPlan.Size = New System.Drawing.Size(245, 30)
         Me.btnSalesPlan.TabIndex = 6
         Me.btnSalesPlan.Text = "売上見込"
         Me.btnSalesPlan.UseVisualStyleBackColor = True
         '
+        'btnItemMaster
+        '
+        Me.btnItemMaster.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnItemMaster.Location = New System.Drawing.Point(325, 34)
+        Me.btnItemMaster.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnItemMaster.Name = "btnItemMaster"
+        Me.btnItemMaster.Size = New System.Drawing.Size(245, 28)
+        Me.btnItemMaster.TabIndex = 9
+        Me.btnItemMaster.Text = "商品マスタ"
+        Me.btnItemMaster.UseVisualStyleBackColor = True
+        '
         'MenuForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1111, 722)
+        Me.ClientSize = New System.Drawing.Size(667, 481)
         Me.Controls.Add(Me.btnBuying)
         Me.Controls.Add(Me.btnSalesPlan)
         Me.Controls.Add(Me.btnAnkenMaster)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnClose)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "MenuForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "メニュー"
@@ -171,4 +198,5 @@ Partial Class MenuForm
     Friend WithEvents btnAnkenMaster As Button
     Friend WithEvents btnShopMaster As Button
     Friend WithEvents btnSalesPlan As Button
+    Friend WithEvents btnItemMaster As Button
 End Class

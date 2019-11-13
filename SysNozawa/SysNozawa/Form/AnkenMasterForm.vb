@@ -115,6 +115,9 @@ Public Class AnkenMasterForm
         btnOK.Text = "追加"
         btnCancel.Text = "中止"
 
+        '工番1を選択中
+        cmbCode1.Select()
+
     End Sub
 
     ''' <summary>
@@ -144,6 +147,9 @@ Public Class AnkenMasterForm
         btnOK.Enabled = True
         btnOK.Text = "編集"
         btnCancel.Text = "中止"
+
+        '工番1を選択中
+        cmbCode1.Select()
 
     End Sub
 
@@ -274,6 +280,9 @@ Public Class AnkenMasterForm
 
         setOther()
 
+        '新規追加ボタン選択中
+        mitmAdd.Select()
+
     End Sub
 
     ''' <summary>
@@ -321,6 +330,9 @@ Public Class AnkenMasterForm
             btnOK.Enabled = False
             btnOK.Text = "編集"
             btnCancel.Text = "閉じる"
+
+            '新規追加ボタン選択中
+            mitmAdd.Select()
 
         Else '閉じるクリック
             Me.Close()
@@ -557,6 +569,4 @@ Public Class AnkenMasterForm
         Return True
 
     End Function
-
-
 End Class

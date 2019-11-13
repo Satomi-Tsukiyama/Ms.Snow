@@ -75,6 +75,14 @@ Public Class MenuForm
         My.Forms.SalesPlanForm.ShowDialog()
     End Sub
 
+    ''' <summary>
+    ''' 商品マスタ
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnItemMaster_Click(sender As Object, e As EventArgs) Handles btnItemMaster.Click
+        My.Forms.ItemMasterForm.ShowDialog()
+    End Sub
 
     ''' <summary>
     ''' 閉じるボタンクリック

@@ -130,6 +130,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\CommonSet.vb" />
+    <Compile Include="Form\ItemMasterForm.Designer.vb">
+      <DependentUpon>ItemMasterForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ItemMasterForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\MenuForm.Designer.vb">
       <DependentUpon>MenuForm.vb</DependentUpon>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ClientMasterForm.resx">
       <DependentUpon>ClientMasterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ItemMasterForm.resx">
+      <DependentUpon>ItemMasterForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MenuForm.resx">
       <DependentUpon>MenuForm.vb</DependentUpon>
