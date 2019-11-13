@@ -113,6 +113,7 @@ Public Class ShopMasterForm
             MessageBox.Show("削除しました。")
         Else
             MessageBox.Show("削除に失敗しました。")
+            Exit Sub
         End If
 
         inputType = inputType.non
@@ -158,6 +159,7 @@ Public Class ShopMasterForm
                 MessageBox.Show("追加しました。")
             Else
                 MessageBox.Show("追加に失敗しました。")
+                Exit Sub
             End If
 
         ElseIf inputType = inputType.update Then '編集クリック
@@ -181,6 +183,7 @@ Public Class ShopMasterForm
                 MessageBox.Show("編集しました。")
             Else
                 MessageBox.Show("編集に失敗しました。")
+                Exit Sub
             End If
 
         Else

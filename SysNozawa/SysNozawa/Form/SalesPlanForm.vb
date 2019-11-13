@@ -204,14 +204,21 @@ Public Class SalesPlanForm
         For i As Integer = 0 To cmbClients.Count - 1
 
             Dim cmbClient As ComboBox = cmbClients(i)
+
+            Dim year As Integer = dtpDisplayYear.Value.Year
+            Dim month As Integer = lblMonths(0).Text
+
             If cmbClient.SelectedIndex > 0 Then
 
-                dgvSalesPlans(6 * i + 0).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(0).Text)
-                dgvSalesPlans(6 * i + 1).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(1).Text)
-                dgvSalesPlans(6 * i + 2).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(2).Text)
-                dgvSalesPlans(6 * i + 3).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(3).Text)
-                dgvSalesPlans(6 * i + 4).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(4).Text)
-                dgvSalesPlans(6 * i + 5).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, dtpDisplayYear.Value.Year, lblMonths(5).Text)
+                For j As Integer = 0 To 5
+                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, year, month)
+
+                    month = month + 1
+                    If month > 12 Then
+                        year = year + 1
+                        month = 1
+                    End If
+                Next
 
             Else '空白選択時　他のをすべて表示
 
@@ -222,22 +229,21 @@ Public Class SalesPlanForm
                     End If
                 Next
 
-                dgvSalesPlans(6 * i + 0).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(0).Text)
-                dgvSalesPlans(6 * i + 1).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(1).Text)
-                dgvSalesPlans(6 * i + 2).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(2).Text)
-                dgvSalesPlans(6 * i + 3).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(3).Text)
-                dgvSalesPlans(6 * i + 4).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(4).Text)
-                dgvSalesPlans(6 * i + 5).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, dtpDisplayYear.Value.Year, lblMonths(5).Text)
+                For j As Integer = 0 To 5
+                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, year, month)
 
+                    month = month + 1
+                    If month > 12 Then
+                        year = year + 1
+                        month = 1
+                    End If
+                Next
 
             End If
 
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 0))
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 1))
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 2))
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 3))
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 4))
-            CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + 5))
+            For j As Integer = 0 To 5
+                CommonSet.setDgvAnken_BackColor(dgvSalesPlans(6 * i + j))
+            Next
 
         Next
 

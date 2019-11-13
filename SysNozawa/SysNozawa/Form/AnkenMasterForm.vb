@@ -4,6 +4,7 @@ Public Class AnkenMasterForm
 
     Private inputType As New inputType
     Private selectId As Integer = 0
+    Private editCode3Flg As Boolean = False
 
     ''' <summary>
     ''' ロードイベント
@@ -43,18 +44,7 @@ Public Class AnkenMasterForm
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub cmbCode2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCode2.SelectedIndexChanged
-
-        If cmbCode2.Text.Count > 0 Then
-            '案件リスト
-            dgvAnken.DataSource = Ankens.selectWhereCode2(cmbCode2.Text)
-        Else
-            '案件リスト
-            dgvAnken.DataSource = Ankens.selectAll()
-        End If
-
-        '背景色設定
-        CommonSet.setDgvAnken_BackColor(dgvAnken)
-
+        setDgvAnken()
     End Sub
 
     ''' <summary>
@@ -104,6 +94,7 @@ Public Class AnkenMasterForm
         cmbCode1.SelectedItem = ""
         txtCode2.Enabled = True
         txtCode2.Text = ""
+        btnEditCode3.Enabled = True
         txtCode3.Enabled = False
         txtCode3.Text = ""
         txtName.Enabled = True
@@ -141,6 +132,7 @@ Public Class AnkenMasterForm
 
         cmbCode1.Enabled = True
         txtCode2.Enabled = True
+        btnEditCode3.Enabled = True
         txtCode3.Enabled = False
         txtName.Enabled = True
         cmbClient.Enabled = True
@@ -177,6 +169,7 @@ Public Class AnkenMasterForm
             MessageBox.Show("削除しました。")
         Else
             MessageBox.Show("削除に失敗しました。")
+            Exit Sub
         End If
 
         inputType = inputType.non
@@ -220,7 +213,11 @@ Public Class AnkenMasterForm
             insertInfo.clientId = cmbClient.SelectedValue
             insertInfo.clientCode = cmbClient.Text
             insertInfo.salesYearMonth = dtpSalesYearMonth.Value
-            insertInfo.salesAmount = txtSalesAmount.Text
+            If txtSalesAmount.Text.Count > 0 Then
+                insertInfo.salesAmount = txtSalesAmount.Text
+            Else
+                insertInfo.salesAmount = 0
+            End If
             insertInfo.staffId = cmbStaff.SelectedValue
             insertInfo.staffName = cmbStaff.Text
             insertInfo.status = cmbStatus.SelectedValue
@@ -229,6 +226,7 @@ Public Class AnkenMasterForm
                 MessageBox.Show("追加しました。")
             Else
                 MessageBox.Show("追加に失敗しました。")
+                Exit Sub
             End If
 
         ElseIf inputType = inputType.update Then '編集クリック
@@ -260,6 +258,7 @@ Public Class AnkenMasterForm
                 MessageBox.Show("編集しました。")
             Else
                 MessageBox.Show("編集に失敗しました。")
+                Exit Sub
             End If
 
         Else
@@ -297,6 +296,9 @@ Public Class AnkenMasterForm
             cmbCode1.SelectedItem = ""
             txtCode2.Enabled = False
             txtCode2.Text = ""
+            btnEditCode3.Enabled = False
+            btnEditCode3.Text = "連番編集"
+            txtCode3.ReadOnly = True
             txtCode3.Enabled = False
             txtCode3.Text = ""
             txtName.Enabled = False
@@ -364,6 +366,37 @@ Public Class AnkenMasterForm
 
     End Sub
 
+    ''' <summary>
+    ''' 工番3入力許可
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnEditCode3_Click(sender As Object, e As EventArgs) Handles btnEditCode3.Click
+
+        If editCode3Flg Then
+
+            txtCode3.ReadOnly = True
+            txtCode3.Enabled = False
+            If cmbCode1.Text = "" Or txtCode2.Text = "" Then
+                txtCode3.Text = ""
+            Else
+                txtCode3.Text = Ankens.getNewCode3(txtCode2.Text).ToString("D2")
+            End If
+
+            editCode3Flg = False
+            btnEditCode3.Text = "連番編集"
+
+        Else
+
+            txtCode3.ReadOnly = False
+            txtCode3.Enabled = True
+
+            editCode3Flg = True
+            btnEditCode3.Text = "連番自動"
+
+        End If
+
+    End Sub
     ''' <summary>
     ''' 売上金額に金額入力のみ許可
     ''' </summary>
@@ -448,8 +481,13 @@ Public Class AnkenMasterForm
     ''' </summary>
     Private Sub setDgvAnken()
 
-        '案件リスト
-        dgvAnken.DataSource = Ankens.selectAll()
+        If cmbCode2.Text.Count > 0 Then
+            '案件リスト
+            dgvAnken.DataSource = Ankens.selectWhereCode2(cmbCode2.Text)
+        Else
+            '案件リスト
+            dgvAnken.DataSource = Ankens.selectAll()
+        End If
 
         '背景色設定
         CommonSet.setDgvAnken_BackColor(dgvAnken)
@@ -467,8 +505,12 @@ Public Class AnkenMasterForm
         cmbCode1.SelectedItem = ""
         txtCode2.Enabled = False
         txtCode2.Text = ""
+        txtCode3.ReadOnly = True
         txtCode3.Enabled = False
         txtCode3.Text = ""
+        btnEditCode3.Enabled = False
+        btnEditCode3.Text = "連番編集"
+        editCode3Flg = False
         txtName.Enabled = False
         txtName.Text = ""
         cmbClient.Enabled = False

@@ -50,6 +50,8 @@ Public Class AnkenEditForm
         dtpSalesYearMonth.Enabled = True
         txtSalesAmount.Enabled = True
         cmbStaff.Enabled = True
+        cmbStaff.Enabled = True
+        cmbStatus.Enabled = True
 
         btnOK.Enabled = True
         btnOK.Text = "編集"
@@ -94,11 +96,14 @@ Public Class AnkenEditForm
             updateInfo.salesAmount = txtSalesAmount.Text
             updateInfo.staffId = cmbStaff.SelectedValue
             updateInfo.staffName = cmbStaff.SelectedText
+            updateInfo.status = cmbStatus.SelectedValue
+
 
             If Ankens.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
             Else
                 MessageBox.Show("編集に失敗しました。")
+                Exit Sub
             End If
 
         Else
@@ -134,6 +139,7 @@ Public Class AnkenEditForm
             dtpSalesYearMonth.Enabled = False
             txtSalesAmount.Enabled = False
             cmbStaff.Enabled = False
+            cmbStatus.Enabled = False
 
             btnOK.Enabled = False
             btnOK.Text = "編集"
@@ -283,7 +289,7 @@ Public Class AnkenEditForm
     ''' <returns></returns>
     Private Function check() As Boolean
 
-        If Ankens.getCountSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
+        If inputType = inputType.insert And Ankens.getCountSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
             MessageBox.Show("同一の工番がすでに存在します。")
             Return False
         End If

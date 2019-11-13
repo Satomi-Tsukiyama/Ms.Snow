@@ -31,14 +31,14 @@ Partial Class ClientMasterForm
         Me.cCode = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.txtCode = New System.Windows.Forms.TextBox()
-        Me.txtName = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvClient, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -50,26 +50,27 @@ Partial Class ClientMasterForm
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitmAdd, Me.mitmEdit, Me.mitmDelete})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(628, 33)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 1, 0, 1)
+        Me.MenuStrip1.Size = New System.Drawing.Size(377, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'mitmAdd
         '
         Me.mitmAdd.Name = "mitmAdd"
-        Me.mitmAdd.Size = New System.Drawing.Size(96, 29)
+        Me.mitmAdd.Size = New System.Drawing.Size(68, 22)
         Me.mitmAdd.Text = "新規追加"
         '
         'mitmEdit
         '
         Me.mitmEdit.Name = "mitmEdit"
-        Me.mitmEdit.Size = New System.Drawing.Size(60, 29)
+        Me.mitmEdit.Size = New System.Drawing.Size(44, 22)
         Me.mitmEdit.Text = "編集"
         '
         'mitmDelete
         '
         Me.mitmDelete.Name = "mitmDelete"
-        Me.mitmDelete.Size = New System.Drawing.Size(60, 29)
+        Me.mitmDelete.Size = New System.Drawing.Size(44, 22)
         Me.mitmDelete.Text = "削除"
         '
         'dgvClient
@@ -79,11 +80,12 @@ Partial Class ClientMasterForm
         Me.dgvClient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cCode, Me.cName})
-        Me.dgvClient.Location = New System.Drawing.Point(33, 59)
+        Me.dgvClient.Location = New System.Drawing.Point(20, 39)
+        Me.dgvClient.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvClient.Name = "dgvClient"
         Me.dgvClient.ReadOnly = True
         Me.dgvClient.RowTemplate.Height = 27
-        Me.dgvClient.Size = New System.Drawing.Size(561, 366)
+        Me.dgvClient.Size = New System.Drawing.Size(337, 244)
         Me.dgvClient.TabIndex = 10
         '
         'cId
@@ -115,28 +117,63 @@ Partial Class ClientMasterForm
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.79397!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.20603!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 361.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtName, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.txtCode, 2, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(33, 442)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(20, 295)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(561, 81)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(337, 54)
         Me.TableLayoutPanel1.TabIndex = 11
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(76, 34)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(41, 12)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "（必須）"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(76, 7)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(41, 12)
+        Me.Label10.TabIndex = 24
+        Me.Label10.Text = "（必須）"
+        '
+        'txtName
+        '
+        Me.txtName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtName.Location = New System.Drawing.Point(121, 31)
+        Me.txtName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(214, 19)
+        Me.txtName.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 51)
+        Me.Label2.Location = New System.Drawing.Point(15, 34)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(80, 18)
+        Me.Label2.Size = New System.Drawing.Size(53, 12)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "取引先名"
         '
@@ -144,18 +181,29 @@ Partial Class ClientMasterForm
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 11)
+        Me.Label1.Location = New System.Drawing.Point(9, 1)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(102, 18)
+        Me.Label1.Size = New System.Drawing.Size(59, 24)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "取引先コード"
+        '
+        'txtCode
+        '
+        Me.txtCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCode.Location = New System.Drawing.Point(121, 4)
+        Me.txtCode.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(214, 19)
+        Me.txtCode.TabIndex = 3
         '
         'btnOK
         '
         Me.btnOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnOK.Location = New System.Drawing.Point(274, 542)
+        Me.btnOK.Location = New System.Drawing.Point(164, 361)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnOK.Name = "btnOK"
-        Me.btnOK.Size = New System.Drawing.Size(152, 40)
+        Me.btnOK.Size = New System.Drawing.Size(91, 27)
         Me.btnOK.TabIndex = 12
         Me.btnOK.Text = "更新"
         Me.btnOK.UseVisualStyleBackColor = True
@@ -163,62 +211,26 @@ Partial Class ClientMasterForm
         'btnCancel
         '
         Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.Location = New System.Drawing.Point(442, 542)
+        Me.btnCancel.Location = New System.Drawing.Point(265, 361)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(152, 40)
+        Me.btnCancel.Size = New System.Drawing.Size(91, 27)
         Me.btnCancel.TabIndex = 13
         Me.btnCancel.Text = "閉じる"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'txtCode
-        '
-        Me.txtCode.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCode.Location = New System.Drawing.Point(202, 7)
-        Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(356, 25)
-        Me.txtCode.TabIndex = 3
-        '
-        'txtName
-        '
-        Me.txtName.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtName.Location = New System.Drawing.Point(202, 48)
-        Me.txtName.Name = "txtName"
-        Me.txtName.Size = New System.Drawing.Size(356, 25)
-        Me.txtName.TabIndex = 12
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(134, 11)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 18)
-        Me.Label10.TabIndex = 24
-        Me.Label10.Text = "（必須）"
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(134, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(62, 18)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "（必須）"
-        '
         'ClientMasterForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(628, 594)
+        Me.ClientSize = New System.Drawing.Size(377, 396)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.dgvClient)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "ClientMasterForm"

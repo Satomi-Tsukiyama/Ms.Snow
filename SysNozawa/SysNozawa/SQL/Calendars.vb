@@ -144,7 +144,12 @@ Public Module Calendars
             'SQL文 
             sqlStr = "select * from calendar"
             sqlStr = sqlStr + String.Format(" where day >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
-            sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
+            If month = 12 Then
+                sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
+            Else
+                sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
+            End If
+
             sqlStr = sqlStr + " and holidayflg is not null"
 
             'MySQLCommand作成 

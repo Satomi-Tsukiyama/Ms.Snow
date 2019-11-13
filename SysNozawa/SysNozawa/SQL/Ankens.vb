@@ -390,7 +390,7 @@ Public Module Ankens
 
     End Function
 
-    Public Function selectWhereElseClientAndSalesYearMonth(clientIds_list As List(Of Integer), yaer As Integer, month As Integer) As DataTable
+    Public Function selectWhereElseClientAndSalesYearMonth(clientIds_list As List(Of Integer), year As Integer, month As Integer) As DataTable
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -433,11 +433,11 @@ Public Module Ankens
                 sqlStr = sqlStr + ")"
             End If
 
-            sqlStr = sqlStr + String.Format(" and anken.salesyearmonth >= '{0}'", CDate(yaer.ToString + "/" + month.ToString + "/" + "1"))
+            sqlStr = sqlStr + String.Format(" and anken.salesyearmonth >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate((yaer + 1).ToString + "/" + "1" + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
             Else
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate(yaer.ToString + "/" + (month + 1).ToString + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
 
             End If
 

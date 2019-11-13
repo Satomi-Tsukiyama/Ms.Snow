@@ -167,6 +167,7 @@ Public Class CalendarMasterForm
                 MessageBox.Show("編集しました。")
             Else
                 MessageBox.Show("編集に失敗しました。")
+                Exit Sub
             End If
 
         Else
