@@ -70,23 +70,29 @@
 
         Dim dr As DataRow = dt.NewRow
         dr("cId") = 1
-        dr("cStatus") = "未決定"
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
+
         dr = dt.NewRow
         dr("cId") = 2
-        dr("cStatus") = "見積済"
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
+
         dr = dt.NewRow
         dr("cId") = 3
-        dr("cStatus") = "決定"
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
         dr = dt.NewRow
         dr("cId") = 4
-        dr("cStatus") = "請求済"
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+        dt.Rows.Add(dr)
+        dr = dt.NewRow
+        dr("cId") = 5
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
         dr = dt.NewRow
         dr("cId") = 99
-        dr("cStatus") = "取消"
+        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
 
         cmbStatus.DataSource = dt

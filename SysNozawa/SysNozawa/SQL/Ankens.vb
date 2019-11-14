@@ -57,6 +57,10 @@ Public Module Ankens
 
     End Function
 
+    ''' <summary>
+    ''' 全ての工番2を取得
+    ''' </summary>
+    ''' <returns></returns>
     Public Function getAllCode2() As List(Of String)
 
         Dim cmd As MySqlCommand
@@ -79,7 +83,7 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select distinct anken.code2"
+            sqlStr = "select distinct code2"
             sqlStr = sqlStr + " from anken"
 
             'MySQLCommand作成 

@@ -94,6 +94,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inhibitStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Item.vb" />
     <Compile Include="Entity\Anken.vb" />
     <Compile Include="Entity\Calendar.vb" />
     <Compile Include="Entity\Shop.vb" />
@@ -177,6 +178,7 @@
     </Compile>
     <Compile Include="SQL\Calendars.vb" />
     <Compile Include="SQL\Ankens.vb" />
+    <Compile Include="SQL\Items.vb" />
     <Compile Include="SQL\Shops.vb" />
     <Compile Include="SQL\Clients.vb" />
     <Compile Include="SQL\Staffs.vb" />

@@ -10,6 +10,8 @@ Public Class SalesPlanForm
     Private cmbClients As ComboBox()
     Private dgvSalesPlans As DataGridView()
 
+    Private semesters As String() = {"前期", "後期"}
+
     ''' <summary>
     ''' ロードイベント
     ''' </summary>
@@ -32,10 +34,6 @@ Public Class SalesPlanForm
         setCmbClients()
 
         setDudSemester()
-
-        mitmAdd.Enabled = False
-        mitmEdit.Enabled = False
-        mitmDelete.Enabled = False
 
     End Sub
 
@@ -134,8 +132,7 @@ Public Class SalesPlanForm
     Private Sub setDudSemester()
 
         dudSemester.Items.Clear()
-        dudSemester.Items.Add("前期")
-        dudSemester.Items.Add("後期")
+        dudSemester.Items.AddRange(semesters)
 
         dtpDisplayYear.Value = Now
         Select Case Now.Month
@@ -175,22 +172,26 @@ Public Class SalesPlanForm
     End Sub
 
     Private Sub setLblSemesters()
-        Select Case dudSemester.Text
-            Case "前期"
-                lblMonth1.Text = 6
-                lblMonth2.Text = 7
-                lblMonth3.Text = 8
-                lblMonth4.Text = 9
-                lblMonth5.Text = 10
-                lblMonth6.Text = 11
+        Dim month As Integer
+        Select Case dudSemester.SelectedIndex
+            Case 0
+                month = 6
             Case Else
-                lblMonth1.Text = 12
-                lblMonth2.Text = 1
-                lblMonth3.Text = 2
-                lblMonth4.Text = 3
-                lblMonth5.Text = 4
-                lblMonth6.Text = 5
+                month = 12
         End Select
+
+        If IsNothing(lblMonths) = False Then
+            For Each lblMonth In lblMonths
+
+                If month > 12 Then
+                    month = 1
+                End If
+                lblMonth.Text = month
+                month = month + 1
+
+            Next
+        End If
+
     End Sub
 
     Private Sub setDgvSalesPlans()
@@ -254,22 +255,44 @@ Public Class SalesPlanForm
 
         Dim tsmi As ToolStripMenuItem = sender
 
-        Select Case tsmi.Text
-            Case "未定"
-                Ankens.updateStatus(selectId, AnkenStatus.NoPlan)
-            Case "見積中"
-                Ankens.updateStatus(selectId, AnkenStatus.Estimating)
-            Case "決定"
-                Ankens.updateStatus(selectId, AnkenStatus.Decided)
-            Case "請求済"
-                Ankens.updateStatus(selectId, AnkenStatus.Invoiced)
-            Case "取消"
-                Ankens.updateStatus(selectId, AnkenStatus.Cancel)
-        End Select
+        Dim a = cmsStatusChange.Items.IndexOf(tsmi)
+
+        Dim ankenStatus As Integer = cmsStatusChange.Items.IndexOf(tsmi) + 1
+        Ankens.updateStatus(selectId, ankenStatus)
 
         setDgvSalesPlans()
 
     End Sub
 
+    ''' <summary>
+    ''' 前へボタンクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
 
+        If dudSemester.SelectedIndex = 0 Then '前期
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(-1)
+            dudSemester.SelectedIndex = 1
+        Else'後期
+            dudSemester.SelectedIndex = 0
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' 次へボタンクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+
+        If dudSemester.SelectedIndex = 0 Then '前期
+            dudSemester.SelectedIndex = 1
+        Else '後期
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(1)
+            dudSemester.SelectedIndex = 0
+        End If
+
+    End Sub
 End Class

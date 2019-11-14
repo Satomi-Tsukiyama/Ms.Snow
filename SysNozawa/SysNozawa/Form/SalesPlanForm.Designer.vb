@@ -23,9 +23,6 @@ Partial Class SalesPlanForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -116,38 +113,27 @@ Partial Class SalesPlanForm
         Dim DataGridViewCellStyle91 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle92 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle93 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle106 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle107 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle108 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle103 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle104 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle105 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle100 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle101 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle102 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle97 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle98 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle99 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle94 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle95 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle96 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvRow6Column1 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn404 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn405 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn406 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn407 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn408 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn409 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn410 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn411 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn412 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn413 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn414 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn415 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn416 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn465 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow5Column1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn300 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn301 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -623,80 +609,10 @@ Partial Class SalesPlanForm
         Me.DataGridViewTextBoxColumn396 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn397 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow6Column2 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn398 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn399 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn400 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn401 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn402 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn403 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn417 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn418 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn419 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn420 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn421 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn422 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn423 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn424 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow6Column3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn425 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn426 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn427 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn428 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn429 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn430 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn431 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn432 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn433 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn434 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn435 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn436 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn437 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn438 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow6Column4 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn439 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn440 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn441 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn442 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn443 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn444 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn445 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn446 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn447 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn448 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn449 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn450 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn451 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn452 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow6Column5 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn453 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn454 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn455 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn466 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn467 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn468 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn469 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn470 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn471 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn472 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn473 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn474 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn475 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn476 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgvRow6Column6 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn477 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn478 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn479 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn480 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn481 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn482 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn483 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn484 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn485 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn486 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn487 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn488 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn489 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn490 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.dtpDisplayYear = New System.Windows.Forms.DateTimePicker()
         Me.dudSemester = New System.Windows.Forms.DomainUpDown()
@@ -706,10 +622,92 @@ Partial Class SalesPlanForm
         Me.tsmiDecided = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiInvoiced = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmiCancel = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.mitmAdd = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mitmEdit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mitmDelete = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnPrev = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn477 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn478 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn479 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn480 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn481 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn486 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn482 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn483 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn484 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn485 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn487 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn488 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn489 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn490 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn453 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn454 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn455 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn466 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn467 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn472 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn468 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn469 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn470 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn471 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn473 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn474 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn475 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn476 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn439 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn440 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn441 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn442 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn443 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn448 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn444 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn445 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn446 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn447 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn449 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn450 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn451 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn452 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn425 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn426 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn427 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn428 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn429 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn434 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn430 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn431 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn432 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn433 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn435 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn436 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn437 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn438 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn398 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn399 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn400 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn401 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn402 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn420 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn403 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn417 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn418 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn419 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn421 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn422 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn423 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn424 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn404 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn405 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn406 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn407 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn408 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn413 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn409 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn410 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn411 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn412 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn414 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn415 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn416 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn465 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel3.SuspendLayout()
         CType(Me.dgvRow6Column1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -756,7 +754,6 @@ Partial Class SalesPlanForm
         CType(Me.dgvRow6Column6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.cmsStatusChange.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -769,12 +766,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(28, 56)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(28, 12)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(2094, 1276)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(2094, 1320)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel3
@@ -838,7 +835,7 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column4, 4, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column5, 5, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column6, 6, 6)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 92)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 69)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 7
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.0!))
@@ -849,7 +846,7 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(2088, 1181)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(2088, 1248)
         Me.TableLayoutPanel3.TabIndex = 15
         '
         'dgvRow6Column1
@@ -862,134 +859,14 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column1.ColumnHeadersVisible = False
-        Me.dgvRow6Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn404, Me.DataGridViewTextBoxColumn405, Me.DataGridViewTextBoxColumn406, Me.DataGridViewTextBoxColumn407, Me.DataGridViewTextBoxColumn408, Me.DataGridViewTextBoxColumn409, Me.DataGridViewTextBoxColumn410, Me.DataGridViewTextBoxColumn411, Me.DataGridViewTextBoxColumn412, Me.DataGridViewTextBoxColumn413, Me.DataGridViewTextBoxColumn414, Me.DataGridViewTextBoxColumn415, Me.DataGridViewTextBoxColumn416, Me.DataGridViewTextBoxColumn465})
-        Me.dgvRow6Column1.Location = New System.Drawing.Point(149, 990)
+        Me.dgvRow6Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn404, Me.DataGridViewTextBoxColumn405, Me.DataGridViewTextBoxColumn406, Me.DataGridViewTextBoxColumn407, Me.DataGridViewTextBoxColumn408, Me.DataGridViewTextBoxColumn413, Me.DataGridViewTextBoxColumn409, Me.DataGridViewTextBoxColumn410, Me.DataGridViewTextBoxColumn411, Me.DataGridViewTextBoxColumn412, Me.DataGridViewTextBoxColumn414, Me.DataGridViewTextBoxColumn415, Me.DataGridViewTextBoxColumn416, Me.DataGridViewTextBoxColumn465})
+        Me.dgvRow6Column1.Location = New System.Drawing.Point(149, 1047)
         Me.dgvRow6Column1.Name = "dgvRow6Column1"
         Me.dgvRow6Column1.ReadOnly = True
         Me.dgvRow6Column1.RowHeadersVisible = False
         Me.dgvRow6Column1.RowTemplate.Height = 27
-        Me.dgvRow6Column1.Size = New System.Drawing.Size(317, 188)
+        Me.dgvRow6Column1.Size = New System.Drawing.Size(317, 198)
         Me.dgvRow6Column1.TabIndex = 39
-        '
-        'DataGridViewTextBoxColumn404
-        '
-        Me.DataGridViewTextBoxColumn404.DataPropertyName = "cId"
-        Me.DataGridViewTextBoxColumn404.HeaderText = ""
-        Me.DataGridViewTextBoxColumn404.Name = "DataGridViewTextBoxColumn404"
-        Me.DataGridViewTextBoxColumn404.ReadOnly = True
-        Me.DataGridViewTextBoxColumn404.Visible = False
-        '
-        'DataGridViewTextBoxColumn405
-        '
-        Me.DataGridViewTextBoxColumn405.DataPropertyName = "cCode1"
-        Me.DataGridViewTextBoxColumn405.HeaderText = "工番1"
-        Me.DataGridViewTextBoxColumn405.Name = "DataGridViewTextBoxColumn405"
-        Me.DataGridViewTextBoxColumn405.ReadOnly = True
-        Me.DataGridViewTextBoxColumn405.Visible = False
-        '
-        'DataGridViewTextBoxColumn406
-        '
-        Me.DataGridViewTextBoxColumn406.DataPropertyName = "cCode2"
-        Me.DataGridViewTextBoxColumn406.HeaderText = "工番2"
-        Me.DataGridViewTextBoxColumn406.Name = "DataGridViewTextBoxColumn406"
-        Me.DataGridViewTextBoxColumn406.ReadOnly = True
-        Me.DataGridViewTextBoxColumn406.Visible = False
-        '
-        'DataGridViewTextBoxColumn407
-        '
-        Me.DataGridViewTextBoxColumn407.DataPropertyName = "cCode3"
-        Me.DataGridViewTextBoxColumn407.HeaderText = "工番3"
-        Me.DataGridViewTextBoxColumn407.Name = "DataGridViewTextBoxColumn407"
-        Me.DataGridViewTextBoxColumn407.ReadOnly = True
-        Me.DataGridViewTextBoxColumn407.Visible = False
-        '
-        'DataGridViewTextBoxColumn408
-        '
-        Me.DataGridViewTextBoxColumn408.DataPropertyName = "cCode"
-        Me.DataGridViewTextBoxColumn408.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn408.HeaderText = "工番"
-        Me.DataGridViewTextBoxColumn408.Name = "DataGridViewTextBoxColumn408"
-        Me.DataGridViewTextBoxColumn408.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn409
-        '
-        Me.DataGridViewTextBoxColumn409.DataPropertyName = "cName"
-        Me.DataGridViewTextBoxColumn409.FillWeight = 130.0!
-        Me.DataGridViewTextBoxColumn409.HeaderText = "件名"
-        Me.DataGridViewTextBoxColumn409.Name = "DataGridViewTextBoxColumn409"
-        Me.DataGridViewTextBoxColumn409.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn410
-        '
-        Me.DataGridViewTextBoxColumn410.DataPropertyName = "cSalesYearMonth"
-        DataGridViewCellStyle1.Format = "yyyy年MM月"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn410.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridViewTextBoxColumn410.HeaderText = "売上年月"
-        Me.DataGridViewTextBoxColumn410.Name = "DataGridViewTextBoxColumn410"
-        Me.DataGridViewTextBoxColumn410.ReadOnly = True
-        Me.DataGridViewTextBoxColumn410.Visible = False
-        '
-        'DataGridViewTextBoxColumn411
-        '
-        Me.DataGridViewTextBoxColumn411.DataPropertyName = "cSalesAmount"
-        DataGridViewCellStyle2.Format = "C0"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn411.DefaultCellStyle = DataGridViewCellStyle2
-        Me.DataGridViewTextBoxColumn411.HeaderText = "売上金額"
-        Me.DataGridViewTextBoxColumn411.Name = "DataGridViewTextBoxColumn411"
-        Me.DataGridViewTextBoxColumn411.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn412
-        '
-        Me.DataGridViewTextBoxColumn412.DataPropertyName = "cClientID"
-        Me.DataGridViewTextBoxColumn412.HeaderText = "取引先ID"
-        Me.DataGridViewTextBoxColumn412.Name = "DataGridViewTextBoxColumn412"
-        Me.DataGridViewTextBoxColumn412.ReadOnly = True
-        Me.DataGridViewTextBoxColumn412.Visible = False
-        '
-        'DataGridViewTextBoxColumn413
-        '
-        Me.DataGridViewTextBoxColumn413.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn413.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn413.Name = "DataGridViewTextBoxColumn413"
-        Me.DataGridViewTextBoxColumn413.ReadOnly = True
-        Me.DataGridViewTextBoxColumn413.Visible = False
-        '
-        'DataGridViewTextBoxColumn414
-        '
-        Me.DataGridViewTextBoxColumn414.DataPropertyName = "cStatus"
-        Me.DataGridViewTextBoxColumn414.HeaderText = "請求状況"
-        Me.DataGridViewTextBoxColumn414.Name = "DataGridViewTextBoxColumn414"
-        Me.DataGridViewTextBoxColumn414.ReadOnly = True
-        Me.DataGridViewTextBoxColumn414.Visible = False
-        '
-        'DataGridViewTextBoxColumn415
-        '
-        Me.DataGridViewTextBoxColumn415.DataPropertyName = "cInsertDate"
-        DataGridViewCellStyle3.Format = "D"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn415.DefaultCellStyle = DataGridViewCellStyle3
-        Me.DataGridViewTextBoxColumn415.HeaderText = "作成日"
-        Me.DataGridViewTextBoxColumn415.Name = "DataGridViewTextBoxColumn415"
-        Me.DataGridViewTextBoxColumn415.ReadOnly = True
-        Me.DataGridViewTextBoxColumn415.Visible = False
-        '
-        'DataGridViewTextBoxColumn416
-        '
-        Me.DataGridViewTextBoxColumn416.DataPropertyName = "cStaffID"
-        Me.DataGridViewTextBoxColumn416.HeaderText = "作成者ID"
-        Me.DataGridViewTextBoxColumn416.Name = "DataGridViewTextBoxColumn416"
-        Me.DataGridViewTextBoxColumn416.ReadOnly = True
-        Me.DataGridViewTextBoxColumn416.Visible = False
-        '
-        'DataGridViewTextBoxColumn465
-        '
-        Me.DataGridViewTextBoxColumn465.DataPropertyName = "cStaffName"
-        Me.DataGridViewTextBoxColumn465.HeaderText = "作成者"
-        Me.DataGridViewTextBoxColumn465.Name = "DataGridViewTextBoxColumn465"
-        Me.DataGridViewTextBoxColumn465.ReadOnly = True
-        Me.DataGridViewTextBoxColumn465.Visible = False
         '
         'dgvRow5Column1
         '
@@ -1002,12 +879,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column1.ColumnHeadersVisible = False
         Me.dgvRow5Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn300, Me.DataGridViewTextBoxColumn301, Me.DataGridViewTextBoxColumn302, Me.DataGridViewTextBoxColumn303, Me.DataGridViewTextBoxColumn304, Me.DataGridViewTextBoxColumn305, Me.DataGridViewTextBoxColumn306, Me.DataGridViewTextBoxColumn307, Me.DataGridViewTextBoxColumn308, Me.DataGridViewTextBoxColumn309, Me.DataGridViewTextBoxColumn310, Me.DataGridViewTextBoxColumn311, Me.DataGridViewTextBoxColumn312, Me.DataGridViewTextBoxColumn464})
-        Me.dgvRow5Column1.Location = New System.Drawing.Point(149, 802)
+        Me.dgvRow5Column1.Location = New System.Drawing.Point(149, 848)
         Me.dgvRow5Column1.Name = "dgvRow5Column1"
         Me.dgvRow5Column1.ReadOnly = True
         Me.dgvRow5Column1.RowHeadersVisible = False
         Me.dgvRow5Column1.RowTemplate.Height = 27
-        Me.dgvRow5Column1.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow5Column1.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow5Column1.TabIndex = 38
         '
         'DataGridViewTextBoxColumn300
@@ -1141,12 +1018,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column1.ColumnHeadersVisible = False
         Me.dgvRow4Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn71, Me.DataGridViewTextBoxColumn72, Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75, Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80, Me.DataGridViewTextBoxColumn81, Me.DataGridViewTextBoxColumn82, Me.DataGridViewTextBoxColumn83, Me.DataGridViewTextBoxColumn463})
-        Me.dgvRow4Column1.Location = New System.Drawing.Point(149, 614)
+        Me.dgvRow4Column1.Location = New System.Drawing.Point(149, 649)
         Me.dgvRow4Column1.Name = "dgvRow4Column1"
         Me.dgvRow4Column1.ReadOnly = True
         Me.dgvRow4Column1.RowHeadersVisible = False
         Me.dgvRow4Column1.RowTemplate.Height = 27
-        Me.dgvRow4Column1.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow4Column1.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow4Column1.TabIndex = 37
         '
         'DataGridViewTextBoxColumn71
@@ -1280,12 +1157,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column1.ColumnHeadersVisible = False
         Me.dgvRow3Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn218, Me.DataGridViewTextBoxColumn219, Me.DataGridViewTextBoxColumn220, Me.DataGridViewTextBoxColumn221, Me.DataGridViewTextBoxColumn222, Me.DataGridViewTextBoxColumn223, Me.DataGridViewTextBoxColumn224, Me.DataGridViewTextBoxColumn225, Me.DataGridViewTextBoxColumn226, Me.DataGridViewTextBoxColumn227, Me.DataGridViewTextBoxColumn228, Me.DataGridViewTextBoxColumn229, Me.DataGridViewTextBoxColumn230, Me.DataGridViewTextBoxColumn462})
-        Me.dgvRow3Column1.Location = New System.Drawing.Point(149, 426)
+        Me.dgvRow3Column1.Location = New System.Drawing.Point(149, 450)
         Me.dgvRow3Column1.Name = "dgvRow3Column1"
         Me.dgvRow3Column1.ReadOnly = True
         Me.dgvRow3Column1.RowHeadersVisible = False
         Me.dgvRow3Column1.RowTemplate.Height = 27
-        Me.dgvRow3Column1.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow3Column1.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow3Column1.TabIndex = 36
         '
         'DataGridViewTextBoxColumn218
@@ -1419,12 +1296,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column1.ColumnHeadersVisible = False
         Me.dgvRow2Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn461})
-        Me.dgvRow2Column1.Location = New System.Drawing.Point(149, 238)
+        Me.dgvRow2Column1.Location = New System.Drawing.Point(149, 251)
         Me.dgvRow2Column1.Name = "dgvRow2Column1"
         Me.dgvRow2Column1.ReadOnly = True
         Me.dgvRow2Column1.RowHeadersVisible = False
         Me.dgvRow2Column1.RowTemplate.Height = 27
-        Me.dgvRow2Column1.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow2Column1.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow2Column1.TabIndex = 35
         '
         'DataGridViewTextBoxColumn21
@@ -1558,12 +1435,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column6.ColumnHeadersVisible = False
         Me.dgvRow1Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn125, Me.DataGridViewTextBoxColumn126, Me.DataGridViewTextBoxColumn127, Me.DataGridViewTextBoxColumn128, Me.DataGridViewTextBoxColumn129, Me.DataGridViewTextBoxColumn130, Me.DataGridViewTextBoxColumn131, Me.DataGridViewTextBoxColumn132, Me.DataGridViewTextBoxColumn133, Me.DataGridViewTextBoxColumn134, Me.DataGridViewTextBoxColumn135, Me.DataGridViewTextBoxColumn136, Me.DataGridViewTextBoxColumn137, Me.DataGridViewTextBoxColumn460})
-        Me.dgvRow1Column6.Location = New System.Drawing.Point(1764, 50)
+        Me.dgvRow1Column6.Location = New System.Drawing.Point(1764, 52)
         Me.dgvRow1Column6.Name = "dgvRow1Column6"
         Me.dgvRow1Column6.ReadOnly = True
         Me.dgvRow1Column6.RowHeadersVisible = False
         Me.dgvRow1Column6.RowTemplate.Height = 27
-        Me.dgvRow1Column6.Size = New System.Drawing.Size(321, 182)
+        Me.dgvRow1Column6.Size = New System.Drawing.Size(321, 193)
         Me.dgvRow1Column6.TabIndex = 39
         '
         'DataGridViewTextBoxColumn125
@@ -1697,12 +1574,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column5.ColumnHeadersVisible = False
         Me.dgvRow1Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn112, Me.DataGridViewTextBoxColumn113, Me.DataGridViewTextBoxColumn114, Me.DataGridViewTextBoxColumn115, Me.DataGridViewTextBoxColumn116, Me.DataGridViewTextBoxColumn117, Me.DataGridViewTextBoxColumn118, Me.DataGridViewTextBoxColumn119, Me.DataGridViewTextBoxColumn120, Me.DataGridViewTextBoxColumn121, Me.DataGridViewTextBoxColumn122, Me.DataGridViewTextBoxColumn123, Me.DataGridViewTextBoxColumn124, Me.DataGridViewTextBoxColumn459})
-        Me.dgvRow1Column5.Location = New System.Drawing.Point(1441, 50)
+        Me.dgvRow1Column5.Location = New System.Drawing.Point(1441, 52)
         Me.dgvRow1Column5.Name = "dgvRow1Column5"
         Me.dgvRow1Column5.ReadOnly = True
         Me.dgvRow1Column5.RowHeadersVisible = False
         Me.dgvRow1Column5.RowTemplate.Height = 27
-        Me.dgvRow1Column5.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow1Column5.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow1Column5.TabIndex = 38
         '
         'DataGridViewTextBoxColumn112
@@ -1836,12 +1713,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column4.ColumnHeadersVisible = False
         Me.dgvRow1Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn99, Me.DataGridViewTextBoxColumn100, Me.DataGridViewTextBoxColumn101, Me.DataGridViewTextBoxColumn102, Me.DataGridViewTextBoxColumn103, Me.DataGridViewTextBoxColumn104, Me.DataGridViewTextBoxColumn105, Me.DataGridViewTextBoxColumn106, Me.DataGridViewTextBoxColumn107, Me.DataGridViewTextBoxColumn108, Me.DataGridViewTextBoxColumn109, Me.DataGridViewTextBoxColumn110, Me.DataGridViewTextBoxColumn111, Me.DataGridViewTextBoxColumn458})
-        Me.dgvRow1Column4.Location = New System.Drawing.Point(1118, 50)
+        Me.dgvRow1Column4.Location = New System.Drawing.Point(1118, 52)
         Me.dgvRow1Column4.Name = "dgvRow1Column4"
         Me.dgvRow1Column4.ReadOnly = True
         Me.dgvRow1Column4.RowHeadersVisible = False
         Me.dgvRow1Column4.RowTemplate.Height = 27
-        Me.dgvRow1Column4.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow1Column4.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow1Column4.TabIndex = 37
         '
         'DataGridViewTextBoxColumn99
@@ -1975,12 +1852,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column3.ColumnHeadersVisible = False
         Me.dgvRow1Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn93, Me.DataGridViewTextBoxColumn94, Me.DataGridViewTextBoxColumn95, Me.DataGridViewTextBoxColumn96, Me.DataGridViewTextBoxColumn97, Me.DataGridViewTextBoxColumn98, Me.DataGridViewTextBoxColumn457})
-        Me.dgvRow1Column3.Location = New System.Drawing.Point(795, 50)
+        Me.dgvRow1Column3.Location = New System.Drawing.Point(795, 52)
         Me.dgvRow1Column3.Name = "dgvRow1Column3"
         Me.dgvRow1Column3.ReadOnly = True
         Me.dgvRow1Column3.RowHeadersVisible = False
         Me.dgvRow1Column3.RowTemplate.Height = 27
-        Me.dgvRow1Column3.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow1Column3.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow1Column3.TabIndex = 36
         '
         'DataGridViewTextBoxColumn14
@@ -2114,12 +1991,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column2.ColumnHeadersVisible = False
         Me.dgvRow1Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn456})
-        Me.dgvRow1Column2.Location = New System.Drawing.Point(472, 50)
+        Me.dgvRow1Column2.Location = New System.Drawing.Point(472, 52)
         Me.dgvRow1Column2.Name = "dgvRow1Column2"
         Me.dgvRow1Column2.ReadOnly = True
         Me.dgvRow1Column2.RowHeadersVisible = False
         Me.dgvRow1Column2.RowTemplate.Height = 27
-        Me.dgvRow1Column2.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow1Column2.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow1Column2.TabIndex = 35
         '
         'DataGridViewTextBoxColumn1
@@ -2246,21 +2123,24 @@ Partial Class SalesPlanForm
         '
         Me.cmbClient5.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient5.FormattingEnabled = True
-        Me.cmbClient5.Location = New System.Drawing.Point(3, 880)
+        Me.cmbClient5.Location = New System.Drawing.Point(3, 931)
         Me.cmbClient5.Name = "cmbClient5"
-        Me.cmbClient5.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient5.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient5.TabIndex = 50
         '
         'cmbClient6
         '
         Me.cmbClient6.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient6.FormattingEnabled = True
-        Me.cmbClient6.Location = New System.Drawing.Point(3, 1071)
+        Me.cmbClient6.Location = New System.Drawing.Point(3, 1133)
         Me.cmbClient6.Name = "cmbClient6"
-        Me.cmbClient6.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient6.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient6.TabIndex = 78
+        Me.cmbClient6.Visible = False
         '
         'TableLayoutPanel9
         '
@@ -2276,16 +2156,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 1
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(321, 41)
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(321, 43)
         Me.TableLayoutPanel9.TabIndex = 53
         '
         'Label7
         '
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(163, 11)
+        Me.Label7.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label7.Location = New System.Drawing.Point(163, 7)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(26, 18)
+        Me.Label7.Size = New System.Drawing.Size(40, 28)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "月"
         '
@@ -2293,9 +2174,10 @@ Partial Class SalesPlanForm
         '
         Me.lblMonth6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth6.AutoSize = True
-        Me.lblMonth6.Location = New System.Drawing.Point(131, 11)
+        Me.lblMonth6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth6.Location = New System.Drawing.Point(117, 7)
         Me.lblMonth6.Name = "lblMonth6"
-        Me.lblMonth6.Size = New System.Drawing.Size(26, 18)
+        Me.lblMonth6.Size = New System.Drawing.Size(40, 28)
         Me.lblMonth6.TabIndex = 5
         Me.lblMonth6.Text = "11"
         '
@@ -2313,16 +2195,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(317, 41)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(317, 43)
         Me.TableLayoutPanel8.TabIndex = 53
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(161, 11)
+        Me.Label6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label6.Location = New System.Drawing.Point(161, 7)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 18)
+        Me.Label6.Size = New System.Drawing.Size(40, 28)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "月"
         '
@@ -2330,9 +2213,10 @@ Partial Class SalesPlanForm
         '
         Me.lblMonth5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth5.AutoSize = True
-        Me.lblMonth5.Location = New System.Drawing.Point(129, 11)
+        Me.lblMonth5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth5.Location = New System.Drawing.Point(115, 7)
         Me.lblMonth5.Name = "lblMonth5"
-        Me.lblMonth5.Size = New System.Drawing.Size(26, 18)
+        Me.lblMonth5.Size = New System.Drawing.Size(40, 28)
         Me.lblMonth5.TabIndex = 4
         Me.lblMonth5.Text = "10"
         '
@@ -2350,16 +2234,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(317, 41)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(317, 43)
         Me.TableLayoutPanel7.TabIndex = 53
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(161, 11)
+        Me.Label5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label5.Location = New System.Drawing.Point(161, 7)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(26, 18)
+        Me.Label5.Size = New System.Drawing.Size(40, 28)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "月"
         '
@@ -2367,9 +2252,10 @@ Partial Class SalesPlanForm
         '
         Me.lblMonth4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth4.AutoSize = True
-        Me.lblMonth4.Location = New System.Drawing.Point(138, 11)
+        Me.lblMonth4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth4.Location = New System.Drawing.Point(129, 7)
         Me.lblMonth4.Name = "lblMonth4"
-        Me.lblMonth4.Size = New System.Drawing.Size(17, 18)
+        Me.lblMonth4.Size = New System.Drawing.Size(26, 28)
         Me.lblMonth4.TabIndex = 3
         Me.lblMonth4.Text = "9"
         '
@@ -2377,40 +2263,44 @@ Partial Class SalesPlanForm
         '
         Me.cmbClient1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient1.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient1.FormattingEnabled = True
-        Me.cmbClient1.Location = New System.Drawing.Point(3, 128)
+        Me.cmbClient1.Location = New System.Drawing.Point(3, 135)
         Me.cmbClient1.Name = "cmbClient1"
-        Me.cmbClient1.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient1.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient1.TabIndex = 46
         '
         'cmbClient2
         '
         Me.cmbClient2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient2.FormattingEnabled = True
-        Me.cmbClient2.Location = New System.Drawing.Point(3, 316)
+        Me.cmbClient2.Location = New System.Drawing.Point(3, 334)
         Me.cmbClient2.Name = "cmbClient2"
-        Me.cmbClient2.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient2.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient2.TabIndex = 47
         '
         'cmbClient3
         '
         Me.cmbClient3.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient3.FormattingEnabled = True
-        Me.cmbClient3.Location = New System.Drawing.Point(3, 504)
+        Me.cmbClient3.Location = New System.Drawing.Point(3, 533)
         Me.cmbClient3.Name = "cmbClient3"
-        Me.cmbClient3.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient3.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient3.TabIndex = 48
         '
         'cmbClient4
         '
         Me.cmbClient4.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbClient4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbClient4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient4.FormattingEnabled = True
-        Me.cmbClient4.Location = New System.Drawing.Point(3, 692)
+        Me.cmbClient4.Location = New System.Drawing.Point(3, 732)
         Me.cmbClient4.Name = "cmbClient4"
-        Me.cmbClient4.Size = New System.Drawing.Size(140, 26)
+        Me.cmbClient4.Size = New System.Drawing.Size(140, 36)
         Me.cmbClient4.TabIndex = 49
         '
         'TableLayoutPanel5
@@ -2427,16 +2317,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(317, 41)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(317, 43)
         Me.TableLayoutPanel5.TabIndex = 51
         '
         'Label4
         '
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(161, 11)
+        Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label4.Location = New System.Drawing.Point(161, 7)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(26, 18)
+        Me.Label4.Size = New System.Drawing.Size(40, 28)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "月"
         '
@@ -2444,9 +2335,10 @@ Partial Class SalesPlanForm
         '
         Me.lblMonth2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth2.AutoSize = True
-        Me.lblMonth2.Location = New System.Drawing.Point(138, 11)
+        Me.lblMonth2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth2.Location = New System.Drawing.Point(129, 7)
         Me.lblMonth2.Name = "lblMonth2"
-        Me.lblMonth2.Size = New System.Drawing.Size(17, 18)
+        Me.lblMonth2.Size = New System.Drawing.Size(26, 28)
         Me.lblMonth2.TabIndex = 1
         Me.lblMonth2.Text = "7"
         '
@@ -2464,16 +2356,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 1
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(317, 41)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(317, 43)
         Me.TableLayoutPanel6.TabIndex = 52
         '
         'Label3
         '
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(161, 11)
+        Me.Label3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label3.Location = New System.Drawing.Point(161, 7)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(26, 18)
+        Me.Label3.Size = New System.Drawing.Size(40, 28)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "月"
         '
@@ -2481,9 +2374,10 @@ Partial Class SalesPlanForm
         '
         Me.lblMonth3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth3.AutoSize = True
-        Me.lblMonth3.Location = New System.Drawing.Point(138, 11)
+        Me.lblMonth3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth3.Location = New System.Drawing.Point(129, 7)
         Me.lblMonth3.Name = "lblMonth3"
-        Me.lblMonth3.Size = New System.Drawing.Size(17, 18)
+        Me.lblMonth3.Size = New System.Drawing.Size(26, 28)
         Me.lblMonth3.TabIndex = 2
         Me.lblMonth3.Text = "8"
         '
@@ -2501,16 +2395,17 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(317, 41)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(317, 43)
         Me.TableLayoutPanel4.TabIndex = 50
         '
         'lblMonth1
         '
         Me.lblMonth1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth1.AutoSize = True
-        Me.lblMonth1.Location = New System.Drawing.Point(138, 11)
+        Me.lblMonth1.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.lblMonth1.Location = New System.Drawing.Point(129, 7)
         Me.lblMonth1.Name = "lblMonth1"
-        Me.lblMonth1.Size = New System.Drawing.Size(17, 18)
+        Me.lblMonth1.Size = New System.Drawing.Size(26, 28)
         Me.lblMonth1.TabIndex = 0
         Me.lblMonth1.Text = "6"
         '
@@ -2518,9 +2413,10 @@ Partial Class SalesPlanForm
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(161, 11)
+        Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label2.Location = New System.Drawing.Point(161, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(26, 18)
+        Me.Label2.Size = New System.Drawing.Size(40, 28)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "月"
         '
@@ -2535,12 +2431,12 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column1.ColumnHeadersVisible = False
         Me.dgvRow1Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cCode1, Me.cCode2, Me.cCode3, Me.cCode, Me.cName, Me.cSalesYearMonth, Me.cSalesAmount, Me.cClientID, Me.cClient, Me.cStatus, Me.cInsertDate, Me.cStaffID, Me.cStaffName})
-        Me.dgvRow1Column1.Location = New System.Drawing.Point(149, 50)
+        Me.dgvRow1Column1.Location = New System.Drawing.Point(149, 52)
         Me.dgvRow1Column1.Name = "dgvRow1Column1"
         Me.dgvRow1Column1.ReadOnly = True
         Me.dgvRow1Column1.RowHeadersVisible = False
         Me.dgvRow1Column1.RowTemplate.Height = 27
-        Me.dgvRow1Column1.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow1Column1.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow1Column1.TabIndex = 34
         '
         'cId
@@ -2674,12 +2570,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column2.ColumnHeadersVisible = False
         Me.dgvRow2Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47})
-        Me.dgvRow2Column2.Location = New System.Drawing.Point(472, 238)
+        Me.dgvRow2Column2.Location = New System.Drawing.Point(472, 251)
         Me.dgvRow2Column2.Name = "dgvRow2Column2"
         Me.dgvRow2Column2.ReadOnly = True
         Me.dgvRow2Column2.RowHeadersVisible = False
         Me.dgvRow2Column2.RowTemplate.Height = 27
-        Me.dgvRow2Column2.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow2Column2.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow2Column2.TabIndex = 79
         '
         'DataGridViewTextBoxColumn34
@@ -2813,12 +2709,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column3.ColumnHeadersVisible = False
         Me.dgvRow2Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn50, Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn61})
-        Me.dgvRow2Column3.Location = New System.Drawing.Point(795, 238)
+        Me.dgvRow2Column3.Location = New System.Drawing.Point(795, 251)
         Me.dgvRow2Column3.Name = "dgvRow2Column3"
         Me.dgvRow2Column3.ReadOnly = True
         Me.dgvRow2Column3.RowHeadersVisible = False
         Me.dgvRow2Column3.RowTemplate.Height = 27
-        Me.dgvRow2Column3.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow2Column3.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow2Column3.TabIndex = 80
         '
         'DataGridViewTextBoxColumn48
@@ -2952,12 +2848,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column4.ColumnHeadersVisible = False
         Me.dgvRow2Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn84, Me.DataGridViewTextBoxColumn85, Me.DataGridViewTextBoxColumn86, Me.DataGridViewTextBoxColumn87, Me.DataGridViewTextBoxColumn88})
-        Me.dgvRow2Column4.Location = New System.Drawing.Point(1118, 238)
+        Me.dgvRow2Column4.Location = New System.Drawing.Point(1118, 251)
         Me.dgvRow2Column4.Name = "dgvRow2Column4"
         Me.dgvRow2Column4.ReadOnly = True
         Me.dgvRow2Column4.RowHeadersVisible = False
         Me.dgvRow2Column4.RowTemplate.Height = 27
-        Me.dgvRow2Column4.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow2Column4.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow2Column4.TabIndex = 81
         '
         'DataGridViewTextBoxColumn62
@@ -3091,12 +2987,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column5.ColumnHeadersVisible = False
         Me.dgvRow2Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn89, Me.DataGridViewTextBoxColumn90, Me.DataGridViewTextBoxColumn91, Me.DataGridViewTextBoxColumn92, Me.DataGridViewTextBoxColumn138, Me.DataGridViewTextBoxColumn139, Me.DataGridViewTextBoxColumn140, Me.DataGridViewTextBoxColumn141, Me.DataGridViewTextBoxColumn142, Me.DataGridViewTextBoxColumn143, Me.DataGridViewTextBoxColumn144, Me.DataGridViewTextBoxColumn145, Me.DataGridViewTextBoxColumn146, Me.DataGridViewTextBoxColumn147})
-        Me.dgvRow2Column5.Location = New System.Drawing.Point(1441, 238)
+        Me.dgvRow2Column5.Location = New System.Drawing.Point(1441, 251)
         Me.dgvRow2Column5.Name = "dgvRow2Column5"
         Me.dgvRow2Column5.ReadOnly = True
         Me.dgvRow2Column5.RowHeadersVisible = False
         Me.dgvRow2Column5.RowTemplate.Height = 27
-        Me.dgvRow2Column5.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow2Column5.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow2Column5.TabIndex = 82
         '
         'DataGridViewTextBoxColumn89
@@ -3230,12 +3126,12 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column6.ColumnHeadersVisible = False
         Me.dgvRow2Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn148, Me.DataGridViewTextBoxColumn149, Me.DataGridViewTextBoxColumn150, Me.DataGridViewTextBoxColumn151, Me.DataGridViewTextBoxColumn152, Me.DataGridViewTextBoxColumn153, Me.DataGridViewTextBoxColumn154, Me.DataGridViewTextBoxColumn155, Me.DataGridViewTextBoxColumn156, Me.DataGridViewTextBoxColumn157, Me.DataGridViewTextBoxColumn158, Me.DataGridViewTextBoxColumn159, Me.DataGridViewTextBoxColumn160, Me.DataGridViewTextBoxColumn161})
-        Me.dgvRow2Column6.Location = New System.Drawing.Point(1764, 238)
+        Me.dgvRow2Column6.Location = New System.Drawing.Point(1764, 251)
         Me.dgvRow2Column6.Name = "dgvRow2Column6"
         Me.dgvRow2Column6.ReadOnly = True
         Me.dgvRow2Column6.RowHeadersVisible = False
         Me.dgvRow2Column6.RowTemplate.Height = 27
-        Me.dgvRow2Column6.Size = New System.Drawing.Size(321, 182)
+        Me.dgvRow2Column6.Size = New System.Drawing.Size(321, 193)
         Me.dgvRow2Column6.TabIndex = 83
         '
         'DataGridViewTextBoxColumn148
@@ -3369,12 +3265,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column2.ColumnHeadersVisible = False
         Me.dgvRow3Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn162, Me.DataGridViewTextBoxColumn163, Me.DataGridViewTextBoxColumn164, Me.DataGridViewTextBoxColumn165, Me.DataGridViewTextBoxColumn166, Me.DataGridViewTextBoxColumn167, Me.DataGridViewTextBoxColumn168, Me.DataGridViewTextBoxColumn169, Me.DataGridViewTextBoxColumn170, Me.DataGridViewTextBoxColumn171, Me.DataGridViewTextBoxColumn172, Me.DataGridViewTextBoxColumn173, Me.DataGridViewTextBoxColumn174, Me.DataGridViewTextBoxColumn175})
-        Me.dgvRow3Column2.Location = New System.Drawing.Point(472, 426)
+        Me.dgvRow3Column2.Location = New System.Drawing.Point(472, 450)
         Me.dgvRow3Column2.Name = "dgvRow3Column2"
         Me.dgvRow3Column2.ReadOnly = True
         Me.dgvRow3Column2.RowHeadersVisible = False
         Me.dgvRow3Column2.RowTemplate.Height = 27
-        Me.dgvRow3Column2.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow3Column2.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow3Column2.TabIndex = 84
         '
         'DataGridViewTextBoxColumn162
@@ -3508,12 +3404,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column3.ColumnHeadersVisible = False
         Me.dgvRow3Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn176, Me.DataGridViewTextBoxColumn177, Me.DataGridViewTextBoxColumn178, Me.DataGridViewTextBoxColumn179, Me.DataGridViewTextBoxColumn180, Me.DataGridViewTextBoxColumn181, Me.DataGridViewTextBoxColumn182, Me.DataGridViewTextBoxColumn183, Me.DataGridViewTextBoxColumn184, Me.DataGridViewTextBoxColumn185, Me.DataGridViewTextBoxColumn186, Me.DataGridViewTextBoxColumn187, Me.DataGridViewTextBoxColumn188, Me.DataGridViewTextBoxColumn189})
-        Me.dgvRow3Column3.Location = New System.Drawing.Point(795, 426)
+        Me.dgvRow3Column3.Location = New System.Drawing.Point(795, 450)
         Me.dgvRow3Column3.Name = "dgvRow3Column3"
         Me.dgvRow3Column3.ReadOnly = True
         Me.dgvRow3Column3.RowHeadersVisible = False
         Me.dgvRow3Column3.RowTemplate.Height = 27
-        Me.dgvRow3Column3.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow3Column3.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow3Column3.TabIndex = 85
         '
         'DataGridViewTextBoxColumn176
@@ -3647,12 +3543,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column4.ColumnHeadersVisible = False
         Me.dgvRow3Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn190, Me.DataGridViewTextBoxColumn191, Me.DataGridViewTextBoxColumn192, Me.DataGridViewTextBoxColumn193, Me.DataGridViewTextBoxColumn194, Me.DataGridViewTextBoxColumn195, Me.DataGridViewTextBoxColumn196, Me.DataGridViewTextBoxColumn197, Me.DataGridViewTextBoxColumn198, Me.DataGridViewTextBoxColumn199, Me.DataGridViewTextBoxColumn200, Me.DataGridViewTextBoxColumn201, Me.DataGridViewTextBoxColumn202, Me.DataGridViewTextBoxColumn203})
-        Me.dgvRow3Column4.Location = New System.Drawing.Point(1118, 426)
+        Me.dgvRow3Column4.Location = New System.Drawing.Point(1118, 450)
         Me.dgvRow3Column4.Name = "dgvRow3Column4"
         Me.dgvRow3Column4.ReadOnly = True
         Me.dgvRow3Column4.RowHeadersVisible = False
         Me.dgvRow3Column4.RowTemplate.Height = 27
-        Me.dgvRow3Column4.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow3Column4.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow3Column4.TabIndex = 86
         '
         'DataGridViewTextBoxColumn190
@@ -3786,12 +3682,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column5.ColumnHeadersVisible = False
         Me.dgvRow3Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn204, Me.DataGridViewTextBoxColumn205, Me.DataGridViewTextBoxColumn206, Me.DataGridViewTextBoxColumn207, Me.DataGridViewTextBoxColumn208, Me.DataGridViewTextBoxColumn209, Me.DataGridViewTextBoxColumn210, Me.DataGridViewTextBoxColumn211, Me.DataGridViewTextBoxColumn212, Me.DataGridViewTextBoxColumn213, Me.DataGridViewTextBoxColumn214, Me.DataGridViewTextBoxColumn215, Me.DataGridViewTextBoxColumn216, Me.DataGridViewTextBoxColumn217})
-        Me.dgvRow3Column5.Location = New System.Drawing.Point(1441, 426)
+        Me.dgvRow3Column5.Location = New System.Drawing.Point(1441, 450)
         Me.dgvRow3Column5.Name = "dgvRow3Column5"
         Me.dgvRow3Column5.ReadOnly = True
         Me.dgvRow3Column5.RowHeadersVisible = False
         Me.dgvRow3Column5.RowTemplate.Height = 27
-        Me.dgvRow3Column5.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow3Column5.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow3Column5.TabIndex = 87
         '
         'DataGridViewTextBoxColumn204
@@ -3925,12 +3821,12 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column6.ColumnHeadersVisible = False
         Me.dgvRow3Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn231, Me.DataGridViewTextBoxColumn232, Me.DataGridViewTextBoxColumn233, Me.DataGridViewTextBoxColumn234, Me.DataGridViewTextBoxColumn235, Me.DataGridViewTextBoxColumn236, Me.DataGridViewTextBoxColumn237, Me.DataGridViewTextBoxColumn238, Me.DataGridViewTextBoxColumn239, Me.DataGridViewTextBoxColumn240, Me.DataGridViewTextBoxColumn241, Me.DataGridViewTextBoxColumn242, Me.DataGridViewTextBoxColumn243, Me.DataGridViewTextBoxColumn244})
-        Me.dgvRow3Column6.Location = New System.Drawing.Point(1764, 426)
+        Me.dgvRow3Column6.Location = New System.Drawing.Point(1764, 450)
         Me.dgvRow3Column6.Name = "dgvRow3Column6"
         Me.dgvRow3Column6.ReadOnly = True
         Me.dgvRow3Column6.RowHeadersVisible = False
         Me.dgvRow3Column6.RowTemplate.Height = 27
-        Me.dgvRow3Column6.Size = New System.Drawing.Size(321, 182)
+        Me.dgvRow3Column6.Size = New System.Drawing.Size(321, 193)
         Me.dgvRow3Column6.TabIndex = 88
         '
         'DataGridViewTextBoxColumn231
@@ -4064,12 +3960,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column2.ColumnHeadersVisible = False
         Me.dgvRow4Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn245, Me.DataGridViewTextBoxColumn246, Me.DataGridViewTextBoxColumn247, Me.DataGridViewTextBoxColumn248, Me.DataGridViewTextBoxColumn249, Me.DataGridViewTextBoxColumn250, Me.DataGridViewTextBoxColumn251, Me.DataGridViewTextBoxColumn252, Me.DataGridViewTextBoxColumn253, Me.DataGridViewTextBoxColumn254, Me.DataGridViewTextBoxColumn255, Me.DataGridViewTextBoxColumn256, Me.DataGridViewTextBoxColumn257, Me.DataGridViewTextBoxColumn258})
-        Me.dgvRow4Column2.Location = New System.Drawing.Point(472, 614)
+        Me.dgvRow4Column2.Location = New System.Drawing.Point(472, 649)
         Me.dgvRow4Column2.Name = "dgvRow4Column2"
         Me.dgvRow4Column2.ReadOnly = True
         Me.dgvRow4Column2.RowHeadersVisible = False
         Me.dgvRow4Column2.RowTemplate.Height = 27
-        Me.dgvRow4Column2.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow4Column2.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow4Column2.TabIndex = 89
         '
         'DataGridViewTextBoxColumn245
@@ -4203,12 +4099,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column3.ColumnHeadersVisible = False
         Me.dgvRow4Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn259, Me.DataGridViewTextBoxColumn260, Me.DataGridViewTextBoxColumn261, Me.DataGridViewTextBoxColumn262, Me.DataGridViewTextBoxColumn263, Me.DataGridViewTextBoxColumn264, Me.DataGridViewTextBoxColumn265, Me.DataGridViewTextBoxColumn266, Me.DataGridViewTextBoxColumn267, Me.DataGridViewTextBoxColumn268, Me.DataGridViewTextBoxColumn269, Me.DataGridViewTextBoxColumn270, Me.DataGridViewTextBoxColumn271, Me.DataGridViewTextBoxColumn272})
-        Me.dgvRow4Column3.Location = New System.Drawing.Point(795, 614)
+        Me.dgvRow4Column3.Location = New System.Drawing.Point(795, 649)
         Me.dgvRow4Column3.Name = "dgvRow4Column3"
         Me.dgvRow4Column3.ReadOnly = True
         Me.dgvRow4Column3.RowHeadersVisible = False
         Me.dgvRow4Column3.RowTemplate.Height = 27
-        Me.dgvRow4Column3.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow4Column3.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow4Column3.TabIndex = 90
         '
         'DataGridViewTextBoxColumn259
@@ -4342,12 +4238,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column4.ColumnHeadersVisible = False
         Me.dgvRow4Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn273, Me.DataGridViewTextBoxColumn274, Me.DataGridViewTextBoxColumn275, Me.DataGridViewTextBoxColumn276, Me.DataGridViewTextBoxColumn277, Me.DataGridViewTextBoxColumn278, Me.DataGridViewTextBoxColumn279, Me.DataGridViewTextBoxColumn280, Me.DataGridViewTextBoxColumn281, Me.DataGridViewTextBoxColumn282, Me.DataGridViewTextBoxColumn283, Me.DataGridViewTextBoxColumn284, Me.DataGridViewTextBoxColumn285, Me.DataGridViewTextBoxColumn286})
-        Me.dgvRow4Column4.Location = New System.Drawing.Point(1118, 614)
+        Me.dgvRow4Column4.Location = New System.Drawing.Point(1118, 649)
         Me.dgvRow4Column4.Name = "dgvRow4Column4"
         Me.dgvRow4Column4.ReadOnly = True
         Me.dgvRow4Column4.RowHeadersVisible = False
         Me.dgvRow4Column4.RowTemplate.Height = 27
-        Me.dgvRow4Column4.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow4Column4.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow4Column4.TabIndex = 91
         '
         'DataGridViewTextBoxColumn273
@@ -4481,12 +4377,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column5.ColumnHeadersVisible = False
         Me.dgvRow4Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn287, Me.DataGridViewTextBoxColumn288, Me.DataGridViewTextBoxColumn289, Me.DataGridViewTextBoxColumn290, Me.DataGridViewTextBoxColumn291, Me.DataGridViewTextBoxColumn292, Me.DataGridViewTextBoxColumn293, Me.DataGridViewTextBoxColumn294, Me.DataGridViewTextBoxColumn295, Me.DataGridViewTextBoxColumn296, Me.DataGridViewTextBoxColumn297, Me.DataGridViewTextBoxColumn298, Me.DataGridViewTextBoxColumn299, Me.DataGridViewTextBoxColumn313})
-        Me.dgvRow4Column5.Location = New System.Drawing.Point(1441, 614)
+        Me.dgvRow4Column5.Location = New System.Drawing.Point(1441, 649)
         Me.dgvRow4Column5.Name = "dgvRow4Column5"
         Me.dgvRow4Column5.ReadOnly = True
         Me.dgvRow4Column5.RowHeadersVisible = False
         Me.dgvRow4Column5.RowTemplate.Height = 27
-        Me.dgvRow4Column5.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow4Column5.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow4Column5.TabIndex = 92
         '
         'DataGridViewTextBoxColumn287
@@ -4620,12 +4516,12 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column6.ColumnHeadersVisible = False
         Me.dgvRow4Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn314, Me.DataGridViewTextBoxColumn315, Me.DataGridViewTextBoxColumn316, Me.DataGridViewTextBoxColumn317, Me.DataGridViewTextBoxColumn318, Me.DataGridViewTextBoxColumn319, Me.DataGridViewTextBoxColumn320, Me.DataGridViewTextBoxColumn321, Me.DataGridViewTextBoxColumn322, Me.DataGridViewTextBoxColumn323, Me.DataGridViewTextBoxColumn324, Me.DataGridViewTextBoxColumn325, Me.DataGridViewTextBoxColumn326, Me.DataGridViewTextBoxColumn327})
-        Me.dgvRow4Column6.Location = New System.Drawing.Point(1764, 614)
+        Me.dgvRow4Column6.Location = New System.Drawing.Point(1764, 649)
         Me.dgvRow4Column6.Name = "dgvRow4Column6"
         Me.dgvRow4Column6.ReadOnly = True
         Me.dgvRow4Column6.RowHeadersVisible = False
         Me.dgvRow4Column6.RowTemplate.Height = 27
-        Me.dgvRow4Column6.Size = New System.Drawing.Size(321, 182)
+        Me.dgvRow4Column6.Size = New System.Drawing.Size(321, 193)
         Me.dgvRow4Column6.TabIndex = 93
         '
         'DataGridViewTextBoxColumn314
@@ -4759,12 +4655,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column2.ColumnHeadersVisible = False
         Me.dgvRow5Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn328, Me.DataGridViewTextBoxColumn329, Me.DataGridViewTextBoxColumn330, Me.DataGridViewTextBoxColumn331, Me.DataGridViewTextBoxColumn332, Me.DataGridViewTextBoxColumn333, Me.DataGridViewTextBoxColumn334, Me.DataGridViewTextBoxColumn335, Me.DataGridViewTextBoxColumn336, Me.DataGridViewTextBoxColumn337, Me.DataGridViewTextBoxColumn338, Me.DataGridViewTextBoxColumn339, Me.DataGridViewTextBoxColumn340, Me.DataGridViewTextBoxColumn341})
-        Me.dgvRow5Column2.Location = New System.Drawing.Point(472, 802)
+        Me.dgvRow5Column2.Location = New System.Drawing.Point(472, 848)
         Me.dgvRow5Column2.Name = "dgvRow5Column2"
         Me.dgvRow5Column2.ReadOnly = True
         Me.dgvRow5Column2.RowHeadersVisible = False
         Me.dgvRow5Column2.RowTemplate.Height = 27
-        Me.dgvRow5Column2.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow5Column2.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow5Column2.TabIndex = 94
         '
         'DataGridViewTextBoxColumn328
@@ -4898,12 +4794,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column3.ColumnHeadersVisible = False
         Me.dgvRow5Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn342, Me.DataGridViewTextBoxColumn343, Me.DataGridViewTextBoxColumn344, Me.DataGridViewTextBoxColumn345, Me.DataGridViewTextBoxColumn346, Me.DataGridViewTextBoxColumn347, Me.DataGridViewTextBoxColumn348, Me.DataGridViewTextBoxColumn349, Me.DataGridViewTextBoxColumn350, Me.DataGridViewTextBoxColumn351, Me.DataGridViewTextBoxColumn352, Me.DataGridViewTextBoxColumn353, Me.DataGridViewTextBoxColumn354, Me.DataGridViewTextBoxColumn355})
-        Me.dgvRow5Column3.Location = New System.Drawing.Point(795, 802)
+        Me.dgvRow5Column3.Location = New System.Drawing.Point(795, 848)
         Me.dgvRow5Column3.Name = "dgvRow5Column3"
         Me.dgvRow5Column3.ReadOnly = True
         Me.dgvRow5Column3.RowHeadersVisible = False
         Me.dgvRow5Column3.RowTemplate.Height = 27
-        Me.dgvRow5Column3.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow5Column3.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow5Column3.TabIndex = 95
         '
         'DataGridViewTextBoxColumn342
@@ -5037,12 +4933,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column4.ColumnHeadersVisible = False
         Me.dgvRow5Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn356, Me.DataGridViewTextBoxColumn357, Me.DataGridViewTextBoxColumn358, Me.DataGridViewTextBoxColumn359, Me.DataGridViewTextBoxColumn360, Me.DataGridViewTextBoxColumn361, Me.DataGridViewTextBoxColumn362, Me.DataGridViewTextBoxColumn363, Me.DataGridViewTextBoxColumn364, Me.DataGridViewTextBoxColumn365, Me.DataGridViewTextBoxColumn366, Me.DataGridViewTextBoxColumn367, Me.DataGridViewTextBoxColumn368, Me.DataGridViewTextBoxColumn369})
-        Me.dgvRow5Column4.Location = New System.Drawing.Point(1118, 802)
+        Me.dgvRow5Column4.Location = New System.Drawing.Point(1118, 848)
         Me.dgvRow5Column4.Name = "dgvRow5Column4"
         Me.dgvRow5Column4.ReadOnly = True
         Me.dgvRow5Column4.RowHeadersVisible = False
         Me.dgvRow5Column4.RowTemplate.Height = 27
-        Me.dgvRow5Column4.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow5Column4.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow5Column4.TabIndex = 96
         '
         'DataGridViewTextBoxColumn356
@@ -5176,12 +5072,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column5.ColumnHeadersVisible = False
         Me.dgvRow5Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn370, Me.DataGridViewTextBoxColumn371, Me.DataGridViewTextBoxColumn372, Me.DataGridViewTextBoxColumn373, Me.DataGridViewTextBoxColumn374, Me.DataGridViewTextBoxColumn375, Me.DataGridViewTextBoxColumn376, Me.DataGridViewTextBoxColumn377, Me.DataGridViewTextBoxColumn378, Me.DataGridViewTextBoxColumn379, Me.DataGridViewTextBoxColumn380, Me.DataGridViewTextBoxColumn381, Me.DataGridViewTextBoxColumn382, Me.DataGridViewTextBoxColumn383})
-        Me.dgvRow5Column5.Location = New System.Drawing.Point(1441, 802)
+        Me.dgvRow5Column5.Location = New System.Drawing.Point(1441, 848)
         Me.dgvRow5Column5.Name = "dgvRow5Column5"
         Me.dgvRow5Column5.ReadOnly = True
         Me.dgvRow5Column5.RowHeadersVisible = False
         Me.dgvRow5Column5.RowTemplate.Height = 27
-        Me.dgvRow5Column5.Size = New System.Drawing.Size(317, 182)
+        Me.dgvRow5Column5.Size = New System.Drawing.Size(317, 193)
         Me.dgvRow5Column5.TabIndex = 97
         '
         'DataGridViewTextBoxColumn370
@@ -5315,12 +5211,12 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column6.ColumnHeadersVisible = False
         Me.dgvRow5Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn384, Me.DataGridViewTextBoxColumn385, Me.DataGridViewTextBoxColumn386, Me.DataGridViewTextBoxColumn387, Me.DataGridViewTextBoxColumn388, Me.DataGridViewTextBoxColumn389, Me.DataGridViewTextBoxColumn390, Me.DataGridViewTextBoxColumn391, Me.DataGridViewTextBoxColumn392, Me.DataGridViewTextBoxColumn393, Me.DataGridViewTextBoxColumn394, Me.DataGridViewTextBoxColumn395, Me.DataGridViewTextBoxColumn396, Me.DataGridViewTextBoxColumn397})
-        Me.dgvRow5Column6.Location = New System.Drawing.Point(1764, 802)
+        Me.dgvRow5Column6.Location = New System.Drawing.Point(1764, 848)
         Me.dgvRow5Column6.Name = "dgvRow5Column6"
         Me.dgvRow5Column6.ReadOnly = True
         Me.dgvRow5Column6.RowHeadersVisible = False
         Me.dgvRow5Column6.RowTemplate.Height = 27
-        Me.dgvRow5Column6.Size = New System.Drawing.Size(321, 182)
+        Me.dgvRow5Column6.Size = New System.Drawing.Size(321, 193)
         Me.dgvRow5Column6.TabIndex = 98
         '
         'DataGridViewTextBoxColumn384
@@ -5453,134 +5349,14 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column2.ColumnHeadersVisible = False
-        Me.dgvRow6Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn398, Me.DataGridViewTextBoxColumn399, Me.DataGridViewTextBoxColumn400, Me.DataGridViewTextBoxColumn401, Me.DataGridViewTextBoxColumn402, Me.DataGridViewTextBoxColumn403, Me.DataGridViewTextBoxColumn417, Me.DataGridViewTextBoxColumn418, Me.DataGridViewTextBoxColumn419, Me.DataGridViewTextBoxColumn420, Me.DataGridViewTextBoxColumn421, Me.DataGridViewTextBoxColumn422, Me.DataGridViewTextBoxColumn423, Me.DataGridViewTextBoxColumn424})
-        Me.dgvRow6Column2.Location = New System.Drawing.Point(472, 990)
+        Me.dgvRow6Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn398, Me.DataGridViewTextBoxColumn399, Me.DataGridViewTextBoxColumn400, Me.DataGridViewTextBoxColumn401, Me.DataGridViewTextBoxColumn402, Me.DataGridViewTextBoxColumn420, Me.DataGridViewTextBoxColumn403, Me.DataGridViewTextBoxColumn417, Me.DataGridViewTextBoxColumn418, Me.DataGridViewTextBoxColumn419, Me.DataGridViewTextBoxColumn421, Me.DataGridViewTextBoxColumn422, Me.DataGridViewTextBoxColumn423, Me.DataGridViewTextBoxColumn424})
+        Me.dgvRow6Column2.Location = New System.Drawing.Point(472, 1047)
         Me.dgvRow6Column2.Name = "dgvRow6Column2"
         Me.dgvRow6Column2.ReadOnly = True
         Me.dgvRow6Column2.RowHeadersVisible = False
         Me.dgvRow6Column2.RowTemplate.Height = 27
-        Me.dgvRow6Column2.Size = New System.Drawing.Size(317, 188)
+        Me.dgvRow6Column2.Size = New System.Drawing.Size(317, 198)
         Me.dgvRow6Column2.TabIndex = 99
-        '
-        'DataGridViewTextBoxColumn398
-        '
-        Me.DataGridViewTextBoxColumn398.DataPropertyName = "cId"
-        Me.DataGridViewTextBoxColumn398.HeaderText = ""
-        Me.DataGridViewTextBoxColumn398.Name = "DataGridViewTextBoxColumn398"
-        Me.DataGridViewTextBoxColumn398.ReadOnly = True
-        Me.DataGridViewTextBoxColumn398.Visible = False
-        '
-        'DataGridViewTextBoxColumn399
-        '
-        Me.DataGridViewTextBoxColumn399.DataPropertyName = "cCode1"
-        Me.DataGridViewTextBoxColumn399.HeaderText = "工番1"
-        Me.DataGridViewTextBoxColumn399.Name = "DataGridViewTextBoxColumn399"
-        Me.DataGridViewTextBoxColumn399.ReadOnly = True
-        Me.DataGridViewTextBoxColumn399.Visible = False
-        '
-        'DataGridViewTextBoxColumn400
-        '
-        Me.DataGridViewTextBoxColumn400.DataPropertyName = "cCode2"
-        Me.DataGridViewTextBoxColumn400.HeaderText = "工番2"
-        Me.DataGridViewTextBoxColumn400.Name = "DataGridViewTextBoxColumn400"
-        Me.DataGridViewTextBoxColumn400.ReadOnly = True
-        Me.DataGridViewTextBoxColumn400.Visible = False
-        '
-        'DataGridViewTextBoxColumn401
-        '
-        Me.DataGridViewTextBoxColumn401.DataPropertyName = "cCode3"
-        Me.DataGridViewTextBoxColumn401.HeaderText = "工番3"
-        Me.DataGridViewTextBoxColumn401.Name = "DataGridViewTextBoxColumn401"
-        Me.DataGridViewTextBoxColumn401.ReadOnly = True
-        Me.DataGridViewTextBoxColumn401.Visible = False
-        '
-        'DataGridViewTextBoxColumn402
-        '
-        Me.DataGridViewTextBoxColumn402.DataPropertyName = "cCode"
-        Me.DataGridViewTextBoxColumn402.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn402.HeaderText = "工番"
-        Me.DataGridViewTextBoxColumn402.Name = "DataGridViewTextBoxColumn402"
-        Me.DataGridViewTextBoxColumn402.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn403
-        '
-        Me.DataGridViewTextBoxColumn403.DataPropertyName = "cName"
-        Me.DataGridViewTextBoxColumn403.FillWeight = 130.0!
-        Me.DataGridViewTextBoxColumn403.HeaderText = "件名"
-        Me.DataGridViewTextBoxColumn403.Name = "DataGridViewTextBoxColumn403"
-        Me.DataGridViewTextBoxColumn403.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn417
-        '
-        Me.DataGridViewTextBoxColumn417.DataPropertyName = "cSalesYearMonth"
-        DataGridViewCellStyle94.Format = "yyyy年MM月"
-        DataGridViewCellStyle94.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn417.DefaultCellStyle = DataGridViewCellStyle94
-        Me.DataGridViewTextBoxColumn417.HeaderText = "売上年月"
-        Me.DataGridViewTextBoxColumn417.Name = "DataGridViewTextBoxColumn417"
-        Me.DataGridViewTextBoxColumn417.ReadOnly = True
-        Me.DataGridViewTextBoxColumn417.Visible = False
-        '
-        'DataGridViewTextBoxColumn418
-        '
-        Me.DataGridViewTextBoxColumn418.DataPropertyName = "cSalesAmount"
-        DataGridViewCellStyle95.Format = "C0"
-        DataGridViewCellStyle95.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn418.DefaultCellStyle = DataGridViewCellStyle95
-        Me.DataGridViewTextBoxColumn418.HeaderText = "売上金額"
-        Me.DataGridViewTextBoxColumn418.Name = "DataGridViewTextBoxColumn418"
-        Me.DataGridViewTextBoxColumn418.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn419
-        '
-        Me.DataGridViewTextBoxColumn419.DataPropertyName = "cClientID"
-        Me.DataGridViewTextBoxColumn419.HeaderText = "取引先ID"
-        Me.DataGridViewTextBoxColumn419.Name = "DataGridViewTextBoxColumn419"
-        Me.DataGridViewTextBoxColumn419.ReadOnly = True
-        Me.DataGridViewTextBoxColumn419.Visible = False
-        '
-        'DataGridViewTextBoxColumn420
-        '
-        Me.DataGridViewTextBoxColumn420.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn420.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn420.Name = "DataGridViewTextBoxColumn420"
-        Me.DataGridViewTextBoxColumn420.ReadOnly = True
-        Me.DataGridViewTextBoxColumn420.Visible = False
-        '
-        'DataGridViewTextBoxColumn421
-        '
-        Me.DataGridViewTextBoxColumn421.DataPropertyName = "cStatus"
-        Me.DataGridViewTextBoxColumn421.HeaderText = "請求状況"
-        Me.DataGridViewTextBoxColumn421.Name = "DataGridViewTextBoxColumn421"
-        Me.DataGridViewTextBoxColumn421.ReadOnly = True
-        Me.DataGridViewTextBoxColumn421.Visible = False
-        '
-        'DataGridViewTextBoxColumn422
-        '
-        Me.DataGridViewTextBoxColumn422.DataPropertyName = "cInsertDate"
-        DataGridViewCellStyle96.Format = "D"
-        DataGridViewCellStyle96.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn422.DefaultCellStyle = DataGridViewCellStyle96
-        Me.DataGridViewTextBoxColumn422.HeaderText = "作成日"
-        Me.DataGridViewTextBoxColumn422.Name = "DataGridViewTextBoxColumn422"
-        Me.DataGridViewTextBoxColumn422.ReadOnly = True
-        Me.DataGridViewTextBoxColumn422.Visible = False
-        '
-        'DataGridViewTextBoxColumn423
-        '
-        Me.DataGridViewTextBoxColumn423.DataPropertyName = "cStaffID"
-        Me.DataGridViewTextBoxColumn423.HeaderText = "作成者ID"
-        Me.DataGridViewTextBoxColumn423.Name = "DataGridViewTextBoxColumn423"
-        Me.DataGridViewTextBoxColumn423.ReadOnly = True
-        Me.DataGridViewTextBoxColumn423.Visible = False
-        '
-        'DataGridViewTextBoxColumn424
-        '
-        Me.DataGridViewTextBoxColumn424.DataPropertyName = "cStaffName"
-        Me.DataGridViewTextBoxColumn424.HeaderText = "作成者"
-        Me.DataGridViewTextBoxColumn424.Name = "DataGridViewTextBoxColumn424"
-        Me.DataGridViewTextBoxColumn424.ReadOnly = True
-        Me.DataGridViewTextBoxColumn424.Visible = False
         '
         'dgvRow6Column3
         '
@@ -5592,134 +5368,14 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column3.ColumnHeadersVisible = False
-        Me.dgvRow6Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn425, Me.DataGridViewTextBoxColumn426, Me.DataGridViewTextBoxColumn427, Me.DataGridViewTextBoxColumn428, Me.DataGridViewTextBoxColumn429, Me.DataGridViewTextBoxColumn430, Me.DataGridViewTextBoxColumn431, Me.DataGridViewTextBoxColumn432, Me.DataGridViewTextBoxColumn433, Me.DataGridViewTextBoxColumn434, Me.DataGridViewTextBoxColumn435, Me.DataGridViewTextBoxColumn436, Me.DataGridViewTextBoxColumn437, Me.DataGridViewTextBoxColumn438})
-        Me.dgvRow6Column3.Location = New System.Drawing.Point(795, 990)
+        Me.dgvRow6Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn425, Me.DataGridViewTextBoxColumn426, Me.DataGridViewTextBoxColumn427, Me.DataGridViewTextBoxColumn428, Me.DataGridViewTextBoxColumn429, Me.DataGridViewTextBoxColumn434, Me.DataGridViewTextBoxColumn430, Me.DataGridViewTextBoxColumn431, Me.DataGridViewTextBoxColumn432, Me.DataGridViewTextBoxColumn433, Me.DataGridViewTextBoxColumn435, Me.DataGridViewTextBoxColumn436, Me.DataGridViewTextBoxColumn437, Me.DataGridViewTextBoxColumn438})
+        Me.dgvRow6Column3.Location = New System.Drawing.Point(795, 1047)
         Me.dgvRow6Column3.Name = "dgvRow6Column3"
         Me.dgvRow6Column3.ReadOnly = True
         Me.dgvRow6Column3.RowHeadersVisible = False
         Me.dgvRow6Column3.RowTemplate.Height = 27
-        Me.dgvRow6Column3.Size = New System.Drawing.Size(317, 188)
+        Me.dgvRow6Column3.Size = New System.Drawing.Size(317, 198)
         Me.dgvRow6Column3.TabIndex = 100
-        '
-        'DataGridViewTextBoxColumn425
-        '
-        Me.DataGridViewTextBoxColumn425.DataPropertyName = "cId"
-        Me.DataGridViewTextBoxColumn425.HeaderText = ""
-        Me.DataGridViewTextBoxColumn425.Name = "DataGridViewTextBoxColumn425"
-        Me.DataGridViewTextBoxColumn425.ReadOnly = True
-        Me.DataGridViewTextBoxColumn425.Visible = False
-        '
-        'DataGridViewTextBoxColumn426
-        '
-        Me.DataGridViewTextBoxColumn426.DataPropertyName = "cCode1"
-        Me.DataGridViewTextBoxColumn426.HeaderText = "工番1"
-        Me.DataGridViewTextBoxColumn426.Name = "DataGridViewTextBoxColumn426"
-        Me.DataGridViewTextBoxColumn426.ReadOnly = True
-        Me.DataGridViewTextBoxColumn426.Visible = False
-        '
-        'DataGridViewTextBoxColumn427
-        '
-        Me.DataGridViewTextBoxColumn427.DataPropertyName = "cCode2"
-        Me.DataGridViewTextBoxColumn427.HeaderText = "工番2"
-        Me.DataGridViewTextBoxColumn427.Name = "DataGridViewTextBoxColumn427"
-        Me.DataGridViewTextBoxColumn427.ReadOnly = True
-        Me.DataGridViewTextBoxColumn427.Visible = False
-        '
-        'DataGridViewTextBoxColumn428
-        '
-        Me.DataGridViewTextBoxColumn428.DataPropertyName = "cCode3"
-        Me.DataGridViewTextBoxColumn428.HeaderText = "工番3"
-        Me.DataGridViewTextBoxColumn428.Name = "DataGridViewTextBoxColumn428"
-        Me.DataGridViewTextBoxColumn428.ReadOnly = True
-        Me.DataGridViewTextBoxColumn428.Visible = False
-        '
-        'DataGridViewTextBoxColumn429
-        '
-        Me.DataGridViewTextBoxColumn429.DataPropertyName = "cCode"
-        Me.DataGridViewTextBoxColumn429.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn429.HeaderText = "工番"
-        Me.DataGridViewTextBoxColumn429.Name = "DataGridViewTextBoxColumn429"
-        Me.DataGridViewTextBoxColumn429.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn430
-        '
-        Me.DataGridViewTextBoxColumn430.DataPropertyName = "cName"
-        Me.DataGridViewTextBoxColumn430.FillWeight = 130.0!
-        Me.DataGridViewTextBoxColumn430.HeaderText = "件名"
-        Me.DataGridViewTextBoxColumn430.Name = "DataGridViewTextBoxColumn430"
-        Me.DataGridViewTextBoxColumn430.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn431
-        '
-        Me.DataGridViewTextBoxColumn431.DataPropertyName = "cSalesYearMonth"
-        DataGridViewCellStyle97.Format = "yyyy年MM月"
-        DataGridViewCellStyle97.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn431.DefaultCellStyle = DataGridViewCellStyle97
-        Me.DataGridViewTextBoxColumn431.HeaderText = "売上年月"
-        Me.DataGridViewTextBoxColumn431.Name = "DataGridViewTextBoxColumn431"
-        Me.DataGridViewTextBoxColumn431.ReadOnly = True
-        Me.DataGridViewTextBoxColumn431.Visible = False
-        '
-        'DataGridViewTextBoxColumn432
-        '
-        Me.DataGridViewTextBoxColumn432.DataPropertyName = "cSalesAmount"
-        DataGridViewCellStyle98.Format = "C0"
-        DataGridViewCellStyle98.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn432.DefaultCellStyle = DataGridViewCellStyle98
-        Me.DataGridViewTextBoxColumn432.HeaderText = "売上金額"
-        Me.DataGridViewTextBoxColumn432.Name = "DataGridViewTextBoxColumn432"
-        Me.DataGridViewTextBoxColumn432.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn433
-        '
-        Me.DataGridViewTextBoxColumn433.DataPropertyName = "cClientID"
-        Me.DataGridViewTextBoxColumn433.HeaderText = "取引先ID"
-        Me.DataGridViewTextBoxColumn433.Name = "DataGridViewTextBoxColumn433"
-        Me.DataGridViewTextBoxColumn433.ReadOnly = True
-        Me.DataGridViewTextBoxColumn433.Visible = False
-        '
-        'DataGridViewTextBoxColumn434
-        '
-        Me.DataGridViewTextBoxColumn434.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn434.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn434.Name = "DataGridViewTextBoxColumn434"
-        Me.DataGridViewTextBoxColumn434.ReadOnly = True
-        Me.DataGridViewTextBoxColumn434.Visible = False
-        '
-        'DataGridViewTextBoxColumn435
-        '
-        Me.DataGridViewTextBoxColumn435.DataPropertyName = "cStatus"
-        Me.DataGridViewTextBoxColumn435.HeaderText = "請求状況"
-        Me.DataGridViewTextBoxColumn435.Name = "DataGridViewTextBoxColumn435"
-        Me.DataGridViewTextBoxColumn435.ReadOnly = True
-        Me.DataGridViewTextBoxColumn435.Visible = False
-        '
-        'DataGridViewTextBoxColumn436
-        '
-        Me.DataGridViewTextBoxColumn436.DataPropertyName = "cInsertDate"
-        DataGridViewCellStyle99.Format = "D"
-        DataGridViewCellStyle99.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn436.DefaultCellStyle = DataGridViewCellStyle99
-        Me.DataGridViewTextBoxColumn436.HeaderText = "作成日"
-        Me.DataGridViewTextBoxColumn436.Name = "DataGridViewTextBoxColumn436"
-        Me.DataGridViewTextBoxColumn436.ReadOnly = True
-        Me.DataGridViewTextBoxColumn436.Visible = False
-        '
-        'DataGridViewTextBoxColumn437
-        '
-        Me.DataGridViewTextBoxColumn437.DataPropertyName = "cStaffID"
-        Me.DataGridViewTextBoxColumn437.HeaderText = "作成者ID"
-        Me.DataGridViewTextBoxColumn437.Name = "DataGridViewTextBoxColumn437"
-        Me.DataGridViewTextBoxColumn437.ReadOnly = True
-        Me.DataGridViewTextBoxColumn437.Visible = False
-        '
-        'DataGridViewTextBoxColumn438
-        '
-        Me.DataGridViewTextBoxColumn438.DataPropertyName = "cStaffName"
-        Me.DataGridViewTextBoxColumn438.HeaderText = "作成者"
-        Me.DataGridViewTextBoxColumn438.Name = "DataGridViewTextBoxColumn438"
-        Me.DataGridViewTextBoxColumn438.ReadOnly = True
-        Me.DataGridViewTextBoxColumn438.Visible = False
         '
         'dgvRow6Column4
         '
@@ -5731,134 +5387,14 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column4.ColumnHeadersVisible = False
-        Me.dgvRow6Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn439, Me.DataGridViewTextBoxColumn440, Me.DataGridViewTextBoxColumn441, Me.DataGridViewTextBoxColumn442, Me.DataGridViewTextBoxColumn443, Me.DataGridViewTextBoxColumn444, Me.DataGridViewTextBoxColumn445, Me.DataGridViewTextBoxColumn446, Me.DataGridViewTextBoxColumn447, Me.DataGridViewTextBoxColumn448, Me.DataGridViewTextBoxColumn449, Me.DataGridViewTextBoxColumn450, Me.DataGridViewTextBoxColumn451, Me.DataGridViewTextBoxColumn452})
-        Me.dgvRow6Column4.Location = New System.Drawing.Point(1118, 990)
+        Me.dgvRow6Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn439, Me.DataGridViewTextBoxColumn440, Me.DataGridViewTextBoxColumn441, Me.DataGridViewTextBoxColumn442, Me.DataGridViewTextBoxColumn443, Me.DataGridViewTextBoxColumn448, Me.DataGridViewTextBoxColumn444, Me.DataGridViewTextBoxColumn445, Me.DataGridViewTextBoxColumn446, Me.DataGridViewTextBoxColumn447, Me.DataGridViewTextBoxColumn449, Me.DataGridViewTextBoxColumn450, Me.DataGridViewTextBoxColumn451, Me.DataGridViewTextBoxColumn452})
+        Me.dgvRow6Column4.Location = New System.Drawing.Point(1118, 1047)
         Me.dgvRow6Column4.Name = "dgvRow6Column4"
         Me.dgvRow6Column4.ReadOnly = True
         Me.dgvRow6Column4.RowHeadersVisible = False
         Me.dgvRow6Column4.RowTemplate.Height = 27
-        Me.dgvRow6Column4.Size = New System.Drawing.Size(317, 188)
+        Me.dgvRow6Column4.Size = New System.Drawing.Size(317, 198)
         Me.dgvRow6Column4.TabIndex = 101
-        '
-        'DataGridViewTextBoxColumn439
-        '
-        Me.DataGridViewTextBoxColumn439.DataPropertyName = "cId"
-        Me.DataGridViewTextBoxColumn439.HeaderText = ""
-        Me.DataGridViewTextBoxColumn439.Name = "DataGridViewTextBoxColumn439"
-        Me.DataGridViewTextBoxColumn439.ReadOnly = True
-        Me.DataGridViewTextBoxColumn439.Visible = False
-        '
-        'DataGridViewTextBoxColumn440
-        '
-        Me.DataGridViewTextBoxColumn440.DataPropertyName = "cCode1"
-        Me.DataGridViewTextBoxColumn440.HeaderText = "工番1"
-        Me.DataGridViewTextBoxColumn440.Name = "DataGridViewTextBoxColumn440"
-        Me.DataGridViewTextBoxColumn440.ReadOnly = True
-        Me.DataGridViewTextBoxColumn440.Visible = False
-        '
-        'DataGridViewTextBoxColumn441
-        '
-        Me.DataGridViewTextBoxColumn441.DataPropertyName = "cCode2"
-        Me.DataGridViewTextBoxColumn441.HeaderText = "工番2"
-        Me.DataGridViewTextBoxColumn441.Name = "DataGridViewTextBoxColumn441"
-        Me.DataGridViewTextBoxColumn441.ReadOnly = True
-        Me.DataGridViewTextBoxColumn441.Visible = False
-        '
-        'DataGridViewTextBoxColumn442
-        '
-        Me.DataGridViewTextBoxColumn442.DataPropertyName = "cCode3"
-        Me.DataGridViewTextBoxColumn442.HeaderText = "工番3"
-        Me.DataGridViewTextBoxColumn442.Name = "DataGridViewTextBoxColumn442"
-        Me.DataGridViewTextBoxColumn442.ReadOnly = True
-        Me.DataGridViewTextBoxColumn442.Visible = False
-        '
-        'DataGridViewTextBoxColumn443
-        '
-        Me.DataGridViewTextBoxColumn443.DataPropertyName = "cCode"
-        Me.DataGridViewTextBoxColumn443.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn443.HeaderText = "工番"
-        Me.DataGridViewTextBoxColumn443.Name = "DataGridViewTextBoxColumn443"
-        Me.DataGridViewTextBoxColumn443.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn444
-        '
-        Me.DataGridViewTextBoxColumn444.DataPropertyName = "cName"
-        Me.DataGridViewTextBoxColumn444.FillWeight = 130.0!
-        Me.DataGridViewTextBoxColumn444.HeaderText = "件名"
-        Me.DataGridViewTextBoxColumn444.Name = "DataGridViewTextBoxColumn444"
-        Me.DataGridViewTextBoxColumn444.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn445
-        '
-        Me.DataGridViewTextBoxColumn445.DataPropertyName = "cSalesYearMonth"
-        DataGridViewCellStyle100.Format = "yyyy年MM月"
-        DataGridViewCellStyle100.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn445.DefaultCellStyle = DataGridViewCellStyle100
-        Me.DataGridViewTextBoxColumn445.HeaderText = "売上年月"
-        Me.DataGridViewTextBoxColumn445.Name = "DataGridViewTextBoxColumn445"
-        Me.DataGridViewTextBoxColumn445.ReadOnly = True
-        Me.DataGridViewTextBoxColumn445.Visible = False
-        '
-        'DataGridViewTextBoxColumn446
-        '
-        Me.DataGridViewTextBoxColumn446.DataPropertyName = "cSalesAmount"
-        DataGridViewCellStyle101.Format = "C0"
-        DataGridViewCellStyle101.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn446.DefaultCellStyle = DataGridViewCellStyle101
-        Me.DataGridViewTextBoxColumn446.HeaderText = "売上金額"
-        Me.DataGridViewTextBoxColumn446.Name = "DataGridViewTextBoxColumn446"
-        Me.DataGridViewTextBoxColumn446.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn447
-        '
-        Me.DataGridViewTextBoxColumn447.DataPropertyName = "cClientID"
-        Me.DataGridViewTextBoxColumn447.HeaderText = "取引先ID"
-        Me.DataGridViewTextBoxColumn447.Name = "DataGridViewTextBoxColumn447"
-        Me.DataGridViewTextBoxColumn447.ReadOnly = True
-        Me.DataGridViewTextBoxColumn447.Visible = False
-        '
-        'DataGridViewTextBoxColumn448
-        '
-        Me.DataGridViewTextBoxColumn448.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn448.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn448.Name = "DataGridViewTextBoxColumn448"
-        Me.DataGridViewTextBoxColumn448.ReadOnly = True
-        Me.DataGridViewTextBoxColumn448.Visible = False
-        '
-        'DataGridViewTextBoxColumn449
-        '
-        Me.DataGridViewTextBoxColumn449.DataPropertyName = "cStatus"
-        Me.DataGridViewTextBoxColumn449.HeaderText = "請求状況"
-        Me.DataGridViewTextBoxColumn449.Name = "DataGridViewTextBoxColumn449"
-        Me.DataGridViewTextBoxColumn449.ReadOnly = True
-        Me.DataGridViewTextBoxColumn449.Visible = False
-        '
-        'DataGridViewTextBoxColumn450
-        '
-        Me.DataGridViewTextBoxColumn450.DataPropertyName = "cInsertDate"
-        DataGridViewCellStyle102.Format = "D"
-        DataGridViewCellStyle102.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn450.DefaultCellStyle = DataGridViewCellStyle102
-        Me.DataGridViewTextBoxColumn450.HeaderText = "作成日"
-        Me.DataGridViewTextBoxColumn450.Name = "DataGridViewTextBoxColumn450"
-        Me.DataGridViewTextBoxColumn450.ReadOnly = True
-        Me.DataGridViewTextBoxColumn450.Visible = False
-        '
-        'DataGridViewTextBoxColumn451
-        '
-        Me.DataGridViewTextBoxColumn451.DataPropertyName = "cStaffID"
-        Me.DataGridViewTextBoxColumn451.HeaderText = "作成者ID"
-        Me.DataGridViewTextBoxColumn451.Name = "DataGridViewTextBoxColumn451"
-        Me.DataGridViewTextBoxColumn451.ReadOnly = True
-        Me.DataGridViewTextBoxColumn451.Visible = False
-        '
-        'DataGridViewTextBoxColumn452
-        '
-        Me.DataGridViewTextBoxColumn452.DataPropertyName = "cStaffName"
-        Me.DataGridViewTextBoxColumn452.HeaderText = "作成者"
-        Me.DataGridViewTextBoxColumn452.Name = "DataGridViewTextBoxColumn452"
-        Me.DataGridViewTextBoxColumn452.ReadOnly = True
-        Me.DataGridViewTextBoxColumn452.Visible = False
         '
         'dgvRow6Column5
         '
@@ -5870,134 +5406,14 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column5.ColumnHeadersVisible = False
-        Me.dgvRow6Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn453, Me.DataGridViewTextBoxColumn454, Me.DataGridViewTextBoxColumn455, Me.DataGridViewTextBoxColumn466, Me.DataGridViewTextBoxColumn467, Me.DataGridViewTextBoxColumn468, Me.DataGridViewTextBoxColumn469, Me.DataGridViewTextBoxColumn470, Me.DataGridViewTextBoxColumn471, Me.DataGridViewTextBoxColumn472, Me.DataGridViewTextBoxColumn473, Me.DataGridViewTextBoxColumn474, Me.DataGridViewTextBoxColumn475, Me.DataGridViewTextBoxColumn476})
-        Me.dgvRow6Column5.Location = New System.Drawing.Point(1441, 990)
+        Me.dgvRow6Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn453, Me.DataGridViewTextBoxColumn454, Me.DataGridViewTextBoxColumn455, Me.DataGridViewTextBoxColumn466, Me.DataGridViewTextBoxColumn467, Me.DataGridViewTextBoxColumn472, Me.DataGridViewTextBoxColumn468, Me.DataGridViewTextBoxColumn469, Me.DataGridViewTextBoxColumn470, Me.DataGridViewTextBoxColumn471, Me.DataGridViewTextBoxColumn473, Me.DataGridViewTextBoxColumn474, Me.DataGridViewTextBoxColumn475, Me.DataGridViewTextBoxColumn476})
+        Me.dgvRow6Column5.Location = New System.Drawing.Point(1441, 1047)
         Me.dgvRow6Column5.Name = "dgvRow6Column5"
         Me.dgvRow6Column5.ReadOnly = True
         Me.dgvRow6Column5.RowHeadersVisible = False
         Me.dgvRow6Column5.RowTemplate.Height = 27
-        Me.dgvRow6Column5.Size = New System.Drawing.Size(317, 188)
+        Me.dgvRow6Column5.Size = New System.Drawing.Size(317, 198)
         Me.dgvRow6Column5.TabIndex = 102
-        '
-        'DataGridViewTextBoxColumn453
-        '
-        Me.DataGridViewTextBoxColumn453.DataPropertyName = "cId"
-        Me.DataGridViewTextBoxColumn453.HeaderText = ""
-        Me.DataGridViewTextBoxColumn453.Name = "DataGridViewTextBoxColumn453"
-        Me.DataGridViewTextBoxColumn453.ReadOnly = True
-        Me.DataGridViewTextBoxColumn453.Visible = False
-        '
-        'DataGridViewTextBoxColumn454
-        '
-        Me.DataGridViewTextBoxColumn454.DataPropertyName = "cCode1"
-        Me.DataGridViewTextBoxColumn454.HeaderText = "工番1"
-        Me.DataGridViewTextBoxColumn454.Name = "DataGridViewTextBoxColumn454"
-        Me.DataGridViewTextBoxColumn454.ReadOnly = True
-        Me.DataGridViewTextBoxColumn454.Visible = False
-        '
-        'DataGridViewTextBoxColumn455
-        '
-        Me.DataGridViewTextBoxColumn455.DataPropertyName = "cCode2"
-        Me.DataGridViewTextBoxColumn455.HeaderText = "工番2"
-        Me.DataGridViewTextBoxColumn455.Name = "DataGridViewTextBoxColumn455"
-        Me.DataGridViewTextBoxColumn455.ReadOnly = True
-        Me.DataGridViewTextBoxColumn455.Visible = False
-        '
-        'DataGridViewTextBoxColumn466
-        '
-        Me.DataGridViewTextBoxColumn466.DataPropertyName = "cCode3"
-        Me.DataGridViewTextBoxColumn466.HeaderText = "工番3"
-        Me.DataGridViewTextBoxColumn466.Name = "DataGridViewTextBoxColumn466"
-        Me.DataGridViewTextBoxColumn466.ReadOnly = True
-        Me.DataGridViewTextBoxColumn466.Visible = False
-        '
-        'DataGridViewTextBoxColumn467
-        '
-        Me.DataGridViewTextBoxColumn467.DataPropertyName = "cCode"
-        Me.DataGridViewTextBoxColumn467.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn467.HeaderText = "工番"
-        Me.DataGridViewTextBoxColumn467.Name = "DataGridViewTextBoxColumn467"
-        Me.DataGridViewTextBoxColumn467.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn468
-        '
-        Me.DataGridViewTextBoxColumn468.DataPropertyName = "cName"
-        Me.DataGridViewTextBoxColumn468.FillWeight = 130.0!
-        Me.DataGridViewTextBoxColumn468.HeaderText = "件名"
-        Me.DataGridViewTextBoxColumn468.Name = "DataGridViewTextBoxColumn468"
-        Me.DataGridViewTextBoxColumn468.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn469
-        '
-        Me.DataGridViewTextBoxColumn469.DataPropertyName = "cSalesYearMonth"
-        DataGridViewCellStyle103.Format = "yyyy年MM月"
-        DataGridViewCellStyle103.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn469.DefaultCellStyle = DataGridViewCellStyle103
-        Me.DataGridViewTextBoxColumn469.HeaderText = "売上年月"
-        Me.DataGridViewTextBoxColumn469.Name = "DataGridViewTextBoxColumn469"
-        Me.DataGridViewTextBoxColumn469.ReadOnly = True
-        Me.DataGridViewTextBoxColumn469.Visible = False
-        '
-        'DataGridViewTextBoxColumn470
-        '
-        Me.DataGridViewTextBoxColumn470.DataPropertyName = "cSalesAmount"
-        DataGridViewCellStyle104.Format = "C0"
-        DataGridViewCellStyle104.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn470.DefaultCellStyle = DataGridViewCellStyle104
-        Me.DataGridViewTextBoxColumn470.HeaderText = "売上金額"
-        Me.DataGridViewTextBoxColumn470.Name = "DataGridViewTextBoxColumn470"
-        Me.DataGridViewTextBoxColumn470.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn471
-        '
-        Me.DataGridViewTextBoxColumn471.DataPropertyName = "cClientID"
-        Me.DataGridViewTextBoxColumn471.HeaderText = "取引先ID"
-        Me.DataGridViewTextBoxColumn471.Name = "DataGridViewTextBoxColumn471"
-        Me.DataGridViewTextBoxColumn471.ReadOnly = True
-        Me.DataGridViewTextBoxColumn471.Visible = False
-        '
-        'DataGridViewTextBoxColumn472
-        '
-        Me.DataGridViewTextBoxColumn472.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn472.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn472.Name = "DataGridViewTextBoxColumn472"
-        Me.DataGridViewTextBoxColumn472.ReadOnly = True
-        Me.DataGridViewTextBoxColumn472.Visible = False
-        '
-        'DataGridViewTextBoxColumn473
-        '
-        Me.DataGridViewTextBoxColumn473.DataPropertyName = "cStatus"
-        Me.DataGridViewTextBoxColumn473.HeaderText = "請求状況"
-        Me.DataGridViewTextBoxColumn473.Name = "DataGridViewTextBoxColumn473"
-        Me.DataGridViewTextBoxColumn473.ReadOnly = True
-        Me.DataGridViewTextBoxColumn473.Visible = False
-        '
-        'DataGridViewTextBoxColumn474
-        '
-        Me.DataGridViewTextBoxColumn474.DataPropertyName = "cInsertDate"
-        DataGridViewCellStyle105.Format = "D"
-        DataGridViewCellStyle105.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn474.DefaultCellStyle = DataGridViewCellStyle105
-        Me.DataGridViewTextBoxColumn474.HeaderText = "作成日"
-        Me.DataGridViewTextBoxColumn474.Name = "DataGridViewTextBoxColumn474"
-        Me.DataGridViewTextBoxColumn474.ReadOnly = True
-        Me.DataGridViewTextBoxColumn474.Visible = False
-        '
-        'DataGridViewTextBoxColumn475
-        '
-        Me.DataGridViewTextBoxColumn475.DataPropertyName = "cStaffID"
-        Me.DataGridViewTextBoxColumn475.HeaderText = "作成者ID"
-        Me.DataGridViewTextBoxColumn475.Name = "DataGridViewTextBoxColumn475"
-        Me.DataGridViewTextBoxColumn475.ReadOnly = True
-        Me.DataGridViewTextBoxColumn475.Visible = False
-        '
-        'DataGridViewTextBoxColumn476
-        '
-        Me.DataGridViewTextBoxColumn476.DataPropertyName = "cStaffName"
-        Me.DataGridViewTextBoxColumn476.HeaderText = "作成者"
-        Me.DataGridViewTextBoxColumn476.Name = "DataGridViewTextBoxColumn476"
-        Me.DataGridViewTextBoxColumn476.ReadOnly = True
-        Me.DataGridViewTextBoxColumn476.Visible = False
         '
         'dgvRow6Column6
         '
@@ -6009,14 +5425,118 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvRow6Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column6.ColumnHeadersVisible = False
-        Me.dgvRow6Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn477, Me.DataGridViewTextBoxColumn478, Me.DataGridViewTextBoxColumn479, Me.DataGridViewTextBoxColumn480, Me.DataGridViewTextBoxColumn481, Me.DataGridViewTextBoxColumn482, Me.DataGridViewTextBoxColumn483, Me.DataGridViewTextBoxColumn484, Me.DataGridViewTextBoxColumn485, Me.DataGridViewTextBoxColumn486, Me.DataGridViewTextBoxColumn487, Me.DataGridViewTextBoxColumn488, Me.DataGridViewTextBoxColumn489, Me.DataGridViewTextBoxColumn490})
-        Me.dgvRow6Column6.Location = New System.Drawing.Point(1764, 990)
+        Me.dgvRow6Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn477, Me.DataGridViewTextBoxColumn478, Me.DataGridViewTextBoxColumn479, Me.DataGridViewTextBoxColumn480, Me.DataGridViewTextBoxColumn481, Me.DataGridViewTextBoxColumn486, Me.DataGridViewTextBoxColumn482, Me.DataGridViewTextBoxColumn483, Me.DataGridViewTextBoxColumn484, Me.DataGridViewTextBoxColumn485, Me.DataGridViewTextBoxColumn487, Me.DataGridViewTextBoxColumn488, Me.DataGridViewTextBoxColumn489, Me.DataGridViewTextBoxColumn490})
+        Me.dgvRow6Column6.Location = New System.Drawing.Point(1764, 1047)
         Me.dgvRow6Column6.Name = "dgvRow6Column6"
         Me.dgvRow6Column6.ReadOnly = True
         Me.dgvRow6Column6.RowHeadersVisible = False
         Me.dgvRow6Column6.RowTemplate.Height = 27
-        Me.dgvRow6Column6.Size = New System.Drawing.Size(321, 188)
+        Me.dgvRow6Column6.Size = New System.Drawing.Size(321, 198)
         Me.dgvRow6Column6.TabIndex = 103
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.btnNext, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.dudSemester, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.dtpDisplayYear, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.btnPrev, 0, 0)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(2088, 60)
+        Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'dtpDisplayYear
+        '
+        Me.dtpDisplayYear.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dtpDisplayYear.CustomFormat = "yyyy年度"
+        Me.dtpDisplayYear.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.dtpDisplayYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dtpDisplayYear.Location = New System.Drawing.Point(838, 10)
+        Me.dtpDisplayYear.Name = "dtpDisplayYear"
+        Me.dtpDisplayYear.ShowUpDown = True
+        Me.dtpDisplayYear.Size = New System.Drawing.Size(202, 39)
+        Me.dtpDisplayYear.TabIndex = 0
+        '
+        'dudSemester
+        '
+        Me.dudSemester.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dudSemester.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.dudSemester.Location = New System.Drawing.Point(1046, 10)
+        Me.dudSemester.Name = "dudSemester"
+        Me.dudSemester.Size = New System.Drawing.Size(202, 39)
+        Me.dudSemester.TabIndex = 1
+        Me.dudSemester.Text = "前期"
+        '
+        'cmsStatusChange
+        '
+        Me.cmsStatusChange.ImageScalingSize = New System.Drawing.Size(24, 24)
+        Me.cmsStatusChange.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiNoPlan, Me.tsmiEstimating, Me.tsmiDecided, Me.tsmiInvoiced, Me.tsmiCancel})
+        Me.cmsStatusChange.Name = "cmsStatusChange"
+        Me.cmsStatusChange.Size = New System.Drawing.Size(139, 154)
+        '
+        'tsmiNoPlan
+        '
+        Me.tsmiNoPlan.Name = "tsmiNoPlan"
+        Me.tsmiNoPlan.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiNoPlan.Text = "未定"
+        '
+        'tsmiEstimating
+        '
+        Me.tsmiEstimating.Name = "tsmiEstimating"
+        Me.tsmiEstimating.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiEstimating.Text = "見積中"
+        '
+        'tsmiDecided
+        '
+        Me.tsmiDecided.Name = "tsmiDecided"
+        Me.tsmiDecided.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiDecided.Text = "決定"
+        '
+        'tsmiInvoiced
+        '
+        Me.tsmiInvoiced.Name = "tsmiInvoiced"
+        Me.tsmiInvoiced.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiInvoiced.Text = "請求済"
+        '
+        'tsmiCancel
+        '
+        Me.tsmiCancel.Name = "tsmiCancel"
+        Me.tsmiCancel.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiCancel.Text = "取消"
+        '
+        'btnPrev
+        '
+        Me.btnPrev.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrev.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btnPrev.Location = New System.Drawing.Point(757, 3)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(75, 54)
+        Me.btnPrev.TabIndex = 2
+        Me.btnPrev.Text = "前"
+        Me.btnPrev.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnNext.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.btnNext.Location = New System.Drawing.Point(1254, 3)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(75, 54)
+        Me.btnNext.TabIndex = 3
+        Me.btnNext.Text = "次"
+        Me.btnNext.UseVisualStyleBackColor = True
         '
         'DataGridViewTextBoxColumn477
         '
@@ -6058,6 +5578,13 @@ Partial Class SalesPlanForm
         Me.DataGridViewTextBoxColumn481.Name = "DataGridViewTextBoxColumn481"
         Me.DataGridViewTextBoxColumn481.ReadOnly = True
         '
+        'DataGridViewTextBoxColumn486
+        '
+        Me.DataGridViewTextBoxColumn486.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn486.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn486.Name = "DataGridViewTextBoxColumn486"
+        Me.DataGridViewTextBoxColumn486.ReadOnly = True
+        '
         'DataGridViewTextBoxColumn482
         '
         Me.DataGridViewTextBoxColumn482.DataPropertyName = "cName"
@@ -6095,14 +5622,6 @@ Partial Class SalesPlanForm
         Me.DataGridViewTextBoxColumn485.ReadOnly = True
         Me.DataGridViewTextBoxColumn485.Visible = False
         '
-        'DataGridViewTextBoxColumn486
-        '
-        Me.DataGridViewTextBoxColumn486.DataPropertyName = "cClient"
-        Me.DataGridViewTextBoxColumn486.HeaderText = "取引先"
-        Me.DataGridViewTextBoxColumn486.Name = "DataGridViewTextBoxColumn486"
-        Me.DataGridViewTextBoxColumn486.ReadOnly = True
-        Me.DataGridViewTextBoxColumn486.Visible = False
-        '
         'DataGridViewTextBoxColumn487
         '
         Me.DataGridViewTextBoxColumn487.DataPropertyName = "cStatus"
@@ -6138,114 +5657,606 @@ Partial Class SalesPlanForm
         Me.DataGridViewTextBoxColumn490.ReadOnly = True
         Me.DataGridViewTextBoxColumn490.Visible = False
         '
-        'TableLayoutPanel2
+        'DataGridViewTextBoxColumn453
         '
-        Me.TableLayoutPanel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.dtpDisplayYear, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.dudSemester, 1, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 23)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(2088, 43)
-        Me.TableLayoutPanel2.TabIndex = 0
+        Me.DataGridViewTextBoxColumn453.DataPropertyName = "cId"
+        Me.DataGridViewTextBoxColumn453.HeaderText = ""
+        Me.DataGridViewTextBoxColumn453.Name = "DataGridViewTextBoxColumn453"
+        Me.DataGridViewTextBoxColumn453.ReadOnly = True
+        Me.DataGridViewTextBoxColumn453.Visible = False
         '
-        'dtpDisplayYear
+        'DataGridViewTextBoxColumn454
         '
-        Me.dtpDisplayYear.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.dtpDisplayYear.CustomFormat = "yyyy年度"
-        Me.dtpDisplayYear.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.dtpDisplayYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDisplayYear.Location = New System.Drawing.Point(866, 3)
-        Me.dtpDisplayYear.Name = "dtpDisplayYear"
-        Me.dtpDisplayYear.ShowUpDown = True
-        Me.dtpDisplayYear.Size = New System.Drawing.Size(175, 39)
-        Me.dtpDisplayYear.TabIndex = 0
+        Me.DataGridViewTextBoxColumn454.DataPropertyName = "cCode1"
+        Me.DataGridViewTextBoxColumn454.HeaderText = "工番1"
+        Me.DataGridViewTextBoxColumn454.Name = "DataGridViewTextBoxColumn454"
+        Me.DataGridViewTextBoxColumn454.ReadOnly = True
+        Me.DataGridViewTextBoxColumn454.Visible = False
         '
-        'dudSemester
+        'DataGridViewTextBoxColumn455
         '
-        Me.dudSemester.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.dudSemester.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.dudSemester.Location = New System.Drawing.Point(1047, 3)
-        Me.dudSemester.Name = "dudSemester"
-        Me.dudSemester.Size = New System.Drawing.Size(120, 39)
-        Me.dudSemester.TabIndex = 1
-        Me.dudSemester.Text = "前期"
+        Me.DataGridViewTextBoxColumn455.DataPropertyName = "cCode2"
+        Me.DataGridViewTextBoxColumn455.HeaderText = "工番2"
+        Me.DataGridViewTextBoxColumn455.Name = "DataGridViewTextBoxColumn455"
+        Me.DataGridViewTextBoxColumn455.ReadOnly = True
+        Me.DataGridViewTextBoxColumn455.Visible = False
         '
-        'cmsStatusChange
+        'DataGridViewTextBoxColumn466
         '
-        Me.cmsStatusChange.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.cmsStatusChange.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiNoPlan, Me.tsmiEstimating, Me.tsmiDecided, Me.tsmiInvoiced, Me.tsmiCancel})
-        Me.cmsStatusChange.Name = "cmsStatusChange"
-        Me.cmsStatusChange.Size = New System.Drawing.Size(139, 154)
+        Me.DataGridViewTextBoxColumn466.DataPropertyName = "cCode3"
+        Me.DataGridViewTextBoxColumn466.HeaderText = "工番3"
+        Me.DataGridViewTextBoxColumn466.Name = "DataGridViewTextBoxColumn466"
+        Me.DataGridViewTextBoxColumn466.ReadOnly = True
+        Me.DataGridViewTextBoxColumn466.Visible = False
         '
-        'tsmiNoPlan
+        'DataGridViewTextBoxColumn467
         '
-        Me.tsmiNoPlan.Name = "tsmiNoPlan"
-        Me.tsmiNoPlan.Size = New System.Drawing.Size(138, 30)
-        Me.tsmiNoPlan.Text = "未定"
+        Me.DataGridViewTextBoxColumn467.DataPropertyName = "cCode"
+        Me.DataGridViewTextBoxColumn467.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn467.HeaderText = "工番"
+        Me.DataGridViewTextBoxColumn467.Name = "DataGridViewTextBoxColumn467"
+        Me.DataGridViewTextBoxColumn467.ReadOnly = True
         '
-        'tsmiEstimating
+        'DataGridViewTextBoxColumn472
         '
-        Me.tsmiEstimating.Name = "tsmiEstimating"
-        Me.tsmiEstimating.Size = New System.Drawing.Size(138, 30)
-        Me.tsmiEstimating.Text = "見積中"
+        Me.DataGridViewTextBoxColumn472.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn472.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn472.Name = "DataGridViewTextBoxColumn472"
+        Me.DataGridViewTextBoxColumn472.ReadOnly = True
         '
-        'tsmiDecided
+        'DataGridViewTextBoxColumn468
         '
-        Me.tsmiDecided.Name = "tsmiDecided"
-        Me.tsmiDecided.Size = New System.Drawing.Size(138, 30)
-        Me.tsmiDecided.Text = "決定"
+        Me.DataGridViewTextBoxColumn468.DataPropertyName = "cName"
+        Me.DataGridViewTextBoxColumn468.FillWeight = 130.0!
+        Me.DataGridViewTextBoxColumn468.HeaderText = "件名"
+        Me.DataGridViewTextBoxColumn468.Name = "DataGridViewTextBoxColumn468"
+        Me.DataGridViewTextBoxColumn468.ReadOnly = True
         '
-        'tsmiInvoiced
+        'DataGridViewTextBoxColumn469
         '
-        Me.tsmiInvoiced.Name = "tsmiInvoiced"
-        Me.tsmiInvoiced.Size = New System.Drawing.Size(138, 30)
-        Me.tsmiInvoiced.Text = "請求済"
+        Me.DataGridViewTextBoxColumn469.DataPropertyName = "cSalesYearMonth"
+        DataGridViewCellStyle103.Format = "yyyy年MM月"
+        DataGridViewCellStyle103.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn469.DefaultCellStyle = DataGridViewCellStyle103
+        Me.DataGridViewTextBoxColumn469.HeaderText = "売上年月"
+        Me.DataGridViewTextBoxColumn469.Name = "DataGridViewTextBoxColumn469"
+        Me.DataGridViewTextBoxColumn469.ReadOnly = True
+        Me.DataGridViewTextBoxColumn469.Visible = False
         '
-        'tsmiCancel
+        'DataGridViewTextBoxColumn470
         '
-        Me.tsmiCancel.Name = "tsmiCancel"
-        Me.tsmiCancel.Size = New System.Drawing.Size(138, 30)
-        Me.tsmiCancel.Text = "取消"
+        Me.DataGridViewTextBoxColumn470.DataPropertyName = "cSalesAmount"
+        DataGridViewCellStyle104.Format = "C0"
+        DataGridViewCellStyle104.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn470.DefaultCellStyle = DataGridViewCellStyle104
+        Me.DataGridViewTextBoxColumn470.HeaderText = "売上金額"
+        Me.DataGridViewTextBoxColumn470.Name = "DataGridViewTextBoxColumn470"
+        Me.DataGridViewTextBoxColumn470.ReadOnly = True
         '
-        'MenuStrip1
+        'DataGridViewTextBoxColumn471
         '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mitmAdd, Me.mitmEdit, Me.mitmDelete})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(2164, 33)
-        Me.MenuStrip1.TabIndex = 12
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.DataGridViewTextBoxColumn471.DataPropertyName = "cClientID"
+        Me.DataGridViewTextBoxColumn471.HeaderText = "取引先ID"
+        Me.DataGridViewTextBoxColumn471.Name = "DataGridViewTextBoxColumn471"
+        Me.DataGridViewTextBoxColumn471.ReadOnly = True
+        Me.DataGridViewTextBoxColumn471.Visible = False
         '
-        'mitmAdd
+        'DataGridViewTextBoxColumn473
         '
-        Me.mitmAdd.Name = "mitmAdd"
-        Me.mitmAdd.Size = New System.Drawing.Size(96, 29)
-        Me.mitmAdd.Text = "新規追加"
+        Me.DataGridViewTextBoxColumn473.DataPropertyName = "cStatus"
+        Me.DataGridViewTextBoxColumn473.HeaderText = "請求状況"
+        Me.DataGridViewTextBoxColumn473.Name = "DataGridViewTextBoxColumn473"
+        Me.DataGridViewTextBoxColumn473.ReadOnly = True
+        Me.DataGridViewTextBoxColumn473.Visible = False
         '
-        'mitmEdit
+        'DataGridViewTextBoxColumn474
         '
-        Me.mitmEdit.Name = "mitmEdit"
-        Me.mitmEdit.Size = New System.Drawing.Size(60, 29)
-        Me.mitmEdit.Text = "編集"
+        Me.DataGridViewTextBoxColumn474.DataPropertyName = "cInsertDate"
+        DataGridViewCellStyle105.Format = "D"
+        DataGridViewCellStyle105.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn474.DefaultCellStyle = DataGridViewCellStyle105
+        Me.DataGridViewTextBoxColumn474.HeaderText = "作成日"
+        Me.DataGridViewTextBoxColumn474.Name = "DataGridViewTextBoxColumn474"
+        Me.DataGridViewTextBoxColumn474.ReadOnly = True
+        Me.DataGridViewTextBoxColumn474.Visible = False
         '
-        'mitmDelete
+        'DataGridViewTextBoxColumn475
         '
-        Me.mitmDelete.Name = "mitmDelete"
-        Me.mitmDelete.Size = New System.Drawing.Size(60, 29)
-        Me.mitmDelete.Text = "削除"
+        Me.DataGridViewTextBoxColumn475.DataPropertyName = "cStaffID"
+        Me.DataGridViewTextBoxColumn475.HeaderText = "作成者ID"
+        Me.DataGridViewTextBoxColumn475.Name = "DataGridViewTextBoxColumn475"
+        Me.DataGridViewTextBoxColumn475.ReadOnly = True
+        Me.DataGridViewTextBoxColumn475.Visible = False
+        '
+        'DataGridViewTextBoxColumn476
+        '
+        Me.DataGridViewTextBoxColumn476.DataPropertyName = "cStaffName"
+        Me.DataGridViewTextBoxColumn476.HeaderText = "作成者"
+        Me.DataGridViewTextBoxColumn476.Name = "DataGridViewTextBoxColumn476"
+        Me.DataGridViewTextBoxColumn476.ReadOnly = True
+        Me.DataGridViewTextBoxColumn476.Visible = False
+        '
+        'DataGridViewTextBoxColumn439
+        '
+        Me.DataGridViewTextBoxColumn439.DataPropertyName = "cId"
+        Me.DataGridViewTextBoxColumn439.HeaderText = ""
+        Me.DataGridViewTextBoxColumn439.Name = "DataGridViewTextBoxColumn439"
+        Me.DataGridViewTextBoxColumn439.ReadOnly = True
+        Me.DataGridViewTextBoxColumn439.Visible = False
+        '
+        'DataGridViewTextBoxColumn440
+        '
+        Me.DataGridViewTextBoxColumn440.DataPropertyName = "cCode1"
+        Me.DataGridViewTextBoxColumn440.HeaderText = "工番1"
+        Me.DataGridViewTextBoxColumn440.Name = "DataGridViewTextBoxColumn440"
+        Me.DataGridViewTextBoxColumn440.ReadOnly = True
+        Me.DataGridViewTextBoxColumn440.Visible = False
+        '
+        'DataGridViewTextBoxColumn441
+        '
+        Me.DataGridViewTextBoxColumn441.DataPropertyName = "cCode2"
+        Me.DataGridViewTextBoxColumn441.HeaderText = "工番2"
+        Me.DataGridViewTextBoxColumn441.Name = "DataGridViewTextBoxColumn441"
+        Me.DataGridViewTextBoxColumn441.ReadOnly = True
+        Me.DataGridViewTextBoxColumn441.Visible = False
+        '
+        'DataGridViewTextBoxColumn442
+        '
+        Me.DataGridViewTextBoxColumn442.DataPropertyName = "cCode3"
+        Me.DataGridViewTextBoxColumn442.HeaderText = "工番3"
+        Me.DataGridViewTextBoxColumn442.Name = "DataGridViewTextBoxColumn442"
+        Me.DataGridViewTextBoxColumn442.ReadOnly = True
+        Me.DataGridViewTextBoxColumn442.Visible = False
+        '
+        'DataGridViewTextBoxColumn443
+        '
+        Me.DataGridViewTextBoxColumn443.DataPropertyName = "cCode"
+        Me.DataGridViewTextBoxColumn443.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn443.HeaderText = "工番"
+        Me.DataGridViewTextBoxColumn443.Name = "DataGridViewTextBoxColumn443"
+        Me.DataGridViewTextBoxColumn443.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn448
+        '
+        Me.DataGridViewTextBoxColumn448.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn448.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn448.Name = "DataGridViewTextBoxColumn448"
+        Me.DataGridViewTextBoxColumn448.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn444
+        '
+        Me.DataGridViewTextBoxColumn444.DataPropertyName = "cName"
+        Me.DataGridViewTextBoxColumn444.FillWeight = 130.0!
+        Me.DataGridViewTextBoxColumn444.HeaderText = "件名"
+        Me.DataGridViewTextBoxColumn444.Name = "DataGridViewTextBoxColumn444"
+        Me.DataGridViewTextBoxColumn444.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn445
+        '
+        Me.DataGridViewTextBoxColumn445.DataPropertyName = "cSalesYearMonth"
+        DataGridViewCellStyle100.Format = "yyyy年MM月"
+        DataGridViewCellStyle100.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn445.DefaultCellStyle = DataGridViewCellStyle100
+        Me.DataGridViewTextBoxColumn445.HeaderText = "売上年月"
+        Me.DataGridViewTextBoxColumn445.Name = "DataGridViewTextBoxColumn445"
+        Me.DataGridViewTextBoxColumn445.ReadOnly = True
+        Me.DataGridViewTextBoxColumn445.Visible = False
+        '
+        'DataGridViewTextBoxColumn446
+        '
+        Me.DataGridViewTextBoxColumn446.DataPropertyName = "cSalesAmount"
+        DataGridViewCellStyle101.Format = "C0"
+        DataGridViewCellStyle101.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn446.DefaultCellStyle = DataGridViewCellStyle101
+        Me.DataGridViewTextBoxColumn446.HeaderText = "売上金額"
+        Me.DataGridViewTextBoxColumn446.Name = "DataGridViewTextBoxColumn446"
+        Me.DataGridViewTextBoxColumn446.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn447
+        '
+        Me.DataGridViewTextBoxColumn447.DataPropertyName = "cClientID"
+        Me.DataGridViewTextBoxColumn447.HeaderText = "取引先ID"
+        Me.DataGridViewTextBoxColumn447.Name = "DataGridViewTextBoxColumn447"
+        Me.DataGridViewTextBoxColumn447.ReadOnly = True
+        Me.DataGridViewTextBoxColumn447.Visible = False
+        '
+        'DataGridViewTextBoxColumn449
+        '
+        Me.DataGridViewTextBoxColumn449.DataPropertyName = "cStatus"
+        Me.DataGridViewTextBoxColumn449.HeaderText = "請求状況"
+        Me.DataGridViewTextBoxColumn449.Name = "DataGridViewTextBoxColumn449"
+        Me.DataGridViewTextBoxColumn449.ReadOnly = True
+        Me.DataGridViewTextBoxColumn449.Visible = False
+        '
+        'DataGridViewTextBoxColumn450
+        '
+        Me.DataGridViewTextBoxColumn450.DataPropertyName = "cInsertDate"
+        DataGridViewCellStyle102.Format = "D"
+        DataGridViewCellStyle102.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn450.DefaultCellStyle = DataGridViewCellStyle102
+        Me.DataGridViewTextBoxColumn450.HeaderText = "作成日"
+        Me.DataGridViewTextBoxColumn450.Name = "DataGridViewTextBoxColumn450"
+        Me.DataGridViewTextBoxColumn450.ReadOnly = True
+        Me.DataGridViewTextBoxColumn450.Visible = False
+        '
+        'DataGridViewTextBoxColumn451
+        '
+        Me.DataGridViewTextBoxColumn451.DataPropertyName = "cStaffID"
+        Me.DataGridViewTextBoxColumn451.HeaderText = "作成者ID"
+        Me.DataGridViewTextBoxColumn451.Name = "DataGridViewTextBoxColumn451"
+        Me.DataGridViewTextBoxColumn451.ReadOnly = True
+        Me.DataGridViewTextBoxColumn451.Visible = False
+        '
+        'DataGridViewTextBoxColumn452
+        '
+        Me.DataGridViewTextBoxColumn452.DataPropertyName = "cStaffName"
+        Me.DataGridViewTextBoxColumn452.HeaderText = "作成者"
+        Me.DataGridViewTextBoxColumn452.Name = "DataGridViewTextBoxColumn452"
+        Me.DataGridViewTextBoxColumn452.ReadOnly = True
+        Me.DataGridViewTextBoxColumn452.Visible = False
+        '
+        'DataGridViewTextBoxColumn425
+        '
+        Me.DataGridViewTextBoxColumn425.DataPropertyName = "cId"
+        Me.DataGridViewTextBoxColumn425.HeaderText = ""
+        Me.DataGridViewTextBoxColumn425.Name = "DataGridViewTextBoxColumn425"
+        Me.DataGridViewTextBoxColumn425.ReadOnly = True
+        Me.DataGridViewTextBoxColumn425.Visible = False
+        '
+        'DataGridViewTextBoxColumn426
+        '
+        Me.DataGridViewTextBoxColumn426.DataPropertyName = "cCode1"
+        Me.DataGridViewTextBoxColumn426.HeaderText = "工番1"
+        Me.DataGridViewTextBoxColumn426.Name = "DataGridViewTextBoxColumn426"
+        Me.DataGridViewTextBoxColumn426.ReadOnly = True
+        Me.DataGridViewTextBoxColumn426.Visible = False
+        '
+        'DataGridViewTextBoxColumn427
+        '
+        Me.DataGridViewTextBoxColumn427.DataPropertyName = "cCode2"
+        Me.DataGridViewTextBoxColumn427.HeaderText = "工番2"
+        Me.DataGridViewTextBoxColumn427.Name = "DataGridViewTextBoxColumn427"
+        Me.DataGridViewTextBoxColumn427.ReadOnly = True
+        Me.DataGridViewTextBoxColumn427.Visible = False
+        '
+        'DataGridViewTextBoxColumn428
+        '
+        Me.DataGridViewTextBoxColumn428.DataPropertyName = "cCode3"
+        Me.DataGridViewTextBoxColumn428.HeaderText = "工番3"
+        Me.DataGridViewTextBoxColumn428.Name = "DataGridViewTextBoxColumn428"
+        Me.DataGridViewTextBoxColumn428.ReadOnly = True
+        Me.DataGridViewTextBoxColumn428.Visible = False
+        '
+        'DataGridViewTextBoxColumn429
+        '
+        Me.DataGridViewTextBoxColumn429.DataPropertyName = "cCode"
+        Me.DataGridViewTextBoxColumn429.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn429.HeaderText = "工番"
+        Me.DataGridViewTextBoxColumn429.Name = "DataGridViewTextBoxColumn429"
+        Me.DataGridViewTextBoxColumn429.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn434
+        '
+        Me.DataGridViewTextBoxColumn434.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn434.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn434.Name = "DataGridViewTextBoxColumn434"
+        Me.DataGridViewTextBoxColumn434.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn430
+        '
+        Me.DataGridViewTextBoxColumn430.DataPropertyName = "cName"
+        Me.DataGridViewTextBoxColumn430.FillWeight = 130.0!
+        Me.DataGridViewTextBoxColumn430.HeaderText = "件名"
+        Me.DataGridViewTextBoxColumn430.Name = "DataGridViewTextBoxColumn430"
+        Me.DataGridViewTextBoxColumn430.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn431
+        '
+        Me.DataGridViewTextBoxColumn431.DataPropertyName = "cSalesYearMonth"
+        DataGridViewCellStyle97.Format = "yyyy年MM月"
+        DataGridViewCellStyle97.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn431.DefaultCellStyle = DataGridViewCellStyle97
+        Me.DataGridViewTextBoxColumn431.HeaderText = "売上年月"
+        Me.DataGridViewTextBoxColumn431.Name = "DataGridViewTextBoxColumn431"
+        Me.DataGridViewTextBoxColumn431.ReadOnly = True
+        Me.DataGridViewTextBoxColumn431.Visible = False
+        '
+        'DataGridViewTextBoxColumn432
+        '
+        Me.DataGridViewTextBoxColumn432.DataPropertyName = "cSalesAmount"
+        DataGridViewCellStyle98.Format = "C0"
+        DataGridViewCellStyle98.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn432.DefaultCellStyle = DataGridViewCellStyle98
+        Me.DataGridViewTextBoxColumn432.HeaderText = "売上金額"
+        Me.DataGridViewTextBoxColumn432.Name = "DataGridViewTextBoxColumn432"
+        Me.DataGridViewTextBoxColumn432.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn433
+        '
+        Me.DataGridViewTextBoxColumn433.DataPropertyName = "cClientID"
+        Me.DataGridViewTextBoxColumn433.HeaderText = "取引先ID"
+        Me.DataGridViewTextBoxColumn433.Name = "DataGridViewTextBoxColumn433"
+        Me.DataGridViewTextBoxColumn433.ReadOnly = True
+        Me.DataGridViewTextBoxColumn433.Visible = False
+        '
+        'DataGridViewTextBoxColumn435
+        '
+        Me.DataGridViewTextBoxColumn435.DataPropertyName = "cStatus"
+        Me.DataGridViewTextBoxColumn435.HeaderText = "請求状況"
+        Me.DataGridViewTextBoxColumn435.Name = "DataGridViewTextBoxColumn435"
+        Me.DataGridViewTextBoxColumn435.ReadOnly = True
+        Me.DataGridViewTextBoxColumn435.Visible = False
+        '
+        'DataGridViewTextBoxColumn436
+        '
+        Me.DataGridViewTextBoxColumn436.DataPropertyName = "cInsertDate"
+        DataGridViewCellStyle99.Format = "D"
+        DataGridViewCellStyle99.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn436.DefaultCellStyle = DataGridViewCellStyle99
+        Me.DataGridViewTextBoxColumn436.HeaderText = "作成日"
+        Me.DataGridViewTextBoxColumn436.Name = "DataGridViewTextBoxColumn436"
+        Me.DataGridViewTextBoxColumn436.ReadOnly = True
+        Me.DataGridViewTextBoxColumn436.Visible = False
+        '
+        'DataGridViewTextBoxColumn437
+        '
+        Me.DataGridViewTextBoxColumn437.DataPropertyName = "cStaffID"
+        Me.DataGridViewTextBoxColumn437.HeaderText = "作成者ID"
+        Me.DataGridViewTextBoxColumn437.Name = "DataGridViewTextBoxColumn437"
+        Me.DataGridViewTextBoxColumn437.ReadOnly = True
+        Me.DataGridViewTextBoxColumn437.Visible = False
+        '
+        'DataGridViewTextBoxColumn438
+        '
+        Me.DataGridViewTextBoxColumn438.DataPropertyName = "cStaffName"
+        Me.DataGridViewTextBoxColumn438.HeaderText = "作成者"
+        Me.DataGridViewTextBoxColumn438.Name = "DataGridViewTextBoxColumn438"
+        Me.DataGridViewTextBoxColumn438.ReadOnly = True
+        Me.DataGridViewTextBoxColumn438.Visible = False
+        '
+        'DataGridViewTextBoxColumn398
+        '
+        Me.DataGridViewTextBoxColumn398.DataPropertyName = "cId"
+        Me.DataGridViewTextBoxColumn398.HeaderText = ""
+        Me.DataGridViewTextBoxColumn398.Name = "DataGridViewTextBoxColumn398"
+        Me.DataGridViewTextBoxColumn398.ReadOnly = True
+        Me.DataGridViewTextBoxColumn398.Visible = False
+        '
+        'DataGridViewTextBoxColumn399
+        '
+        Me.DataGridViewTextBoxColumn399.DataPropertyName = "cCode1"
+        Me.DataGridViewTextBoxColumn399.HeaderText = "工番1"
+        Me.DataGridViewTextBoxColumn399.Name = "DataGridViewTextBoxColumn399"
+        Me.DataGridViewTextBoxColumn399.ReadOnly = True
+        Me.DataGridViewTextBoxColumn399.Visible = False
+        '
+        'DataGridViewTextBoxColumn400
+        '
+        Me.DataGridViewTextBoxColumn400.DataPropertyName = "cCode2"
+        Me.DataGridViewTextBoxColumn400.HeaderText = "工番2"
+        Me.DataGridViewTextBoxColumn400.Name = "DataGridViewTextBoxColumn400"
+        Me.DataGridViewTextBoxColumn400.ReadOnly = True
+        Me.DataGridViewTextBoxColumn400.Visible = False
+        '
+        'DataGridViewTextBoxColumn401
+        '
+        Me.DataGridViewTextBoxColumn401.DataPropertyName = "cCode3"
+        Me.DataGridViewTextBoxColumn401.HeaderText = "工番3"
+        Me.DataGridViewTextBoxColumn401.Name = "DataGridViewTextBoxColumn401"
+        Me.DataGridViewTextBoxColumn401.ReadOnly = True
+        Me.DataGridViewTextBoxColumn401.Visible = False
+        '
+        'DataGridViewTextBoxColumn402
+        '
+        Me.DataGridViewTextBoxColumn402.DataPropertyName = "cCode"
+        Me.DataGridViewTextBoxColumn402.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn402.HeaderText = "工番"
+        Me.DataGridViewTextBoxColumn402.Name = "DataGridViewTextBoxColumn402"
+        Me.DataGridViewTextBoxColumn402.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn420
+        '
+        Me.DataGridViewTextBoxColumn420.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn420.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn420.Name = "DataGridViewTextBoxColumn420"
+        Me.DataGridViewTextBoxColumn420.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn403
+        '
+        Me.DataGridViewTextBoxColumn403.DataPropertyName = "cName"
+        Me.DataGridViewTextBoxColumn403.FillWeight = 130.0!
+        Me.DataGridViewTextBoxColumn403.HeaderText = "件名"
+        Me.DataGridViewTextBoxColumn403.Name = "DataGridViewTextBoxColumn403"
+        Me.DataGridViewTextBoxColumn403.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn417
+        '
+        Me.DataGridViewTextBoxColumn417.DataPropertyName = "cSalesYearMonth"
+        DataGridViewCellStyle94.Format = "yyyy年MM月"
+        DataGridViewCellStyle94.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn417.DefaultCellStyle = DataGridViewCellStyle94
+        Me.DataGridViewTextBoxColumn417.HeaderText = "売上年月"
+        Me.DataGridViewTextBoxColumn417.Name = "DataGridViewTextBoxColumn417"
+        Me.DataGridViewTextBoxColumn417.ReadOnly = True
+        Me.DataGridViewTextBoxColumn417.Visible = False
+        '
+        'DataGridViewTextBoxColumn418
+        '
+        Me.DataGridViewTextBoxColumn418.DataPropertyName = "cSalesAmount"
+        DataGridViewCellStyle95.Format = "C0"
+        DataGridViewCellStyle95.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn418.DefaultCellStyle = DataGridViewCellStyle95
+        Me.DataGridViewTextBoxColumn418.HeaderText = "売上金額"
+        Me.DataGridViewTextBoxColumn418.Name = "DataGridViewTextBoxColumn418"
+        Me.DataGridViewTextBoxColumn418.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn419
+        '
+        Me.DataGridViewTextBoxColumn419.DataPropertyName = "cClientID"
+        Me.DataGridViewTextBoxColumn419.HeaderText = "取引先ID"
+        Me.DataGridViewTextBoxColumn419.Name = "DataGridViewTextBoxColumn419"
+        Me.DataGridViewTextBoxColumn419.ReadOnly = True
+        Me.DataGridViewTextBoxColumn419.Visible = False
+        '
+        'DataGridViewTextBoxColumn421
+        '
+        Me.DataGridViewTextBoxColumn421.DataPropertyName = "cStatus"
+        Me.DataGridViewTextBoxColumn421.HeaderText = "請求状況"
+        Me.DataGridViewTextBoxColumn421.Name = "DataGridViewTextBoxColumn421"
+        Me.DataGridViewTextBoxColumn421.ReadOnly = True
+        Me.DataGridViewTextBoxColumn421.Visible = False
+        '
+        'DataGridViewTextBoxColumn422
+        '
+        Me.DataGridViewTextBoxColumn422.DataPropertyName = "cInsertDate"
+        DataGridViewCellStyle96.Format = "D"
+        DataGridViewCellStyle96.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn422.DefaultCellStyle = DataGridViewCellStyle96
+        Me.DataGridViewTextBoxColumn422.HeaderText = "作成日"
+        Me.DataGridViewTextBoxColumn422.Name = "DataGridViewTextBoxColumn422"
+        Me.DataGridViewTextBoxColumn422.ReadOnly = True
+        Me.DataGridViewTextBoxColumn422.Visible = False
+        '
+        'DataGridViewTextBoxColumn423
+        '
+        Me.DataGridViewTextBoxColumn423.DataPropertyName = "cStaffID"
+        Me.DataGridViewTextBoxColumn423.HeaderText = "作成者ID"
+        Me.DataGridViewTextBoxColumn423.Name = "DataGridViewTextBoxColumn423"
+        Me.DataGridViewTextBoxColumn423.ReadOnly = True
+        Me.DataGridViewTextBoxColumn423.Visible = False
+        '
+        'DataGridViewTextBoxColumn424
+        '
+        Me.DataGridViewTextBoxColumn424.DataPropertyName = "cStaffName"
+        Me.DataGridViewTextBoxColumn424.HeaderText = "作成者"
+        Me.DataGridViewTextBoxColumn424.Name = "DataGridViewTextBoxColumn424"
+        Me.DataGridViewTextBoxColumn424.ReadOnly = True
+        Me.DataGridViewTextBoxColumn424.Visible = False
+        '
+        'DataGridViewTextBoxColumn404
+        '
+        Me.DataGridViewTextBoxColumn404.DataPropertyName = "cId"
+        Me.DataGridViewTextBoxColumn404.HeaderText = ""
+        Me.DataGridViewTextBoxColumn404.Name = "DataGridViewTextBoxColumn404"
+        Me.DataGridViewTextBoxColumn404.ReadOnly = True
+        Me.DataGridViewTextBoxColumn404.Visible = False
+        '
+        'DataGridViewTextBoxColumn405
+        '
+        Me.DataGridViewTextBoxColumn405.DataPropertyName = "cCode1"
+        Me.DataGridViewTextBoxColumn405.HeaderText = "工番1"
+        Me.DataGridViewTextBoxColumn405.Name = "DataGridViewTextBoxColumn405"
+        Me.DataGridViewTextBoxColumn405.ReadOnly = True
+        Me.DataGridViewTextBoxColumn405.Visible = False
+        '
+        'DataGridViewTextBoxColumn406
+        '
+        Me.DataGridViewTextBoxColumn406.DataPropertyName = "cCode2"
+        Me.DataGridViewTextBoxColumn406.HeaderText = "工番2"
+        Me.DataGridViewTextBoxColumn406.Name = "DataGridViewTextBoxColumn406"
+        Me.DataGridViewTextBoxColumn406.ReadOnly = True
+        Me.DataGridViewTextBoxColumn406.Visible = False
+        '
+        'DataGridViewTextBoxColumn407
+        '
+        Me.DataGridViewTextBoxColumn407.DataPropertyName = "cCode3"
+        Me.DataGridViewTextBoxColumn407.HeaderText = "工番3"
+        Me.DataGridViewTextBoxColumn407.Name = "DataGridViewTextBoxColumn407"
+        Me.DataGridViewTextBoxColumn407.ReadOnly = True
+        Me.DataGridViewTextBoxColumn407.Visible = False
+        '
+        'DataGridViewTextBoxColumn408
+        '
+        Me.DataGridViewTextBoxColumn408.DataPropertyName = "cCode"
+        Me.DataGridViewTextBoxColumn408.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn408.HeaderText = "工番"
+        Me.DataGridViewTextBoxColumn408.Name = "DataGridViewTextBoxColumn408"
+        Me.DataGridViewTextBoxColumn408.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn413
+        '
+        Me.DataGridViewTextBoxColumn413.DataPropertyName = "cClient"
+        Me.DataGridViewTextBoxColumn413.HeaderText = "取引先"
+        Me.DataGridViewTextBoxColumn413.Name = "DataGridViewTextBoxColumn413"
+        Me.DataGridViewTextBoxColumn413.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn409
+        '
+        Me.DataGridViewTextBoxColumn409.DataPropertyName = "cName"
+        Me.DataGridViewTextBoxColumn409.FillWeight = 130.0!
+        Me.DataGridViewTextBoxColumn409.HeaderText = "件名"
+        Me.DataGridViewTextBoxColumn409.Name = "DataGridViewTextBoxColumn409"
+        Me.DataGridViewTextBoxColumn409.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn410
+        '
+        Me.DataGridViewTextBoxColumn410.DataPropertyName = "cSalesYearMonth"
+        DataGridViewCellStyle1.Format = "yyyy年MM月"
+        DataGridViewCellStyle1.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn410.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewTextBoxColumn410.HeaderText = "売上年月"
+        Me.DataGridViewTextBoxColumn410.Name = "DataGridViewTextBoxColumn410"
+        Me.DataGridViewTextBoxColumn410.ReadOnly = True
+        Me.DataGridViewTextBoxColumn410.Visible = False
+        '
+        'DataGridViewTextBoxColumn411
+        '
+        Me.DataGridViewTextBoxColumn411.DataPropertyName = "cSalesAmount"
+        DataGridViewCellStyle2.Format = "C0"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn411.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewTextBoxColumn411.HeaderText = "売上金額"
+        Me.DataGridViewTextBoxColumn411.Name = "DataGridViewTextBoxColumn411"
+        Me.DataGridViewTextBoxColumn411.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn412
+        '
+        Me.DataGridViewTextBoxColumn412.DataPropertyName = "cClientID"
+        Me.DataGridViewTextBoxColumn412.HeaderText = "取引先ID"
+        Me.DataGridViewTextBoxColumn412.Name = "DataGridViewTextBoxColumn412"
+        Me.DataGridViewTextBoxColumn412.ReadOnly = True
+        Me.DataGridViewTextBoxColumn412.Visible = False
+        '
+        'DataGridViewTextBoxColumn414
+        '
+        Me.DataGridViewTextBoxColumn414.DataPropertyName = "cStatus"
+        Me.DataGridViewTextBoxColumn414.HeaderText = "請求状況"
+        Me.DataGridViewTextBoxColumn414.Name = "DataGridViewTextBoxColumn414"
+        Me.DataGridViewTextBoxColumn414.ReadOnly = True
+        Me.DataGridViewTextBoxColumn414.Visible = False
+        '
+        'DataGridViewTextBoxColumn415
+        '
+        Me.DataGridViewTextBoxColumn415.DataPropertyName = "cInsertDate"
+        DataGridViewCellStyle3.Format = "D"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn415.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridViewTextBoxColumn415.HeaderText = "作成日"
+        Me.DataGridViewTextBoxColumn415.Name = "DataGridViewTextBoxColumn415"
+        Me.DataGridViewTextBoxColumn415.ReadOnly = True
+        Me.DataGridViewTextBoxColumn415.Visible = False
+        '
+        'DataGridViewTextBoxColumn416
+        '
+        Me.DataGridViewTextBoxColumn416.DataPropertyName = "cStaffID"
+        Me.DataGridViewTextBoxColumn416.HeaderText = "作成者ID"
+        Me.DataGridViewTextBoxColumn416.Name = "DataGridViewTextBoxColumn416"
+        Me.DataGridViewTextBoxColumn416.ReadOnly = True
+        Me.DataGridViewTextBoxColumn416.Visible = False
+        '
+        'DataGridViewTextBoxColumn465
+        '
+        Me.DataGridViewTextBoxColumn465.DataPropertyName = "cStaffName"
+        Me.DataGridViewTextBoxColumn465.HeaderText = "作成者"
+        Me.DataGridViewTextBoxColumn465.Name = "DataGridViewTextBoxColumn465"
+        Me.DataGridViewTextBoxColumn465.ReadOnly = True
+        Me.DataGridViewTextBoxColumn465.Visible = False
         '
         'SalesPlanForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(2164, 1368)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "SalesPlanForm"
         Me.Text = "売上見込"
@@ -6302,20 +6313,13 @@ Partial Class SalesPlanForm
         CType(Me.dgvRow6Column6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.cmsStatusChange.ResumeLayout(False)
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents dtpDisplayYear As DateTimePicker
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents mitmAdd As ToolStripMenuItem
-    Friend WithEvents mitmEdit As ToolStripMenuItem
-    Friend WithEvents mitmDelete As ToolStripMenuItem
     Friend WithEvents dudSemester As DomainUpDown
     Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
     Friend WithEvents lblMonth1 As Label
@@ -6419,20 +6423,6 @@ Partial Class SalesPlanForm
     Friend WithEvents DataGridViewTextBoxColumn13 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn456 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column1 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn404 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn405 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn406 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn407 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn408 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn409 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn410 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn411 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn412 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn413 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn414 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn415 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn416 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn465 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow5Column1 As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn300 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn301 As DataGridViewTextBoxColumn
@@ -6808,84 +6798,100 @@ Partial Class SalesPlanForm
     Friend WithEvents DataGridViewTextBoxColumn396 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn397 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column2 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn398 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn399 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn400 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn401 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn402 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn403 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn417 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn418 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn419 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn420 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn421 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn422 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn423 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn424 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column3 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn425 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn426 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn427 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn428 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn429 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn430 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn431 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn432 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn433 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn434 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn435 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn436 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn437 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn438 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column4 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn439 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn440 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn441 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn442 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn443 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn444 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn445 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn446 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn447 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn448 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn449 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn450 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn451 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn452 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column5 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn453 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn454 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn455 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn466 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn467 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn468 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn469 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn470 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn471 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn472 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn473 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn474 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn475 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn476 As DataGridViewTextBoxColumn
     Friend WithEvents dgvRow6Column6 As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn477 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn478 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn479 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn480 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn481 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn482 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn483 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn484 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn485 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn486 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn487 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn488 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn489 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn490 As DataGridViewTextBoxColumn
     Friend WithEvents cmsStatusChange As ContextMenuStrip
     Friend WithEvents tsmiNoPlan As ToolStripMenuItem
     Friend WithEvents tsmiEstimating As ToolStripMenuItem
     Friend WithEvents tsmiDecided As ToolStripMenuItem
     Friend WithEvents tsmiInvoiced As ToolStripMenuItem
     Friend WithEvents tsmiCancel As ToolStripMenuItem
+    Friend WithEvents btnNext As Button
+    Friend WithEvents btnPrev As Button
+    Friend WithEvents DataGridViewTextBoxColumn477 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn478 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn479 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn480 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn481 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn486 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn482 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn483 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn484 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn485 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn487 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn488 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn489 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn490 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn404 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn405 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn406 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn407 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn408 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn413 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn409 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn410 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn411 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn412 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn414 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn415 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn416 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn465 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn398 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn399 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn400 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn401 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn402 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn420 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn403 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn417 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn418 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn419 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn421 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn422 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn423 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn424 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn425 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn426 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn427 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn428 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn429 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn434 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn430 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn431 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn432 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn433 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn435 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn436 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn437 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn438 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn439 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn440 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn441 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn442 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn443 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn448 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn444 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn445 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn446 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn447 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn449 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn450 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn451 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn452 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn453 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn454 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn455 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn466 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn467 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn472 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn468 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn469 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn470 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn471 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn473 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn474 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn475 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn476 As DataGridViewTextBoxColumn
 End Class
