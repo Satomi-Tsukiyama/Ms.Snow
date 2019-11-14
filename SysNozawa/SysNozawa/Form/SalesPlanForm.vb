@@ -9,6 +9,7 @@ Public Class SalesPlanForm
     Private lblMonths As Label()
     Private cmbClients As ComboBox()
     Private dgvSalesPlans As DataGridView()
+    Private dgvElseSalesPlans As DataGridView()
 
     ''' <summary>
     ''' ロードイベント
@@ -28,6 +29,9 @@ Public Class SalesPlanForm
         dgvRow4Column1, dgvRow4Column2, dgvRow4Column3, dgvRow4Column4, dgvRow4Column5, dgvRow4Column6,
         dgvRow5Column1, dgvRow5Column2, dgvRow5Column3, dgvRow5Column4, dgvRow5Column5, dgvRow5Column6,
         dgvRow6Column1, dgvRow6Column2, dgvRow6Column3, dgvRow6Column4, dgvRow6Column5, dgvRow6Column6}
+
+        dgvElseSalesPlans = {
+        dgvRow7Column1, dgvRow7Column2, dgvRow7Column3, dgvRow7Column4, dgvRow7Column5, dgvRow7Column6}
 
         setCmbClients()
 
@@ -62,7 +66,8 @@ Public Class SalesPlanForm
             dgvRow3Column1.CellClick, dgvRow3Column2.CellClick, dgvRow3Column3.CellClick, dgvRow3Column4.CellClick, dgvRow3Column5.CellClick, dgvRow3Column6.CellClick,
             dgvRow4Column1.CellClick, dgvRow4Column2.CellClick, dgvRow4Column3.CellClick, dgvRow4Column4.CellClick, dgvRow4Column5.CellClick, dgvRow4Column6.CellClick,
             dgvRow5Column1.CellClick, dgvRow5Column2.CellClick, dgvRow5Column3.CellClick, dgvRow5Column4.CellClick, dgvRow5Column5.CellClick, dgvRow5Column6.CellClick,
-            dgvRow6Column1.CellClick, dgvRow6Column2.CellClick, dgvRow6Column3.CellClick, dgvRow6Column4.CellClick, dgvRow6Column5.CellClick, dgvRow6Column6.CellClick
+            dgvRow6Column1.CellClick, dgvRow6Column2.CellClick, dgvRow6Column3.CellClick, dgvRow6Column4.CellClick, dgvRow6Column5.CellClick, dgvRow6Column6.CellClick,
+            dgvRow7Column1.CellClick, dgvRow7Column2.CellClick, dgvRow7Column3.CellClick, dgvRow7Column4.CellClick, dgvRow7Column5.CellClick, dgvRow7Column6.CellClick
 
         Dim dgvSalesPlan As DataGridView = sender
         selectId = dgvSalesPlan.Rows(e.RowIndex).Cells(0).Value
@@ -75,8 +80,8 @@ Public Class SalesPlanForm
             dgvRow3Column1.CellContentDoubleClick, dgvRow3Column2.CellContentDoubleClick, dgvRow3Column3.CellContentDoubleClick, dgvRow3Column4.CellContentDoubleClick, dgvRow3Column5.CellContentDoubleClick, dgvRow3Column6.CellContentDoubleClick,
             dgvRow4Column1.CellContentDoubleClick, dgvRow4Column2.CellContentDoubleClick, dgvRow4Column3.CellContentDoubleClick, dgvRow4Column4.CellContentDoubleClick, dgvRow4Column5.CellContentDoubleClick, dgvRow4Column6.CellContentDoubleClick,
             dgvRow5Column1.CellContentDoubleClick, dgvRow5Column2.CellContentDoubleClick, dgvRow5Column3.CellContentDoubleClick, dgvRow5Column4.CellContentDoubleClick, dgvRow5Column5.CellContentDoubleClick, dgvRow5Column6.CellContentDoubleClick,
-            dgvRow6Column1.CellContentDoubleClick, dgvRow6Column2.CellContentDoubleClick, dgvRow6Column3.CellContentDoubleClick, dgvRow6Column4.CellContentDoubleClick, dgvRow6Column5.CellContentDoubleClick, dgvRow6Column6.CellContentDoubleClick
-
+            dgvRow6Column1.CellContentDoubleClick, dgvRow6Column2.CellContentDoubleClick, dgvRow6Column3.CellContentDoubleClick, dgvRow6Column4.CellContentDoubleClick, dgvRow6Column5.CellContentDoubleClick, dgvRow6Column6.CellContentDoubleClick,
+            dgvRow7Column1.CellContentDoubleClick, dgvRow7Column2.CellContentDoubleClick, dgvRow7Column3.CellContentDoubleClick, dgvRow7Column4.CellContentDoubleClick, dgvRow7Column5.CellContentDoubleClick, dgvRow7Column6.CellContentDoubleClick
 
         Dim dgvSalesPlan As DataGridView = sender
         selectId = dgvSalesPlan.Rows(e.RowIndex).Cells(0).Value
@@ -95,7 +100,8 @@ Public Class SalesPlanForm
         dgvRow3Column1.RowContextMenuStripNeeded, dgvRow3Column2.RowContextMenuStripNeeded, dgvRow3Column3.RowContextMenuStripNeeded, dgvRow3Column4.RowContextMenuStripNeeded, dgvRow3Column5.RowContextMenuStripNeeded, dgvRow3Column6.RowContextMenuStripNeeded,
         dgvRow4Column1.RowContextMenuStripNeeded, dgvRow4Column2.RowContextMenuStripNeeded, dgvRow4Column3.RowContextMenuStripNeeded, dgvRow4Column4.RowContextMenuStripNeeded, dgvRow4Column5.RowContextMenuStripNeeded, dgvRow4Column6.RowContextMenuStripNeeded,
         dgvRow5Column1.RowContextMenuStripNeeded, dgvRow5Column2.RowContextMenuStripNeeded, dgvRow5Column3.RowContextMenuStripNeeded, dgvRow5Column4.RowContextMenuStripNeeded, dgvRow5Column5.RowContextMenuStripNeeded, dgvRow5Column6.RowContextMenuStripNeeded,
-        dgvRow6Column1.RowContextMenuStripNeeded, dgvRow6Column2.RowContextMenuStripNeeded, dgvRow6Column3.RowContextMenuStripNeeded, dgvRow6Column4.RowContextMenuStripNeeded, dgvRow6Column5.RowContextMenuStripNeeded, dgvRow6Column6.RowContextMenuStripNeeded
+        dgvRow6Column1.RowContextMenuStripNeeded, dgvRow6Column2.RowContextMenuStripNeeded, dgvRow6Column3.RowContextMenuStripNeeded, dgvRow6Column4.RowContextMenuStripNeeded, dgvRow6Column5.RowContextMenuStripNeeded, dgvRow6Column6.RowContextMenuStripNeeded,
+        dgvRow7Column1.RowContextMenuStripNeeded, dgvRow7Column2.RowContextMenuStripNeeded, dgvRow7Column3.RowContextMenuStripNeeded, dgvRow7Column4.RowContextMenuStripNeeded, dgvRow7Column5.RowContextMenuStripNeeded, dgvRow7Column6.RowContextMenuStripNeeded
 
         selectDataGridView = sender
         selectId = selectDataGridView.CurrentRow.Cells(0).Value
@@ -201,12 +207,15 @@ Public Class SalesPlanForm
             Exit Sub
         End If
 
+        Dim year As Integer = dtpDisplayYear.Value.Year
+        Dim month As Integer = lblMonths(0).Text
+
         For i As Integer = 0 To cmbClients.Count - 1
 
-            Dim cmbClient As ComboBox = cmbClients(i)
+            year = dtpDisplayYear.Value.Year
+            month = lblMonths(0).Text
 
-            Dim year As Integer = dtpDisplayYear.Value.Year
-            Dim month As Integer = lblMonths(0).Text
+            Dim cmbClient As ComboBox = cmbClients(i)
 
             If cmbClient.SelectedIndex > 0 Then
 
@@ -220,23 +229,10 @@ Public Class SalesPlanForm
                     End If
                 Next
 
-            Else '空白選択時　他のをすべて表示
-
-                Dim selectedIndexs As New List(Of Integer)
-                For Each cmbClient_ver2 In cmbClients
-                    If cmbClient_ver2.SelectedIndex > 0 Then
-                        selectedIndexs.Add(cmbClient_ver2.SelectedIndex)
-                    End If
-                Next
+            Else '空白選択時
 
                 For j As Integer = 0 To 5
-                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, year, month)
-
-                    month = month + 1
-                    If month > 12 Then
-                        year = year + 1
-                        month = 1
-                    End If
+                    dgvSalesPlans(6 * i + j).DataSource = Nothing
                 Next
 
             End If
@@ -246,6 +242,34 @@ Public Class SalesPlanForm
             Next
 
         Next
+
+        'year = dtpDisplayYear.Value.Year
+        'month = lblMonths(0).Text
+
+        ''その他の案件行
+        'For Each dgvElseSalesPlan In dgvElseSalesPlans
+
+        '    Dim selectedIndexs As New List(Of Integer)
+        '    For Each cmbClient_ver2 In cmbClients
+        '        If cmbClient_ver2.SelectedIndex > 0 Then
+        '            selectedIndexs.Add(cmbClient_ver2.SelectedIndex)
+        '        End If
+        '    Next
+
+        '    dgvElseSalesPlan.DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, year, month)
+
+        '    month = month + 1
+        '    If month > 12 Then
+        '        year = year + 1
+        '        month = 1
+        '    End If
+
+
+        '    For j As Integer = 0 To 5
+        '        CommonSet.setDgvAnken_BackColor(dgvElseSalesPlan)
+        '    Next
+
+        'Next
 
     End Sub
 
@@ -271,5 +295,26 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 前へボタンクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnPre_Click(sender As Object, e As EventArgs) Handles btnPre.Click
+        If dudSemester.Text = "前期" Then
+            dudSemester.Text = "後期"
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(-1)
+        Else
+            dudSemester.Text = "前期"
+        End If
+    End Sub
 
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+        If dudSemester.Text = "前期" Then
+            dudSemester.Text = "後期"
+        Else
+            dudSemester.Text = "前期"
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(1)
+        End If
+    End Sub
 End Class

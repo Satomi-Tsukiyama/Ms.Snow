@@ -797,7 +797,7 @@ Public Module Ankens
             dr("cSalesYearMonth") = anken.salesYearMonth.ToString("yyyy年MM月")    '売上年月(yyyy年MM月表記)
             dr("cSalesAmount") = anken.salesAmount.ToString("#,0")    '売上金額(100,000,000表記)
             dr("cClientID") = anken.clientId    '取引先ID
-            dr("cClient") = anken.clientCode ' + " | " + anken.clientName    '取引先
+            dr("cClient") = anken.clientCode ' + " | " + anken.clientName    '取引先コード
             dr("cStatus") = anken.status '請求状況
             dr("cInsertDate") = anken.insertDate.ToShortDateString   '作成日(yyyy/MM/dd表記)
             dr("cStaffID") = anken.staffId    '作成者ID
