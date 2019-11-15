@@ -347,15 +347,11 @@ Public Class AnkenMasterForm
     ''' <param name="e"></param>
     Private Sub cmbCode1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbCode1.SelectedIndexChanged
 
-        If inputType = inputType.insert Then
-
-            If cmbCode1.Text = "" Or txtCode2.Text = "" Then
-                Exit Sub
-            End If
-
-            txtCode3.Text = Ankens.getNewCode3(txtCode2.Text).ToString("D2")
-
+        If cmbCode1.Text = "" Then
+            Exit Sub
         End If
+
+        txtCode3.Text = Ankens.getNewCode3(txtCode2.Text).ToString("D2")
 
     End Sub
 
@@ -366,15 +362,11 @@ Public Class AnkenMasterForm
     ''' <param name="e"></param>
     Private Sub txtCode2_TextChanged(sender As Object, e As EventArgs) Handles txtCode2.TextChanged
 
-        If inputType = inputType.insert Then
-
-            If cmbCode1.Text = "" Or txtCode2.Text = "" Then
-                Exit Sub
-            End If
-
-            txtCode3.Text = Ankens.getNewCode3(txtCode2.Text).ToString("D2")
-
+        If cmbCode1.Text = "" Or txtCode2.Text = "" Then
+            Exit Sub
         End If
+
+        txtCode3.Text = Ankens.getNewCode3(txtCode2.Text).ToString("D2")
 
     End Sub
 
@@ -546,7 +538,7 @@ Public Class AnkenMasterForm
     ''' <returns></returns>
     Private Function check() As Boolean
 
-        If inputType = inputType.insert And Ankens.getCountSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
+        If inputType = inputType.insert And Ankens.isExistSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
             MessageBox.Show("同一の工番がすでに存在します。")
             Return False
         End If

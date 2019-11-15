@@ -69,7 +69,7 @@ Public Module Items
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of String)
 
         '接続文字列
@@ -118,7 +118,7 @@ Public Module Items
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of String)
 
         '接続文字列
@@ -155,7 +155,6 @@ Public Module Items
 
     End Function
 
-
     ''' <summary>
     ''' 全ての単位を取得
     ''' </summary>
@@ -168,7 +167,7 @@ Public Module Items
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of String)
 
         '接続文字列
@@ -217,7 +216,7 @@ Public Module Items
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Item)
 
         '接続文字列
@@ -257,6 +256,61 @@ Public Module Items
 
     End Function
 
+    ''' <summary>
+    ''' 指定したIDの商品情報を取得
+    ''' </summary>
+    ''' <param name="id">社員番号</param>
+    ''' <returns></returns>
+    Public Function selectOne(id As Integer) As Item
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        'リスト初期化
+        Dim list As New List(Of Item)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = "select *,"
+            sqlStr = sqlStr + " from item"
+            sqlStr = sqlStr + String.Format(" Where item.id = {0}", id)
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            If rlt.Read Then
+                list.Add(New Item(rlt))
+            End If
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        If list.Count > 0 Then
+            Return list(0)
+        Else
+            Return Nothing
+        End If
+
+    End Function
+
 #End Region
 
 
@@ -271,6 +325,7 @@ Public Module Items
         dt.Columns.Add("cId")
         dt.Columns.Add("cCode1")
         dt.Columns.Add("cCode2")
+        dt.Columns.Add("cCode3")
         dt.Columns.Add("cCode")
         dt.Columns.Add("cName")
         dt.Columns.Add("cKata")
@@ -286,6 +341,7 @@ Public Module Items
             dr("cId") = item.id        '商品番号
             dr("cCode1") = item.code1  '商品コード1
             dr("cCode2") = item.code2  '商品コード2
+            dr("cCode3") = item.code2  '商品コード3
             dr("cCode") = item.code1 + "-" + item.code2  '商品コード
             dr("cName") = item.name  '品名
             dr("cKata") = item.kata    '型式

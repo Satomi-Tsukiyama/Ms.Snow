@@ -69,7 +69,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of String)
 
         '接続文字列
@@ -160,7 +160,14 @@ Public Module Ankens
         Return maxCode3 + 1
     End Function
 
-    Public Function getCountSameCode(code1 As String, code2 As String, code3 As String) As Boolean
+    ''' <summary>
+    ''' 同じ工番の
+    ''' </summary>
+    ''' <param name="code1"></param>
+    ''' <param name="code2"></param>
+    ''' <param name="code3"></param>
+    ''' <returns></returns>
+    Public Function isExistSameCode(code1 As String, code2 As String, code3 As String) As Boolean
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -168,7 +175,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         '接続文字列
@@ -212,7 +219,8 @@ Public Module Ankens
 
         End Using
 
-        Return list.Count
+
+        Return list.Count > 0
 
     End Function
 
@@ -228,7 +236,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         '接続文字列
@@ -285,7 +293,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         '接続文字列
@@ -332,6 +340,13 @@ Public Module Ankens
 
     End Function
 
+    ''' <summary>
+    ''' 指定した取引先IDと売上年月のデータをDataTableで出力
+    ''' </summary>
+    ''' <param name="clientId"></param>
+    ''' <param name="yaer"></param>
+    ''' <param name="month"></param>
+    ''' <returns></returns>
     Public Function selectWhereClientAndSalesYearMonth(clientId As Integer, yaer As Integer, month As Integer) As DataTable
 
         Dim cmd As MySqlCommand
@@ -340,7 +355,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         '接続文字列
@@ -394,6 +409,13 @@ Public Module Ankens
 
     End Function
 
+    ''' <summary>
+    ''' 指定した売上年月のデータの内、指定した取引先ID以外のデータをDataTableで出力
+    ''' </summary>
+    ''' <param name="clientIds_list"></param>
+    ''' <param name="year"></param>
+    ''' <param name="month"></param>
+    ''' <returns></returns>
     Public Function selectWhereElseClientAndSalesYearMonth(clientIds_list As List(Of Integer), year As Integer, month As Integer) As DataTable
 
         Dim cmd As MySqlCommand
@@ -402,7 +424,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         Dim a As Integer() = clientIds_list.ToArray
@@ -469,7 +491,7 @@ Public Module Ankens
     End Function
 
     ''' <summary>
-    ''' 社員情報を取得
+    ''' 指定したIDの案件情報を取得
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
@@ -481,7 +503,7 @@ Public Module Ankens
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Anken)
 
         '接続文字列

@@ -5,6 +5,7 @@ Public Class Item
     Public id As Integer            '商品番号
     Public code1 As String          '商品コード1
     Public code2 As String          '商品コード2
+    Public code3 As String          '商品コード3
     Public name As String           '品名
     Public kata As String             '型式
     Public maker As String         'メーカー
@@ -20,6 +21,7 @@ Public Class Item
         id = sqlResult("id")
         code1 = sqlResult("code1")
         code2 = sqlResult("code2")
+        code3 = sqlResult("code3")
         name = sqlResult("name")
         kata = sqlResult("kata")
         maker = sqlResult("maker")

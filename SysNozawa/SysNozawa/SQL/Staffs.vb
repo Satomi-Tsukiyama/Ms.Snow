@@ -68,7 +68,7 @@ Public Module Staffs
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Staff)
 
         '接続文字列
@@ -107,7 +107,7 @@ Public Module Staffs
     End Function
 
     ''' <summary>
-    ''' 社員情報を取得
+    ''' 指定したIDの社員情報を取得
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
@@ -119,7 +119,7 @@ Public Module Staffs
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Staff)
 
         '接続文字列

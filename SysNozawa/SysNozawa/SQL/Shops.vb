@@ -68,7 +68,7 @@ Public Module Shops
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Shop)
 
         '接続文字列
@@ -107,7 +107,7 @@ Public Module Shops
     End Function
 
     ''' <summary>
-    ''' 購入先情報を取得
+    ''' 指定したIDの購入先情報を取得
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
@@ -119,7 +119,7 @@ Public Module Shops
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Shop)
 
         '接続文字列

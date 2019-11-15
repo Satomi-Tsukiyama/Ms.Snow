@@ -70,7 +70,7 @@ Public Module Calendars
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Calendar)
 
         '接続文字列
@@ -128,7 +128,7 @@ Public Module Calendars
         Dim connectionString As String
         Dim sqlStr As String
 
-        '社員リスト初期化
+        'リスト初期化
         Dim list As New List(Of Calendar)
 
         '接続文字列
