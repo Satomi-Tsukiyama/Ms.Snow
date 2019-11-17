@@ -58,6 +58,7 @@ Public Class StaffMasterForm
         dgvStaff.Enabled = False
         txtName.Enabled = True
         txtName.Text = ""
+
         btnOK.Enabled = True
         btnOK.Text = "追加"
         btnCancel.Text = "中止"
@@ -72,6 +73,7 @@ Public Class StaffMasterForm
     Private Sub mitmEdit_Click(sender As Object, e As EventArgs) Handles mitmEdit.Click
 
         inputType = inputType.update
+
         mitmAdd.Enabled = False
         mitmEdit.Enabled = False
         mitmDelete.Enabled = False

@@ -283,7 +283,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select *,"
+            sqlStr = "select *"
             sqlStr = sqlStr + " from item"
             sqlStr = sqlStr + String.Format(" Where item.id = {0}", id)
 

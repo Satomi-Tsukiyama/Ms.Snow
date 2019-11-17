@@ -46,10 +46,78 @@
 
         Dim selectInfo As Item = Items.selectOne(selectId)
 
-        txtCode1.Text = selectInfo.code1
-        txtCode2.Text = selectInfo.code2
-        txtCode3.Text = selectInfo.code3
         cmbName.SelectedText = selectInfo.name
+        txtKata.Text = selectInfo.kata
+        cmbMaker.SelectedText = selectInfo.maker
+        txtCode1.SelectedText = selectInfo.code1
+        txtCode2.SelectedText = selectInfo.code2
+        txtCode3.SelectedText = selectInfo.code3
+        cmbUnit.SelectedText = selectInfo.unit
+        txtQuantity.Text = selectInfo.quantity
+
+    End Sub
+
+    ''' <summary>
+    ''' 新規追加クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub mitmAdd_Click(sender As Object, e As EventArgs) Handles mitmAdd.Click
+
+        inputType = inputType.insert
+
+        mitmAdd.Enabled = False
+        mitmEdit.Enabled = False
+        mitmDelete.Enabled = False
+        dgvItem.Enabled = False
+
+        cmbName.Enabled = True
+        cmbName.SelectedIndex = 0
+        txtKata.Enabled = True
+        txtKata.Text = ""
+        txtCode1.Enabled = True
+        txtCode1.Text = ""
+        txtCode2.Enabled = True
+        txtCode2.Text = ""
+        txtCode3.Enabled = True
+        txtCode3.Text = ""
+        cmbUnit.Enabled = True
+        cmbUnit.SelectedIndex = 0
+        txtQuantity.Enabled = True
+        txtQuantity.Text = ""
+
+        btnOK.Enabled = True
+        btnOK.Text = "追加"
+        btnCancel.Text = "中止"
+
+    End Sub
+
+    ''' <summary>
+    ''' 編集クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub mitmEdit_Click(sender As Object, e As EventArgs) Handles mitmEdit.Click
+
+        inputType = inputType.update
+
+        mitmAdd.Enabled = False
+        mitmEdit.Enabled = False
+        mitmDelete.Enabled = False
+        dgvItem.Enabled = False
+
+        cmbName.Enabled = True
+        txtKata.Enabled = True
+        txtKata.Enabled = True
+        txtCode1.Enabled = True
+        txtCode2.Enabled = True
+        txtCode3.Enabled = True
+        cmbUnit.Enabled = True
+        txtQuantity.Enabled = True
+
+        btnOK.Enabled = True
+        btnOK.Text = "追加"
+        btnCancel.Text = "中止"
 
     End Sub
 
@@ -106,6 +174,8 @@
         cmbName.SelectedIndex = 0
         txtKata.Enabled = False
         txtKata.Text = ""
+        cmbMaker.Enabled = False
+        cmbMaker.SelectedIndex = 0
         txtCode1.Enabled = False
         txtCode1.Text = ""
         txtCode2.Enabled = False

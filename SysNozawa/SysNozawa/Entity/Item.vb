@@ -19,9 +19,9 @@ Public Class Item
     Public Sub New(sqlResult As MySqlDataReader)
 
         id = sqlResult("id")
-        code1 = sqlResult("code1")
-        code2 = sqlResult("code2")
-        code3 = sqlResult("code3")
+        code1 = sqlResult("code1").ToString
+        code2 = sqlResult("code2").ToString
+        code3 = sqlResult("code3").ToString
         name = sqlResult("name")
         kata = sqlResult("kata")
         maker = sqlResult("maker")

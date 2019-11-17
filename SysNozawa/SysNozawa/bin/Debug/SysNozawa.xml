@@ -205,6 +205,13 @@ SysNozawa
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:SysNozawa.AnkenMasterForm.btnEditCode3_Click(System.Object,System.EventArgs)">
+ <summary>
+ 工番3入力許可
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:SysNozawa.AnkenMasterForm.txtSalesAmount_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
  <summary>
  売上金額に金額入力のみ許可
@@ -400,6 +407,34 @@ SysNozawa
  </summary>
  <param name="dgvAnken"></param>
 </member>
+<member name="M:SysNozawa.ItemMasterForm.ItemMasterForm_Load(System.Object,System.EventArgs)">
+ <summary>
+ ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ItemMasterForm.dgvItem_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 商品選択
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ItemMasterForm.mitmAdd_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新規追加クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.ItemMasterForm.mitmEdit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 編集クリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:SysNozawa.MenuForm.Menu_Load(System.Object,System.EventArgs)">
  <summary>
  ロードイベント
@@ -456,6 +491,13 @@ SysNozawa
  <param name="sender"></param>
  <param name="e"></param>
 </member>
+<member name="M:SysNozawa.MenuForm.btnItemMaster_Click(System.Object,System.EventArgs)">
+ <summary>
+ 商品マスタ
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
 <member name="M:SysNozawa.MenuForm.btnClose_Click(System.Object,System.EventArgs)">
  <summary>
  閉じるボタンクリック
@@ -473,6 +515,20 @@ SysNozawa
 <member name="M:SysNozawa.SalesPlanForm.SalesPlanForm_Load(System.Object,System.EventArgs)">
  <summary>
  ロードイベント
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.SalesPlanForm.btnPrev_Click(System.Object,System.EventArgs)">
+ <summary>
+ 前へボタンクリック
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:SysNozawa.SalesPlanForm.btnNext_Click(System.Object,System.EventArgs)">
+ <summary>
+ 次へボタンクリック
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
@@ -652,6 +708,12 @@ SysNozawa
  </summary>
  <returns></returns>
 </member>
+<member name="M:SysNozawa.Ankens.getAllCode2">
+ <summary>
+ 全ての工番2を取得
+ </summary>
+ <returns></returns>
+</member>
 <member name="M:SysNozawa.Ankens.getNewCode3(System.String)">
  <summary>
  新規追加用の新しい工番3を生成
@@ -659,9 +721,36 @@ SysNozawa
  <param name="code2"></param>
  <returns></returns>
 </member>
+<member name="M:SysNozawa.Ankens.isExistSameCode(System.String,System.String,System.String)">
+ <summary>
+ 同じ工番の
+ </summary>
+ <param name="code1"></param>
+ <param name="code2"></param>
+ <param name="code3"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.selectWhereClientAndSalesYearMonth(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 指定した取引先IDと売上年月のデータをDataTableで出力
+ </summary>
+ <param name="clientId"></param>
+ <param name="yaer"></param>
+ <param name="month"></param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Ankens.selectWhereElseClientAndSalesYearMonth(System.Collections.Generic.List{System.Int32},System.Int32,System.Int32)">
+ <summary>
+ 指定した売上年月のデータの内、指定した取引先ID以外のデータをDataTableで出力
+ </summary>
+ <param name="clientIds_list"></param>
+ <param name="year"></param>
+ <param name="month"></param>
+ <returns></returns>
+</member>
 <member name="M:SysNozawa.Ankens.selectOne(System.Int32)">
  <summary>
- 社員情報を取得
+ 指定したIDの案件情報を取得
  </summary>
  <param name="id">社員番号</param>
  <returns></returns>
@@ -702,6 +791,44 @@ SysNozawa
  <param name="list"></param>
  <returns></returns>
 </member>
+<member name="M:SysNozawa.Items.getNewId">
+ <summary>
+ 新規追加用の新しいIDを生成
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Items.getAllName">
+ <summary>
+ 全ての品名を取得
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Items.getAllMaker">
+ <summary>
+ 全てのメーカー名を取得
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Items.getAllUnit">
+ <summary>
+ 全ての単位を取得
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Items.selectOne(System.Int32)">
+ <summary>
+ 指定したIDの商品情報を取得
+ </summary>
+ <param name="id">社員番号</param>
+ <returns></returns>
+</member>
+<member name="M:SysNozawa.Items.ToDataTable(System.Collections.Generic.List{SysNozawa.Item})">
+ <summary>
+ List(Of Anken)をDataTableに変換
+ </summary>
+ <param name="list"></param>
+ <returns></returns>
+</member>
 <member name="M:SysNozawa.Shops.getNewId">
  <summary>
  新規追加用の新しいIDを生成
@@ -710,7 +837,7 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Shops.selectOne(System.Int32)">
  <summary>
- 購入先情報を取得
+ 指定したIDの購入先情報を取得
  </summary>
  <param name="id">社員番号</param>
  <returns></returns>
@@ -751,7 +878,7 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Clients.selectOne(System.Int32)">
  <summary>
- 取引先情報を取得
+ 指定したIDの取引先情報を取得
  </summary>
  <param name="id">社員番号</param>
  <returns></returns>
@@ -798,7 +925,7 @@ SysNozawa
 </member>
 <member name="M:SysNozawa.Staffs.selectOne(System.Int32)">
  <summary>
- 社員情報を取得
+ 指定したIDの社員情報を取得
  </summary>
  <param name="id">社員番号</param>
  <returns></returns>
