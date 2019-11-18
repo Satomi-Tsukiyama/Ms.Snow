@@ -28,8 +28,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select max(id) as maxid"
-            sqlStr = sqlStr + " from item"
+            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -83,8 +83,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select distinct name"
-            sqlStr = sqlStr + " from item"
+            sqlStr = "SELECT distinct name"
+            sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -132,8 +132,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select distinct maker"
-            sqlStr = sqlStr + " from item"
+            sqlStr = "SELECT distinct maker"
+            sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -181,8 +181,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select distinct unit"
-            sqlStr = sqlStr + " from item"
+            sqlStr = "SELECT distinct unit"
+            sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -201,6 +201,65 @@ Public Module Items
         End Using
 
         Return list
+
+    End Function
+
+    ''' <summary>
+    ''' 同じ商品コードの商品が存在するか
+    ''' </summary>
+    ''' <param name="code1"></param>
+    ''' <param name="code2"></param>
+    ''' <param name="code3"></param>
+    ''' <returns></returns>
+    Public Function isExistSameCode(code1 As String, code2 As String, code3 As String) As Boolean
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        'リスト初期化
+        Dim list As New List(Of Anken)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM item"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + String.Format(" and item.code1 = '{0}'", code1)
+            sqlStr = sqlStr + String.Format(" and item.code2 = '{0}'", code2)
+            sqlStr = sqlStr + String.Format(" and item.code3 = '{0}'", code3)
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+
+                list.Add(New Anken(rlt))
+
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+
+        Return list.Count > 0
 
     End Function
 
@@ -230,8 +289,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select *"
-            sqlStr = sqlStr + " from item"
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -283,9 +342,9 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "select *"
-            sqlStr = sqlStr + " from item"
-            sqlStr = sqlStr + String.Format(" Where item.id = {0}", id)
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM item"
+            sqlStr = sqlStr + String.Format(" WHERE item.id = {0}", id)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -341,8 +400,8 @@ Public Module Items
             dr("cId") = item.id        '商品番号
             dr("cCode1") = item.code1  '商品コード1
             dr("cCode2") = item.code2  '商品コード2
-            dr("cCode3") = item.code2  '商品コード3
-            dr("cCode") = item.code1 + "-" + item.code2  '商品コード
+            dr("cCode3") = item.code3  '商品コード3
+            dr("cCode") = item.code1 + "-" + item.code2 + item.code3  '商品コード
             dr("cName") = item.name  '品名
             dr("cKata") = item.kata    '型式
             dr("cMaker") = item.maker    'メーカー

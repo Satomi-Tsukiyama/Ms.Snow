@@ -28,8 +28,8 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select max(id) as maxid"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = "SELECT MAX(id) AS maxid"
+            sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -83,8 +83,8 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select distinct code2"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = "SELECT DISTINCT code2"
+            sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -131,9 +131,9 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select max(code3) as maxcode3"
-            sqlStr = sqlStr + " from anken"
-            sqlStr = sqlStr + String.Format(" where code2 = '{0}'", code2)
+            sqlStr = "SELECT MAX(code3) AS maxcode3"
+            sqlStr = sqlStr + " FROM anken"
+            sqlStr = sqlStr + String.Format(" WHERE code2 = '{0}'", code2)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -161,7 +161,7 @@ Public Module Ankens
     End Function
 
     ''' <summary>
-    ''' 同じ工番の
+    ''' 同じ工番の案件が存在するか
     ''' </summary>
     ''' <param name="code1"></param>
     ''' <param name="code2"></param>
@@ -189,17 +189,17 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = "SELECT anken.*,"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + " Where 0 = 0"
-            sqlStr = sqlStr + String.Format(" and anken.code1 = '{0}'", code1)
-            sqlStr = sqlStr + String.Format(" and anken.code2 = '{0}'", code2)
-            sqlStr = sqlStr + String.Format(" and anken.code3 = '{0}'", code3)
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + String.Format(" AND anken.code1 = '{0}'", code1)
+            sqlStr = sqlStr + String.Format(" AND anken.code2 = '{0}'", code2)
+            sqlStr = sqlStr + String.Format(" AND anken.code3 = '{0}'", code3)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -250,14 +250,14 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = "SELECT anken.*,"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + " order by anken.code2, anken.code3"
+            sqlStr = sqlStr + " ORDER BY anken.code2, anken.code3"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -307,14 +307,14 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
+            sqlStr = "SELECT anken.*,"
             sqlStr = sqlStr + " client.code as clientcode,"
             sqlStr = sqlStr + " client.name as clientname,"
             sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + " Where 0 = 0"
+            sqlStr = sqlStr + " WHERE 0 = 0"
             sqlStr = sqlStr + String.Format(" and anken.code2 = '{0}'", code2)
             sqlStr = sqlStr + " order by anken.code2"
 
@@ -369,14 +369,14 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
+            sqlStr = "SELECT anken.*,"
             sqlStr = sqlStr + " client.code as clientcode,"
             sqlStr = sqlStr + " client.name as clientname,"
             sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + " Where 0 = 0"
+            sqlStr = sqlStr + " WHERE 0 = 0"
             sqlStr = sqlStr + String.Format(" and anken.clientid = {0}", clientId)
             sqlStr = sqlStr + String.Format(" and anken.salesyearmonth >= '{0}'", CDate(yaer.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
@@ -440,14 +440,14 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
+            sqlStr = "SELECT anken.*,"
             sqlStr = sqlStr + " client.code as clientcode,"
             sqlStr = sqlStr + " client.name as clientname,"
             sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + " Where 0 = 0"
+            sqlStr = sqlStr + " WHERE 0 = 0"
 
             If clientIds_list.Count > 0 Then
                 sqlStr = sqlStr + " and anken.clientid not in (0"
@@ -517,14 +517,14 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "select anken.*,"
+            sqlStr = "SELECT anken.*,"
             sqlStr = sqlStr + " client.code as clientcode,"
             sqlStr = sqlStr + " client.name as clientname,"
             sqlStr = sqlStr + " staff.name as staffname"
-            sqlStr = sqlStr + " from anken"
+            sqlStr = sqlStr + " FROM anken"
             sqlStr = sqlStr + " left join client on anken.clientid = client.id"
             sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
-            sqlStr = sqlStr + String.Format(" Where anken.id = {0}", id)
+            sqlStr = sqlStr + String.Format(" WHERE anken.id = {0}", id)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -579,7 +579,7 @@ Public Module Ankens
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update anken set"
+                sqlStr = "UPDATE anken SET"
                 sqlStr = sqlStr + String.Format(" code1 = '{0}',", info.code1)
                 sqlStr = sqlStr + String.Format(" code2 = '{0}',", info.code2)
                 sqlStr = sqlStr + String.Format(" code3 = '{0}',", info.code3)
@@ -591,7 +591,7 @@ Public Module Ankens
                 sqlStr = sqlStr + String.Format(" salesamount = {0},", info.salesAmount)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
-                sqlStr = sqlStr + String.Format(" where id = {0}", info.id)
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -637,11 +637,11 @@ Public Module Ankens
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update anken set"
+                sqlStr = "UPDATE anken SET"
                 sqlStr = sqlStr + String.Format(" status = {0},", status)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
-                sqlStr = sqlStr + String.Format(" where id = {0}", id)
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -764,8 +764,8 @@ Public Module Ankens
                 con.Open()
 
                 'SQL文 
-                sqlStr = "delete from anken "
-                sqlStr = sqlStr + String.Format(" where id = {0}", id)
+                sqlStr = "DELETE FROM anken "
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

@@ -28,7 +28,8 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = String.Format("select max(id) as maxid from shop")
+            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " FROM shop"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -82,7 +83,7 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = "select * from shop"
+            sqlStr = "SELECT * FROM shop"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -133,8 +134,8 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = "select * from shop"
-            sqlStr = sqlStr + String.Format(" where id = {0}", id)
+            sqlStr = "SELECT * FROM shop"
+            sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -189,12 +190,12 @@ Public Module Shops
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update shop set"
+                sqlStr = "UPDATE shop SET"
                 sqlStr = sqlStr + String.Format(" code = '{0}',", info.code)
                 sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
-                sqlStr = sqlStr + String.Format(" where id = {0}", info.id)
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -303,8 +304,8 @@ Public Module Shops
                 con.Open()
 
                 'SQL文 
-                sqlStr = "delete from shop "
-                sqlStr = sqlStr + String.Format(" where id = {0}", id)
+                sqlStr = "DELETE FROM shop "
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

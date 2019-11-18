@@ -121,6 +121,104 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 追加/編集クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+
+        '入力情報のチェック
+        If check() = False Then
+            Exit Sub
+        End If
+
+        '追加クリック
+        If inputType = inputType.insert Then
+
+            If DialogResult.No = MessageBox.Show("追加します。よろしいですか？",
+                                                 "追加",
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question) Then
+                Exit Sub
+
+            End If
+
+            Dim insertInfo As New Anken
+            insertInfo.id = Ankens.getNewId()
+            insertInfo.code1 = cmbCode1.Text
+            insertInfo.code2 = txtCode2.Text
+            insertInfo.code3 = txtCode3.Text
+            insertInfo.name = txtName.Text
+            insertInfo.clientId = cmbClient.SelectedValue
+            insertInfo.clientCode = cmbClient.Text
+            insertInfo.salesYearMonth = dtpSalesYearMonth.Value
+            If txtSalesAmount.Text.Count > 0 Then
+                insertInfo.salesAmount = txtSalesAmount.Text
+            Else
+                insertInfo.salesAmount = 0
+            End If
+            insertInfo.staffId = cmbStaff.SelectedValue
+            insertInfo.staffName = cmbStaff.Text
+            insertInfo.status = cmbStatus.SelectedValue
+
+            If Ankens.insert(insertInfo) Then
+                MessageBox.Show("追加しました。")
+            Else
+                MessageBox.Show("追加に失敗しました。")
+                Exit Sub
+            End If
+
+        ElseIf inputType = inputType.update Then '編集クリック
+
+            If DialogResult.No = MessageBox.Show("編集します。よろしいですか？",
+                                                 "編集",
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question) Then
+                Exit Sub
+
+            End If
+
+            Dim updateInfo As New Anken
+            updateInfo.id = selectId
+            updateInfo.code1 = cmbCode1.Text
+            updateInfo.code2 = txtCode2.Text
+            updateInfo.code3 = txtCode3.Text
+            updateInfo.name = txtName.Text
+            updateInfo.clientId = cmbClient.SelectedValue
+            updateInfo.clientCode = cmbClient.SelectedText
+            updateInfo.salesYearMonth = dtpSalesYearMonth.Value
+            updateInfo.salesAmount = txtSalesAmount.Text
+            updateInfo.staffId = cmbStaff.SelectedValue
+            updateInfo.staffName = cmbStaff.SelectedText
+            updateInfo.status = cmbStatus.SelectedValue
+
+
+            If Ankens.update(updateInfo) Then
+                MessageBox.Show("編集しました。")
+            Else
+                MessageBox.Show("編集に失敗しました。")
+                Exit Sub
+            End If
+
+        Else
+
+        End If
+
+        inputType = inputType.non
+        selectId = 0
+
+        setCmbCode2()
+
+        setDgvAnken()
+
+        setOther()
+
+        '新規追加ボタン選択中
+        mitmAdd.Select()
+
+    End Sub
+
     Private Sub setDgvItem()
 
         dgvItem.DataSource = Items.selectAll()
@@ -192,6 +290,41 @@
         btnCancel.Text = "閉じる"
 
     End Sub
+
+    ''' <summary>
+    ''' 入力した商品情報のチェック
+    ''' </summary>
+    ''' <returns></returns>
+    Private Function check() As Boolean
+
+        If inputType = inputType.insert And Ankens.isExistSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
+            MessageBox.Show("同一の工番がすでに存在します。")
+            Return False
+        End If
+
+        If cmbName.Text.Count = 0 Then
+            MessageBox.Show("商品名を入力してください。")
+            Return False
+        End If
+
+        If txtKata.Text.Count = 0 Then
+            MessageBox.Show("型式を正しく入力してください。")
+            Return False
+        End If
+
+        If inputType = inputType.insert And Items.isExistSameCode(txtCode1.Text, txtCode2.Text, txtCode3.Text) Then
+            MessageBox.Show("同一の工番がすでに存在します。")
+            Return False
+        End If
+
+        If cmbStaff.Text.Count = 0 Then
+            MessageBox.Show("作成者を正しく入力してください。")
+            Return False
+        End If
+
+        Return True
+
+    End Function
 
 
 End Class

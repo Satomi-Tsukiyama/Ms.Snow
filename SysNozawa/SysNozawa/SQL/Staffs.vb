@@ -28,7 +28,8 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = String.Format("select max(id) as maxid from staff")
+            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " FROM staff"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -82,7 +83,7 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = "select * from staff"
+            sqlStr = "SELECT * FROM staff"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -133,7 +134,7 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = String.Format("select * from staff where id = {0}", id)
+            sqlStr = String.Format("SELECT * FROM staff WHERE id = {0}", id)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -247,11 +248,11 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update staff set"
+                sqlStr = "update staff SET"
                 sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
-                sqlStr = sqlStr + String.Format(" where id = {0}", info.id)
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -300,8 +301,8 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "delete from staff "
-                sqlStr = sqlStr + String.Format(" where id = {0}", id)
+                sqlStr = "DELETE FROM staff "
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

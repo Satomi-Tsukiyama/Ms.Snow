@@ -28,8 +28,8 @@ Public Module Calendars
             con.Open()
 
             'SQL文 
-            sqlStr = "select max(id) as maxid"
-            sqlStr = sqlStr + " from calendar"
+            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " FROM calendar"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -84,8 +84,8 @@ Public Module Calendars
             con.Open()
 
             'SQL文 
-            sqlStr = "select * from calendar"
-            sqlStr = sqlStr + String.Format(" where day = '{0}'", day.ToShortDateString)
+            sqlStr = "SELECT * FROM calendar"
+            sqlStr = sqlStr + String.Format(" WHERE day = '{0}'", day.ToShortDateString)
             sqlStr = sqlStr + " and holidayflg is not null"
 
             'MySQLCommand作成 
@@ -142,8 +142,8 @@ Public Module Calendars
             con.Open()
 
             'SQL文 
-            sqlStr = "select * from calendar"
-            sqlStr = sqlStr + String.Format(" where day >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
+            sqlStr = "SELECT * FROM calendar"
+            sqlStr = sqlStr + String.Format(" WHERE day >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
                 sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
             Else
@@ -207,12 +207,12 @@ Public Module Calendars
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update calendar set"
+                sqlStr = "UPDATE calendar SET"
                 sqlStr = sqlStr + String.Format(" day = '{0}',", info.day)
                 sqlStr = sqlStr + String.Format(" holidayflg = '{0}',", info.holidayflg)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
-                sqlStr = sqlStr + String.Format(" where id = {0}", info.id)
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
