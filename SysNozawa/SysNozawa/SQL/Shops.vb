@@ -28,7 +28,7 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = "SELECT MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM shop"
 
             'MySQLCommand作成 
@@ -83,7 +83,8 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM shop"
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM shop"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -134,7 +135,8 @@ Public Module Shops
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM shop"
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM shop"
             sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
 
             'MySQLCommand作成 
@@ -244,13 +246,13 @@ Public Module Shops
                 con.Open()
 
                 'SQL文 
-                sqlStr = "insert into shop ("
+                sqlStr = "INSERT INTO shop ("
                 sqlStr = sqlStr + "  id"
                 sqlStr = sqlStr + ", code"
                 sqlStr = sqlStr + ", name"
                 sqlStr = sqlStr + ", insertdatetime"
 
-                sqlStr = sqlStr + ") values ("
+                sqlStr = sqlStr + ") VALUES ("
                 sqlStr = sqlStr + String.Format(" {0}", info.id)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.code)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.name)

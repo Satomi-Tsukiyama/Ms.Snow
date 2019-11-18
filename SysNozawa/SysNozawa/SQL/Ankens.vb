@@ -194,8 +194,8 @@ Public Module Ankens
             sqlStr = sqlStr + " client.name AS clientname,"
             sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
             sqlStr = sqlStr + String.Format(" AND anken.code1 = '{0}'", code1)
             sqlStr = sqlStr + String.Format(" AND anken.code2 = '{0}'", code2)
@@ -255,8 +255,8 @@ Public Module Ankens
             sqlStr = sqlStr + " client.name AS clientname,"
             sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " ORDER BY anken.code2, anken.code3"
 
             'MySQLCommand作成 
@@ -308,15 +308,15 @@ Public Module Ankens
 
             'SQL文 
             sqlStr = "SELECT anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + String.Format(" and anken.code2 = '{0}'", code2)
-            sqlStr = sqlStr + " order by anken.code2"
+            sqlStr = sqlStr + String.Format(" AND anken.code2 = '{0}'", code2)
+            sqlStr = sqlStr + " ORDER BY anken.code2"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -370,19 +370,19 @@ Public Module Ankens
 
             'SQL文 
             sqlStr = "SELECT anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + String.Format(" and anken.clientid = {0}", clientId)
-            sqlStr = sqlStr + String.Format(" and anken.salesyearmonth >= '{0}'", CDate(yaer.ToString + "/" + month.ToString + "/" + "1"))
+            sqlStr = sqlStr + String.Format(" AND anken.clientid = {0}", clientId)
+            sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth >= '{0}'", CDate(yaer.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate((yaer + 1).ToString + "/" + "1" + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth < '{0}'", CDate((yaer + 1).ToString + "/" + "1" + "/" + "1"))
             Else
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate(yaer.ToString + "/" + (month + 1).ToString + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth < '{0}'", CDate(yaer.ToString + "/" + (month + 1).ToString + "/" + "1"))
 
             End If
 
@@ -441,16 +441,16 @@ Public Module Ankens
 
             'SQL文 
             sqlStr = "SELECT anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
 
             If clientIds_list.Count > 0 Then
-                sqlStr = sqlStr + " and anken.clientid not in (0"
+                sqlStr = sqlStr + " AND anken.clientid NIT IN (0"
 
                 For Each clientId In clientIds_list
                     sqlStr = sqlStr + String.Format(",{0}", clientId)
@@ -459,11 +459,11 @@ Public Module Ankens
                 sqlStr = sqlStr + ")"
             End If
 
-            sqlStr = sqlStr + String.Format(" and anken.salesyearmonth >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
+            sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
             Else
-                sqlStr = sqlStr + String.Format(" and anken.salesyearmonth < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND anken.salesyearmonth < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
 
             End If
 
@@ -518,12 +518,12 @@ Public Module Ankens
 
             'SQL文 
             sqlStr = "SELECT anken.*,"
-            sqlStr = sqlStr + " client.code as clientcode,"
-            sqlStr = sqlStr + " client.name as clientname,"
-            sqlStr = sqlStr + " staff.name as staffname"
+            sqlStr = sqlStr + " client.code AS clientcode,"
+            sqlStr = sqlStr + " client.name AS clientname,"
+            sqlStr = sqlStr + " staff.name AS staffname"
             sqlStr = sqlStr + " FROM anken"
-            sqlStr = sqlStr + " left join client on anken.clientid = client.id"
-            sqlStr = sqlStr + " left join staff on anken.staffid = staff.id"
+            sqlStr = sqlStr + " LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + " LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + String.Format(" WHERE anken.id = {0}", id)
 
             'MySQLCommand作成 
@@ -690,7 +690,7 @@ Public Module Ankens
                 con.Open()
 
                 'SQL文 
-                sqlStr = "insert into anken ("
+                sqlStr = "INSERT INTO anken ("
                 sqlStr = sqlStr + "  id"
                 sqlStr = sqlStr + ", code1"
                 sqlStr = sqlStr + ", code2"
@@ -703,7 +703,7 @@ Public Module Ankens
                 sqlStr = sqlStr + ", salesamount"
                 sqlStr = sqlStr + ", insertdatetime"
 
-                sqlStr = sqlStr + ") values ("
+                sqlStr = sqlStr + ") VALUES ("
                 sqlStr = sqlStr + String.Format(" {0}", info.id)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.code1)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.code2)

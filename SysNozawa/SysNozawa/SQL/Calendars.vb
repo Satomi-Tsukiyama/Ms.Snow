@@ -86,7 +86,7 @@ Public Module Calendars
             'SQL文 
             sqlStr = "SELECT * FROM calendar"
             sqlStr = sqlStr + String.Format(" WHERE day = '{0}'", day.ToShortDateString)
-            sqlStr = sqlStr + " and holidayflg is not null"
+            sqlStr = sqlStr + " AND holidayflg IS NOT NULL"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -145,12 +145,12 @@ Public Module Calendars
             sqlStr = "SELECT * FROM calendar"
             sqlStr = sqlStr + String.Format(" WHERE day >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
             If month = 12 Then
-                sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND day < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
             Else
-                sqlStr = sqlStr + String.Format(" and day < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
+                sqlStr = sqlStr + String.Format(" AND day < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
             End If
 
-            sqlStr = sqlStr + " and holidayflg is not null"
+            sqlStr = sqlStr + " AND holidayflg IS NOT NULL"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -261,13 +261,13 @@ Public Module Calendars
                 con.Open()
 
                 'SQL文 
-                sqlStr = "insert into calendar ("
+                sqlStr = "INSERT INTO calendar ("
                 sqlStr = sqlStr + "  id"
                 sqlStr = sqlStr + ", day"
                 sqlStr = sqlStr + ", holidayflg"
                 sqlStr = sqlStr + ", insertdatetime"
 
-                sqlStr = sqlStr + ") values ("
+                sqlStr = sqlStr + ") VALUES ("
                 sqlStr = sqlStr + String.Format(" {0}", info.id)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.day)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.holidayflg)

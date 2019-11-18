@@ -75,6 +75,8 @@
         cmbName.SelectedIndex = 0
         txtKata.Enabled = True
         txtKata.Text = ""
+        cmbMaker.Enabled = True
+        cmbMaker.SelectedIndex = 0
         txtCode1.Enabled = True
         txtCode1.Text = ""
         txtCode2.Enabled = True
@@ -108,7 +110,7 @@
 
         cmbName.Enabled = True
         txtKata.Enabled = True
-        txtKata.Enabled = True
+        cmbMaker.Enabled = True
         txtCode1.Enabled = True
         txtCode2.Enabled = True
         txtCode3.Enabled = True
@@ -116,7 +118,7 @@
         txtQuantity.Enabled = True
 
         btnOK.Enabled = True
-        btnOK.Text = "追加"
+        btnOK.Text = "編集"
         btnCancel.Text = "中止"
 
     End Sub
@@ -144,25 +146,18 @@
 
             End If
 
-            Dim insertInfo As New Anken
-            insertInfo.id = Ankens.getNewId()
-            insertInfo.code1 = cmbCode1.Text
+            Dim insertInfo As New Item
+            insertInfo.id = Items.getNewId()
+            insertInfo.code1 = txtCode1.Text
             insertInfo.code2 = txtCode2.Text
             insertInfo.code3 = txtCode3.Text
-            insertInfo.name = txtName.Text
-            insertInfo.clientId = cmbClient.SelectedValue
-            insertInfo.clientCode = cmbClient.Text
-            insertInfo.salesYearMonth = dtpSalesYearMonth.Value
-            If txtSalesAmount.Text.Count > 0 Then
-                insertInfo.salesAmount = txtSalesAmount.Text
-            Else
-                insertInfo.salesAmount = 0
-            End If
-            insertInfo.staffId = cmbStaff.SelectedValue
-            insertInfo.staffName = cmbStaff.Text
-            insertInfo.status = cmbStatus.SelectedValue
+            insertInfo.name = cmbName.Text
+            insertInfo.kata = txtKata.Text
+            insertInfo.maker = cmbMaker.Text
+            insertInfo.unit = cmbUnit.Text
+            insertInfo.quantity = txtQuantity.Text
 
-            If Ankens.insert(insertInfo) Then
+            If Items.insert(insertInfo) Then
                 MessageBox.Show("追加しました。")
             Else
                 MessageBox.Show("追加に失敗しました。")
@@ -179,22 +174,19 @@
 
             End If
 
-            Dim updateInfo As New Anken
+            Dim updateInfo As New Item
             updateInfo.id = selectId
-            updateInfo.code1 = cmbCode1.Text
+            updateInfo.code1 = txtCode1.Text
             updateInfo.code2 = txtCode2.Text
             updateInfo.code3 = txtCode3.Text
-            updateInfo.name = txtName.Text
-            updateInfo.clientId = cmbClient.SelectedValue
-            updateInfo.clientCode = cmbClient.SelectedText
-            updateInfo.salesYearMonth = dtpSalesYearMonth.Value
-            updateInfo.salesAmount = txtSalesAmount.Text
-            updateInfo.staffId = cmbStaff.SelectedValue
-            updateInfo.staffName = cmbStaff.SelectedText
-            updateInfo.status = cmbStatus.SelectedValue
+            updateInfo.name = cmbName.Text
+            updateInfo.kata = txtKata.Text
+            updateInfo.maker = cmbMaker.Text
+            updateInfo.unit = cmbUnit.Text
+            updateInfo.quantity = txtQuantity.Text
 
 
-            If Ankens.update(updateInfo) Then
+            If Items.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
             Else
                 MessageBox.Show("編集に失敗しました。")
@@ -208,9 +200,13 @@
         inputType = inputType.non
         selectId = 0
 
-        setCmbCode2()
+        setDgvItem()
 
-        setDgvAnken()
+        setCmbName()
+
+        setCmbMaker()
+
+        setCmbUnit()
 
         setOther()
 
@@ -297,11 +293,6 @@
     ''' <returns></returns>
     Private Function check() As Boolean
 
-        If inputType = inputType.insert And Ankens.isExistSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
-            MessageBox.Show("同一の工番がすでに存在します。")
-            Return False
-        End If
-
         If cmbName.Text.Count = 0 Then
             MessageBox.Show("商品名を入力してください。")
             Return False
@@ -317,8 +308,8 @@
             Return False
         End If
 
-        If cmbStaff.Text.Count = 0 Then
-            MessageBox.Show("作成者を正しく入力してください。")
+        If cmbUnit.Text.Count = 0 Then
+            MessageBox.Show("単位を正しく入力してください。")
             Return False
         End If
 

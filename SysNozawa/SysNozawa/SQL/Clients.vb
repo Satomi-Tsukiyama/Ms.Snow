@@ -28,7 +28,7 @@ Public Module Clients
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = "SELECT MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM client"
 
             'MySQLCommand作成 
@@ -83,7 +83,8 @@ Public Module Clients
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM client"
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM client"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -244,13 +245,13 @@ Public Module Clients
                 con.Open()
 
                 'SQL文 
-                sqlStr = "insert into client ("
+                sqlStr = "INSERT INTO client ("
                 sqlStr = sqlStr + "  id"
                 sqlStr = sqlStr + ", code"
                 sqlStr = sqlStr + ", name"
                 sqlStr = sqlStr + ", insertdatetime"
 
-                sqlStr = sqlStr + ") values ("
+                sqlStr = sqlStr + ") VALUES ("
                 sqlStr = sqlStr + String.Format(" {0}", info.id)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.code)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.name)
@@ -327,7 +328,7 @@ Public Module Clients
 #End Region
 
     ''' <summary>
-    ''' List(Of Anken)をDataTableに変換
+    ''' List(Of Client)をDataTableに変換
     ''' </summary>
     ''' <param name="list"></param>
     ''' <returns></returns>

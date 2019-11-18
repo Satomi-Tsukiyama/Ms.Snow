@@ -83,7 +83,8 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM staff"
+            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " FROM staff"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -189,13 +190,12 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "insert into staff ("
+                sqlStr = "INSERT INTO staff ("
                 sqlStr = sqlStr + "  id"
                 sqlStr = sqlStr + ", name"
-
                 sqlStr = sqlStr + ", insertdatetime"
 
-                sqlStr = sqlStr + ") values ("
+                sqlStr = sqlStr + ") VALUES ("
                 sqlStr = sqlStr + String.Format(" '{0}'", info.id)
                 sqlStr = sqlStr + String.Format(", '{0}'", info.name)
                 sqlStr = sqlStr + ", now()"
@@ -248,7 +248,7 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "update staff SET"
+                sqlStr = "UPDATE staff SET"
                 sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
                 sqlStr = sqlStr + " updatedatetime = now()"
 
@@ -324,6 +324,11 @@ Public Module Staffs
 
 #End Region
 
+    ''' <summary>
+    ''' List(Of Staff)をDataTableに変換
+    ''' </summary>
+    ''' <param name="list"></param>
+    ''' <returns></returns>
     Private Function ToDataTable(list As List(Of Staff)) As DataTable
 
         Dim dt As DataTable = New DataTable("staffList")

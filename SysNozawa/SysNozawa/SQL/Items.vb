@@ -28,7 +28,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = "SELECT MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -83,7 +83,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT distinct name"
+            sqlStr = "SELECT DISTINCT name"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -132,7 +132,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT distinct maker"
+            sqlStr = "SELECT DISTINCT maker"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -181,7 +181,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT distinct unit"
+            sqlStr = "SELECT DISTINCT unit"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -236,9 +236,9 @@ Public Module Items
             sqlStr = "SELECT *"
             sqlStr = sqlStr + " FROM item"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + String.Format(" and item.code1 = '{0}'", code1)
-            sqlStr = sqlStr + String.Format(" and item.code2 = '{0}'", code2)
-            sqlStr = sqlStr + String.Format(" and item.code3 = '{0}'", code3)
+            sqlStr = sqlStr + String.Format(" AND item.code1 = '{0}'", code1)
+            sqlStr = sqlStr + String.Format(" AND item.code2 = '{0}'", code2)
+            sqlStr = sqlStr + String.Format(" AND item.code3 = '{0}'", code3)
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -372,9 +372,141 @@ Public Module Items
 
 #End Region
 
+#Region "更新"
 
     ''' <summary>
-    ''' List(Of Anken)をDataTableに変換
+    ''' 商品情報の更新
+    ''' </summary>
+    ''' <param name="info"></param>
+    ''' <returns></returns>
+    Public Function update(info As Item) As Boolean
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        Try
+
+            'コネクション生成 
+            Using con As New MySqlConnection(connectionString)
+
+                '接続 
+                con.Open()
+
+                'SQL文 
+                sqlStr = "UPDATE item SET"
+                sqlStr = sqlStr + String.Format(" code1 = '{0}',", info.code1)
+                sqlStr = sqlStr + String.Format(" code2 = '{0}',", info.code2)
+                sqlStr = sqlStr + String.Format(" code3 = '{0}',", info.code3)
+                sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
+                sqlStr = sqlStr + String.Format(" kata = '{0}',", info.kata)
+                sqlStr = sqlStr + String.Format(" maker = '{0}',", info.maker)
+                sqlStr = sqlStr + String.Format(" unit = '{0}',", info.unit)
+                sqlStr = sqlStr + String.Format(" quantity = '{0}',", info.quantity)
+                sqlStr = sqlStr + " updatedatetime = now()"
+
+                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
+
+                'MySQLCommand作成 
+                cmd = New MySqlCommand(sqlStr, con)
+
+                'SQL文実行 
+                rlt = cmd.ExecuteReader
+
+                'クローズ 
+                con.Close()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
+#End Region
+
+#Region "追加"
+
+    ''' <summary>
+    ''' 商品情報の追加
+    ''' </summary>
+    ''' <param name="info"></param>
+    ''' <returns></returns>
+    Public Function insert(info As Item) As Boolean
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        Try
+
+            'コネクション生成 
+            Using con As New MySqlConnection(connectionString)
+
+                '接続 
+                con.Open()
+
+                'SQL文 
+                sqlStr = "INSERT INTO item ("
+                sqlStr = sqlStr + "  id"
+                sqlStr = sqlStr + ", code1"
+                sqlStr = sqlStr + ", code2"
+                sqlStr = sqlStr + ", code3"
+                sqlStr = sqlStr + ", name"
+                sqlStr = sqlStr + ", kata"
+                sqlStr = sqlStr + ", maker"
+                sqlStr = sqlStr + ", unit"
+                sqlStr = sqlStr + ", quantity"
+                sqlStr = sqlStr + ", insertdatetime"
+
+                sqlStr = sqlStr + ") VALUES ("
+                sqlStr = sqlStr + String.Format(" {0}", info.id)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.code1)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.code2)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.code3)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.name)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.kata)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.maker)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.unit)
+                sqlStr = sqlStr + String.Format(", '{0}'", info.quantity)
+                sqlStr = sqlStr + ", now()"
+                sqlStr = sqlStr + ")"
+
+                'MySQLCommand作成 
+                cmd = New MySqlCommand(sqlStr, con)
+
+                'SQL文実行 
+                rlt = cmd.ExecuteReader
+
+                'クローズ 
+                con.Close()
+
+            End Using
+
+            Return True
+        Catch ex As Exception
+            Return False
+        End Try
+
+    End Function
+
+
+#End Region
+
+    ''' <summary>
+    ''' List(Of Item)をDataTableに変換
     ''' </summary>
     ''' <param name="list"></param>
     ''' <returns></returns>
@@ -401,7 +533,7 @@ Public Module Items
             dr("cCode1") = item.code1  '商品コード1
             dr("cCode2") = item.code2  '商品コード2
             dr("cCode3") = item.code3  '商品コード3
-            dr("cCode") = item.code1 + "-" + item.code2 + item.code3  '商品コード
+            dr("cCode") = item.code1 + "-" + item.code2 + "-" + item.code3  '商品コード
             dr("cName") = item.name  '品名
             dr("cKata") = item.kata    '型式
             dr("cMaker") = item.maker    'メーカー
