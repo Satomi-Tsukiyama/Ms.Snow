@@ -82,14 +82,17 @@
         dr("cId") = 3
         dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
+
         dr = dt.NewRow
         dr("cId") = 4
         dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
+
         dr = dt.NewRow
         dr("cId") = 5
         dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
         dt.Rows.Add(dr)
+
         dr = dt.NewRow
         dr("cId") = 99
         dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))

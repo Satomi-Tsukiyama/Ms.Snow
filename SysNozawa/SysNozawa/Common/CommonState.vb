@@ -34,7 +34,7 @@ Public Module ANKEN_STATUS
                 Return "決定"
             Case AnkenStatus.Invoiced
                 Return "請求済"
-            Case AnkenStatus.Decided
+            Case AnkenStatus.Deposited
                 Return "入金済"
             Case Else
                 Return "取消"

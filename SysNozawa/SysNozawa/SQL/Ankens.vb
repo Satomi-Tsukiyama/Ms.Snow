@@ -450,7 +450,7 @@ Public Module Ankens
             sqlStr = sqlStr + " WHERE 0 = 0"
 
             If clientIds_list.Count > 0 Then
-                sqlStr = sqlStr + " AND anken.clientid NIT IN (0"
+                sqlStr = sqlStr + " AND anken.clientid NOT IN (0"
 
                 For Each clientId In clientIds_list
                     sqlStr = sqlStr + String.Format(",{0}", clientId)
