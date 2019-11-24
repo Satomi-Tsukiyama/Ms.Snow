@@ -1,4 +1,6 @@
-﻿Public Class ItemMasterForm
+﻿Imports System.ComponentModel
+
+Public Class ItemMasterForm
 
     Private inputType As New inputType
     Private selectId As Integer = 0
@@ -46,14 +48,16 @@
 
         Dim selectInfo As Item = Items.selectOne(selectId)
 
-        cmbName.SelectedText = selectInfo.name
-        txtKata.Text = selectInfo.kata
-        cmbMaker.SelectedText = selectInfo.maker
-        txtCode1.SelectedText = selectInfo.code1
-        txtCode2.SelectedText = selectInfo.code2
-        txtCode3.SelectedText = selectInfo.code3
-        cmbUnit.SelectedText = selectInfo.unit
-        txtQuantity.Text = selectInfo.quantity
+        With selectInfo
+            cmbName.SelectedText = .name
+            txtKata.Text = .kata
+            cmbMaker.SelectedText = .maker
+            txtCode1.Text = .code1
+            txtCode2.Text = .code2
+            txtCode3.Text = .code3
+            cmbUnit.SelectedText = .unit
+            txtQuantity.Text = .quantity
+        End With
 
     End Sub
 
@@ -147,15 +151,24 @@
             End If
 
             Dim insertInfo As New Item
-            insertInfo.id = Items.getNewId()
-            insertInfo.code1 = txtCode1.Text
-            insertInfo.code2 = txtCode2.Text
-            insertInfo.code3 = txtCode3.Text
-            insertInfo.name = cmbName.Text
-            insertInfo.kata = txtKata.Text
-            insertInfo.maker = cmbMaker.Text
-            insertInfo.unit = cmbUnit.Text
-            insertInfo.quantity = txtQuantity.Text
+
+            With insertInfo
+                .id = Items.getNewId()
+                .code1 = txtCode1.Text
+                .code2 = txtCode2.Text
+                .code3 = txtCode3.Text
+                .name = cmbName.Text
+                .kata = txtKata.Text
+                .maker = cmbMaker.Text
+                .unit = cmbUnit.Text
+                If txtQuantity.Text.Count > 0 Then
+                    .quantity = txtQuantity.Text
+                Else
+                    .quantity = Nothing
+                End If
+
+            End With
+
 
             If Items.insert(insertInfo) Then
                 MessageBox.Show("追加しました。")
@@ -175,16 +188,18 @@
             End If
 
             Dim updateInfo As New Item
-            updateInfo.id = selectId
-            updateInfo.code1 = txtCode1.Text
-            updateInfo.code2 = txtCode2.Text
-            updateInfo.code3 = txtCode3.Text
-            updateInfo.name = cmbName.Text
-            updateInfo.kata = txtKata.Text
-            updateInfo.maker = cmbMaker.Text
-            updateInfo.unit = cmbUnit.Text
-            updateInfo.quantity = txtQuantity.Text
 
+            With updateInfo
+                .id = selectId
+                .code1 = txtCode1.Text
+                .code2 = txtCode2.Text
+                .code3 = txtCode3.Text
+                .name = cmbName.Text
+                .kata = txtKata.Text
+                .maker = cmbMaker.Text
+                .unit = cmbUnit.Text
+                .quantity = txtQuantity.Text
+            End With
 
             If Items.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
@@ -215,12 +230,88 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 閉じる/中止クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+
+        '中止クリック
+        If inputType = inputType.insert Or inputType = inputType.update Then
+            inputType = inputType.non
+
+            mitmAdd.Enabled = True
+            mitmEdit.Enabled = False
+            mitmDelete.Enabled = False
+            dgvItem.Enabled = True
+
+            cmbName.Enabled = False
+            cmbName.SelectedItem = ""
+            txtKata.Enabled = False
+            txtKata.Text = ""
+            cmbMaker.Enabled = False
+            cmbMaker.SelectedItem = ""
+            txtCode1.Enabled = False
+            txtCode1.Text = ""
+            txtCode2.Enabled = False
+            txtCode2.Text = ""
+            txtCode3.Enabled = False
+            txtCode3.Text = ""
+            cmbUnit.Enabled = False
+            cmbUnit.SelectedItem = ""
+            txtQuantity.Enabled = False
+            txtQuantity.Text = ""
+
+            btnOK.Enabled = False
+            btnOK.Text = "編集"
+            btnCancel.Text = "閉じる"
+
+            '新規追加ボタン選択中
+            mitmAdd.Select()
+
+        Else '閉じるクリック
+            Me.Close()
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' フォームクローズ
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub ItemMasterForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+        '追加中/編集中
+        If inputType = inputType.insert Or inputType = inputType.update Then
+
+            If DialogResult.No = MessageBox.Show("編集内容が保存されていません。画面を閉じてもよろしいですが？",
+                                              "編集",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Question
+                                              ) Then
+
+                e.Cancel = True
+                Exit Sub
+            End If
+
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' 商品リストの表示
+    ''' </summary>
     Private Sub setDgvItem()
 
         dgvItem.DataSource = Items.selectAll()
 
     End Sub
 
+    ''' <summary>
+    ''' 商品名のセット
+    ''' </summary>
     Private Sub setCmbName()
 
         cmbName.Items.Clear()
@@ -233,6 +324,9 @@
 
     End Sub
 
+    ''' <summary>
+    ''' メーカー名のセット
+    ''' </summary>
     Private Sub setCmbMaker()
 
         cmbMaker.Items.Clear()
@@ -245,6 +339,9 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 単位のセット
+    ''' </summary>
     Private Sub setCmbUnit()
 
         cmbUnit.Items.Clear()
@@ -257,6 +354,9 @@
 
     End Sub
 
+    ''' <summary>
+    ''' 他コントロールのセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = True
@@ -316,6 +416,5 @@
         Return True
 
     End Function
-
 
 End Class

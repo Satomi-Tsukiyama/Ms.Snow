@@ -14,7 +14,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         Dim maxId As Integer = 0
 
@@ -28,7 +28,8 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM staff"
 
             'MySQLCommand作成 
@@ -67,7 +68,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Staff)
@@ -83,7 +84,7 @@ Public Module Staffs
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " SELECT *"
             sqlStr = sqlStr + " FROM staff"
 
             'MySQLCommand作成 
@@ -119,7 +120,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Staff)
@@ -134,8 +135,11 @@ Public Module Staffs
             '接続 
             con.Open()
 
-            'SQL文 
-            sqlStr = String.Format("SELECT * FROM staff WHERE id = {0}", id)
+            'SQL文
+            sqlStr = sqlStr + " SELECT *"
+            sqlStr = sqlStr + " FROM staff"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     id = " + id
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -176,7 +180,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -190,16 +194,18 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "INSERT INTO staff ("
-                sqlStr = sqlStr + "  id"
-                sqlStr = sqlStr + ", name"
-                sqlStr = sqlStr + ", insertdatetime"
-
-                sqlStr = sqlStr + ") VALUES ("
-                sqlStr = sqlStr + String.Format(" '{0}'", info.id)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.name)
-                sqlStr = sqlStr + ", now()"
-                sqlStr = sqlStr + ")"
+                With info
+                    sqlStr = sqlStr + " INSERT INTO"
+                    sqlStr = sqlStr + "     staff ("
+                    sqlStr = sqlStr + "         id,"
+                    sqlStr = sqlStr + "         name,"
+                    sqlStr = sqlStr + "         insertdatetime"
+                    sqlStr = sqlStr + " ) VALUES ("
+                    sqlStr = sqlStr + String.Format(" '{0}',", .id)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .name)
+                    sqlStr = sqlStr + " now()"
+                    sqlStr = sqlStr + ")"
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -234,7 +240,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -248,11 +254,15 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "UPDATE staff SET"
-                sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
-                sqlStr = sqlStr + " updatedatetime = now()"
-
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
+                With info
+                    sqlStr = sqlStr + " UPDATE"
+                    sqlStr = sqlStr + "     staff"
+                    sqlStr = sqlStr + " SET"
+                    sqlStr = sqlStr + "     name = '" + .name + "',"
+                    sqlStr = sqlStr + "     updatedatetime = now()"
+                    sqlStr = sqlStr + " WHERE 0 = 0"
+                    sqlStr = sqlStr + "     AND id = " + .id
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -287,7 +297,7 @@ Public Module Staffs
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -301,8 +311,10 @@ Public Module Staffs
                 con.Open()
 
                 'SQL文 
-                sqlStr = "DELETE FROM staff "
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
+                sqlStr = sqlStr + " DELETE FROM staff "
+                sqlStr = sqlStr + " WHERE 0 = 0"
+                sqlStr = sqlStr + "     AND id = " + id
+
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -332,23 +344,19 @@ Public Module Staffs
     Private Function ToDataTable(list As List(Of Staff)) As DataTable
 
         Dim dt As DataTable = New DataTable("staffList")
-        dt.Columns.Add("cId")
-        dt.Columns.Add("cName")
-
+        With dt.Columns
+            .Add("cId")
+            .Add("cName")
+        End With
 
         '結果を表示 
         For Each staff In list
 
             Dim dr As DataRow = dt.NewRow
-
-            For i = 0 To dt.Columns.Count - 1
-                Select Case dt.Columns.Item(i).ColumnName
-                    Case "cId"
-                        dr(i) = staff.id
-                    Case "cName"
-                        dr(i) = staff.name
-                End Select
-            Next
+            With staff
+                dr("cId") = .id '従業員番号
+                dr("cName") = .name '氏名
+            End With
 
             dt.Rows.Add(dr)
 

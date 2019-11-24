@@ -17,10 +17,16 @@ Public Class Anken
     Public staffId As Integer       '従業員ID
     Public staffName As String      '従業員名
 
-
+    ''' <summary>
+    ''' インスタンス
+    ''' </summary>
     Public Sub New()
     End Sub
 
+    ''' <summary>
+    ''' インスタンス
+    ''' </summary>
+    ''' <param name="sqlResult"></param>
     Public Sub New(sqlResult As MySqlDataReader)
 
         id = sqlResult("id")

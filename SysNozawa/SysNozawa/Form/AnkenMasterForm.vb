@@ -64,15 +64,17 @@ Public Class AnkenMasterForm
 
         Dim selectInfo As Anken = Ankens.selectOne(selectId)
 
-        cmbCode1.SelectedItem = selectInfo.code1
-        txtCode2.Text = selectInfo.code2
-        txtCode3.Text = selectInfo.code3
-        txtName.Text = selectInfo.name
-        cmbClient.SelectedValue = selectInfo.clientId
-        dtpSalesYearMonth.Value = selectInfo.salesYearMonth
-        txtSalesAmount.Text = CDec(selectInfo.salesAmount).ToString("#,0")
-        cmbStaff.SelectedValue = selectInfo.staffId
-        cmbStatus.SelectedValue = selectInfo.status
+        With selectInfo
+            cmbCode1.SelectedItem = .code1
+            txtCode2.Text = .code2
+            txtCode3.Text = .code3
+            txtName.Text = .name
+            cmbClient.SelectedValue = .clientId
+            dtpSalesYearMonth.Value = .salesYearMonth
+            txtSalesAmount.Text = CDec(.salesAmount).ToString("#,0")
+            cmbStaff.SelectedValue = .staffId
+            cmbStatus.SelectedValue = .status
+        End With
 
     End Sub
 
@@ -211,22 +213,26 @@ Public Class AnkenMasterForm
             End If
 
             Dim insertInfo As New Anken
-            insertInfo.id = Ankens.getNewId()
-            insertInfo.code1 = cmbCode1.Text
-            insertInfo.code2 = txtCode2.Text
-            insertInfo.code3 = txtCode3.Text
-            insertInfo.name = txtName.Text
-            insertInfo.clientId = cmbClient.SelectedValue
-            insertInfo.clientCode = cmbClient.Text
-            insertInfo.salesYearMonth = dtpSalesYearMonth.Value
-            If txtSalesAmount.Text.Count > 0 Then
-                insertInfo.salesAmount = txtSalesAmount.Text
-            Else
-                insertInfo.salesAmount = 0
-            End If
-            insertInfo.staffId = cmbStaff.SelectedValue
-            insertInfo.staffName = cmbStaff.Text
-            insertInfo.status = cmbStatus.SelectedValue
+
+            With insertInfo
+                .id = Ankens.getNewId()
+                .code1 = cmbCode1.Text
+                .code2 = txtCode2.Text
+                .code3 = txtCode3.Text
+                .name = txtName.Text
+                .clientId = cmbClient.SelectedValue
+                .clientCode = cmbClient.Text
+                .salesYearMonth = dtpSalesYearMonth.Value
+                If txtSalesAmount.Text.Count > 0 Then
+                    .salesAmount = txtSalesAmount.Text
+                Else
+                    .salesAmount = 0
+                End If
+                .staffId = cmbStaff.SelectedValue
+                .staffName = cmbStaff.Text
+                .status = cmbStatus.SelectedValue
+            End With
+
 
             If Ankens.insert(insertInfo) Then
                 MessageBox.Show("追加しました。")
@@ -246,19 +252,21 @@ Public Class AnkenMasterForm
             End If
 
             Dim updateInfo As New Anken
-            updateInfo.id = selectId
-            updateInfo.code1 = cmbCode1.Text
-            updateInfo.code2 = txtCode2.Text
-            updateInfo.code3 = txtCode3.Text
-            updateInfo.name = txtName.Text
-            updateInfo.clientId = cmbClient.SelectedValue
-            updateInfo.clientCode = cmbClient.SelectedText
-            updateInfo.salesYearMonth = dtpSalesYearMonth.Value
-            updateInfo.salesAmount = txtSalesAmount.Text
-            updateInfo.staffId = cmbStaff.SelectedValue
-            updateInfo.staffName = cmbStaff.SelectedText
-            updateInfo.status = cmbStatus.SelectedValue
 
+            With updateInfo
+                .id = selectId
+                .code1 = cmbCode1.Text
+                .code2 = txtCode2.Text
+                .code3 = txtCode3.Text
+                .name = txtName.Text
+                .clientId = cmbClient.SelectedValue
+                .clientCode = cmbClient.SelectedText
+                .salesYearMonth = dtpSalesYearMonth.Value
+                .salesAmount = txtSalesAmount.Text
+                .staffId = cmbStaff.SelectedValue
+                .staffName = cmbStaff.SelectedText
+                .status = cmbStatus.SelectedValue
+            End With
 
             If Ankens.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
@@ -401,6 +409,7 @@ Public Class AnkenMasterForm
         End If
 
     End Sub
+
     ''' <summary>
     ''' 売上金額に金額入力のみ許可
     ''' </summary>
@@ -442,7 +451,7 @@ Public Class AnkenMasterForm
     End Sub
 
     ''' <summary>
-    ''' ×クリック
+    ''' フォームクローズ
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -498,6 +507,9 @@ Public Class AnkenMasterForm
 
     End Sub
 
+    ''' <summary>
+    ''' 他コントロールセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = True
@@ -530,7 +542,6 @@ Public Class AnkenMasterForm
         btnCancel.Text = "閉じる"
 
     End Sub
-
 
     ''' <summary>
     ''' 入力した案件情報のチェック

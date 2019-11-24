@@ -14,7 +14,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         Dim maxId As Integer = 0
 
@@ -28,7 +28,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) AS maxid"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -67,7 +68,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of String)
@@ -83,7 +84,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT DISTINCT name"
+            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + "     DISTINCT name"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -116,7 +118,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of String)
@@ -132,7 +134,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT DISTINCT maker"
+            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + "     DISTINCT maker"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -165,7 +168,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of String)
@@ -181,7 +184,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT DISTINCT unit"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     DISTINCT unit"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -217,7 +221,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Anken)
@@ -233,12 +237,13 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
             sqlStr = sqlStr + " FROM item"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + String.Format(" AND item.code1 = '{0}'", code1)
-            sqlStr = sqlStr + String.Format(" AND item.code2 = '{0}'", code2)
-            sqlStr = sqlStr + String.Format(" AND item.code3 = '{0}'", code3)
+            sqlStr = sqlStr + "     AND item.code1 = '" + code1 + "'"
+            sqlStr = sqlStr + "     AND item.code2 = '" + code2 + "'"
+            sqlStr = sqlStr + "     AND item.code3 = '" + code3 + "'"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -273,7 +278,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Item)
@@ -289,7 +294,8 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
             sqlStr = sqlStr + " FROM item"
 
             'MySQLCommand作成 
@@ -326,7 +332,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Item)
@@ -342,9 +348,10 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT *"
-            sqlStr = sqlStr + " FROM item"
-            sqlStr = sqlStr + String.Format(" WHERE item.id = {0}", id)
+            sqlStr = sqlStr + " SELECT *"
+            sqlStr = sqlStr + "     FROM item"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     AND item.id = " + id
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -385,7 +392,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -398,19 +405,27 @@ Public Module Items
                 '接続 
                 con.Open()
 
-                'SQL文 
-                sqlStr = "UPDATE item SET"
-                sqlStr = sqlStr + String.Format(" code1 = '{0}',", info.code1)
-                sqlStr = sqlStr + String.Format(" code2 = '{0}',", info.code2)
-                sqlStr = sqlStr + String.Format(" code3 = '{0}',", info.code3)
-                sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
-                sqlStr = sqlStr + String.Format(" kata = '{0}',", info.kata)
-                sqlStr = sqlStr + String.Format(" maker = '{0}',", info.maker)
-                sqlStr = sqlStr + String.Format(" unit = '{0}',", info.unit)
-                sqlStr = sqlStr + String.Format(" quantity = '{0}',", info.quantity)
-                sqlStr = sqlStr + " updatedatetime = now()"
-
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
+                'SQL文
+                With info
+                    sqlStr = sqlStr + " UPDATE"
+                    sqlStr = sqlStr + "     item"
+                    sqlStr = sqlStr + " SET"
+                    sqlStr = sqlStr + "     code1 = '" + .code1 + "',"
+                    sqlStr = sqlStr + "     code2 = '" + .code2 + "',"
+                    sqlStr = sqlStr + "     code3 = '" + .code3 + "',"
+                    sqlStr = sqlStr + "     name = '" + .name + "',"
+                    sqlStr = sqlStr + "     kata = '" + .kata + "',"
+                    sqlStr = sqlStr + "     maker = '" + .maker + "',"
+                    sqlStr = sqlStr + "     unit = '" + .unit + "',"
+                    If IsNothing(.quantity) Then
+                        sqlStr = sqlStr + "     quantity = NULL,"
+                    Else
+                        sqlStr = sqlStr + "     quantity = '" + .quantity + "',"
+                    End If
+                    sqlStr = sqlStr + "     updatedatetime = now()"
+                    sqlStr = sqlStr + " WHERE 0 = 0"
+                    sqlStr = sqlStr + "     AND id = " + .id
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -445,7 +460,7 @@ Public Module Items
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -458,31 +473,38 @@ Public Module Items
                 '接続 
                 con.Open()
 
-                'SQL文 
-                sqlStr = "INSERT INTO item ("
-                sqlStr = sqlStr + "  id"
-                sqlStr = sqlStr + ", code1"
-                sqlStr = sqlStr + ", code2"
-                sqlStr = sqlStr + ", code3"
-                sqlStr = sqlStr + ", name"
-                sqlStr = sqlStr + ", kata"
-                sqlStr = sqlStr + ", maker"
-                sqlStr = sqlStr + ", unit"
-                sqlStr = sqlStr + ", quantity"
-                sqlStr = sqlStr + ", insertdatetime"
+                'SQL文
+                With info
+                    sqlStr = sqlStr + "INSERT INTO"
+                    sqlStr = sqlStr + "     item ("
+                    sqlStr = sqlStr + "         id,"
+                    sqlStr = sqlStr + "         code1,"
+                    sqlStr = sqlStr + "         code2,"
+                    sqlStr = sqlStr + "         code3,"
+                    sqlStr = sqlStr + "         name,"
+                    sqlStr = sqlStr + "         kata,"
+                    sqlStr = sqlStr + "         maker,"
+                    sqlStr = sqlStr + "         unit,"
+                    sqlStr = sqlStr + "         quantity,"
+                    sqlStr = sqlStr + "         insertdatetime"
+                    sqlStr = sqlStr + " ) VALUES ("
+                    sqlStr = sqlStr + String.Format(" {0},", .id)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .code1)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .code2)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .code3)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .name)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .kata)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .maker)
+                    sqlStr = sqlStr + String.Format(" '{0},'", .unit)
+                    If IsNothing(.quantity) Then
+                        sqlStr = sqlStr + " NULL,"
+                    Else
+                        sqlStr = sqlStr + String.Format(" {0},", .quantity)
+                    End If
 
-                sqlStr = sqlStr + ") VALUES ("
-                sqlStr = sqlStr + String.Format(" {0}", info.id)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.code1)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.code2)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.code3)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.name)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.kata)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.maker)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.unit)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.quantity)
-                sqlStr = sqlStr + ", now()"
-                sqlStr = sqlStr + ")"
+                    sqlStr = sqlStr + " now()"
+                    sqlStr = sqlStr + ")"
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -513,32 +535,35 @@ Public Module Items
     Private Function ToDataTable(list As List(Of Item)) As DataTable
 
         Dim dt As DataTable = New DataTable("ankenList")
-        dt.Columns.Add("cId")
-        dt.Columns.Add("cCode1")
-        dt.Columns.Add("cCode2")
-        dt.Columns.Add("cCode3")
-        dt.Columns.Add("cCode")
-        dt.Columns.Add("cName")
-        dt.Columns.Add("cKata")
-        dt.Columns.Add("cMaker")
-        dt.Columns.Add("cUnit")
-        dt.Columns.Add("cQuantity")
+        With dt.Columns
+            .Add("cId")
+            .Add("cCode1")
+            .Add("cCode2")
+            .Add("cCode3")
+            .Add("cCode")
+            .Add("cName")
+            .Add("cKata")
+            .Add("cMaker")
+            .Add("cUnit")
+            .Add("cQuantity")
+        End With
 
         '結果を表示 
         For Each item In list
 
             Dim dr As DataRow = dt.NewRow
-
-            dr("cId") = item.id        '商品番号
-            dr("cCode1") = item.code1  '商品コード1
-            dr("cCode2") = item.code2  '商品コード2
-            dr("cCode3") = item.code3  '商品コード3
-            dr("cCode") = item.code1 + "-" + item.code2 + "-" + item.code3  '商品コード
-            dr("cName") = item.name  '品名
-            dr("cKata") = item.kata    '型式
-            dr("cMaker") = item.maker    'メーカー
-            dr("cUnit") = item.unit   '単位
-            dr("cQuantity") = item.quantity    '入数
+            With item
+                dr("cId") = .id        '商品番号
+                dr("cCode1") = .code1  '商品コード1
+                dr("cCode2") = .code2  '商品コード2
+                dr("cCode3") = .code3  '商品コード3
+                dr("cCode") = .code1 + "-" + .code2 + "-" + .code3  '商品コード
+                dr("cName") = .name  '品名
+                dr("cKata") = .kata    '型式
+                dr("cMaker") = .maker    'メーカー
+                dr("cUnit") = .unit   '単位
+                dr("cQuantity") = .quantity    '入数
+            End With
 
             dt.Rows.Add(dr)
 

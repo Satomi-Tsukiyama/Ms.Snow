@@ -41,8 +41,10 @@ Public Class ClientMasterForm
 
         Dim selectInfo As Client = Clients.selectOne(selectId)
 
-        txtCode.Text = selectInfo.code
-        txtName.Text = selectInfo.name
+        With selectInfo
+            txtCode.Text = .code
+            txtName.Text = .name
+        End With
 
     End Sub
 
@@ -151,9 +153,13 @@ Public Class ClientMasterForm
 
 
             Dim insertInfo As New Client
-            insertInfo.id = Clients.getNewId()
-            insertInfo.code = txtCode.Text
-            insertInfo.name = txtName.Text
+
+            With insertInfo
+                .id = Clients.getNewId()
+                .code = txtCode.Text
+                .name = txtName.Text
+            End With
+
 
             If Clients.insert(insertInfo) Then
                 MessageBox.Show("追加しました。")
@@ -175,9 +181,12 @@ Public Class ClientMasterForm
 
 
             Dim updateInfo As New Client
-            updateInfo.id = selectId
-            updateInfo.code = txtCode.Text
-            updateInfo.name = txtName.Text
+
+            With updateInfo
+                .id = selectId
+                .code = txtCode.Text
+                .name = txtName.Text
+            End With
 
             If Clients.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
@@ -226,7 +235,7 @@ Public Class ClientMasterForm
     End Sub
 
     ''' <summary>
-    ''' ×クリック
+    ''' フォームクローズ
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -259,7 +268,9 @@ Public Class ClientMasterForm
 
     End Sub
 
-
+    ''' <summary>
+    ''' 他コントロールのセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = True

@@ -9,7 +9,6 @@ Public Class Staff
     ''' インスタンス
     ''' </summary>
     Public Sub New()
-
     End Sub
 
     ''' <summary>

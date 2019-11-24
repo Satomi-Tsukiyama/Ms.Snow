@@ -116,6 +116,12 @@
     <Compile Include="Form\AnkenMasterForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\AnkenOrderForm.Designer.vb">
+      <DependentUpon>AnkenOrderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AnkenOrderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\BuyingForm.Designer.vb">
       <DependentUpon>BuyingForm.vb</DependentUpon>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\AnkenMasterForm.resx">
       <DependentUpon>AnkenMasterForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AnkenOrderForm.resx">
+      <DependentUpon>AnkenOrderForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\BuyingForm.resx">
       <DependentUpon>BuyingForm.vb</DependentUpon>

@@ -67,6 +67,15 @@ Public Class MenuForm
     End Sub
 
     ''' <summary>
+    ''' 受注管理
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnAnkenOrder_Click(sender As Object, e As EventArgs) Handles btnAnkenOrder.Click
+        My.Forms.AnkenOrderForm.ShowDialog()
+    End Sub
+
+    ''' <summary>
     ''' 売上見込
     ''' </summary>
     ''' <param name="sender"></param>

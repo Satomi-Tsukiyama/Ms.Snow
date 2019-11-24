@@ -202,7 +202,6 @@ Public Class CalendarMasterForm
 
     End Sub
 
-
     ''' <summary>
     ''' カレンダーの表示
     ''' </summary>
@@ -287,6 +286,9 @@ Public Class CalendarMasterForm
 
     End Sub
 
+    ''' <summary>
+    ''' 他コントロールのセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = False
@@ -311,7 +313,7 @@ Public Class CalendarMasterForm
     Private Function check() As Boolean
 
         Return True
-    End Function
 
+    End Function
 
 End Class

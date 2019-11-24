@@ -37,23 +37,80 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' フォーム表示
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub SalesPlanForm_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         setDgvSalesPlans()
     End Sub
 
+    ''' <summary>
+    ''' 年度変更
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub dtpDisplayYear_ValueChanged(sender As Object, e As EventArgs) Handles dtpDisplayYear.ValueChanged
         setDgvSalesPlans()
     End Sub
 
+    ''' <summary>
+    ''' 前期/後期 変更
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub dudSemester_SelectedItemChanged(sender As Object, e As EventArgs) Handles dudSemester.SelectedItemChanged
         setDgvSalesPlans()
     End Sub
 
+    ''' <summary>
+    ''' 前へボタンクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
+
+        If dudSemester.SelectedIndex = 0 Then '前期
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(-1)
+            dudSemester.SelectedIndex = 1
+        Else '後期
+            dudSemester.SelectedIndex = 0
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' 次へボタンクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
+
+        If dudSemester.SelectedIndex = 0 Then '前期
+            dudSemester.SelectedIndex = 1
+        Else '後期
+            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(1)
+            dudSemester.SelectedIndex = 0
+        End If
+
+    End Sub
+
+    ''' <summary>
+    ''' 表示取引先変更
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub cmbClients_SelectedIndexChanged(sender As Object, e As EventArgs) Handles _
         cmbClient1.SelectedIndexChanged, cmbClient2.SelectedIndexChanged, cmbClient3.SelectedIndexChanged, cmbClient4.SelectedIndexChanged, cmbClient5.SelectedIndexChanged, cmbClient6.SelectedIndexChanged
         setDgvSalesPlans()
     End Sub
 
+    ''' <summary>
+    ''' 案件クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub dgvSalesPlans_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles _
             dgvRow1Column1.CellClick, dgvRow1Column2.CellClick, dgvRow1Column3.CellClick, dgvRow1Column4.CellClick, dgvRow1Column5.CellClick, dgvRow1Column6.CellClick,
             dgvRow2Column1.CellClick, dgvRow2Column2.CellClick, dgvRow2Column3.CellClick, dgvRow2Column4.CellClick, dgvRow2Column5.CellClick, dgvRow2Column6.CellClick,
@@ -67,6 +124,11 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 案件ダブルクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub dgvSalesPlans_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles _
             dgvRow1Column1.CellContentDoubleClick, dgvRow1Column2.CellContentDoubleClick, dgvRow1Column3.CellContentDoubleClick, dgvRow1Column4.CellContentDoubleClick, dgvRow1Column5.CellContentDoubleClick, dgvRow1Column6.CellContentDoubleClick,
             dgvRow2Column1.CellContentDoubleClick, dgvRow2Column2.CellContentDoubleClick, dgvRow2Column3.CellContentDoubleClick, dgvRow2Column4.CellContentDoubleClick, dgvRow2Column5.CellContentDoubleClick, dgvRow2Column6.CellContentDoubleClick,
@@ -87,6 +149,11 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 案件右クリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub dgv_SalesPlans_RowContextMenuStripNeeded(sender As Object, e As DataGridViewRowContextMenuStripNeededEventArgs) Handles _
         dgvRow1Column1.RowContextMenuStripNeeded, dgvRow1Column2.RowContextMenuStripNeeded, dgvRow1Column3.RowContextMenuStripNeeded, dgvRow1Column4.RowContextMenuStripNeeded, dgvRow1Column5.RowContextMenuStripNeeded, dgvRow1Column6.RowContextMenuStripNeeded,
         dgvRow2Column1.RowContextMenuStripNeeded, dgvRow2Column2.RowContextMenuStripNeeded, dgvRow2Column3.RowContextMenuStripNeeded, dgvRow2Column4.RowContextMenuStripNeeded, dgvRow2Column5.RowContextMenuStripNeeded, dgvRow2Column6.RowContextMenuStripNeeded,
@@ -101,6 +168,31 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 右クリックで請求情報を変更
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub tsmi_Click(sender As Object, e As EventArgs) Handles _
+        tsmiNoPlan.Click, tsmiEstimating.Click, tsmiDecided.Click, tsmiInvoiced.Click, tsmiCancel.Click
+
+        Dim tsmi As ToolStripMenuItem = sender
+
+        Dim a = cmsStatusChange.Items.IndexOf(tsmi)
+
+        Dim ankenStatus As Integer = cmsStatusChange.Items.IndexOf(tsmi) + 1
+        Ankens.updateStatus(selectId, ankenStatus)
+
+        setDgvSalesPlans()
+
+    End Sub
+
+
+    ''' <summary>
+    ''' フォームクローズ
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub SalesPlanForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
 
         '追加中/編集中
@@ -129,6 +221,9 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 前期/後期のセット
+    ''' </summary>
     Private Sub setDudSemester()
 
         dudSemester.Items.Clear()
@@ -145,6 +240,9 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 表示取引先のセット
+    ''' </summary>
     Private Sub setCmbClients()
 
         For Each cmbClient In cmbClients
@@ -171,6 +269,9 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 表示月のセット
+    ''' </summary>
     Private Sub setLblSemesters()
         Dim month As Integer
         Select Case dudSemester.SelectedIndex
@@ -194,6 +295,9 @@ Public Class SalesPlanForm
 
     End Sub
 
+    ''' <summary>
+    ''' 案件リストの表示
+    ''' </summary>
     Private Sub setDgvSalesPlans()
 
         setLblSemesters()
@@ -250,49 +354,4 @@ Public Class SalesPlanForm
 
     End Sub
 
-    Private Sub tsmi_Click(sender As Object, e As EventArgs) Handles _
-        tsmiNoPlan.Click, tsmiEstimating.Click, tsmiDecided.Click, tsmiInvoiced.Click, tsmiCancel.Click
-
-        Dim tsmi As ToolStripMenuItem = sender
-
-        Dim a = cmsStatusChange.Items.IndexOf(tsmi)
-
-        Dim ankenStatus As Integer = cmsStatusChange.Items.IndexOf(tsmi) + 1
-        Ankens.updateStatus(selectId, ankenStatus)
-
-        setDgvSalesPlans()
-
-    End Sub
-
-    ''' <summary>
-    ''' 前へボタンクリック
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
-
-        If dudSemester.SelectedIndex = 0 Then '前期
-            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(-1)
-            dudSemester.SelectedIndex = 1
-        Else'後期
-            dudSemester.SelectedIndex = 0
-        End If
-
-    End Sub
-
-    ''' <summary>
-    ''' 次へボタンクリック
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-
-        If dudSemester.SelectedIndex = 0 Then '前期
-            dudSemester.SelectedIndex = 1
-        Else '後期
-            dtpDisplayYear.Value = dtpDisplayYear.Value.AddYears(1)
-            dudSemester.SelectedIndex = 0
-        End If
-
-    End Sub
 End Class

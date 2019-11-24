@@ -14,7 +14,7 @@ Public Module Calendars
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         Dim maxId As Integer = 0
 
@@ -28,7 +28,8 @@ Public Module Calendars
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) as maxid"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM calendar"
 
             'MySQLCommand作成 
@@ -68,7 +69,7 @@ Public Module Calendars
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Calendar)
@@ -84,9 +85,12 @@ Public Module Calendars
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM calendar"
-            sqlStr = sqlStr + String.Format(" WHERE day = '{0}'", day.ToShortDateString)
-            sqlStr = sqlStr + " AND holidayflg IS NOT NULL"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
+            sqlStr = sqlStr + " FROM calendar"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     AND day = '" + day.ToShortDateString + "'"
+            sqlStr = sqlStr + "     AND holidayflg IS NOT NULL"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -126,7 +130,7 @@ Public Module Calendars
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Calendar)
@@ -141,16 +145,23 @@ Public Module Calendars
             '接続 
             con.Open()
 
-            'SQL文 
-            sqlStr = "SELECT * FROM calendar"
-            sqlStr = sqlStr + String.Format(" WHERE day >= '{0}'", CDate(year.ToString + "/" + month.ToString + "/" + "1"))
+            'SQL文
+            Dim lower As Date = CDate(year.ToString + "/" + month.ToString + "/" + "1")
+
+            Dim upper As Date
             If month = 12 Then
-                sqlStr = sqlStr + String.Format(" AND day < '{0}'", CDate((year + 1).ToString + "/" + "1" + "/" + "1"))
+                upper = CDate((year + 1).ToString + "/" + "1" + "/" + "1")
             Else
-                sqlStr = sqlStr + String.Format(" AND day < '{0}'", CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1"))
+                upper = CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1")
             End If
 
-            sqlStr = sqlStr + " AND holidayflg IS NOT NULL"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
+            sqlStr = sqlStr + " FROM calendar"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     AND day >= '" + lower + "'"
+            sqlStr = sqlStr + "     AND day < '" + upper + "'"
+            sqlStr = sqlStr + "     AND holidayflg IS NOT NULL"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -193,7 +204,7 @@ Public Module Calendars
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -207,12 +218,16 @@ Public Module Calendars
                 con.Open()
 
                 'SQL文 
-                sqlStr = "UPDATE calendar SET"
-                sqlStr = sqlStr + String.Format(" day = '{0}',", info.day)
-                sqlStr = sqlStr + String.Format(" holidayflg = '{0}',", info.holidayflg)
-                sqlStr = sqlStr + " updatedatetime = now()"
-
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
+                With info
+                    sqlStr = sqlStr + " UPDATE"
+                    sqlStr = sqlStr + "     calendar"
+                    sqlStr = sqlStr + " SET"
+                    sqlStr = sqlStr + "     day = '" + .day + "'"
+                    sqlStr = sqlStr + "     holidayflg = " + .holidayflg + ","
+                    sqlStr = sqlStr + "     updatedatetime = now()"
+                    sqlStr = sqlStr + " WHERE 0 = 0"
+                    sqlStr = sqlStr + "     AND id = " + .id
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -247,7 +262,7 @@ Public Module Calendars
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -261,17 +276,17 @@ Public Module Calendars
                 con.Open()
 
                 'SQL文 
-                sqlStr = "INSERT INTO calendar ("
-                sqlStr = sqlStr + "  id"
-                sqlStr = sqlStr + ", day"
-                sqlStr = sqlStr + ", holidayflg"
-                sqlStr = sqlStr + ", insertdatetime"
-
-                sqlStr = sqlStr + ") VALUES ("
-                sqlStr = sqlStr + String.Format(" {0}", info.id)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.day)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.holidayflg)
-                sqlStr = sqlStr + ", now()"
+                sqlStr = sqlStr + "INSERT INTO"
+                sqlStr = sqlStr + "       calendar ("
+                sqlStr = sqlStr + "         id,"
+                sqlStr = sqlStr + "         day,"
+                sqlStr = sqlStr + "         holidayflg,"
+                sqlStr = sqlStr + "         insertdatetime"
+                sqlStr = sqlStr + " ) VALUES ("
+                sqlStr = sqlStr + String.Format(" {0},", info.id)
+                sqlStr = sqlStr + String.Format(" '{0}',", info.day)
+                sqlStr = sqlStr + String.Format(" '{0}',", info.holidayflg)
+                sqlStr = sqlStr + " now()"
                 sqlStr = sqlStr + ")"
 
                 'MySQLCommand作成 

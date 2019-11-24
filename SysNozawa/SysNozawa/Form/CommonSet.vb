@@ -5,18 +5,20 @@
     ''' </summary>
     Public Sub setCmbCode1(ByRef cmbCode1 As ComboBox)
 
-        cmbCode1.Items.Clear()
-        cmbCode1.Items.Add("")
-        cmbCode1.Items.Add("A")
-        cmbCode1.Items.Add("B")
-        cmbCode1.Items.Add("G")
-        cmbCode1.Items.Add("K")
-        cmbCode1.Items.Add("S")
-        cmbCode1.Items.Add("T")
-        cmbCode1.Items.Add("Z")
+        With cmbCode1
+            .Items.Clear()
+            .Items.Add("")
+            .Items.Add("A")
+            .Items.Add("B")
+            .Items.Add("G")
+            .Items.Add("K")
+            .Items.Add("S")
+            .Items.Add("T")
+            .Items.Add("Z")
 
-        cmbCode1.Enabled = False
-        cmbCode1.SelectedItem = ""
+            .Enabled = False
+            .SelectedItem = ""
+        End With
 
     End Sub
 
@@ -25,18 +27,22 @@
     ''' </summary>
     Public Sub setCmbClient(ByRef cmbClient As ComboBox)
 
-        cmbClient.DataSource = Nothing
-        Dim ds As DataTable = Clients.selectAll()
-        Dim dr As DataRow = ds.NewRow
-        dr("cId") = 0
-        ds.Rows.InsertAt(dr, 0)
-        cmbClient.DataSource = ds
+        With cmbClient
+            .DataSource = Nothing
 
-        cmbClient.ValueMember = "cId"
-        cmbClient.DisplayMember = "cCode"
+            Dim ds As DataTable = Clients.selectAll()
+            Dim dr As DataRow = ds.NewRow
+            dr("cId") = 0
+            ds.Rows.InsertAt(dr, 0)
 
-        cmbClient.Enabled = False
-        cmbClient.SelectedIndex = 0
+            .DataSource = ds
+
+            .ValueMember = "cId"
+            .DisplayMember = "cCode"
+
+            .Enabled = False
+            .SelectedIndex = 0
+        End With
 
     End Sub
 
@@ -45,66 +51,76 @@
     ''' </summary>
     Public Sub setCmbStaff(ByRef cmbStaff As ComboBox)
 
-        cmbStaff.DataSource = Nothing
-        Dim ds As DataTable = Staffs.selectAll()
-        Dim dr As DataRow = ds.NewRow
-        dr("cId") = 0
-        ds.Rows.InsertAt(dr, 0)
-        cmbStaff.DataSource = ds
+        With cmbStaff
+            .DataSource = Nothing
 
-        cmbStaff.ValueMember = "cId"
-        cmbStaff.DisplayMember = "cName"
+            Dim ds As DataTable = Staffs.selectAll()
+            Dim dr As DataRow = ds.NewRow
+            dr("cId") = 0
+            ds.Rows.InsertAt(dr, 0)
 
-        cmbStaff.Enabled = False
-        cmbStaff.SelectedIndex = 0
+            .DataSource = ds
+
+            .ValueMember = "cId"
+            .DisplayMember = "cName"
+
+            .Enabled = False
+            .SelectedIndex = 0
+        End With
 
     End Sub
 
+    ''' <summary>
+    ''' 請求状況のセット
+    ''' </summary>
+    ''' <param name="cmbStatus"></param>
     Public Sub setCmbStatus(ByRef cmbStatus As ComboBox)
 
-        cmbStatus.DataSource = Nothing
+        With cmbStatus
+            .DataSource = Nothing
 
-        Dim dt As New DataTable
-        dt.Columns.Add("cId")
-        dt.Columns.Add("cStatus")
+            Dim dt As New DataTable
+            dt.Columns.Add("cId")
+            dt.Columns.Add("cStatus")
 
-        Dim dr As DataRow = dt.NewRow
-        dr("cId") = 1
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            Dim dr As DataRow = dt.NewRow
+            dr("cId") = 1
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        dr = dt.NewRow
-        dr("cId") = 2
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            dr = dt.NewRow
+            dr("cId") = 2
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        dr = dt.NewRow
-        dr("cId") = 3
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            dr = dt.NewRow
+            dr("cId") = 3
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        dr = dt.NewRow
-        dr("cId") = 4
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            dr = dt.NewRow
+            dr("cId") = 4
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        dr = dt.NewRow
-        dr("cId") = 5
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            dr = dt.NewRow
+            dr("cId") = 5
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        dr = dt.NewRow
-        dr("cId") = 99
-        dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
-        dt.Rows.Add(dr)
+            dr = dt.NewRow
+            dr("cId") = 99
+            dr("cStatus") = ANKEN_STATUS.ToText(dr("cId"))
+            dt.Rows.Add(dr)
 
-        cmbStatus.DataSource = dt
+            .DataSource = dt
 
-        cmbStatus.ValueMember = "cId"
-        cmbStatus.DisplayMember = "cStatus"
+            .ValueMember = "cId"
+            .DisplayMember = "cStatus"
 
-        cmbStatus.Enabled = False
-        cmbStatus.SelectedIndex = 0
+            .Enabled = False
+            .SelectedIndex = 0
+        End With
 
     End Sub
 
@@ -124,26 +140,28 @@
 
         For rowIndex = 0 To dgvAnken.Rows.Count - 1
 
-            Select Case dgvAnken.Rows(rowIndex).Cells(cStatus_index).Value
-                Case AnkenStatus.NoPlan
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.LemonChiffon
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
-                Case AnkenStatus.Estimating
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.YellowGreen
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
-                Case AnkenStatus.Decided
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Violet
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
-                Case AnkenStatus.Invoiced
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Cyan
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
-                Case AnkenStatus.Cancel
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.Black
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.White
-                Case Else
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.BackColor = Color.White
-                    dgvAnken.Rows(rowIndex).DefaultCellStyle.ForeColor = Color.Black
-            End Select
+            With dgvAnken.Rows(rowIndex)
+                Select Case .Cells(cStatus_index).Value
+                    Case AnkenStatus.NoPlan
+                        .DefaultCellStyle.BackColor = Color.LemonChiffon
+                        .DefaultCellStyle.ForeColor = Color.Black
+                    Case AnkenStatus.Estimating
+                        .DefaultCellStyle.BackColor = Color.YellowGreen
+                        .DefaultCellStyle.ForeColor = Color.Black
+                    Case AnkenStatus.Decided
+                        .DefaultCellStyle.BackColor = Color.Violet
+                        .DefaultCellStyle.ForeColor = Color.Black
+                    Case AnkenStatus.Invoiced
+                        .DefaultCellStyle.BackColor = Color.Cyan
+                        .DefaultCellStyle.ForeColor = Color.Black
+                    Case AnkenStatus.Cancel
+                        .DefaultCellStyle.BackColor = Color.Black
+                        .DefaultCellStyle.ForeColor = Color.White
+                    Case Else
+                        .DefaultCellStyle.BackColor = Color.White
+                        .DefaultCellStyle.ForeColor = Color.Black
+                End Select
+            End With
 
         Next
 

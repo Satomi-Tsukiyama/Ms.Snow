@@ -40,9 +40,10 @@ Public Class ShopMasterForm
         selectId = dgvShop.Rows(e.RowIndex).Cells("cId").Value
 
         Dim selectInfo As Shop = Shops.selectOne(selectId)
-
-        txtCode.Text = selectInfo.code
-        txtName.Text = selectInfo.name
+        With selectInfo
+            txtCode.Text = .code
+            txtName.Text = .name
+        End With
 
     End Sub
 
@@ -151,9 +152,11 @@ Public Class ShopMasterForm
 
 
             Dim insertInfo As New Shop
-            insertInfo.id = Shops.getNewId()
-            insertInfo.code = txtCode.Text
-            insertInfo.name = txtName.Text
+            With insertInfo
+                .id = Shops.getNewId()
+                .code = txtCode.Text
+                .name = txtName.Text
+            End With
 
             If Shops.insert(insertInfo) Then
                 MessageBox.Show("追加しました。")
@@ -173,11 +176,12 @@ Public Class ShopMasterForm
 
             End If
 
-
             Dim updateInfo As New Shop
-            updateInfo.id = selectId
-            updateInfo.code = txtCode.Text
-            updateInfo.name = txtName.Text
+            With updateInfo
+                .id = selectId
+                .code = txtCode.Text
+                .name = txtName.Text
+            End With
 
             If Shops.update(updateInfo) Then
                 MessageBox.Show("編集しました。")
@@ -226,7 +230,7 @@ Public Class ShopMasterForm
     End Sub
 
     ''' <summary>
-    ''' ×クリック
+    ''' フォームクローズ
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -259,7 +263,9 @@ Public Class ShopMasterForm
 
     End Sub
 
-
+    ''' <summary>
+    ''' 他コントロールのセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = True

@@ -215,7 +215,7 @@ Public Class StaffMasterForm
     End Sub
 
     ''' <summary>
-    ''' ×クリック
+    ''' フォームクローズ
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -248,6 +248,9 @@ Public Class StaffMasterForm
 
     End Sub
 
+    ''' <summary>
+    ''' 他コントロールのセット
+    ''' </summary>
     Private Sub setOther()
 
         mitmAdd.Enabled = True

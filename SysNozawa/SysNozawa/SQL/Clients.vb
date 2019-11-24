@@ -14,7 +14,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         Dim maxId As Integer = 0
 
@@ -28,7 +28,8 @@ Public Module Clients
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) AS maxid"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM client"
 
             'MySQLCommand作成 
@@ -67,7 +68,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Client)
@@ -83,7 +84,8 @@ Public Module Clients
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT *"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
             sqlStr = sqlStr + " FROM client"
 
             'MySQLCommand作成 
@@ -119,7 +121,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         'リスト初期化
         Dim list As New List(Of Client)
@@ -135,8 +137,11 @@ Public Module Clients
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT * FROM client"
-            sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     *"
+            sqlStr = sqlStr + " FROM client"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     AND id = " + id
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -177,7 +182,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -190,13 +195,17 @@ Public Module Clients
                 '接続 
                 con.Open()
 
-                'SQL文 
-                sqlStr = "UPDATE client SET"
-                sqlStr = sqlStr + String.Format(" code = '{0}',", info.code)
-                sqlStr = sqlStr + String.Format(" name = '{0}',", info.name)
-                sqlStr = sqlStr + " updatedatetime = now()"
-
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", info.id)
+                'SQL文
+                With info
+                    sqlStr = sqlStr + " UPDATE"
+                    sqlStr = sqlStr + "       client"
+                    sqlStr = sqlStr + " SET"
+                    sqlStr = sqlStr + "     code = '" + .code + "',"
+                    sqlStr = sqlStr + "     name = '" + .name + "',"
+                    sqlStr = sqlStr + "     updatedatetime = now()"
+                    sqlStr = sqlStr + " WHERE 0 = 0"
+                    sqlStr = sqlStr + "     AND id = " + .id
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -231,7 +240,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -244,19 +253,21 @@ Public Module Clients
                 '接続 
                 con.Open()
 
-                'SQL文 
-                sqlStr = "INSERT INTO client ("
-                sqlStr = sqlStr + "  id"
-                sqlStr = sqlStr + ", code"
-                sqlStr = sqlStr + ", name"
-                sqlStr = sqlStr + ", insertdatetime"
-
-                sqlStr = sqlStr + ") VALUES ("
-                sqlStr = sqlStr + String.Format(" {0}", info.id)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.code)
-                sqlStr = sqlStr + String.Format(", '{0}'", info.name)
-                sqlStr = sqlStr + ", now()"
-                sqlStr = sqlStr + ")"
+                'SQL文
+                With info
+                    sqlStr = sqlStr + " INSERT INTO"
+                    sqlStr = sqlStr + "     client ("
+                    sqlStr = sqlStr + "         id,"
+                    sqlStr = sqlStr + "         code,"
+                    sqlStr = sqlStr + "         name,"
+                    sqlStr = sqlStr + "         insertdatetime"
+                    sqlStr = sqlStr + " ) VALUES ("
+                    sqlStr = sqlStr + String.Format(" {0},", .id)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .code)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .name)
+                    sqlStr = sqlStr + " now()"
+                    sqlStr = sqlStr + ")"
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -291,7 +302,7 @@ Public Module Clients
         Dim rlt As MySqlDataReader
 
         Dim connectionString As String
-        Dim sqlStr As String
+        Dim sqlStr As String = ""
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -305,8 +316,9 @@ Public Module Clients
                 con.Open()
 
                 'SQL文 
-                sqlStr = "DELETE FROM client "
-                sqlStr = sqlStr + String.Format(" WHERE id = {0}", id)
+                sqlStr = sqlStr + "DELETE FROM client "
+                sqlStr = sqlStr + " WHERE 0 = 0"
+                sqlStr = sqlStr + "     AND id = " + id
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -335,19 +347,21 @@ Public Module Clients
     Private Function ToDataTable(list As List(Of Client)) As DataTable
 
         Dim dt As DataTable = New DataTable("clientList")
-        dt.Columns.Add("cId")
-        dt.Columns.Add("cCode")
-        dt.Columns.Add("cName")
-
+        With dt.Columns
+            .Add("cId")
+            .Add("cCode")
+            .Add("cName")
+        End With
 
         '結果を表示 
         For Each client In list
 
             Dim dr As DataRow = dt.NewRow
-
-            dr("cId") = client.id '取引先番号
-            dr("cCode") = client.code '取引先コード
-            dr("cName") = client.name '取引先名
+            With client
+                dr("cId") = .id '取引先番号
+                dr("cCode") = .code '取引先コード
+                dr("cName") = .name '取引先名
+            End With
 
             dt.Rows.Add(dr)
 
