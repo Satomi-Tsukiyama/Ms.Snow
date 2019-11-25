@@ -1,4 +1,24 @@
 use sysnozawa;
-alter table item add code3 varchar(10) after code2;
-alter table item drop index code_unique;
-alter table item add unique code_unique(code1,code2,code3);
+create table ankenorderrange (
+	id integer primary key,
+    ankenid integer,
+    name varchar(50),
+    insertdatetime timestamp,
+    updatedatetime timestamp);
+    
+alter table ankenorderrange add foreign key(ankenid) references anken(id);
+
+create table adjustment(
+	id integer primary key,
+    ankenid integer,
+    staffid integer,
+    fieldduration varchar(50),
+    officeduration varchar(50),
+    lacation varchar(50),
+    note varchar(50),
+    insertdatetime timestamp,
+    updatedatetime timestamp);
+
+alter table adjustment add foreign key(ankenid) references anken(id);
+alter table adjustment add foreign key(staffid) references staff(id);
+    
