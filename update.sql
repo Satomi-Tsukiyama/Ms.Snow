@@ -1,24 +1,14 @@
 use sysnozawa;
-create table ankenorderrange (
-	id integer primary key,
-    ankenid integer,
-    name varchar(50),
-    insertdatetime timestamp,
-    updatedatetime timestamp);
-    
-alter table ankenorderrange add foreign key(ankenid) references anken(id);
 
-create table adjustment(
+create table itemamount(
 	id integer primary key,
-    ankenid integer,
-    staffid integer,
-    fieldduration varchar(50),
-    officeduration varchar(50),
-    lacation varchar(50),
+    itemid integer,
+    shopid integer,
+    amount decimal,
     note varchar(50),
     insertdatetime timestamp,
     updatedatetime timestamp);
 
-alter table adjustment add foreign key(ankenid) references anken(id);
-alter table adjustment add foreign key(staffid) references staff(id);
-    
+alter table itemamount add foreign key(shopid) references shop(id);
+alter table itemamount add foreign key(itemid) references item(id);
+-- create view salesplan as select ~

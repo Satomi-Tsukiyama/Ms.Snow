@@ -34,6 +34,7 @@ Partial Class MenuForm
         Me.btnAnkenMaster = New System.Windows.Forms.Button()
         Me.btnSalesPlan = New System.Windows.Forms.Button()
         Me.btnAnkenOrder = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
@@ -168,11 +169,22 @@ Partial Class MenuForm
         Me.btnAnkenOrder.Text = "受注管理"
         Me.btnAnkenOrder.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Location = New System.Drawing.Point(98, 221)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(408, 45)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "単価表"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'MenuForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1112, 722)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnAnkenOrder)
         Me.Controls.Add(Me.btnBuying)
         Me.Controls.Add(Me.btnSalesPlan)
@@ -199,4 +211,5 @@ Partial Class MenuForm
     Friend WithEvents btnSalesPlan As Button
     Friend WithEvents btnItemMaster As Button
     Friend WithEvents btnAnkenOrder As Button
+    Friend WithEvents Button1 As Button
 End Class

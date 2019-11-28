@@ -62,7 +62,17 @@ Public Module Shops
     '' 全購入先をDataTableで出力
     '' </summary>
     '' <returns></returns>
-    Public Function selectAll() As DataTable
+    Public Function selectAllForDataTable() As DataTable
+
+        Return ToDataTable(selectAllForList())
+
+    End Function
+
+    '' <summary>
+    '' 全購入先をDataTableで出力
+    '' </summary>
+    '' <returns></returns>
+    Public Function selectAllForList() As List(Of Shop)
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -105,7 +115,7 @@ Public Module Shops
 
         End Using
 
-        Return ToDataTable(list)
+        Return list
 
     End Function
 

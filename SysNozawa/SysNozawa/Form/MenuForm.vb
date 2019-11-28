@@ -94,6 +94,14 @@ Public Class MenuForm
     End Sub
 
     ''' <summary>
+    ''' 単価表
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        My.Forms.AmountTableForm.ShowDialog()
+    End Sub
+    ''' <summary>
     ''' 閉じるボタンクリック
     ''' </summary>
     ''' <param name="sender"></param>
