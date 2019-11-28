@@ -139,7 +139,7 @@ Public Module Staffs
             sqlStr = sqlStr + " SELECT *"
             sqlStr = sqlStr + " FROM staff"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     id = " + id
+            sqlStr = sqlStr + "     id = " + id.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -201,7 +201,7 @@ Public Module Staffs
                     sqlStr = sqlStr + "         name,"
                     sqlStr = sqlStr + "         insertdatetime"
                     sqlStr = sqlStr + " ) VALUES ("
-                    sqlStr = sqlStr + String.Format(" '{0}',", .id)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .id.ToString)
                     sqlStr = sqlStr + String.Format(" '{0}',", .name)
                     sqlStr = sqlStr + " now()"
                     sqlStr = sqlStr + ")"
@@ -261,7 +261,7 @@ Public Module Staffs
                     sqlStr = sqlStr + "     name = '" + .name + "',"
                     sqlStr = sqlStr + "     updatedatetime = now()"
                     sqlStr = sqlStr + " WHERE 0 = 0"
-                    sqlStr = sqlStr + "     AND id = " + .id
+                    sqlStr = sqlStr + "     AND id = " + .id.ToString
                 End With
 
                 'MySQLCommand作成 
@@ -313,7 +313,7 @@ Public Module Staffs
                 'SQL文 
                 sqlStr = sqlStr + " DELETE FROM staff "
                 sqlStr = sqlStr + " WHERE 0 = 0"
-                sqlStr = sqlStr + "     AND id = " + id
+                sqlStr = sqlStr + "     AND id = " + id.ToString
 
 
                 'MySQLCommand作成 

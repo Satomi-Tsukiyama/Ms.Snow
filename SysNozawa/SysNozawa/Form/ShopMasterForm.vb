@@ -259,7 +259,7 @@ Public Class ShopMasterForm
     Private Sub setDgvShop()
 
         '部署リスト
-        dgvShop.DataSource = Shops.selectAll()
+        dgvShop.DataSource = Shops.selectAllForDataTable()
 
     End Sub
 

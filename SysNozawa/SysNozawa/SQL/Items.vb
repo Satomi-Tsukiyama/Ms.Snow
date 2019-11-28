@@ -351,7 +351,7 @@ Public Module Items
             sqlStr = sqlStr + " SELECT *"
             sqlStr = sqlStr + "     FROM item"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND item.id = " + id
+            sqlStr = sqlStr + "     AND item.id = " + id.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -420,11 +420,12 @@ Public Module Items
                     If IsNothing(.quantity) Then
                         sqlStr = sqlStr + "     quantity = NULL,"
                     Else
-                        sqlStr = sqlStr + "     quantity = '" + .quantity + "',"
+                        sqlStr = sqlStr + "     quantity = '" + .quantity.ToString + "',"
                     End If
+                    sqlStr = sqlStr + "     quantityunit = '" + .quantityunit + "',"
                     sqlStr = sqlStr + "     updatedatetime = now()"
                     sqlStr = sqlStr + " WHERE 0 = 0"
-                    sqlStr = sqlStr + "     AND id = " + .id
+                    sqlStr = sqlStr + "     AND id = " + .id.ToString
                 End With
 
                 'MySQLCommand作成 
@@ -486,9 +487,10 @@ Public Module Items
                     sqlStr = sqlStr + "         maker,"
                     sqlStr = sqlStr + "         unit,"
                     sqlStr = sqlStr + "         quantity,"
+                    sqlStr = sqlStr + "         quantityunit,"
                     sqlStr = sqlStr + "         insertdatetime"
                     sqlStr = sqlStr + " ) VALUES ("
-                    sqlStr = sqlStr + String.Format(" {0},", .id)
+                    sqlStr = sqlStr + String.Format(" {0},", .id.ToString)
                     sqlStr = sqlStr + String.Format(" '{0},'", .code1)
                     sqlStr = sqlStr + String.Format(" '{0},'", .code2)
                     sqlStr = sqlStr + String.Format(" '{0},'", .code3)
@@ -499,8 +501,9 @@ Public Module Items
                     If IsNothing(.quantity) Then
                         sqlStr = sqlStr + " NULL,"
                     Else
-                        sqlStr = sqlStr + String.Format(" {0},", .quantity)
+                        sqlStr = sqlStr + String.Format(" {0},", .quantity.ToString)
                     End If
+                    sqlStr = sqlStr + String.Format(" '{0},'", .quantityunit)
 
                     sqlStr = sqlStr + " now()"
                     sqlStr = sqlStr + ")"
@@ -562,7 +565,7 @@ Public Module Items
                 dr("cKata") = .kata    '型式
                 dr("cMaker") = .maker    'メーカー
                 dr("cUnit") = .unit   '単位
-                dr("cQuantity") = .quantity    '入数
+                dr("cQuantity") = .quantity.ToString + .quantityunit    '入数+入数単位
             End With
 
             dt.Rows.Add(dr)

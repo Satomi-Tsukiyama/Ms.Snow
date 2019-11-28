@@ -296,8 +296,8 @@ Public Class AnkenEditForm
     ''' <returns></returns>
     Private Function check() As Boolean
 
-        If inputType = inputType.insert And Ankens.isExistSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text) Then
-            MessageBox.Show("同一の工番がすでに存在します。")
+        If inputType = inputType.insert And Ankens.isExistSameCode(cmbCode1.Text, txtCode2.Text, txtCode3.Text, txtName.Text) Then
+            MessageBox.Show("同一の工番,名前の組み合わせがすでに存在します。")
             Return False
         End If
 

@@ -159,8 +159,8 @@ Public Module Calendars
             sqlStr = sqlStr + "     *"
             sqlStr = sqlStr + " FROM calendar"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND day >= '" + lower + "'"
-            sqlStr = sqlStr + "     AND day < '" + upper + "'"
+            sqlStr = sqlStr + "     AND day >= '" + lower.ToShortDateString + "'"
+            sqlStr = sqlStr + "     AND day < '" + upper.ToShortDateString + "'"
             sqlStr = sqlStr + "     AND holidayflg IS NOT NULL"
 
             'MySQLCommand作成 
@@ -222,11 +222,11 @@ Public Module Calendars
                     sqlStr = sqlStr + " UPDATE"
                     sqlStr = sqlStr + "     calendar"
                     sqlStr = sqlStr + " SET"
-                    sqlStr = sqlStr + "     day = '" + .day + "'"
-                    sqlStr = sqlStr + "     holidayflg = " + .holidayflg + ","
+                    sqlStr = sqlStr + "     day = '" + .day.ToShortDateString + "'"
+                    sqlStr = sqlStr + "     holidayflg = " + .holidayflg.ToString + ","
                     sqlStr = sqlStr + "     updatedatetime = now()"
                     sqlStr = sqlStr + " WHERE 0 = 0"
-                    sqlStr = sqlStr + "     AND id = " + .id
+                    sqlStr = sqlStr + "     AND id = " + .id.ToString
                 End With
 
                 'MySQLCommand作成 
@@ -275,19 +275,21 @@ Public Module Calendars
                 '接続 
                 con.Open()
 
-                'SQL文 
-                sqlStr = sqlStr + "INSERT INTO"
-                sqlStr = sqlStr + "       calendar ("
-                sqlStr = sqlStr + "         id,"
-                sqlStr = sqlStr + "         day,"
-                sqlStr = sqlStr + "         holidayflg,"
-                sqlStr = sqlStr + "         insertdatetime"
-                sqlStr = sqlStr + " ) VALUES ("
-                sqlStr = sqlStr + String.Format(" {0},", info.id)
-                sqlStr = sqlStr + String.Format(" '{0}',", info.day)
-                sqlStr = sqlStr + String.Format(" '{0}',", info.holidayflg)
-                sqlStr = sqlStr + " now()"
-                sqlStr = sqlStr + ")"
+                'SQL文
+                With info
+                    sqlStr = sqlStr + "INSERT INTO"
+                    sqlStr = sqlStr + "       calendar ("
+                    sqlStr = sqlStr + "         id,"
+                    sqlStr = sqlStr + "         day,"
+                    sqlStr = sqlStr + "         holidayflg,"
+                    sqlStr = sqlStr + "         insertdatetime"
+                    sqlStr = sqlStr + " ) VALUES ("
+                    sqlStr = sqlStr + String.Format(" {0},", .id.ToString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .day.ToShortDateString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .holidayflg.ToString)
+                    sqlStr = sqlStr + " now()"
+                    sqlStr = sqlStr + ")"
+                End With
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

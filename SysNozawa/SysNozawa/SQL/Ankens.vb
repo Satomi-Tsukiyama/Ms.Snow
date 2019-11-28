@@ -82,7 +82,7 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT DISTINCT code2"
+            sqlStr = sqlStr + "SELECT DISTINCT code2"
             sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
@@ -162,13 +162,14 @@ Public Module Ankens
     End Function
 
     ''' <summary>
-    ''' 同じ工番の案件が存在するか
+    ''' 同じ工番と名前の組み合わせの案件が存在するか
     ''' </summary>
     ''' <param name="code1"></param>
     ''' <param name="code2"></param>
     ''' <param name="code3"></param>
+    ''' <param name="name"></param>
     ''' <returns></returns>
-    Public Function isExistSameCode(code1 As String, code2 As String, code3 As String) As Boolean
+    Public Function isExistSameCode(code1 As String, code2 As String, code3 As String, name As String) As Boolean
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -202,6 +203,7 @@ Public Module Ankens
             sqlStr = sqlStr + "     AND anken.code1 = '" + code1 + "'"
             sqlStr = sqlStr + "     AND anken.code2 = '" + code2 + "'"
             sqlStr = sqlStr + "     AND anken.code3 = '" + code3 + "'"
+            sqlStr = sqlStr + "     AND anken.name = '" + name + "'"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -323,7 +325,7 @@ Public Module Ankens
             sqlStr = sqlStr + " WHERE 0 = 0"
             sqlStr = sqlStr + "     AND anken.code2 = '" + code2 + "'"
             sqlStr = sqlStr + " ORDER BY"
-            sqlStr = sqlStr + "     anken.code2"
+            sqlStr = sqlStr + "     anken.code3"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -351,7 +353,7 @@ Public Module Ankens
     ''' 指定した取引先IDと売上年月のデータをDataTableで出力
     ''' </summary>
     ''' <param name="clientId"></param>
-    ''' <param name="yaer"></param>
+    ''' <param name="year"></param>
     ''' <param name="month"></param>
     ''' <returns></returns>
     Public Function selectWhereClientAndSalesYearMonth(clientId As Integer, year As Integer, month As Integer) As DataTable
@@ -397,9 +399,12 @@ Public Module Ankens
             sqlStr = sqlStr + "     LEFT JOIN client ON anken.clientid = client.id"
             sqlStr = sqlStr + "     LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND anken.clientid = " + clientId
-            sqlStr = sqlStr + "     AND anken.salesyearmonth >= '" + lower + "'"
-            sqlStr = sqlStr + "     AND Anken.salesYearMonth < '" + upper + "'"
+            sqlStr = sqlStr + "     AND anken.clientid = " + clientId.ToString
+            sqlStr = sqlStr + "     AND anken.salesyearmonth >= '" + lower.ToShortDateString + "'"
+            sqlStr = sqlStr + "     AND Anken.salesYearMonth < '" + upper.ToShortDateString + "'"
+            sqlStr = sqlStr + " ORDER BY"
+            sqlStr = sqlStr + "     anken.code2,"
+            sqlStr = sqlStr + "     anken.code3"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -480,15 +485,19 @@ Public Module Ankens
                 sqlStr = sqlStr + " AND anken.clientid NOT IN (0"
 
                 For Each clientId In clientIds_list
-                    sqlStr = sqlStr + String.Format(",{0}", clientId)
+                    sqlStr = sqlStr + String.Format(",{0}", clientId.ToString)
                 Next
 
                 sqlStr = sqlStr + ")"
             End If
 
-            sqlStr = sqlStr + "     AND anken.salesyearmonth >= '" + lower + "'"
-            sqlStr = sqlStr + "     AND Anken.salesYearMonth < '" + upper + "'"
+            sqlStr = sqlStr + "     AND anken.salesyearmonth >= '" + lower.ToShortDateString + "'"
+            sqlStr = sqlStr + "     AND Anken.salesYearMonth < '" + upper.ToShortDateString + "'"
 
+            sqlStr = sqlStr + " ORDER BY"
+            sqlStr = sqlStr + "     anken.clientid,"
+            sqlStr = sqlStr + "     anken.code2,"
+            sqlStr = sqlStr + "     anken.code3"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -548,7 +557,7 @@ Public Module Ankens
             sqlStr = sqlStr + "     LEFT JOIN client ON anken.clientid = client.id"
             sqlStr = sqlStr + "     LEFT JOIN staff ON anken.staffid = staff.id"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND anken.id = " + id
+            sqlStr = sqlStr + "     AND anken.id = " + id.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -611,14 +620,14 @@ Public Module Ankens
                     sqlStr = sqlStr + "     code2 = '" + .code2 + "',"
                     sqlStr = sqlStr + "     code3 = '" + .code3 + "',"
                     sqlStr = sqlStr + "     name = '" + .name + "',"
-                    sqlStr = sqlStr + "     clientid = " + .clientId + ","
-                    sqlStr = sqlStr + "     staffid = " + .staffId + ","
-                    sqlStr = sqlStr + "     status = " + .status + ","
-                    sqlStr = sqlStr + "     salesyearmonth = '" + .salesYearMonth + "',"
-                    sqlStr = sqlStr + "     salesamount = " + .salesAmount + ","
+                    sqlStr = sqlStr + "     clientid = " + .clientId.ToString + ","
+                    sqlStr = sqlStr + "     staffid = " + .staffId.ToString + ","
+                    sqlStr = sqlStr + "     status = " + .status.ToString + ","
+                    sqlStr = sqlStr + "     salesyearmonth = '" + .salesYearMonth.ToShortDateString + "',"
+                    sqlStr = sqlStr + "     salesamount = " + .salesAmount.ToString + ","
                     sqlStr = sqlStr + "     updatedatetime = now()"
                     sqlStr = sqlStr + " WHERE 0 = 0"
-                    sqlStr = sqlStr + "     AND id = " + .id
+                    sqlStr = sqlStr + "     AND id = " + .id.ToString
                 End With
 
                 'MySQLCommand作成 
@@ -668,10 +677,10 @@ Public Module Ankens
                 sqlStr = sqlStr + " UPDATE"
                 sqlStr = sqlStr + "     anken"
                 sqlStr = sqlStr + " SET"
-                sqlStr = sqlStr + "     status = " + status + ","
+                sqlStr = sqlStr + "     status = " + status.ToString + ","
                 sqlStr = sqlStr + "     updatedatetime = now()"
                 sqlStr = sqlStr + " WHERE 0 = 0"
-                sqlStr = sqlStr + "     AND id = " + id
+                sqlStr = sqlStr + "     AND id = " + id.ToString
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
@@ -735,16 +744,16 @@ Public Module Ankens
                     sqlStr = sqlStr + "         salesamount,"
                     sqlStr = sqlStr + "         insertdatetime"
                     sqlStr = sqlStr + " ) VALUES ("
-                    sqlStr = sqlStr + String.Format(" {0},", .id)
+                    sqlStr = sqlStr + String.Format(" {0},", .id.ToString)
                     sqlStr = sqlStr + String.Format(" '{0}',", .code1)
                     sqlStr = sqlStr + String.Format(" '{0}',", .code2)
                     sqlStr = sqlStr + String.Format(" '{0}',", .code3)
                     sqlStr = sqlStr + String.Format(" '{0}',", .name)
-                    sqlStr = sqlStr + String.Format(" '{0}',", .clientId)
-                    sqlStr = sqlStr + String.Format(" '{0}',", .staffId)
-                    sqlStr = sqlStr + String.Format(" '{0}',", .status)
-                    sqlStr = sqlStr + String.Format(" '{0}',", .salesYearMonth)
-                    sqlStr = sqlStr + String.Format(" '{0}',", .salesAmount)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .clientId.ToString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .staffId.ToString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .status.ToString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .salesYearMonth.ToShortDateString)
+                    sqlStr = sqlStr + String.Format(" '{0}',", .salesAmount.ToString)
                     sqlStr = sqlStr + " now()"
                     sqlStr = sqlStr + ")"
                 End With
@@ -798,7 +807,7 @@ Public Module Ankens
                 'SQL文 
                 sqlStr = sqlStr + " DELETE FROM anken "
                 sqlStr = sqlStr + " WHERE 0 = 0 "
-                sqlStr = sqlStr + "     AND id = " + id
+                sqlStr = sqlStr + "     AND id = " + id.ToString
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)

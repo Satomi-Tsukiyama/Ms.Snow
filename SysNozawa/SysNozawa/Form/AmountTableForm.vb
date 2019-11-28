@@ -23,9 +23,16 @@
     ''' </summary>
     Private Sub setDgvItemAmount()
 
-        dgvItemAmount.DataSource = Items.selectAll()
+        Dim dt As DataTable = Items.selectAll()
 
+        Dim allShop As List(Of Shop) = Shops.selectAllForList()
+        For Each oneShop In allShop
 
+            dt.Columns.Add(oneShop.code)
+
+        Next
+
+        dgvItemAmount.DataSource = dt
 
     End Sub
 End Class

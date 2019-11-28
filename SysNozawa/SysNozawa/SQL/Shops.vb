@@ -149,7 +149,7 @@ Public Module Shops
             sqlStr = sqlStr + " SELECT *"
             sqlStr = sqlStr + " FROM shop"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND id = " + id
+            sqlStr = sqlStr + "     AND id = " + id.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -212,7 +212,7 @@ Public Module Shops
                     sqlStr = sqlStr + "     name = '" + .name + "',"
                     sqlStr = sqlStr + "     updatedatetime = now()"
                     sqlStr = sqlStr + " WHERE 0 = 0"
-                    sqlStr = sqlStr + "     AND id = " + .id
+                    sqlStr = sqlStr + "     AND id = " + .id.ToString
                 End With
 
                 'MySQLCommand作成 
@@ -270,7 +270,7 @@ Public Module Shops
                     sqlStr = sqlStr + "         name,"
                     sqlStr = sqlStr + "         insertdatetime"
                     sqlStr = sqlStr + " ) VALUES ("
-                    sqlStr = sqlStr + String.Format(" {0},", .id)
+                    sqlStr = sqlStr + String.Format(" {0},", .id.ToString)
                     sqlStr = sqlStr + String.Format(" '{0}',", .code)
                     sqlStr = sqlStr + String.Format(" '{0}',", .name)
                     sqlStr = sqlStr + " now()"
@@ -326,7 +326,7 @@ Public Module Shops
                 'SQL文 
                 sqlStr = sqlStr + " DELETE FROM shop "
                 sqlStr = sqlStr + " WHERE 0 = 0"
-                sqlStr = sqlStr + "     AND id = " + id
+                sqlStr = sqlStr + "     AND id = " + id.ToString
 
                 'MySQLCommand作成 
                 cmd = New MySqlCommand(sqlStr, con)
