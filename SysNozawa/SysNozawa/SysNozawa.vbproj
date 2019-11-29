@@ -98,6 +98,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inhibitStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\AnkenOrderRange.vb" />
     <Compile Include="Entity\Item.vb" />
     <Compile Include="Entity\Anken.vb" />
     <Compile Include="Entity\Calendar.vb" />
@@ -192,6 +193,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SQL\AnkenOrderRanges.vb" />
     <Compile Include="SQL\Calendars.vb" />
     <Compile Include="SQL\Ankens.vb" />
     <Compile Include="SQL\Items.vb" />

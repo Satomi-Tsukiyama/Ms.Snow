@@ -28,7 +28,10 @@
         Dim allShop As List(Of Shop) = Shops.selectAllForList()
         For Each oneShop In allShop
 
-            dt.Columns.Add(oneShop.code)
+            Dim dc As New DataColumn
+            dc.ColumnName = oneShop.code
+            dc.Caption = oneShop.id
+            dt.Columns.Add(dc)
 
         Next
 

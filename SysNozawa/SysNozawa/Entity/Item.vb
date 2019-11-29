@@ -11,7 +11,7 @@ Public Class Item
     Public maker As String          'メーカー
     Public unit As String           '単位
     Public quantity As Nullable(Of Integer)      '入数
-    Public quantityunit As Nullable(Of Integer)      '入数単位
+    Public quantityunit As String      '入数単位
 
     ''' <summary>
     ''' インスタンス
@@ -34,7 +34,7 @@ Public Class Item
         maker = sqlResult("maker")
         unit = sqlResult("unit")
         quantity = sqlResult("quantity")
-        quantityunit = sqlResult("quantityunit")
+        quantityunit = sqlResult("quantityunit").ToString
 
     End Sub
 

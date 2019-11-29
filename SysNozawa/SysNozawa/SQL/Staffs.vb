@@ -139,7 +139,7 @@ Public Module Staffs
             sqlStr = sqlStr + " SELECT *"
             sqlStr = sqlStr + " FROM staff"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     id = " + id.ToString
+            sqlStr = sqlStr + "     AND id = " + id.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)

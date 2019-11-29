@@ -222,7 +222,7 @@ Public Class AnkenMasterForm
                 .name = txtName.Text
                 .clientId = cmbClient.SelectedValue
                 .clientCode = cmbClient.Text
-                .salesYearMonth = dtpSalesYearMonth.Value
+                .salesYearMonth = dtpSalesYearMonth.Value.AddDays((-1) * (dtpSalesYearMonth.Value.Day - 1))
                 If txtSalesAmount.Text.Count > 0 Then
                     .salesAmount = txtSalesAmount.Text
                 Else
@@ -261,7 +261,7 @@ Public Class AnkenMasterForm
                 .name = txtName.Text
                 .clientId = cmbClient.SelectedValue
                 .clientCode = cmbClient.SelectedText
-                .salesYearMonth = dtpSalesYearMonth.Value
+                .salesYearMonth = dtpSalesYearMonth.Value.AddDays((-1) * (dtpSalesYearMonth.Value.Day - 1))
                 .salesAmount = txtSalesAmount.Text
                 .staffId = cmbStaff.SelectedValue
                 .staffName = cmbStaff.SelectedText
@@ -499,7 +499,7 @@ Public Class AnkenMasterForm
             dgvAnken.DataSource = Ankens.selectWhereCode2(cmbCode2.Text)
         Else
             '案件リスト
-            dgvAnken.DataSource = Ankens.selectAll()
+            dgvAnken.DataSource = Ankens.selectAllForDataTable()
         End If
 
         '背景色設定

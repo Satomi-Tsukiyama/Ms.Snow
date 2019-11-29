@@ -93,7 +93,7 @@ Public Class AnkenEditForm
                 .name = txtName.Text
                 .clientId = cmbClient.SelectedValue
                 .clientCode = cmbClient.SelectedText
-                .salesYearMonth = dtpSalesYearMonth.Value
+                .salesYearMonth = dtpSalesYearMonth.Value.AddDays((-1) * (dtpSalesYearMonth.Value.Day - 1))
                 .salesAmount = txtSalesAmount.Text
                 .staffId = cmbStaff.SelectedValue
                 .staffName = cmbStaff.SelectedText

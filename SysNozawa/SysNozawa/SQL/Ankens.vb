@@ -106,6 +106,63 @@ Public Module Ankens
     End Function
 
     ''' <summary>
+    ''' 全ての売上年月を取得
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function getAllSalesYearMonth() As List(Of String)
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String = ""
+
+        'リスト初期化
+        Dim dateList As New List(Of Date)
+        Dim stringList As New List(Of String)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = sqlStr + "SELECT DISTINCT salesyearmonth"
+            sqlStr = sqlStr + " FROM anken"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+                dateList.Add(rlt("salesyearmonth"))
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        '日を削除(yyyy/MM/dd→yyyy/MM)
+        For Each oneDate In dateList
+            stringList.Add(Format(oneDate, "yyyy/MM"))
+        Next
+        '重複除外
+        stringList.Distinct
+
+        Return stringList
+
+    End Function
+
+    ''' <summary>
     ''' 新規追加用の新しい工番3を生成
     ''' </summary>
     ''' <param name="code2"></param>
@@ -232,7 +289,18 @@ Public Module Ankens
     '' 全案件をDataTableで出力
     '' </summary>
     '' <returns></returns>
-    Public Function selectAll() As DataTable
+    Public Function selectAllForDataTable() As DataTable
+
+
+        Return ToDataTable(selectAllForList())
+
+    End Function
+
+    '' <summary>
+    '' 全案件をDataTableで出力
+    '' </summary>
+    '' <returns></returns>
+    Public Function selectAllForList() As List(Of Anken)
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -284,12 +352,88 @@ Public Module Ankens
 
         End Using
 
-        Return ToDataTable(list)
+        Return list
 
     End Function
 
     '' <summary>
-    '' 全案件をDataTableで出力
+    '' 指定した売上年月のデータをList(Of Anken)で出力
+    '' </summary>
+    '' <returns></returns>
+    Public Function selectWhereSalesYearMonthForList(year As Integer, month As Integer) As List(Of Anken)
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String = ""
+
+        'リスト初期化
+        Dim list As New List(Of Anken)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+
+            '売上年月の下限
+            Dim lower As Date = CDate(year.ToString + "/" + month.ToString + "/" + "1")
+
+            '売上年月の上限
+            Dim upper As Date
+            If month = 12 Then
+                upper = CDate((year + 1).ToString + "/" + "1" + "/" + "1")
+            Else
+                upper = CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1")
+            End If
+
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     anken.*,"
+            sqlStr = sqlStr + "     client.code AS clientcode,"
+            sqlStr = sqlStr + "     client.name AS clientname,"
+            sqlStr = sqlStr + "     staff.name AS staffname"
+            sqlStr = sqlStr + " FROM anken"
+            sqlStr = sqlStr + "     LEFT JOIN client ON anken.clientid = client.id"
+            sqlStr = sqlStr + "     LEFT JOIN staff ON anken.staffid = staff.id"
+            sqlStr = sqlStr + " WHERE 0 = 0"
+            sqlStr = sqlStr + "     AND anken.salesyearmonth >= '" + lower.ToShortDateString + "'"
+            sqlStr = sqlStr + "     AND Anken.salesYearMonth < '" + upper.ToShortDateString + "'"
+            sqlStr = sqlStr + " ORDER BY"
+            sqlStr = sqlStr + "     anken.code2,"
+            sqlStr = sqlStr + "     anken.code3"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+
+                list.Add(New Anken(rlt))
+
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        Return list
+
+    End Function
+
+
+    '' <summary>
+    '' 全案件をの内指定したCode2の案件をDataTableで出力
     '' </summary>
     '' <returns></returns>
     Public Function selectWhereCode2(code2 As String) As DataTable
