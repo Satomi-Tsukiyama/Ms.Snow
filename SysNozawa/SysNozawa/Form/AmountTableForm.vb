@@ -35,6 +35,16 @@
 
         Next
 
+        For Each dr As DataRow In dt.Rows
+
+            Dim allItemAmount As List(Of ItemAmount) = ItemAmounts.selectSomeWhereItemId(dr("cId"))
+
+            For Each oneItemAmount In allItemAmount
+                dr(Shops.selectOneWhereId(oneItemAmount.shopId).code) = CDec(oneItemAmount.amount).ToString("#,0")
+            Next
+
+        Next
+
         dgvItemAmount.DataSource = dt
 
     End Sub

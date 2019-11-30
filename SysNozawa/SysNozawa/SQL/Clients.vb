@@ -115,7 +115,7 @@ Public Module Clients
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
-    Public Function selectOne(id As Integer) As Client
+    Public Function selectOneWhereId(id As Integer) As Client
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -150,9 +150,9 @@ Public Module Clients
             rlt = cmd.ExecuteReader
 
             '結果を表示 
-            If rlt.Read Then
+            While rlt.Read()
                 list.Add(New Client(rlt))
-            End If
+            End While
 
             'クローズ 
             con.Close()
@@ -316,7 +316,7 @@ Public Module Clients
                 con.Open()
 
                 'SQL文 
-                sqlStr = sqlStr + "DELETE FROM client "
+                sqlStr = sqlStr + " DELETE FROM client "
                 sqlStr = sqlStr + " WHERE 0 = 0"
                 sqlStr = sqlStr + "     AND id = " + id.ToString
 

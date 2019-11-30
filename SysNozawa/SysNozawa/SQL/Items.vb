@@ -84,7 +84,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     DISTINCT name"
             sqlStr = sqlStr + " FROM item"
 
@@ -134,7 +134,7 @@ Public Module Items
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     DISTINCT maker"
             sqlStr = sqlStr + " FROM item"
 
@@ -209,6 +209,56 @@ Public Module Items
     End Function
 
     ''' <summary>
+    ''' 全ての入数単位を取得
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function getAllQuantityUnit() As List(Of String)
+
+        Dim cmd As MySqlCommand
+        Dim rlt As MySqlDataReader
+
+        Dim connectionString As String
+        Dim sqlStr As String = ""
+
+        'リスト初期化
+        Dim list As New List(Of String)
+
+        '接続文字列
+        connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
+
+        'コネクション生成 
+
+        Using con As New MySqlConnection(connectionString)
+
+            '接続 
+            con.Open()
+
+            'SQL文 
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     DISTINCT quantityunit"
+            sqlStr = sqlStr + " FROM item"
+
+            'MySQLCommand作成 
+            cmd = New MySqlCommand(sqlStr, con)
+
+            'SQL文実行 
+            rlt = cmd.ExecuteReader
+
+            '結果を表示 
+            While rlt.Read()
+                list.Add(rlt("quantityunit").ToString)
+            End While
+
+            'クローズ 
+            con.Close()
+
+        End Using
+
+        Return list
+
+    End Function
+
+    ''' <summary>
     ''' 同じ商品コードの商品が存在するか
     ''' </summary>
     ''' <param name="code1"></param>
@@ -224,7 +274,7 @@ Public Module Items
         Dim sqlStr As String = ""
 
         'リスト初期化
-        Dim list As New List(Of Anken)
+        Dim list As New List(Of Item)
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -254,7 +304,7 @@ Public Module Items
             '結果を表示 
             While rlt.Read()
 
-                list.Add(New Anken(rlt))
+                list.Add(New Item(rlt))
 
             End While
 
@@ -262,7 +312,6 @@ Public Module Items
             con.Close()
 
         End Using
-
 
         Return list.Count > 0
 
@@ -326,7 +375,7 @@ Public Module Items
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
-    Public Function selectOne(id As Integer) As Item
+    Public Function selectOneWhereId(id As Integer) As Item
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -360,9 +409,9 @@ Public Module Items
             rlt = cmd.ExecuteReader
 
             '結果を表示 
-            If rlt.Read Then
+            While rlt.Read()
                 list.Add(New Item(rlt))
-            End If
+            End While
 
             'クローズ 
             con.Close()
@@ -476,7 +525,7 @@ Public Module Items
 
                 'SQL文
                 With info
-                    sqlStr = sqlStr + "INSERT INTO"
+                    sqlStr = sqlStr + " INSERT INTO"
                     sqlStr = sqlStr + "     item ("
                     sqlStr = sqlStr + "         id,"
                     sqlStr = sqlStr + "         code1,"

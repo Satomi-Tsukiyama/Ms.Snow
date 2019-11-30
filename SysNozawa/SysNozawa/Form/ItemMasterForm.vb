@@ -27,6 +27,9 @@ Public Class ItemMasterForm
         '単位セット
         setCmbUnit()
 
+        '入数単位セット
+        setCmbQuantityUnit()
+
         setOther()
 
     End Sub
@@ -46,17 +49,18 @@ Public Class ItemMasterForm
         mitmDelete.Enabled = True
         selectId = dgvItem.Rows(e.RowIndex).Cells("cId").Value
 
-        Dim selectInfo As Item = Items.selectOne(selectId)
+        Dim selectInfo As Item = Items.selectOneWhereId(selectId)
 
         With selectInfo
-            cmbName.SelectedText = .name
+            cmbName.SelectedItem = .name
             txtKata.Text = .kata
-            cmbMaker.SelectedText = .maker
+            cmbMaker.SelectedItem = .maker
             txtCode1.Text = .code1
             txtCode2.Text = .code2
             txtCode3.Text = .code3
-            cmbUnit.SelectedText = .unit
+            cmbUnit.SelectedItem = .unit
             txtQuantity.Text = .quantity
+            cmbQuantityUnit.SelectedItem = .quantityunit
         End With
 
     End Sub
@@ -91,6 +95,8 @@ Public Class ItemMasterForm
         cmbUnit.SelectedIndex = 0
         txtQuantity.Enabled = True
         txtQuantity.Text = ""
+        cmbQuantityUnit.Enabled = True
+        cmbQuantityUnit.SelectedIndex = 0
 
         btnOK.Enabled = True
         btnOK.Text = "追加"
@@ -120,6 +126,7 @@ Public Class ItemMasterForm
         txtCode3.Enabled = True
         cmbUnit.Enabled = True
         txtQuantity.Enabled = True
+        cmbQuantityUnit.Enabled = True
 
         btnOK.Enabled = True
         btnOK.Text = "編集"
@@ -166,6 +173,7 @@ Public Class ItemMasterForm
                 Else
                     .quantity = Nothing
                 End If
+                .quantityunit = cmbQuantityUnit.Text
 
             End With
 
@@ -199,6 +207,7 @@ Public Class ItemMasterForm
                 .maker = cmbMaker.Text
                 .unit = cmbUnit.Text
                 .quantity = txtQuantity.Text
+                .quantityunit = cmbQuantityUnit.Text
             End With
 
             If Items.update(updateInfo) Then
@@ -222,6 +231,8 @@ Public Class ItemMasterForm
         setCmbMaker()
 
         setCmbUnit()
+
+        setCmbQuantityUnit()
 
         setOther()
 
@@ -262,6 +273,8 @@ Public Class ItemMasterForm
             cmbUnit.SelectedItem = ""
             txtQuantity.Enabled = False
             txtQuantity.Text = ""
+            cmbQuantityUnit.Enabled = False
+            cmbQuantityUnit.SelectedItem = ""
 
             btnOK.Enabled = False
             btnOK.Text = "編集"
@@ -315,11 +328,11 @@ Public Class ItemMasterForm
     Private Sub setCmbName()
 
         cmbName.Items.Clear()
-        Dim itemNames As List(Of String) = Items.getAllName()
+        Dim allName As List(Of String) = Items.getAllName()
 
         cmbName.Items.Add("")
-        For Each itemName In itemNames
-            cmbName.Items.Add(itemName)
+        For Each oneName In allName
+            cmbName.Items.Add(oneName)
         Next
 
     End Sub
@@ -330,11 +343,11 @@ Public Class ItemMasterForm
     Private Sub setCmbMaker()
 
         cmbMaker.Items.Clear()
-        Dim itemMakers As List(Of String) = Items.getAllMaker()
+        Dim allMaker As List(Of String) = Items.getAllMaker()
 
         cmbMaker.Items.Add("")
-        For Each itemMaker In itemMakers
-            cmbMaker.Items.Add(itemMaker)
+        For Each oneMaker In allMaker
+            cmbMaker.Items.Add(oneMaker)
         Next
 
     End Sub
@@ -345,11 +358,26 @@ Public Class ItemMasterForm
     Private Sub setCmbUnit()
 
         cmbUnit.Items.Clear()
-        Dim itemUnits As List(Of String) = Items.getAllUnit()
+        Dim allUnit As List(Of String) = Items.getAllUnit()
 
         cmbUnit.Items.Add("")
-        For Each itemUnit In itemUnits
-            cmbUnit.Items.Add(itemUnit)
+        For Each oneUnit In allUnit
+            cmbUnit.Items.Add(oneUnit)
+        Next
+
+    End Sub
+
+    ''' <summary>
+    ''' 入数単位のセット
+    ''' </summary>
+    Private Sub setCmbQuantityUnit()
+
+        cmbQuantityUnit.Items.Clear()
+        Dim allQuantityUnits As List(Of String) = Items.getAllQuantityUnit()
+
+        cmbUnit.Items.Add("")
+        For Each oneQuantityUnits In allQuantityUnits
+            cmbQuantityUnit.Items.Add(oneQuantityUnits)
         Next
 
     End Sub
@@ -380,6 +408,8 @@ Public Class ItemMasterForm
         cmbUnit.SelectedIndex = 0
         txtQuantity.Enabled = False
         txtQuantity.Text = ""
+        cmbQuantityUnit.Enabled = False
+        cmbQuantityUnit.SelectedIndex = 0
 
         btnOK.Enabled = False
         btnOK.Text = "編集"

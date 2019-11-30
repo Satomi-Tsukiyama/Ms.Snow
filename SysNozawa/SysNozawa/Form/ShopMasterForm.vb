@@ -39,7 +39,7 @@ Public Class ShopMasterForm
         mitmDelete.Enabled = True
         selectId = dgvShop.Rows(e.RowIndex).Cells("cId").Value
 
-        Dim selectInfo As Shop = Shops.selectOne(selectId)
+        Dim selectInfo As Shop = Shops.selectOneWhereId(selectId)
         With selectInfo
             txtCode.Text = .code
             txtName.Text = .name

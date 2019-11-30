@@ -316,7 +316,7 @@ Public Class SalesPlanForm
             If cmbClient.SelectedIndex > 0 Then
 
                 For j As Integer = 0 To 5
-                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, year, month)
+                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectSomeWhereClientAndSalesYearMonth(cmbClient.SelectedIndex, year, month)
 
                     month = month + 1
                     If month > 12 Then
@@ -335,7 +335,7 @@ Public Class SalesPlanForm
                 Next
 
                 For j As Integer = 0 To 5
-                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectWhereElseClientAndSalesYearMonth(selectedIndexs, year, month)
+                    dgvSalesPlans(6 * i + j).DataSource = Ankens.selectSomeWhereElseClientAndSalesYearMonth(selectedIndexs, year, month)
 
                     month = month + 1
                     If month > 12 Then

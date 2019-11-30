@@ -98,10 +98,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inhibitStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Entity\Adjustment.vb" />
     <Compile Include="Entity\AnkenOrderRange.vb" />
     <Compile Include="Entity\Item.vb" />
     <Compile Include="Entity\Anken.vb" />
     <Compile Include="Entity\Calendar.vb" />
+    <Compile Include="Entity\ItemAmount.vb" />
     <Compile Include="Entity\Shop.vb" />
     <Compile Include="Entity\Client.vb" />
     <Compile Include="Entity\Staff.vb" />
@@ -193,9 +195,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SQL\Adjustments.vb" />
     <Compile Include="SQL\AnkenOrderRanges.vb" />
     <Compile Include="SQL\Calendars.vb" />
     <Compile Include="SQL\Ankens.vb" />
+    <Compile Include="SQL\ItemAmounts.vb" />
     <Compile Include="SQL\Items.vb" />
     <Compile Include="SQL\Shops.vb" />
     <Compile Include="SQL\Clients.vb" />

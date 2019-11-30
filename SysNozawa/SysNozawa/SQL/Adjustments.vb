@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Module AnkenOrderRanges
+Public Module Adjustments
 
 #Region "取得"
 
@@ -30,7 +30,7 @@ Public Module AnkenOrderRanges
             'SQL文 
             sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     MAX(id) AS maxid"
-            sqlStr = sqlStr + " FROM ankenorderrange"
+            sqlStr = sqlStr + " FROM adjustment"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -58,10 +58,10 @@ Public Module AnkenOrderRanges
     End Function
 
     '' <summary>
-    '' 全受注範囲の内指定した案件番号のデータをList(Of AnkenOrderRange)で出力
+    '' 指定した案件IDのデータを出力
     '' </summary>
     '' <returns></returns>
-    Public Function selectSomeWhereAnkenId(ankenId As Integer) As List(Of AnkenOrderRange)
+    Public Function selectOneWhereAnkenId(ankenId As Integer) As Adjustment
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -70,7 +70,7 @@ Public Module AnkenOrderRanges
         Dim sqlStr As String = ""
 
         'リスト初期化
-        Dim list As New List(Of AnkenOrderRange)
+        Dim list As New List(Of Adjustment)
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -85,11 +85,9 @@ Public Module AnkenOrderRanges
             'SQL文 
             sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     *"
-            sqlStr = sqlStr + " FROM ankenorderrange"
+            sqlStr = sqlStr + " FROM adjustment"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND ankenorderrange.ankenid = " + ankenId.ToString + ""
-            sqlStr = sqlStr + " ORDER BY"
-            sqlStr = sqlStr + "     ankenorderrange.id"
+            sqlStr = sqlStr + "     AND ankenid = " + ankenId.ToString + ""
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -100,7 +98,7 @@ Public Module AnkenOrderRanges
             '結果を表示 
             While rlt.Read()
 
-                list.Add(New AnkenOrderRange(rlt))
+                list.Add(New Adjustment(rlt))
 
             End While
 
@@ -109,7 +107,11 @@ Public Module AnkenOrderRanges
 
         End Using
 
-        Return list
+        If list.Count > 0 Then
+            Return list(0)
+        Else
+            Return Nothing
+        End If
 
     End Function
 

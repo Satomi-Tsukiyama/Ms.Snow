@@ -62,7 +62,7 @@ Public Class AnkenMasterForm
         mitmDelete.Enabled = True
         selectId = dgvAnken.Rows(e.RowIndex).Cells("cId").Value
 
-        Dim selectInfo As Anken = Ankens.selectOne(selectId)
+        Dim selectInfo As Anken = Ankens.selectOneWhereId(selectId)
 
         With selectInfo
             cmbCode1.SelectedItem = .code1
@@ -496,7 +496,7 @@ Public Class AnkenMasterForm
 
         If cmbCode2.Text.Count > 0 Then
             '案件リスト
-            dgvAnken.DataSource = Ankens.selectWhereCode2(cmbCode2.Text)
+            dgvAnken.DataSource = Ankens.selectSomeWhereCode2(cmbCode2.Text)
         Else
             '案件リスト
             dgvAnken.DataSource = Ankens.selectAllForDataTable()

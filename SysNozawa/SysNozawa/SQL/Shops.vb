@@ -124,7 +124,7 @@ Public Module Shops
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
-    Public Function selectOne(id As Integer) As Shop
+    Public Function selectOneWhereId(id As Integer) As Shop
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -158,9 +158,9 @@ Public Module Shops
             rlt = cmd.ExecuteReader
 
             '結果を表示 
-            If rlt.Read Then
+            While rlt.Read()
                 list.Add(New Shop(rlt))
-            End If
+            End While
 
             'クローズ 
             con.Close()

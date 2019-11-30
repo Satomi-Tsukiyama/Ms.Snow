@@ -277,7 +277,7 @@ Public Module Calendars
 
                 'SQL文
                 With info
-                    sqlStr = sqlStr + "INSERT INTO"
+                    sqlStr = sqlStr + " INSERT INTO"
                     sqlStr = sqlStr + "       calendar ("
                     sqlStr = sqlStr + "         id,"
                     sqlStr = sqlStr + "         day,"

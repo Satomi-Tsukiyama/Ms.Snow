@@ -37,7 +37,7 @@ Public Class StaffMasterForm
         mitmDelete.Enabled = True
         selectId = dgvStaff.Rows(e.RowIndex).Cells("cId").Value
 
-        Dim selectInfo As Staff = Staffs.selectOne(selectId)
+        Dim selectInfo As Staff = Staffs.selectOneWhereId(selectId)
 
         txtName.Text = selectInfo.name
 

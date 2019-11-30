@@ -112,9 +112,9 @@ Public Module Staffs
     ''' <summary>
     ''' 指定したIDの社員情報を取得
     ''' </summary>
-    ''' <param name="id">社員番号</param>
+    ''' <param name="id"></param>
     ''' <returns></returns>
-    Public Function selectOne(id As Integer) As Staff
+    Public Function selectOneWhereId(Optional id As Integer = Nothing) As Staff
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -148,9 +148,9 @@ Public Module Staffs
             rlt = cmd.ExecuteReader
 
             '結果を表示 
-            If rlt.Read Then
+            While rlt.Read()
                 list.Add(New Staff(rlt))
-            End If
+            End While
 
             'クローズ 
             con.Close()

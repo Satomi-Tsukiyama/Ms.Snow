@@ -39,7 +39,7 @@ Public Class ClientMasterForm
         mitmDelete.Enabled = True
         selectId = dgvClient.Rows(e.RowIndex).Cells("cId").Value
 
-        Dim selectInfo As Client = Clients.selectOne(selectId)
+        Dim selectInfo As Client = Clients.selectOneWhereId(selectId)
 
         With selectInfo
             txtCode.Text = .code

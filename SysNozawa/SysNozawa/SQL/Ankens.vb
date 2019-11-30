@@ -28,7 +28,8 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = "SELECT MAX(id) AS maxid"
+            sqlStr = sqlStr + " SELECT"
+            sqlStr = sqlStr + "     MAX(id) AS maxid"
             sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
@@ -82,7 +83,7 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + "SELECT DISTINCT code2"
+            sqlStr = sqlStr + " SELECT DISTINCT code2"
             sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
@@ -132,7 +133,7 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + "SELECT DISTINCT salesyearmonth"
+            sqlStr = sqlStr + " SELECT DISTINCT salesyearmonth"
             sqlStr = sqlStr + " FROM anken"
 
             'MySQLCommand作成 
@@ -360,7 +361,7 @@ Public Module Ankens
     '' 指定した売上年月のデータをList(Of Anken)で出力
     '' </summary>
     '' <returns></returns>
-    Public Function selectWhereSalesYearMonthForList(year As Integer, month As Integer) As List(Of Anken)
+    Public Function selectSomeWhereSalesYearMonthForList(year As Integer, month As Integer) As List(Of Anken)
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -436,7 +437,7 @@ Public Module Ankens
     '' 全案件をの内指定したCode2の案件をDataTableで出力
     '' </summary>
     '' <returns></returns>
-    Public Function selectWhereCode2(code2 As String) As DataTable
+    Public Function selectSomeWhereCode2(code2 As String) As DataTable
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -458,7 +459,7 @@ Public Module Ankens
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     anken.*,"
             sqlStr = sqlStr + "     client.code AS clientcode,"
             sqlStr = sqlStr + "     client.name AS clientname,"
@@ -500,7 +501,7 @@ Public Module Ankens
     ''' <param name="year"></param>
     ''' <param name="month"></param>
     ''' <returns></returns>
-    Public Function selectWhereClientAndSalesYearMonth(clientId As Integer, year As Integer, month As Integer) As DataTable
+    Public Function selectSomeWhereClientAndSalesYearMonth(clientId As Integer, year As Integer, month As Integer) As DataTable
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -534,7 +535,7 @@ Public Module Ankens
                 upper = CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1")
             End If
 
-            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     anken.*,"
             sqlStr = sqlStr + "     client.code AS clientcode,"
             sqlStr = sqlStr + "     client.name AS clientname,"
@@ -579,7 +580,7 @@ Public Module Ankens
     ''' <param name="year"></param>
     ''' <param name="month"></param>
     ''' <returns></returns>
-    Public Function selectWhereElseClientAndSalesYearMonth(clientIds_list As List(Of Integer), year As Integer, month As Integer) As DataTable
+    Public Function selectSomeWhereElseClientAndSalesYearMonth(clientIds_list As List(Of Integer), year As Integer, month As Integer) As DataTable
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -615,7 +616,7 @@ Public Module Ankens
                 upper = CDate(year.ToString + "/" + (month + 1).ToString + "/" + "1")
             End If
 
-            sqlStr = sqlStr + "SELECT"
+            sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     anken.*,"
             sqlStr = sqlStr + "     client.code AS clientcode,"
             sqlStr = sqlStr + "     client.name AS clientname,"
@@ -670,7 +671,7 @@ Public Module Ankens
     ''' </summary>
     ''' <param name="id">社員番号</param>
     ''' <returns></returns>
-    Public Function selectOne(id As Integer) As Anken
+    Public Function selectOneWhereId(id As Integer) As Anken
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader

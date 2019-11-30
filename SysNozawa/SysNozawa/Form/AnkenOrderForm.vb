@@ -26,55 +26,141 @@
     ''' </summary>
     Private Sub setDgvAnkenOrder()
 
-        'Dim datatable As DataTable
-        'DataTable = Nothing
-        'DataTable.Rows(0).he
-        'dgvAnkenOrder.DataSource = DataTable
         dgvAnkenOrder.DataSource = Nothing
-        'dgvAnkenOrder.DataSource = Ankens.selectAllForDataTable()
 
         Dim dt As New DataTable
         Dim allAnken As New List(Of Anken)
         If cmbSalesYearMonth.Text.Count > 0 Then
             Dim salesYearMonth As Date = CDate(cmbSalesYearMonth.Text)
-            allAnken = Ankens.selectWhereSalesYearMonthForList(salesYearMonth.Year, salesYearMonth.Month)
+            allAnken = Ankens.selectSomeWhereSalesYearMonthForList(salesYearMonth.Year, salesYearMonth.Month)
         Else
             allAnken = Ankens.selectAllForList()
         End If
 
-
         For Each oneAnekn In allAnken
 
             Dim dc As New DataColumn
-            dc.ColumnName = oneAnekn.code1 + oneAnekn.code2 + oneAnekn.code3 + ":" + oneAnekn.name '件名
+            dc.ColumnName = oneAnekn.id
             dc.Caption = oneAnekn.id
             dt.Columns.Add(dc)
 
-            'dt.Rows.Add()
-            'dt.Rows(0).Item(oneAnekn.id) = oneAnekn.code1 + oneAnekn.code2 + oneAnekn.code3 '工番
-            'dt.Rows.Add()
-            'dt.Rows(1).Item(oneAnekn.id) = oneAnekn.salesYearMonth '売上年月
+        Next
 
+        '工番
+        Dim dr As DataRow = dt.NewRow
+        For Each oneAnekn In allAnken
+            dr(oneAnekn.id.ToString) = oneAnekn.code1 + oneAnekn.code2 + oneAnekn.code3
+        Next
+        dt.Rows.Add(dr)
 
-            'Dim allAnkenOrderRange As List(Of AnkenOrderRange) = AnkenOrderRanges.selectWhereAnkenId(oneAnekn.id)
-            'For Each oneAnkenOrderRange In allAnkenOrderRange
-            '    dt.Rows(0).Item(oneAnekn.id) = oneAnkenOrderRange.name
-            'Next
+        '件名
+        dr = dt.NewRow
+        For Each oneAnekn In allAnken
+            dr(oneAnekn.id.ToString) = oneAnekn.name
+        Next
+        dt.Rows.Add(dr)
 
+        '取引先
+        dr = dt.NewRow
+        For Each oneAnekn In allAnken
+            dr(oneAnekn.id.ToString) = Clients.selectOneWhereId(oneAnekn.clientId).code
+        Next
+        dt.Rows.Add(dr)
+
+        '売上年月
+        dr = dt.NewRow
+        For Each oneAnekn In allAnken
+            dr(oneAnekn.id.ToString) = Format(oneAnekn.salesYearMonth, "yyyy/MM")
+        Next
+        dt.Rows.Add(dr)
+
+        '受注範囲
+        Dim drs As New List(Of DataRow)
+        For i As Integer = 0 To 9
+            dr = dt.NewRow
+            drs.Add(dr)
+        Next
+
+        For Each oneAnekn In allAnken
+            Dim allAnkenOrderRange As List(Of AnkenOrderRange) = AnkenOrderRanges.selectSomeWhereAnkenId(oneAnekn.id)
+
+            Dim i As Integer = 0
+            For Each oneAnkenOrderRange In allAnkenOrderRange
+                drs(i)(oneAnekn.id.ToString) = oneAnkenOrderRange.name
+                i = i + 1
+            Next
+
+        Next
+        For Each dr In drs
+            dt.Rows.Add(dr)
+        Next
+
+        '調整
+        drs = New List(Of DataRow)
+        For i As Integer = 0 To 5
+            dr = dt.NewRow
+            drs.Add(dr)
+        Next
+
+        For Each oneAnekn In allAnken
+            Dim oneAdjustment As Adjustment = Adjustments.selectOneWhereAnkenId(oneAnekn.id)
+
+            If IsNothing(oneAdjustment) = False Then
+                ''
+                Dim i As Integer = 0
+
+                drs(i)(oneAnekn.id.ToString) = ""
+                i = i + 1
+                drs(i)(oneAnekn.id.ToString) = Staffs.selectOneWhereId(oneAdjustment.staffId).name
+                i = i + 1
+                drs(i)(oneAnekn.id.ToString) = oneAdjustment.fieldduration
+                i = i + 1
+                drs(i)(oneAnekn.id.ToString) = oneAdjustment.officeduration
+                i = i + 1
+                drs(i)(oneAnekn.id.ToString) = oneAdjustment.lacation
+                i = i + 1
+                drs(i)(oneAnekn.id.ToString) = oneAdjustment.note
+            End If
+
+        Next
+        For Each dr In drs
+            dt.Rows.Add(dr)
         Next
 
         dgvAnkenOrder.DataSource = dt
 
-        'With dgvAnkenOrder
+        With dgvAnkenOrder
+            Dim rowId As Integer = 0
+            .Rows(rowId).HeaderCell.Value = "工番"
+            .Rows(rowId).DefaultCellStyle.BackColor = SystemColors.Highlight
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "件名"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "取引先"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "売上年月"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "受注範囲"
+            rowId = rowId + 10
+            .Rows(rowId).HeaderCell.Value = "調整"
+            .Rows(rowId).DefaultCellStyle.BackColor = SystemColors.Highlight
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "  担当者"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "  現場作業期間"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "  社内作業期間"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "  現場"
+            rowId = rowId + 1
+            .Rows(rowId).HeaderCell.Value = "  備考"
+            'rowId = rowId + 1
+            '.Rows(rowId).HeaderCell.Value = "現場作業期間"
 
-        '    .Rows(0).HeaderCell.Value = "工番"
-        '    .Rows(1).HeaderCell.Value = "取引先"
-        '    .Rows(2).HeaderCell.Value = "売上年月"
-        '    .Rows(3).HeaderCell.Value = "受注範囲"
-        '    .Rows(4).HeaderCell.Value = ""
-        '    .AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders)
 
-        'End With
+            .AutoResizeRowHeadersWidth(DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders)
+
+        End With
 
     End Sub
 
@@ -92,6 +178,5 @@
         Next
 
     End Sub
-
 
 End Class

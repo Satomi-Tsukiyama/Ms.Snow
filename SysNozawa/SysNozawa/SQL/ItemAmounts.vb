@@ -1,8 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Module AnkenOrderRanges
-
-#Region "取得"
+Public Module ItemAmounts
 
     ''' <summary>
     ''' 新規追加用の新しいIDを生成
@@ -30,7 +28,7 @@ Public Module AnkenOrderRanges
             'SQL文 
             sqlStr = sqlStr + " SELECT"
             sqlStr = sqlStr + "     MAX(id) AS maxid"
-            sqlStr = sqlStr + " FROM ankenorderrange"
+            sqlStr = sqlStr + " FROM itemamount"
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -46,6 +44,7 @@ Public Module AnkenOrderRanges
                     maxId = rlt("maxid")
                 End If
 
+
             End While
 
             'クローズ 
@@ -57,11 +56,12 @@ Public Module AnkenOrderRanges
 
     End Function
 
-    '' <summary>
-    '' 全受注範囲の内指定した案件番号のデータをList(Of AnkenOrderRange)で出力
-    '' </summary>
-    '' <returns></returns>
-    Public Function selectSomeWhereAnkenId(ankenId As Integer) As List(Of AnkenOrderRange)
+    ''' <summary>
+    ''' 指定したIDの商品情報を取得
+    ''' </summary>
+    ''' <param name="id">社員番号</param>
+    ''' <returns></returns>
+    Public Function selectSomeWhereItemId(itemId As Integer) As List(Of ItemAmount)
 
         Dim cmd As MySqlCommand
         Dim rlt As MySqlDataReader
@@ -70,7 +70,7 @@ Public Module AnkenOrderRanges
         Dim sqlStr As String = ""
 
         'リスト初期化
-        Dim list As New List(Of AnkenOrderRange)
+        Dim list As New List(Of ItemAmount)
 
         '接続文字列
         connectionString = Configuration.ConfigurationManager.ConnectionStrings("MySqlConnection").ConnectionString
@@ -83,13 +83,10 @@ Public Module AnkenOrderRanges
             con.Open()
 
             'SQL文 
-            sqlStr = sqlStr + " SELECT"
-            sqlStr = sqlStr + "     *"
-            sqlStr = sqlStr + " FROM ankenorderrange"
+            sqlStr = sqlStr + " SELECT *"
+            sqlStr = sqlStr + "     FROM itemamount"
             sqlStr = sqlStr + " WHERE 0 = 0"
-            sqlStr = sqlStr + "     AND ankenorderrange.ankenid = " + ankenId.ToString + ""
-            sqlStr = sqlStr + " ORDER BY"
-            sqlStr = sqlStr + "     ankenorderrange.id"
+            sqlStr = sqlStr + "     AND itemid = " + itemId.ToString
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -99,9 +96,7 @@ Public Module AnkenOrderRanges
 
             '結果を表示 
             While rlt.Read()
-
-                list.Add(New AnkenOrderRange(rlt))
-
+                list.Add(New ItemAmount(rlt))
             End While
 
             'クローズ 
@@ -113,6 +108,5 @@ Public Module AnkenOrderRanges
 
     End Function
 
-#End Region
 
 End Module

@@ -274,7 +274,7 @@ Public Class AnkenEditForm
         btnOK.Text = "編集"
         btnCancel.Text = "閉じる"
 
-        Dim selectInfo As Anken = Ankens.selectOne(selectId)
+        Dim selectInfo As Anken = Ankens.selectOneWhereId(selectId)
 
         With selectInfo
             cmbCode1.SelectedItem = .code1
