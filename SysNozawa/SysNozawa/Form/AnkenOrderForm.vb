@@ -1,5 +1,7 @@
 ﻿Public Class AnkenOrderForm
 
+    Private selectId As Integer = 0
+
     ''' <summary>
     ''' ロードイベント
     ''' </summary>
@@ -21,6 +23,35 @@
     Private Sub cmbSalesYearMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSalesYearMonth.SelectedIndexChanged
         setDgvAnkenOrder()
     End Sub
+
+    ''' <summary>
+    ''' 案件受注リストクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub dgvAnkenOrder_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnkenOrder.CellClick
+
+        selectId = CInt(dgvAnkenOrder.Columns(e.ColumnIndex).HeaderText)
+
+    End Sub
+
+    ''' <summary>
+    ''' 案件受注リストダブルクリック
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub dgvAnkenOrder_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAnkenOrder.CellDoubleClick
+
+        selectId = CInt(dgvAnkenOrder.Columns(e.ColumnIndex).HeaderText)
+
+        Dim childrenForm As New AnkenOrderEditForm
+        childrenForm.selectId = selectId
+        childrenForm.ShowDialog()
+
+        setDgvAnkenOrder()
+
+    End Sub
+
     ''' <summary>
     ''' 案件受注リストの表示
     ''' </summary>
@@ -178,5 +209,6 @@
         Next
 
     End Sub
+
 
 End Class

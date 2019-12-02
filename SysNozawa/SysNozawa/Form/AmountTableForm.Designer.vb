@@ -43,15 +43,14 @@ Partial Class AmountTableForm
         Me.dgvItemAmount.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvItemAmount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvItemAmount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.dgvItemAmount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvItemAmount.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cCode1, Me.cCode2, Me.cCode3, Me.cCode, Me.cName, Me.cKata, Me.cMaker, Me.cUnit, Me.cQuantity})
-        Me.dgvItemAmount.Location = New System.Drawing.Point(14, 22)
-        Me.dgvItemAmount.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.dgvItemAmount.Location = New System.Drawing.Point(8, 15)
         Me.dgvItemAmount.Name = "dgvItemAmount"
         Me.dgvItemAmount.ReadOnly = True
         Me.dgvItemAmount.RowTemplate.Height = 21
-        Me.dgvItemAmount.Size = New System.Drawing.Size(1132, 557)
+        Me.dgvItemAmount.Size = New System.Drawing.Size(679, 371)
         Me.dgvItemAmount.TabIndex = 13
         '
         'cId
@@ -92,6 +91,7 @@ Partial Class AmountTableForm
         Me.cCode.HeaderText = "商品コード"
         Me.cCode.Name = "cCode"
         Me.cCode.ReadOnly = True
+        Me.cCode.Width = 81
         '
         'cName
         '
@@ -99,6 +99,7 @@ Partial Class AmountTableForm
         Me.cName.HeaderText = "品名"
         Me.cName.Name = "cName"
         Me.cName.ReadOnly = True
+        Me.cName.Width = 54
         '
         'cKata
         '
@@ -106,6 +107,7 @@ Partial Class AmountTableForm
         Me.cKata.HeaderText = "型式"
         Me.cKata.Name = "cKata"
         Me.cKata.ReadOnly = True
+        Me.cKata.Width = 54
         '
         'cMaker
         '
@@ -113,6 +115,7 @@ Partial Class AmountTableForm
         Me.cMaker.HeaderText = "メーカー"
         Me.cMaker.Name = "cMaker"
         Me.cMaker.ReadOnly = True
+        Me.cMaker.Width = 67
         '
         'cUnit
         '
@@ -120,6 +123,7 @@ Partial Class AmountTableForm
         Me.cUnit.HeaderText = "単位"
         Me.cUnit.Name = "cUnit"
         Me.cUnit.ReadOnly = True
+        Me.cUnit.Width = 54
         '
         'cQuantity
         '
@@ -127,13 +131,15 @@ Partial Class AmountTableForm
         Me.cQuantity.HeaderText = "入数"
         Me.cQuantity.Name = "cQuantity"
         Me.cQuantity.ReadOnly = True
+        Me.cQuantity.Width = 54
         '
         'AmountTableForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1172, 608)
+        Me.ClientSize = New System.Drawing.Size(703, 405)
         Me.Controls.Add(Me.dgvItemAmount)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AmountTableForm"
         Me.Text = "単価表"
         CType(Me.dgvItemAmount, System.ComponentModel.ISupportInitialize).EndInit()

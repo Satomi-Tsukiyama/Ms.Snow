@@ -135,6 +135,9 @@ Public Module Ankens
             'SQL文 
             sqlStr = sqlStr + " SELECT DISTINCT salesyearmonth"
             sqlStr = sqlStr + " FROM anken"
+            sqlStr = sqlStr + " ORDER BY"
+            sqlStr = sqlStr + "     salesyearmonth"
+
 
             'MySQLCommand作成 
             cmd = New MySqlCommand(sqlStr, con)
@@ -156,10 +159,9 @@ Public Module Ankens
         For Each oneDate In dateList
             stringList.Add(Format(oneDate, "yyyy/MM"))
         Next
-        '重複除外
-        stringList.Distinct
 
-        Return stringList
+        '重複除外
+        Return stringList.Distinct.ToList
 
     End Function
 

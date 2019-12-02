@@ -766,12 +766,13 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(37, 34)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 23)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(2093, 1011)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1256, 674)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel3
@@ -835,7 +836,8 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column4, 4, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column5, 5, 6)
         Me.TableLayoutPanel3.Controls.Add(Me.dgvRow6Column6, 6, 6)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 53)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(2, 35)
+        Me.TableLayoutPanel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 7
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.0!))
@@ -845,8 +847,8 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(2087, 955)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(1252, 637)
         Me.TableLayoutPanel3.TabIndex = 15
         '
         'dgvRow6Column1
@@ -860,12 +862,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column1.ColumnHeadersVisible = False
         Me.dgvRow6Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn404, Me.DataGridViewTextBoxColumn405, Me.DataGridViewTextBoxColumn406, Me.DataGridViewTextBoxColumn407, Me.DataGridViewTextBoxColumn408, Me.DataGridViewTextBoxColumn413, Me.DataGridViewTextBoxColumn409, Me.DataGridViewTextBoxColumn410, Me.DataGridViewTextBoxColumn411, Me.DataGridViewTextBoxColumn412, Me.DataGridViewTextBoxColumn414, Me.DataGridViewTextBoxColumn415, Me.DataGridViewTextBoxColumn416, Me.DataGridViewTextBoxColumn465})
-        Me.dgvRow6Column1.Location = New System.Drawing.Point(149, 801)
+        Me.dgvRow6Column1.Location = New System.Drawing.Point(89, 532)
+        Me.dgvRow6Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column1.Name = "dgvRow6Column1"
         Me.dgvRow6Column1.ReadOnly = True
         Me.dgvRow6Column1.RowHeadersVisible = False
         Me.dgvRow6Column1.RowTemplate.Height = 27
-        Me.dgvRow6Column1.Size = New System.Drawing.Size(317, 151)
+        Me.dgvRow6Column1.Size = New System.Drawing.Size(190, 103)
         Me.dgvRow6Column1.TabIndex = 39
         '
         'DataGridViewTextBoxColumn404
@@ -998,12 +1001,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column1.ColumnHeadersVisible = False
         Me.dgvRow5Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn300, Me.DataGridViewTextBoxColumn301, Me.DataGridViewTextBoxColumn302, Me.DataGridViewTextBoxColumn303, Me.DataGridViewTextBoxColumn304, Me.DataGridViewTextBoxColumn305, Me.DataGridViewTextBoxColumn306, Me.DataGridViewTextBoxColumn307, Me.DataGridViewTextBoxColumn308, Me.DataGridViewTextBoxColumn309, Me.DataGridViewTextBoxColumn310, Me.DataGridViewTextBoxColumn311, Me.DataGridViewTextBoxColumn312, Me.DataGridViewTextBoxColumn464})
-        Me.dgvRow5Column1.Location = New System.Drawing.Point(149, 649)
+        Me.dgvRow5Column1.Location = New System.Drawing.Point(89, 431)
+        Me.dgvRow5Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column1.Name = "dgvRow5Column1"
         Me.dgvRow5Column1.ReadOnly = True
         Me.dgvRow5Column1.RowHeadersVisible = False
         Me.dgvRow5Column1.RowTemplate.Height = 27
-        Me.dgvRow5Column1.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow5Column1.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow5Column1.TabIndex = 38
         '
         'DataGridViewTextBoxColumn300
@@ -1137,12 +1141,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column1.ColumnHeadersVisible = False
         Me.dgvRow4Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn71, Me.DataGridViewTextBoxColumn72, Me.DataGridViewTextBoxColumn73, Me.DataGridViewTextBoxColumn74, Me.DataGridViewTextBoxColumn75, Me.DataGridViewTextBoxColumn76, Me.DataGridViewTextBoxColumn77, Me.DataGridViewTextBoxColumn78, Me.DataGridViewTextBoxColumn79, Me.DataGridViewTextBoxColumn80, Me.DataGridViewTextBoxColumn81, Me.DataGridViewTextBoxColumn82, Me.DataGridViewTextBoxColumn83, Me.DataGridViewTextBoxColumn463})
-        Me.dgvRow4Column1.Location = New System.Drawing.Point(149, 497)
+        Me.dgvRow4Column1.Location = New System.Drawing.Point(89, 330)
+        Me.dgvRow4Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column1.Name = "dgvRow4Column1"
         Me.dgvRow4Column1.ReadOnly = True
         Me.dgvRow4Column1.RowHeadersVisible = False
         Me.dgvRow4Column1.RowTemplate.Height = 27
-        Me.dgvRow4Column1.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow4Column1.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow4Column1.TabIndex = 37
         '
         'DataGridViewTextBoxColumn71
@@ -1276,12 +1281,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column1.ColumnHeadersVisible = False
         Me.dgvRow3Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn218, Me.DataGridViewTextBoxColumn219, Me.DataGridViewTextBoxColumn220, Me.DataGridViewTextBoxColumn221, Me.DataGridViewTextBoxColumn222, Me.DataGridViewTextBoxColumn223, Me.DataGridViewTextBoxColumn224, Me.DataGridViewTextBoxColumn225, Me.DataGridViewTextBoxColumn226, Me.DataGridViewTextBoxColumn227, Me.DataGridViewTextBoxColumn228, Me.DataGridViewTextBoxColumn229, Me.DataGridViewTextBoxColumn230, Me.DataGridViewTextBoxColumn462})
-        Me.dgvRow3Column1.Location = New System.Drawing.Point(149, 345)
+        Me.dgvRow3Column1.Location = New System.Drawing.Point(89, 229)
+        Me.dgvRow3Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column1.Name = "dgvRow3Column1"
         Me.dgvRow3Column1.ReadOnly = True
         Me.dgvRow3Column1.RowHeadersVisible = False
         Me.dgvRow3Column1.RowTemplate.Height = 27
-        Me.dgvRow3Column1.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow3Column1.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow3Column1.TabIndex = 36
         '
         'DataGridViewTextBoxColumn218
@@ -1415,12 +1421,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column1.ColumnHeadersVisible = False
         Me.dgvRow2Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn21, Me.DataGridViewTextBoxColumn22, Me.DataGridViewTextBoxColumn23, Me.DataGridViewTextBoxColumn24, Me.DataGridViewTextBoxColumn25, Me.DataGridViewTextBoxColumn26, Me.DataGridViewTextBoxColumn27, Me.DataGridViewTextBoxColumn28, Me.DataGridViewTextBoxColumn29, Me.DataGridViewTextBoxColumn30, Me.DataGridViewTextBoxColumn31, Me.DataGridViewTextBoxColumn32, Me.DataGridViewTextBoxColumn33, Me.DataGridViewTextBoxColumn461})
-        Me.dgvRow2Column1.Location = New System.Drawing.Point(149, 193)
+        Me.dgvRow2Column1.Location = New System.Drawing.Point(89, 128)
+        Me.dgvRow2Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column1.Name = "dgvRow2Column1"
         Me.dgvRow2Column1.ReadOnly = True
         Me.dgvRow2Column1.RowHeadersVisible = False
         Me.dgvRow2Column1.RowTemplate.Height = 27
-        Me.dgvRow2Column1.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow2Column1.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow2Column1.TabIndex = 35
         '
         'DataGridViewTextBoxColumn21
@@ -1554,12 +1561,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column6.ColumnHeadersVisible = False
         Me.dgvRow1Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn125, Me.DataGridViewTextBoxColumn126, Me.DataGridViewTextBoxColumn127, Me.DataGridViewTextBoxColumn128, Me.DataGridViewTextBoxColumn129, Me.DataGridViewTextBoxColumn130, Me.DataGridViewTextBoxColumn131, Me.DataGridViewTextBoxColumn132, Me.DataGridViewTextBoxColumn133, Me.DataGridViewTextBoxColumn134, Me.DataGridViewTextBoxColumn135, Me.DataGridViewTextBoxColumn136, Me.DataGridViewTextBoxColumn137, Me.DataGridViewTextBoxColumn460})
-        Me.dgvRow1Column6.Location = New System.Drawing.Point(1764, 41)
+        Me.dgvRow1Column6.Location = New System.Drawing.Point(1059, 27)
+        Me.dgvRow1Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column6.Name = "dgvRow1Column6"
         Me.dgvRow1Column6.ReadOnly = True
         Me.dgvRow1Column6.RowHeadersVisible = False
         Me.dgvRow1Column6.RowTemplate.Height = 27
-        Me.dgvRow1Column6.Size = New System.Drawing.Size(320, 146)
+        Me.dgvRow1Column6.Size = New System.Drawing.Size(191, 97)
         Me.dgvRow1Column6.TabIndex = 39
         '
         'DataGridViewTextBoxColumn125
@@ -1693,12 +1701,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column5.ColumnHeadersVisible = False
         Me.dgvRow1Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn112, Me.DataGridViewTextBoxColumn113, Me.DataGridViewTextBoxColumn114, Me.DataGridViewTextBoxColumn115, Me.DataGridViewTextBoxColumn116, Me.DataGridViewTextBoxColumn117, Me.DataGridViewTextBoxColumn118, Me.DataGridViewTextBoxColumn119, Me.DataGridViewTextBoxColumn120, Me.DataGridViewTextBoxColumn121, Me.DataGridViewTextBoxColumn122, Me.DataGridViewTextBoxColumn123, Me.DataGridViewTextBoxColumn124, Me.DataGridViewTextBoxColumn459})
-        Me.dgvRow1Column5.Location = New System.Drawing.Point(1441, 41)
+        Me.dgvRow1Column5.Location = New System.Drawing.Point(865, 27)
+        Me.dgvRow1Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column5.Name = "dgvRow1Column5"
         Me.dgvRow1Column5.ReadOnly = True
         Me.dgvRow1Column5.RowHeadersVisible = False
         Me.dgvRow1Column5.RowTemplate.Height = 27
-        Me.dgvRow1Column5.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow1Column5.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow1Column5.TabIndex = 38
         '
         'DataGridViewTextBoxColumn112
@@ -1832,12 +1841,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column4.ColumnHeadersVisible = False
         Me.dgvRow1Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn99, Me.DataGridViewTextBoxColumn100, Me.DataGridViewTextBoxColumn101, Me.DataGridViewTextBoxColumn102, Me.DataGridViewTextBoxColumn103, Me.DataGridViewTextBoxColumn104, Me.DataGridViewTextBoxColumn105, Me.DataGridViewTextBoxColumn106, Me.DataGridViewTextBoxColumn107, Me.DataGridViewTextBoxColumn108, Me.DataGridViewTextBoxColumn109, Me.DataGridViewTextBoxColumn110, Me.DataGridViewTextBoxColumn111, Me.DataGridViewTextBoxColumn458})
-        Me.dgvRow1Column4.Location = New System.Drawing.Point(1118, 41)
+        Me.dgvRow1Column4.Location = New System.Drawing.Point(671, 27)
+        Me.dgvRow1Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column4.Name = "dgvRow1Column4"
         Me.dgvRow1Column4.ReadOnly = True
         Me.dgvRow1Column4.RowHeadersVisible = False
         Me.dgvRow1Column4.RowTemplate.Height = 27
-        Me.dgvRow1Column4.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow1Column4.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow1Column4.TabIndex = 37
         '
         'DataGridViewTextBoxColumn99
@@ -1971,12 +1981,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column3.ColumnHeadersVisible = False
         Me.dgvRow1Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn14, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16, Me.DataGridViewTextBoxColumn17, Me.DataGridViewTextBoxColumn18, Me.DataGridViewTextBoxColumn19, Me.DataGridViewTextBoxColumn20, Me.DataGridViewTextBoxColumn93, Me.DataGridViewTextBoxColumn94, Me.DataGridViewTextBoxColumn95, Me.DataGridViewTextBoxColumn96, Me.DataGridViewTextBoxColumn97, Me.DataGridViewTextBoxColumn98, Me.DataGridViewTextBoxColumn457})
-        Me.dgvRow1Column3.Location = New System.Drawing.Point(795, 41)
+        Me.dgvRow1Column3.Location = New System.Drawing.Point(477, 27)
+        Me.dgvRow1Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column3.Name = "dgvRow1Column3"
         Me.dgvRow1Column3.ReadOnly = True
         Me.dgvRow1Column3.RowHeadersVisible = False
         Me.dgvRow1Column3.RowTemplate.Height = 27
-        Me.dgvRow1Column3.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow1Column3.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow1Column3.TabIndex = 36
         '
         'DataGridViewTextBoxColumn14
@@ -2110,12 +2121,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column2.ColumnHeadersVisible = False
         Me.dgvRow1Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn12, Me.DataGridViewTextBoxColumn13, Me.DataGridViewTextBoxColumn456})
-        Me.dgvRow1Column2.Location = New System.Drawing.Point(472, 41)
+        Me.dgvRow1Column2.Location = New System.Drawing.Point(283, 27)
+        Me.dgvRow1Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column2.Name = "dgvRow1Column2"
         Me.dgvRow1Column2.ReadOnly = True
         Me.dgvRow1Column2.RowHeadersVisible = False
         Me.dgvRow1Column2.RowTemplate.Height = 27
-        Me.dgvRow1Column2.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow1Column2.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow1Column2.TabIndex = 35
         '
         'DataGridViewTextBoxColumn1
@@ -2244,9 +2256,10 @@ Partial Class SalesPlanForm
         Me.cmbClient5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient5.FormattingEnabled = True
-        Me.cmbClient5.Location = New System.Drawing.Point(3, 704)
+        Me.cmbClient5.Location = New System.Drawing.Point(2, 466)
+        Me.cmbClient5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient5.Name = "cmbClient5"
-        Me.cmbClient5.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient5.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient5.TabIndex = 50
         '
         'cmbClient6
@@ -2255,9 +2268,10 @@ Partial Class SalesPlanForm
         Me.cmbClient6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient6.FormattingEnabled = True
-        Me.cmbClient6.Location = New System.Drawing.Point(3, 858)
+        Me.cmbClient6.Location = New System.Drawing.Point(2, 570)
+        Me.cmbClient6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient6.Name = "cmbClient6"
-        Me.cmbClient6.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient6.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient6.TabIndex = 78
         Me.cmbClient6.Visible = False
         '
@@ -2271,11 +2285,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel9.Controls.Add(Me.Label7, 1, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.lblMonth6, 0, 0)
-        Me.TableLayoutPanel9.Location = New System.Drawing.Point(1764, 3)
+        Me.TableLayoutPanel9.Location = New System.Drawing.Point(1059, 2)
+        Me.TableLayoutPanel9.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 1
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(320, 32)
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(191, 21)
         Me.TableLayoutPanel9.TabIndex = 53
         '
         'Label7
@@ -2283,9 +2298,10 @@ Partial Class SalesPlanForm
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label7.Location = New System.Drawing.Point(163, 2)
+        Me.Label7.Location = New System.Drawing.Point(97, 1)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(40, 28)
+        Me.Label7.Size = New System.Drawing.Size(28, 19)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "月"
         '
@@ -2294,9 +2310,10 @@ Partial Class SalesPlanForm
         Me.lblMonth6.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth6.AutoSize = True
         Me.lblMonth6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth6.Location = New System.Drawing.Point(117, 2)
+        Me.lblMonth6.Location = New System.Drawing.Point(64, 1)
+        Me.lblMonth6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth6.Name = "lblMonth6"
-        Me.lblMonth6.Size = New System.Drawing.Size(40, 28)
+        Me.lblMonth6.Size = New System.Drawing.Size(29, 19)
         Me.lblMonth6.TabIndex = 5
         Me.lblMonth6.Text = "11"
         '
@@ -2310,11 +2327,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.Label6, 1, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.lblMonth5, 0, 0)
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(1441, 3)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(865, 2)
+        Me.TableLayoutPanel8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(317, 32)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(190, 21)
         Me.TableLayoutPanel8.TabIndex = 53
         '
         'Label6
@@ -2322,9 +2340,10 @@ Partial Class SalesPlanForm
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label6.Location = New System.Drawing.Point(161, 2)
+        Me.Label6.Location = New System.Drawing.Point(97, 1)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 28)
+        Me.Label6.Size = New System.Drawing.Size(28, 19)
         Me.Label6.TabIndex = 1
         Me.Label6.Text = "月"
         '
@@ -2333,9 +2352,10 @@ Partial Class SalesPlanForm
         Me.lblMonth5.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth5.AutoSize = True
         Me.lblMonth5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth5.Location = New System.Drawing.Point(115, 2)
+        Me.lblMonth5.Location = New System.Drawing.Point(64, 1)
+        Me.lblMonth5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth5.Name = "lblMonth5"
-        Me.lblMonth5.Size = New System.Drawing.Size(40, 28)
+        Me.lblMonth5.Size = New System.Drawing.Size(29, 19)
         Me.lblMonth5.TabIndex = 4
         Me.lblMonth5.Text = "10"
         '
@@ -2349,11 +2369,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.Label5, 1, 0)
         Me.TableLayoutPanel7.Controls.Add(Me.lblMonth4, 0, 0)
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(1118, 3)
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(671, 2)
+        Me.TableLayoutPanel7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(317, 32)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(190, 21)
         Me.TableLayoutPanel7.TabIndex = 53
         '
         'Label5
@@ -2361,9 +2382,10 @@ Partial Class SalesPlanForm
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label5.Location = New System.Drawing.Point(161, 2)
+        Me.Label5.Location = New System.Drawing.Point(97, 1)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 28)
+        Me.Label5.Size = New System.Drawing.Size(28, 19)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "月"
         '
@@ -2372,9 +2394,10 @@ Partial Class SalesPlanForm
         Me.lblMonth4.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth4.AutoSize = True
         Me.lblMonth4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth4.Location = New System.Drawing.Point(129, 2)
+        Me.lblMonth4.Location = New System.Drawing.Point(74, 1)
+        Me.lblMonth4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth4.Name = "lblMonth4"
-        Me.lblMonth4.Size = New System.Drawing.Size(26, 28)
+        Me.lblMonth4.Size = New System.Drawing.Size(19, 19)
         Me.lblMonth4.TabIndex = 3
         Me.lblMonth4.Text = "9"
         '
@@ -2384,9 +2407,10 @@ Partial Class SalesPlanForm
         Me.cmbClient1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient1.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient1.FormattingEnabled = True
-        Me.cmbClient1.Location = New System.Drawing.Point(3, 96)
+        Me.cmbClient1.Location = New System.Drawing.Point(2, 62)
+        Me.cmbClient1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient1.Name = "cmbClient1"
-        Me.cmbClient1.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient1.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient1.TabIndex = 46
         '
         'cmbClient2
@@ -2395,9 +2419,10 @@ Partial Class SalesPlanForm
         Me.cmbClient2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient2.FormattingEnabled = True
-        Me.cmbClient2.Location = New System.Drawing.Point(3, 248)
+        Me.cmbClient2.Location = New System.Drawing.Point(2, 163)
+        Me.cmbClient2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient2.Name = "cmbClient2"
-        Me.cmbClient2.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient2.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient2.TabIndex = 47
         '
         'cmbClient3
@@ -2406,9 +2431,10 @@ Partial Class SalesPlanForm
         Me.cmbClient3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient3.FormattingEnabled = True
-        Me.cmbClient3.Location = New System.Drawing.Point(3, 400)
+        Me.cmbClient3.Location = New System.Drawing.Point(2, 264)
+        Me.cmbClient3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient3.Name = "cmbClient3"
-        Me.cmbClient3.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient3.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient3.TabIndex = 48
         '
         'cmbClient4
@@ -2417,9 +2443,10 @@ Partial Class SalesPlanForm
         Me.cmbClient4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbClient4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.cmbClient4.FormattingEnabled = True
-        Me.cmbClient4.Location = New System.Drawing.Point(3, 552)
+        Me.cmbClient4.Location = New System.Drawing.Point(2, 365)
+        Me.cmbClient4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cmbClient4.Name = "cmbClient4"
-        Me.cmbClient4.Size = New System.Drawing.Size(140, 36)
+        Me.cmbClient4.Size = New System.Drawing.Size(83, 27)
         Me.cmbClient4.TabIndex = 49
         '
         'TableLayoutPanel5
@@ -2432,11 +2459,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel5.Controls.Add(Me.Label4, 1, 0)
         Me.TableLayoutPanel5.Controls.Add(Me.lblMonth2, 0, 0)
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(472, 3)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(283, 2)
+        Me.TableLayoutPanel5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
         Me.TableLayoutPanel5.RowCount = 1
         Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(317, 32)
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(190, 21)
         Me.TableLayoutPanel5.TabIndex = 51
         '
         'Label4
@@ -2444,9 +2472,10 @@ Partial Class SalesPlanForm
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label4.Location = New System.Drawing.Point(161, 2)
+        Me.Label4.Location = New System.Drawing.Point(97, 1)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 28)
+        Me.Label4.Size = New System.Drawing.Size(28, 19)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "月"
         '
@@ -2455,9 +2484,10 @@ Partial Class SalesPlanForm
         Me.lblMonth2.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth2.AutoSize = True
         Me.lblMonth2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth2.Location = New System.Drawing.Point(129, 2)
+        Me.lblMonth2.Location = New System.Drawing.Point(74, 1)
+        Me.lblMonth2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth2.Name = "lblMonth2"
-        Me.lblMonth2.Size = New System.Drawing.Size(26, 28)
+        Me.lblMonth2.Size = New System.Drawing.Size(19, 19)
         Me.lblMonth2.TabIndex = 1
         Me.lblMonth2.Text = "7"
         '
@@ -2471,11 +2501,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel6.Controls.Add(Me.Label3, 1, 0)
         Me.TableLayoutPanel6.Controls.Add(Me.lblMonth3, 0, 0)
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(795, 3)
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(477, 2)
+        Me.TableLayoutPanel6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
         Me.TableLayoutPanel6.RowCount = 1
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(317, 32)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(190, 21)
         Me.TableLayoutPanel6.TabIndex = 52
         '
         'Label3
@@ -2483,9 +2514,10 @@ Partial Class SalesPlanForm
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label3.Location = New System.Drawing.Point(161, 2)
+        Me.Label3.Location = New System.Drawing.Point(97, 1)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 28)
+        Me.Label3.Size = New System.Drawing.Size(28, 19)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "月"
         '
@@ -2494,9 +2526,10 @@ Partial Class SalesPlanForm
         Me.lblMonth3.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth3.AutoSize = True
         Me.lblMonth3.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth3.Location = New System.Drawing.Point(129, 2)
+        Me.lblMonth3.Location = New System.Drawing.Point(74, 1)
+        Me.lblMonth3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth3.Name = "lblMonth3"
-        Me.lblMonth3.Size = New System.Drawing.Size(26, 28)
+        Me.lblMonth3.Size = New System.Drawing.Size(19, 19)
         Me.lblMonth3.TabIndex = 2
         Me.lblMonth3.Text = "8"
         '
@@ -2510,11 +2543,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel4.Controls.Add(Me.lblMonth1, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.Label2, 1, 0)
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(149, 3)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(89, 2)
+        Me.TableLayoutPanel4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(317, 32)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(190, 21)
         Me.TableLayoutPanel4.TabIndex = 50
         '
         'lblMonth1
@@ -2522,9 +2556,10 @@ Partial Class SalesPlanForm
         Me.lblMonth1.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.lblMonth1.AutoSize = True
         Me.lblMonth1.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.lblMonth1.Location = New System.Drawing.Point(129, 2)
+        Me.lblMonth1.Location = New System.Drawing.Point(74, 1)
+        Me.lblMonth1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblMonth1.Name = "lblMonth1"
-        Me.lblMonth1.Size = New System.Drawing.Size(26, 28)
+        Me.lblMonth1.Size = New System.Drawing.Size(19, 19)
         Me.lblMonth1.TabIndex = 0
         Me.lblMonth1.Text = "6"
         '
@@ -2533,9 +2568,10 @@ Partial Class SalesPlanForm
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("MS UI Gothic", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label2.Location = New System.Drawing.Point(161, 2)
+        Me.Label2.Location = New System.Drawing.Point(97, 1)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 28)
+        Me.Label2.Size = New System.Drawing.Size(28, 19)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "月"
         '
@@ -2550,12 +2586,13 @@ Partial Class SalesPlanForm
         Me.dgvRow1Column1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow1Column1.ColumnHeadersVisible = False
         Me.dgvRow1Column1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.cId, Me.cCode1, Me.cCode2, Me.cCode3, Me.cCode, Me.cName, Me.cSalesYearMonth, Me.cSalesAmount, Me.cClientID, Me.cClient, Me.cStatus, Me.cInsertDate, Me.cStaffID, Me.cStaffName})
-        Me.dgvRow1Column1.Location = New System.Drawing.Point(149, 41)
+        Me.dgvRow1Column1.Location = New System.Drawing.Point(89, 27)
+        Me.dgvRow1Column1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow1Column1.Name = "dgvRow1Column1"
         Me.dgvRow1Column1.ReadOnly = True
         Me.dgvRow1Column1.RowHeadersVisible = False
         Me.dgvRow1Column1.RowTemplate.Height = 27
-        Me.dgvRow1Column1.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow1Column1.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow1Column1.TabIndex = 34
         '
         'cId
@@ -2689,12 +2726,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column2.ColumnHeadersVisible = False
         Me.dgvRow2Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn34, Me.DataGridViewTextBoxColumn35, Me.DataGridViewTextBoxColumn36, Me.DataGridViewTextBoxColumn37, Me.DataGridViewTextBoxColumn38, Me.DataGridViewTextBoxColumn39, Me.DataGridViewTextBoxColumn40, Me.DataGridViewTextBoxColumn41, Me.DataGridViewTextBoxColumn42, Me.DataGridViewTextBoxColumn43, Me.DataGridViewTextBoxColumn44, Me.DataGridViewTextBoxColumn45, Me.DataGridViewTextBoxColumn46, Me.DataGridViewTextBoxColumn47})
-        Me.dgvRow2Column2.Location = New System.Drawing.Point(472, 193)
+        Me.dgvRow2Column2.Location = New System.Drawing.Point(283, 128)
+        Me.dgvRow2Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column2.Name = "dgvRow2Column2"
         Me.dgvRow2Column2.ReadOnly = True
         Me.dgvRow2Column2.RowHeadersVisible = False
         Me.dgvRow2Column2.RowTemplate.Height = 27
-        Me.dgvRow2Column2.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow2Column2.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow2Column2.TabIndex = 79
         '
         'DataGridViewTextBoxColumn34
@@ -2828,12 +2866,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column3.ColumnHeadersVisible = False
         Me.dgvRow2Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn48, Me.DataGridViewTextBoxColumn49, Me.DataGridViewTextBoxColumn50, Me.DataGridViewTextBoxColumn51, Me.DataGridViewTextBoxColumn52, Me.DataGridViewTextBoxColumn53, Me.DataGridViewTextBoxColumn54, Me.DataGridViewTextBoxColumn55, Me.DataGridViewTextBoxColumn56, Me.DataGridViewTextBoxColumn57, Me.DataGridViewTextBoxColumn58, Me.DataGridViewTextBoxColumn59, Me.DataGridViewTextBoxColumn60, Me.DataGridViewTextBoxColumn61})
-        Me.dgvRow2Column3.Location = New System.Drawing.Point(795, 193)
+        Me.dgvRow2Column3.Location = New System.Drawing.Point(477, 128)
+        Me.dgvRow2Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column3.Name = "dgvRow2Column3"
         Me.dgvRow2Column3.ReadOnly = True
         Me.dgvRow2Column3.RowHeadersVisible = False
         Me.dgvRow2Column3.RowTemplate.Height = 27
-        Me.dgvRow2Column3.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow2Column3.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow2Column3.TabIndex = 80
         '
         'DataGridViewTextBoxColumn48
@@ -2967,12 +3006,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column4.ColumnHeadersVisible = False
         Me.dgvRow2Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn62, Me.DataGridViewTextBoxColumn63, Me.DataGridViewTextBoxColumn64, Me.DataGridViewTextBoxColumn65, Me.DataGridViewTextBoxColumn66, Me.DataGridViewTextBoxColumn67, Me.DataGridViewTextBoxColumn68, Me.DataGridViewTextBoxColumn69, Me.DataGridViewTextBoxColumn70, Me.DataGridViewTextBoxColumn84, Me.DataGridViewTextBoxColumn85, Me.DataGridViewTextBoxColumn86, Me.DataGridViewTextBoxColumn87, Me.DataGridViewTextBoxColumn88})
-        Me.dgvRow2Column4.Location = New System.Drawing.Point(1118, 193)
+        Me.dgvRow2Column4.Location = New System.Drawing.Point(671, 128)
+        Me.dgvRow2Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column4.Name = "dgvRow2Column4"
         Me.dgvRow2Column4.ReadOnly = True
         Me.dgvRow2Column4.RowHeadersVisible = False
         Me.dgvRow2Column4.RowTemplate.Height = 27
-        Me.dgvRow2Column4.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow2Column4.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow2Column4.TabIndex = 81
         '
         'DataGridViewTextBoxColumn62
@@ -3106,12 +3146,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column5.ColumnHeadersVisible = False
         Me.dgvRow2Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn89, Me.DataGridViewTextBoxColumn90, Me.DataGridViewTextBoxColumn91, Me.DataGridViewTextBoxColumn92, Me.DataGridViewTextBoxColumn138, Me.DataGridViewTextBoxColumn139, Me.DataGridViewTextBoxColumn140, Me.DataGridViewTextBoxColumn141, Me.DataGridViewTextBoxColumn142, Me.DataGridViewTextBoxColumn143, Me.DataGridViewTextBoxColumn144, Me.DataGridViewTextBoxColumn145, Me.DataGridViewTextBoxColumn146, Me.DataGridViewTextBoxColumn147})
-        Me.dgvRow2Column5.Location = New System.Drawing.Point(1441, 193)
+        Me.dgvRow2Column5.Location = New System.Drawing.Point(865, 128)
+        Me.dgvRow2Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column5.Name = "dgvRow2Column5"
         Me.dgvRow2Column5.ReadOnly = True
         Me.dgvRow2Column5.RowHeadersVisible = False
         Me.dgvRow2Column5.RowTemplate.Height = 27
-        Me.dgvRow2Column5.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow2Column5.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow2Column5.TabIndex = 82
         '
         'DataGridViewTextBoxColumn89
@@ -3245,12 +3286,13 @@ Partial Class SalesPlanForm
         Me.dgvRow2Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow2Column6.ColumnHeadersVisible = False
         Me.dgvRow2Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn148, Me.DataGridViewTextBoxColumn149, Me.DataGridViewTextBoxColumn150, Me.DataGridViewTextBoxColumn151, Me.DataGridViewTextBoxColumn152, Me.DataGridViewTextBoxColumn153, Me.DataGridViewTextBoxColumn154, Me.DataGridViewTextBoxColumn155, Me.DataGridViewTextBoxColumn156, Me.DataGridViewTextBoxColumn157, Me.DataGridViewTextBoxColumn158, Me.DataGridViewTextBoxColumn159, Me.DataGridViewTextBoxColumn160, Me.DataGridViewTextBoxColumn161})
-        Me.dgvRow2Column6.Location = New System.Drawing.Point(1764, 193)
+        Me.dgvRow2Column6.Location = New System.Drawing.Point(1059, 128)
+        Me.dgvRow2Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow2Column6.Name = "dgvRow2Column6"
         Me.dgvRow2Column6.ReadOnly = True
         Me.dgvRow2Column6.RowHeadersVisible = False
         Me.dgvRow2Column6.RowTemplate.Height = 27
-        Me.dgvRow2Column6.Size = New System.Drawing.Size(320, 146)
+        Me.dgvRow2Column6.Size = New System.Drawing.Size(191, 97)
         Me.dgvRow2Column6.TabIndex = 83
         '
         'DataGridViewTextBoxColumn148
@@ -3384,12 +3426,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column2.ColumnHeadersVisible = False
         Me.dgvRow3Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn162, Me.DataGridViewTextBoxColumn163, Me.DataGridViewTextBoxColumn164, Me.DataGridViewTextBoxColumn165, Me.DataGridViewTextBoxColumn166, Me.DataGridViewTextBoxColumn167, Me.DataGridViewTextBoxColumn168, Me.DataGridViewTextBoxColumn169, Me.DataGridViewTextBoxColumn170, Me.DataGridViewTextBoxColumn171, Me.DataGridViewTextBoxColumn172, Me.DataGridViewTextBoxColumn173, Me.DataGridViewTextBoxColumn174, Me.DataGridViewTextBoxColumn175})
-        Me.dgvRow3Column2.Location = New System.Drawing.Point(472, 345)
+        Me.dgvRow3Column2.Location = New System.Drawing.Point(283, 229)
+        Me.dgvRow3Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column2.Name = "dgvRow3Column2"
         Me.dgvRow3Column2.ReadOnly = True
         Me.dgvRow3Column2.RowHeadersVisible = False
         Me.dgvRow3Column2.RowTemplate.Height = 27
-        Me.dgvRow3Column2.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow3Column2.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow3Column2.TabIndex = 84
         '
         'DataGridViewTextBoxColumn162
@@ -3523,12 +3566,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column3.ColumnHeadersVisible = False
         Me.dgvRow3Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn176, Me.DataGridViewTextBoxColumn177, Me.DataGridViewTextBoxColumn178, Me.DataGridViewTextBoxColumn179, Me.DataGridViewTextBoxColumn180, Me.DataGridViewTextBoxColumn181, Me.DataGridViewTextBoxColumn182, Me.DataGridViewTextBoxColumn183, Me.DataGridViewTextBoxColumn184, Me.DataGridViewTextBoxColumn185, Me.DataGridViewTextBoxColumn186, Me.DataGridViewTextBoxColumn187, Me.DataGridViewTextBoxColumn188, Me.DataGridViewTextBoxColumn189})
-        Me.dgvRow3Column3.Location = New System.Drawing.Point(795, 345)
+        Me.dgvRow3Column3.Location = New System.Drawing.Point(477, 229)
+        Me.dgvRow3Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column3.Name = "dgvRow3Column3"
         Me.dgvRow3Column3.ReadOnly = True
         Me.dgvRow3Column3.RowHeadersVisible = False
         Me.dgvRow3Column3.RowTemplate.Height = 27
-        Me.dgvRow3Column3.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow3Column3.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow3Column3.TabIndex = 85
         '
         'DataGridViewTextBoxColumn176
@@ -3662,12 +3706,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column4.ColumnHeadersVisible = False
         Me.dgvRow3Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn190, Me.DataGridViewTextBoxColumn191, Me.DataGridViewTextBoxColumn192, Me.DataGridViewTextBoxColumn193, Me.DataGridViewTextBoxColumn194, Me.DataGridViewTextBoxColumn195, Me.DataGridViewTextBoxColumn196, Me.DataGridViewTextBoxColumn197, Me.DataGridViewTextBoxColumn198, Me.DataGridViewTextBoxColumn199, Me.DataGridViewTextBoxColumn200, Me.DataGridViewTextBoxColumn201, Me.DataGridViewTextBoxColumn202, Me.DataGridViewTextBoxColumn203})
-        Me.dgvRow3Column4.Location = New System.Drawing.Point(1118, 345)
+        Me.dgvRow3Column4.Location = New System.Drawing.Point(671, 229)
+        Me.dgvRow3Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column4.Name = "dgvRow3Column4"
         Me.dgvRow3Column4.ReadOnly = True
         Me.dgvRow3Column4.RowHeadersVisible = False
         Me.dgvRow3Column4.RowTemplate.Height = 27
-        Me.dgvRow3Column4.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow3Column4.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow3Column4.TabIndex = 86
         '
         'DataGridViewTextBoxColumn190
@@ -3801,12 +3846,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column5.ColumnHeadersVisible = False
         Me.dgvRow3Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn204, Me.DataGridViewTextBoxColumn205, Me.DataGridViewTextBoxColumn206, Me.DataGridViewTextBoxColumn207, Me.DataGridViewTextBoxColumn208, Me.DataGridViewTextBoxColumn209, Me.DataGridViewTextBoxColumn210, Me.DataGridViewTextBoxColumn211, Me.DataGridViewTextBoxColumn212, Me.DataGridViewTextBoxColumn213, Me.DataGridViewTextBoxColumn214, Me.DataGridViewTextBoxColumn215, Me.DataGridViewTextBoxColumn216, Me.DataGridViewTextBoxColumn217})
-        Me.dgvRow3Column5.Location = New System.Drawing.Point(1441, 345)
+        Me.dgvRow3Column5.Location = New System.Drawing.Point(865, 229)
+        Me.dgvRow3Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column5.Name = "dgvRow3Column5"
         Me.dgvRow3Column5.ReadOnly = True
         Me.dgvRow3Column5.RowHeadersVisible = False
         Me.dgvRow3Column5.RowTemplate.Height = 27
-        Me.dgvRow3Column5.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow3Column5.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow3Column5.TabIndex = 87
         '
         'DataGridViewTextBoxColumn204
@@ -3940,12 +3986,13 @@ Partial Class SalesPlanForm
         Me.dgvRow3Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow3Column6.ColumnHeadersVisible = False
         Me.dgvRow3Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn231, Me.DataGridViewTextBoxColumn232, Me.DataGridViewTextBoxColumn233, Me.DataGridViewTextBoxColumn234, Me.DataGridViewTextBoxColumn235, Me.DataGridViewTextBoxColumn236, Me.DataGridViewTextBoxColumn237, Me.DataGridViewTextBoxColumn238, Me.DataGridViewTextBoxColumn239, Me.DataGridViewTextBoxColumn240, Me.DataGridViewTextBoxColumn241, Me.DataGridViewTextBoxColumn242, Me.DataGridViewTextBoxColumn243, Me.DataGridViewTextBoxColumn244})
-        Me.dgvRow3Column6.Location = New System.Drawing.Point(1764, 345)
+        Me.dgvRow3Column6.Location = New System.Drawing.Point(1059, 229)
+        Me.dgvRow3Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow3Column6.Name = "dgvRow3Column6"
         Me.dgvRow3Column6.ReadOnly = True
         Me.dgvRow3Column6.RowHeadersVisible = False
         Me.dgvRow3Column6.RowTemplate.Height = 27
-        Me.dgvRow3Column6.Size = New System.Drawing.Size(320, 146)
+        Me.dgvRow3Column6.Size = New System.Drawing.Size(191, 97)
         Me.dgvRow3Column6.TabIndex = 88
         '
         'DataGridViewTextBoxColumn231
@@ -4079,12 +4126,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column2.ColumnHeadersVisible = False
         Me.dgvRow4Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn245, Me.DataGridViewTextBoxColumn246, Me.DataGridViewTextBoxColumn247, Me.DataGridViewTextBoxColumn248, Me.DataGridViewTextBoxColumn249, Me.DataGridViewTextBoxColumn250, Me.DataGridViewTextBoxColumn251, Me.DataGridViewTextBoxColumn252, Me.DataGridViewTextBoxColumn253, Me.DataGridViewTextBoxColumn254, Me.DataGridViewTextBoxColumn255, Me.DataGridViewTextBoxColumn256, Me.DataGridViewTextBoxColumn257, Me.DataGridViewTextBoxColumn258})
-        Me.dgvRow4Column2.Location = New System.Drawing.Point(472, 497)
+        Me.dgvRow4Column2.Location = New System.Drawing.Point(283, 330)
+        Me.dgvRow4Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column2.Name = "dgvRow4Column2"
         Me.dgvRow4Column2.ReadOnly = True
         Me.dgvRow4Column2.RowHeadersVisible = False
         Me.dgvRow4Column2.RowTemplate.Height = 27
-        Me.dgvRow4Column2.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow4Column2.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow4Column2.TabIndex = 89
         '
         'DataGridViewTextBoxColumn245
@@ -4218,12 +4266,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column3.ColumnHeadersVisible = False
         Me.dgvRow4Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn259, Me.DataGridViewTextBoxColumn260, Me.DataGridViewTextBoxColumn261, Me.DataGridViewTextBoxColumn262, Me.DataGridViewTextBoxColumn263, Me.DataGridViewTextBoxColumn264, Me.DataGridViewTextBoxColumn265, Me.DataGridViewTextBoxColumn266, Me.DataGridViewTextBoxColumn267, Me.DataGridViewTextBoxColumn268, Me.DataGridViewTextBoxColumn269, Me.DataGridViewTextBoxColumn270, Me.DataGridViewTextBoxColumn271, Me.DataGridViewTextBoxColumn272})
-        Me.dgvRow4Column3.Location = New System.Drawing.Point(795, 497)
+        Me.dgvRow4Column3.Location = New System.Drawing.Point(477, 330)
+        Me.dgvRow4Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column3.Name = "dgvRow4Column3"
         Me.dgvRow4Column3.ReadOnly = True
         Me.dgvRow4Column3.RowHeadersVisible = False
         Me.dgvRow4Column3.RowTemplate.Height = 27
-        Me.dgvRow4Column3.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow4Column3.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow4Column3.TabIndex = 90
         '
         'DataGridViewTextBoxColumn259
@@ -4357,12 +4406,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column4.ColumnHeadersVisible = False
         Me.dgvRow4Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn273, Me.DataGridViewTextBoxColumn274, Me.DataGridViewTextBoxColumn275, Me.DataGridViewTextBoxColumn276, Me.DataGridViewTextBoxColumn277, Me.DataGridViewTextBoxColumn278, Me.DataGridViewTextBoxColumn279, Me.DataGridViewTextBoxColumn280, Me.DataGridViewTextBoxColumn281, Me.DataGridViewTextBoxColumn282, Me.DataGridViewTextBoxColumn283, Me.DataGridViewTextBoxColumn284, Me.DataGridViewTextBoxColumn285, Me.DataGridViewTextBoxColumn286})
-        Me.dgvRow4Column4.Location = New System.Drawing.Point(1118, 497)
+        Me.dgvRow4Column4.Location = New System.Drawing.Point(671, 330)
+        Me.dgvRow4Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column4.Name = "dgvRow4Column4"
         Me.dgvRow4Column4.ReadOnly = True
         Me.dgvRow4Column4.RowHeadersVisible = False
         Me.dgvRow4Column4.RowTemplate.Height = 27
-        Me.dgvRow4Column4.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow4Column4.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow4Column4.TabIndex = 91
         '
         'DataGridViewTextBoxColumn273
@@ -4496,12 +4546,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column5.ColumnHeadersVisible = False
         Me.dgvRow4Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn287, Me.DataGridViewTextBoxColumn288, Me.DataGridViewTextBoxColumn289, Me.DataGridViewTextBoxColumn290, Me.DataGridViewTextBoxColumn291, Me.DataGridViewTextBoxColumn292, Me.DataGridViewTextBoxColumn293, Me.DataGridViewTextBoxColumn294, Me.DataGridViewTextBoxColumn295, Me.DataGridViewTextBoxColumn296, Me.DataGridViewTextBoxColumn297, Me.DataGridViewTextBoxColumn298, Me.DataGridViewTextBoxColumn299, Me.DataGridViewTextBoxColumn313})
-        Me.dgvRow4Column5.Location = New System.Drawing.Point(1441, 497)
+        Me.dgvRow4Column5.Location = New System.Drawing.Point(865, 330)
+        Me.dgvRow4Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column5.Name = "dgvRow4Column5"
         Me.dgvRow4Column5.ReadOnly = True
         Me.dgvRow4Column5.RowHeadersVisible = False
         Me.dgvRow4Column5.RowTemplate.Height = 27
-        Me.dgvRow4Column5.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow4Column5.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow4Column5.TabIndex = 92
         '
         'DataGridViewTextBoxColumn287
@@ -4635,12 +4686,13 @@ Partial Class SalesPlanForm
         Me.dgvRow4Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow4Column6.ColumnHeadersVisible = False
         Me.dgvRow4Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn314, Me.DataGridViewTextBoxColumn315, Me.DataGridViewTextBoxColumn316, Me.DataGridViewTextBoxColumn317, Me.DataGridViewTextBoxColumn318, Me.DataGridViewTextBoxColumn319, Me.DataGridViewTextBoxColumn320, Me.DataGridViewTextBoxColumn321, Me.DataGridViewTextBoxColumn322, Me.DataGridViewTextBoxColumn323, Me.DataGridViewTextBoxColumn324, Me.DataGridViewTextBoxColumn325, Me.DataGridViewTextBoxColumn326, Me.DataGridViewTextBoxColumn327})
-        Me.dgvRow4Column6.Location = New System.Drawing.Point(1764, 497)
+        Me.dgvRow4Column6.Location = New System.Drawing.Point(1059, 330)
+        Me.dgvRow4Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow4Column6.Name = "dgvRow4Column6"
         Me.dgvRow4Column6.ReadOnly = True
         Me.dgvRow4Column6.RowHeadersVisible = False
         Me.dgvRow4Column6.RowTemplate.Height = 27
-        Me.dgvRow4Column6.Size = New System.Drawing.Size(320, 146)
+        Me.dgvRow4Column6.Size = New System.Drawing.Size(191, 97)
         Me.dgvRow4Column6.TabIndex = 93
         '
         'DataGridViewTextBoxColumn314
@@ -4774,12 +4826,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column2.ColumnHeadersVisible = False
         Me.dgvRow5Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn328, Me.DataGridViewTextBoxColumn329, Me.DataGridViewTextBoxColumn330, Me.DataGridViewTextBoxColumn331, Me.DataGridViewTextBoxColumn332, Me.DataGridViewTextBoxColumn333, Me.DataGridViewTextBoxColumn334, Me.DataGridViewTextBoxColumn335, Me.DataGridViewTextBoxColumn336, Me.DataGridViewTextBoxColumn337, Me.DataGridViewTextBoxColumn338, Me.DataGridViewTextBoxColumn339, Me.DataGridViewTextBoxColumn340, Me.DataGridViewTextBoxColumn341})
-        Me.dgvRow5Column2.Location = New System.Drawing.Point(472, 649)
+        Me.dgvRow5Column2.Location = New System.Drawing.Point(283, 431)
+        Me.dgvRow5Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column2.Name = "dgvRow5Column2"
         Me.dgvRow5Column2.ReadOnly = True
         Me.dgvRow5Column2.RowHeadersVisible = False
         Me.dgvRow5Column2.RowTemplate.Height = 27
-        Me.dgvRow5Column2.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow5Column2.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow5Column2.TabIndex = 94
         '
         'DataGridViewTextBoxColumn328
@@ -4913,12 +4966,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column3.ColumnHeadersVisible = False
         Me.dgvRow5Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn342, Me.DataGridViewTextBoxColumn343, Me.DataGridViewTextBoxColumn344, Me.DataGridViewTextBoxColumn345, Me.DataGridViewTextBoxColumn346, Me.DataGridViewTextBoxColumn347, Me.DataGridViewTextBoxColumn348, Me.DataGridViewTextBoxColumn349, Me.DataGridViewTextBoxColumn350, Me.DataGridViewTextBoxColumn351, Me.DataGridViewTextBoxColumn352, Me.DataGridViewTextBoxColumn353, Me.DataGridViewTextBoxColumn354, Me.DataGridViewTextBoxColumn355})
-        Me.dgvRow5Column3.Location = New System.Drawing.Point(795, 649)
+        Me.dgvRow5Column3.Location = New System.Drawing.Point(477, 431)
+        Me.dgvRow5Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column3.Name = "dgvRow5Column3"
         Me.dgvRow5Column3.ReadOnly = True
         Me.dgvRow5Column3.RowHeadersVisible = False
         Me.dgvRow5Column3.RowTemplate.Height = 27
-        Me.dgvRow5Column3.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow5Column3.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow5Column3.TabIndex = 95
         '
         'DataGridViewTextBoxColumn342
@@ -5052,12 +5106,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column4.ColumnHeadersVisible = False
         Me.dgvRow5Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn356, Me.DataGridViewTextBoxColumn357, Me.DataGridViewTextBoxColumn358, Me.DataGridViewTextBoxColumn359, Me.DataGridViewTextBoxColumn360, Me.DataGridViewTextBoxColumn361, Me.DataGridViewTextBoxColumn362, Me.DataGridViewTextBoxColumn363, Me.DataGridViewTextBoxColumn364, Me.DataGridViewTextBoxColumn365, Me.DataGridViewTextBoxColumn366, Me.DataGridViewTextBoxColumn367, Me.DataGridViewTextBoxColumn368, Me.DataGridViewTextBoxColumn369})
-        Me.dgvRow5Column4.Location = New System.Drawing.Point(1118, 649)
+        Me.dgvRow5Column4.Location = New System.Drawing.Point(671, 431)
+        Me.dgvRow5Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column4.Name = "dgvRow5Column4"
         Me.dgvRow5Column4.ReadOnly = True
         Me.dgvRow5Column4.RowHeadersVisible = False
         Me.dgvRow5Column4.RowTemplate.Height = 27
-        Me.dgvRow5Column4.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow5Column4.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow5Column4.TabIndex = 96
         '
         'DataGridViewTextBoxColumn356
@@ -5191,12 +5246,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column5.ColumnHeadersVisible = False
         Me.dgvRow5Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn370, Me.DataGridViewTextBoxColumn371, Me.DataGridViewTextBoxColumn372, Me.DataGridViewTextBoxColumn373, Me.DataGridViewTextBoxColumn374, Me.DataGridViewTextBoxColumn375, Me.DataGridViewTextBoxColumn376, Me.DataGridViewTextBoxColumn377, Me.DataGridViewTextBoxColumn378, Me.DataGridViewTextBoxColumn379, Me.DataGridViewTextBoxColumn380, Me.DataGridViewTextBoxColumn381, Me.DataGridViewTextBoxColumn382, Me.DataGridViewTextBoxColumn383})
-        Me.dgvRow5Column5.Location = New System.Drawing.Point(1441, 649)
+        Me.dgvRow5Column5.Location = New System.Drawing.Point(865, 431)
+        Me.dgvRow5Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column5.Name = "dgvRow5Column5"
         Me.dgvRow5Column5.ReadOnly = True
         Me.dgvRow5Column5.RowHeadersVisible = False
         Me.dgvRow5Column5.RowTemplate.Height = 27
-        Me.dgvRow5Column5.Size = New System.Drawing.Size(317, 146)
+        Me.dgvRow5Column5.Size = New System.Drawing.Size(190, 97)
         Me.dgvRow5Column5.TabIndex = 97
         '
         'DataGridViewTextBoxColumn370
@@ -5330,12 +5386,13 @@ Partial Class SalesPlanForm
         Me.dgvRow5Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow5Column6.ColumnHeadersVisible = False
         Me.dgvRow5Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn384, Me.DataGridViewTextBoxColumn385, Me.DataGridViewTextBoxColumn386, Me.DataGridViewTextBoxColumn387, Me.DataGridViewTextBoxColumn388, Me.DataGridViewTextBoxColumn389, Me.DataGridViewTextBoxColumn390, Me.DataGridViewTextBoxColumn391, Me.DataGridViewTextBoxColumn392, Me.DataGridViewTextBoxColumn393, Me.DataGridViewTextBoxColumn394, Me.DataGridViewTextBoxColumn395, Me.DataGridViewTextBoxColumn396, Me.DataGridViewTextBoxColumn397})
-        Me.dgvRow5Column6.Location = New System.Drawing.Point(1764, 649)
+        Me.dgvRow5Column6.Location = New System.Drawing.Point(1059, 431)
+        Me.dgvRow5Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow5Column6.Name = "dgvRow5Column6"
         Me.dgvRow5Column6.ReadOnly = True
         Me.dgvRow5Column6.RowHeadersVisible = False
         Me.dgvRow5Column6.RowTemplate.Height = 27
-        Me.dgvRow5Column6.Size = New System.Drawing.Size(320, 146)
+        Me.dgvRow5Column6.Size = New System.Drawing.Size(191, 97)
         Me.dgvRow5Column6.TabIndex = 98
         '
         'DataGridViewTextBoxColumn384
@@ -5469,12 +5526,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column2.ColumnHeadersVisible = False
         Me.dgvRow6Column2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn398, Me.DataGridViewTextBoxColumn399, Me.DataGridViewTextBoxColumn400, Me.DataGridViewTextBoxColumn401, Me.DataGridViewTextBoxColumn402, Me.DataGridViewTextBoxColumn420, Me.DataGridViewTextBoxColumn403, Me.DataGridViewTextBoxColumn417, Me.DataGridViewTextBoxColumn418, Me.DataGridViewTextBoxColumn419, Me.DataGridViewTextBoxColumn421, Me.DataGridViewTextBoxColumn422, Me.DataGridViewTextBoxColumn423, Me.DataGridViewTextBoxColumn424})
-        Me.dgvRow6Column2.Location = New System.Drawing.Point(472, 801)
+        Me.dgvRow6Column2.Location = New System.Drawing.Point(283, 532)
+        Me.dgvRow6Column2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column2.Name = "dgvRow6Column2"
         Me.dgvRow6Column2.ReadOnly = True
         Me.dgvRow6Column2.RowHeadersVisible = False
         Me.dgvRow6Column2.RowTemplate.Height = 27
-        Me.dgvRow6Column2.Size = New System.Drawing.Size(317, 151)
+        Me.dgvRow6Column2.Size = New System.Drawing.Size(190, 103)
         Me.dgvRow6Column2.TabIndex = 99
         '
         'DataGridViewTextBoxColumn398
@@ -5607,12 +5665,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column3.ColumnHeadersVisible = False
         Me.dgvRow6Column3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn425, Me.DataGridViewTextBoxColumn426, Me.DataGridViewTextBoxColumn427, Me.DataGridViewTextBoxColumn428, Me.DataGridViewTextBoxColumn429, Me.DataGridViewTextBoxColumn434, Me.DataGridViewTextBoxColumn430, Me.DataGridViewTextBoxColumn431, Me.DataGridViewTextBoxColumn432, Me.DataGridViewTextBoxColumn433, Me.DataGridViewTextBoxColumn435, Me.DataGridViewTextBoxColumn436, Me.DataGridViewTextBoxColumn437, Me.DataGridViewTextBoxColumn438})
-        Me.dgvRow6Column3.Location = New System.Drawing.Point(795, 801)
+        Me.dgvRow6Column3.Location = New System.Drawing.Point(477, 532)
+        Me.dgvRow6Column3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column3.Name = "dgvRow6Column3"
         Me.dgvRow6Column3.ReadOnly = True
         Me.dgvRow6Column3.RowHeadersVisible = False
         Me.dgvRow6Column3.RowTemplate.Height = 27
-        Me.dgvRow6Column3.Size = New System.Drawing.Size(317, 151)
+        Me.dgvRow6Column3.Size = New System.Drawing.Size(190, 103)
         Me.dgvRow6Column3.TabIndex = 100
         '
         'DataGridViewTextBoxColumn425
@@ -5745,12 +5804,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column4.ColumnHeadersVisible = False
         Me.dgvRow6Column4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn439, Me.DataGridViewTextBoxColumn440, Me.DataGridViewTextBoxColumn441, Me.DataGridViewTextBoxColumn442, Me.DataGridViewTextBoxColumn443, Me.DataGridViewTextBoxColumn448, Me.DataGridViewTextBoxColumn444, Me.DataGridViewTextBoxColumn445, Me.DataGridViewTextBoxColumn446, Me.DataGridViewTextBoxColumn447, Me.DataGridViewTextBoxColumn449, Me.DataGridViewTextBoxColumn450, Me.DataGridViewTextBoxColumn451, Me.DataGridViewTextBoxColumn452})
-        Me.dgvRow6Column4.Location = New System.Drawing.Point(1118, 801)
+        Me.dgvRow6Column4.Location = New System.Drawing.Point(671, 532)
+        Me.dgvRow6Column4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column4.Name = "dgvRow6Column4"
         Me.dgvRow6Column4.ReadOnly = True
         Me.dgvRow6Column4.RowHeadersVisible = False
         Me.dgvRow6Column4.RowTemplate.Height = 27
-        Me.dgvRow6Column4.Size = New System.Drawing.Size(317, 151)
+        Me.dgvRow6Column4.Size = New System.Drawing.Size(190, 103)
         Me.dgvRow6Column4.TabIndex = 101
         '
         'DataGridViewTextBoxColumn439
@@ -5883,12 +5943,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column5.ColumnHeadersVisible = False
         Me.dgvRow6Column5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn453, Me.DataGridViewTextBoxColumn454, Me.DataGridViewTextBoxColumn455, Me.DataGridViewTextBoxColumn466, Me.DataGridViewTextBoxColumn467, Me.DataGridViewTextBoxColumn472, Me.DataGridViewTextBoxColumn468, Me.DataGridViewTextBoxColumn469, Me.DataGridViewTextBoxColumn470, Me.DataGridViewTextBoxColumn471, Me.DataGridViewTextBoxColumn473, Me.DataGridViewTextBoxColumn474, Me.DataGridViewTextBoxColumn475, Me.DataGridViewTextBoxColumn476})
-        Me.dgvRow6Column5.Location = New System.Drawing.Point(1441, 801)
+        Me.dgvRow6Column5.Location = New System.Drawing.Point(865, 532)
+        Me.dgvRow6Column5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column5.Name = "dgvRow6Column5"
         Me.dgvRow6Column5.ReadOnly = True
         Me.dgvRow6Column5.RowHeadersVisible = False
         Me.dgvRow6Column5.RowTemplate.Height = 27
-        Me.dgvRow6Column5.Size = New System.Drawing.Size(317, 151)
+        Me.dgvRow6Column5.Size = New System.Drawing.Size(190, 103)
         Me.dgvRow6Column5.TabIndex = 102
         '
         'DataGridViewTextBoxColumn453
@@ -6021,12 +6082,13 @@ Partial Class SalesPlanForm
         Me.dgvRow6Column6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRow6Column6.ColumnHeadersVisible = False
         Me.dgvRow6Column6.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn477, Me.DataGridViewTextBoxColumn478, Me.DataGridViewTextBoxColumn479, Me.DataGridViewTextBoxColumn480, Me.DataGridViewTextBoxColumn481, Me.DataGridViewTextBoxColumn486, Me.DataGridViewTextBoxColumn482, Me.DataGridViewTextBoxColumn483, Me.DataGridViewTextBoxColumn484, Me.DataGridViewTextBoxColumn485, Me.DataGridViewTextBoxColumn487, Me.DataGridViewTextBoxColumn488, Me.DataGridViewTextBoxColumn489, Me.DataGridViewTextBoxColumn490})
-        Me.dgvRow6Column6.Location = New System.Drawing.Point(1764, 801)
+        Me.dgvRow6Column6.Location = New System.Drawing.Point(1059, 532)
+        Me.dgvRow6Column6.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvRow6Column6.Name = "dgvRow6Column6"
         Me.dgvRow6Column6.ReadOnly = True
         Me.dgvRow6Column6.RowHeadersVisible = False
         Me.dgvRow6Column6.RowTemplate.Height = 27
-        Me.dgvRow6Column6.Size = New System.Drawing.Size(320, 151)
+        Me.dgvRow6Column6.Size = New System.Drawing.Size(191, 103)
         Me.dgvRow6Column6.TabIndex = 103
         '
         'DataGridViewTextBoxColumn477
@@ -6162,11 +6224,12 @@ Partial Class SalesPlanForm
         Me.TableLayoutPanel2.Controls.Add(Me.dudSemester, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.dtpDisplayYear, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.btnPrev, 0, 0)
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(2, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(2087, 44)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1252, 29)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'btnNext
@@ -6174,9 +6237,10 @@ Partial Class SalesPlanForm
         Me.btnNext.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnNext.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(1253, 3)
+        Me.btnNext.Location = New System.Drawing.Point(752, 2)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(75, 38)
+        Me.btnNext.Size = New System.Drawing.Size(45, 25)
         Me.btnNext.TabIndex = 3
         Me.btnNext.Text = "次"
         Me.btnNext.UseVisualStyleBackColor = True
@@ -6185,9 +6249,10 @@ Partial Class SalesPlanForm
         '
         Me.dudSemester.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dudSemester.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.dudSemester.Location = New System.Drawing.Point(1045, 3)
+        Me.dudSemester.Location = New System.Drawing.Point(627, 2)
+        Me.dudSemester.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dudSemester.Name = "dudSemester"
-        Me.dudSemester.Size = New System.Drawing.Size(202, 39)
+        Me.dudSemester.Size = New System.Drawing.Size(121, 29)
         Me.dudSemester.TabIndex = 1
         Me.dudSemester.Text = "前期"
         '
@@ -6197,10 +6262,11 @@ Partial Class SalesPlanForm
         Me.dtpDisplayYear.CustomFormat = "yyyy年度"
         Me.dtpDisplayYear.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.dtpDisplayYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpDisplayYear.Location = New System.Drawing.Point(837, 3)
+        Me.dtpDisplayYear.Location = New System.Drawing.Point(502, 2)
+        Me.dtpDisplayYear.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dtpDisplayYear.Name = "dtpDisplayYear"
         Me.dtpDisplayYear.ShowUpDown = True
-        Me.dtpDisplayYear.Size = New System.Drawing.Size(202, 39)
+        Me.dtpDisplayYear.Size = New System.Drawing.Size(121, 29)
         Me.dtpDisplayYear.TabIndex = 0
         '
         'btnPrev
@@ -6208,9 +6274,10 @@ Partial Class SalesPlanForm
         Me.btnPrev.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrev.Font = New System.Drawing.Font("MS UI Gothic", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.btnPrev.Location = New System.Drawing.Point(756, 3)
+        Me.btnPrev.Location = New System.Drawing.Point(453, 2)
+        Me.btnPrev.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnPrev.Name = "btnPrev"
-        Me.btnPrev.Size = New System.Drawing.Size(75, 38)
+        Me.btnPrev.Size = New System.Drawing.Size(45, 25)
         Me.btnPrev.TabIndex = 2
         Me.btnPrev.Text = "前"
         Me.btnPrev.UseVisualStyleBackColor = True
@@ -6220,44 +6287,45 @@ Partial Class SalesPlanForm
         Me.cmsStatusChange.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.cmsStatusChange.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmiNoPlan, Me.tsmiEstimating, Me.tsmiDecided, Me.tsmiInvoiced, Me.tsmiCancel})
         Me.cmsStatusChange.Name = "cmsStatusChange"
-        Me.cmsStatusChange.Size = New System.Drawing.Size(139, 154)
+        Me.cmsStatusChange.Size = New System.Drawing.Size(113, 114)
         '
         'tsmiNoPlan
         '
         Me.tsmiNoPlan.Name = "tsmiNoPlan"
-        Me.tsmiNoPlan.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiNoPlan.Size = New System.Drawing.Size(112, 22)
         Me.tsmiNoPlan.Text = "未定"
         '
         'tsmiEstimating
         '
         Me.tsmiEstimating.Name = "tsmiEstimating"
-        Me.tsmiEstimating.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiEstimating.Size = New System.Drawing.Size(112, 22)
         Me.tsmiEstimating.Text = "見積中"
         '
         'tsmiDecided
         '
         Me.tsmiDecided.Name = "tsmiDecided"
-        Me.tsmiDecided.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiDecided.Size = New System.Drawing.Size(112, 22)
         Me.tsmiDecided.Text = "決定"
         '
         'tsmiInvoiced
         '
         Me.tsmiInvoiced.Name = "tsmiInvoiced"
-        Me.tsmiInvoiced.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiInvoiced.Size = New System.Drawing.Size(112, 22)
         Me.tsmiInvoiced.Text = "請求済"
         '
         'tsmiCancel
         '
         Me.tsmiCancel.Name = "tsmiCancel"
-        Me.tsmiCancel.Size = New System.Drawing.Size(138, 30)
+        Me.tsmiCancel.Size = New System.Drawing.Size(112, 22)
         Me.tsmiCancel.Text = "取消"
         '
         'SalesPlanForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 18.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(2163, 1062)
+        Me.ClientSize = New System.Drawing.Size(1298, 708)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "SalesPlanForm"
         Me.Text = "売上見込"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

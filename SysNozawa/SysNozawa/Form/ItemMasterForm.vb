@@ -375,7 +375,7 @@ Public Class ItemMasterForm
         cmbQuantityUnit.Items.Clear()
         Dim allQuantityUnits As List(Of String) = Items.getAllQuantityUnit()
 
-        cmbUnit.Items.Add("")
+        cmbQuantityUnit.Items.Add("")
         For Each oneQuantityUnits In allQuantityUnits
             cmbQuantityUnit.Items.Add(oneQuantityUnits)
         Next
