@@ -46,7 +46,7 @@ Public Class CalendarMasterForm
         Next
 
         btnOK.Enabled = True
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "中止"
 
     End Sub
@@ -301,7 +301,7 @@ Public Class CalendarMasterForm
 
 
         btnOK.Enabled = False
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "閉じる"
 
     End Sub

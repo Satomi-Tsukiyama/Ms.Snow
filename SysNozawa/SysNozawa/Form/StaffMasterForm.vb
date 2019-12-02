@@ -80,7 +80,7 @@ Public Class StaffMasterForm
         dgvStaff.Enabled = False
         txtName.Enabled = True
         btnOK.Enabled = True
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "中止"
 
     End Sub
@@ -205,7 +205,7 @@ Public Class StaffMasterForm
             dgvStaff.Enabled = True
             txtName.Enabled = False
             txtName.Text = ""
-            btnOK.Text = "編集"
+            btnOK.Text = "更新"
             btnCancel.Text = "閉じる"
 
         Else '閉じるクリック
@@ -260,7 +260,7 @@ Public Class StaffMasterForm
         txtName.Enabled = False
         txtName.Text = ""
         btnOK.Enabled = False
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "閉じる"
 
     End Sub

@@ -923,7 +923,6 @@ Public Module Ankens
 
     End Function
 
-
 #End Region
 
 #Region "削除"

@@ -147,7 +147,7 @@ Public Class AnkenMasterForm
         cmbStatus.Enabled = True
 
         btnOK.Enabled = True
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "中止"
 
         '工番1を選択中
@@ -244,7 +244,7 @@ Public Class AnkenMasterForm
         ElseIf inputType = inputType.update Then '編集クリック
 
             If DialogResult.No = MessageBox.Show("編集します。よろしいですか？",
-                                                 "編集",
+                                                 "更新",
                                                  MessageBoxButtons.YesNo,
                                                  MessageBoxIcon.Question) Then
                 Exit Sub
@@ -336,7 +336,7 @@ Public Class AnkenMasterForm
 
 
             btnOK.Enabled = False
-            btnOK.Text = "編集"
+            btnOK.Text = "更新"
             btnCancel.Text = "閉じる"
 
             '新規追加ボタン選択中
@@ -538,7 +538,7 @@ Public Class AnkenMasterForm
         txtSalesAmount.Text = ""
 
         btnOK.Enabled = False
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "閉じる"
 
     End Sub

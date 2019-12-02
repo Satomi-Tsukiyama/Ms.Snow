@@ -129,7 +129,7 @@ Public Class ItemMasterForm
         cmbQuantityUnit.Enabled = True
 
         btnOK.Enabled = True
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "中止"
 
     End Sub
@@ -277,7 +277,7 @@ Public Class ItemMasterForm
             cmbQuantityUnit.SelectedItem = ""
 
             btnOK.Enabled = False
-            btnOK.Text = "編集"
+            btnOK.Text = "更新"
             btnCancel.Text = "閉じる"
 
             '新規追加ボタン選択中
@@ -412,7 +412,7 @@ Public Class ItemMasterForm
         cmbQuantityUnit.SelectedIndex = 0
 
         btnOK.Enabled = False
-        btnOK.Text = "編集"
+        btnOK.Text = "更新"
         btnCancel.Text = "閉じる"
 
     End Sub
